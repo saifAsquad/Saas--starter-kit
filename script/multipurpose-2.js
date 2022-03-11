@@ -1,0 +1,318 @@
+// Open and close dropdown
+function toggleDropdown(element) {
+	// console.log();
+	// element.classList.add("open-sub-menu");
+	if (element.nextElementSibling.classList.contains("h-0")) {
+		element.nextElementSibling.classList.remove("h-0");
+		element.nextElementSibling.classList.add("pt-4");
+		element.nextElementSibling.classList.add("h-[100%]");
+		element.nextElementSibling.classList.remove("invisible");
+		element.nextElementSibling.classList.remove("opacity-0");
+		element.children[1].children[0].classList.add("rotate-180");
+
+		return;
+	}
+	element.nextElementSibling.classList.add("invisible");
+	element.nextElementSibling.classList.remove("pt-4");
+	element.nextElementSibling.classList.add("h-0");
+	element.nextElementSibling.classList.remove("h-[100%]");
+	element.nextElementSibling.classList.add("opacity-100");
+	element.children[1].children[0].classList.remove("rotate-180");
+}
+
+// Navigation
+document.querySelector(".hamburger").addEventListener("click", () => {
+	document.querySelector(".navigation-menu").classList.toggle("hidden");
+});
+document.querySelector(".close-nav").addEventListener("click", () => {
+	document.querySelector(".navigation-menu").classList.toggle("hidden");
+});
+
+// Active link logic
+
+const links = document.querySelectorAll(".dashboard-links");
+links.forEach((link) => {
+	if (link.attributes.href.value == location.pathname) {
+		link.children[0].classList.remove("text-slate-600");
+		link.children[0].classList.add("text-blue-700", "bg-blue-100");
+		console.log(
+			(link.children[0].children[0].attributes.fill.value = "#1D4ED8")
+		);
+	}
+});
+
+// percent Chart
+function getPercentChart() {
+	const labels = ["red", "blue", "yellow", "green", "purple", "orange"];
+
+	const data = {
+		datasets: [
+			{
+				data: [57, 43],
+				backgroundColor: ["rgba(29, 78, 216, 1)", "rgba(226, 232, 240, 1)"],
+				borderWidth: 0,
+				offset: 0,
+			},
+		],
+	};
+	//hover Label
+	const hoverLabel = {
+		id: "hoverLabel",
+		afterDraw(chart, args, options) {
+			const {
+				ctx,
+				chartArea: { left, right, top, bottom, width, height },
+			} = chart;
+			ctx.save();
+			ctx.font = "bolder 48px Arial";
+			ctx.fillStyle = "rgba(30, 41, 59, 1)";
+			ctx.textAlign = "center";
+			ctx.fillText("57%", width / 2, height / 2 + top);
+			ctx.font = "normal 14px Arial";
+			(ctx.fillStyle = "rgba(71, 85, 105, 1)"), (ctx.textAlign = "center");
+			ctx.fillText("completed", width / 2, 140);
+		},
+	};
+
+	// Config Block
+	const config = {
+		responsive: "responsive",
+		type: "doughnut",
+		data: data,
+		plugins: [hoverLabel],
+		options: {
+			plugins: {
+				tooltip: {
+					enabled: false,
+				},
+			},
+			layout: {},
+			cutout: "80%",
+		},
+	};
+	// Render Block
+	const myChart = new Chart(document.getElementById("myChartPercent"), config);
+}
+getPercentChart();
+
+// Dougnut Chart
+
+function getDoughnut() {
+	const labels = ["red", "blue", "yellow", "green", "purple", "orange"];
+
+	//Cofig Bloack
+	var config = {
+		type: "doughnut",
+		data: {
+			datasets: [
+				{
+					borderWidth: 0,
+					data: [76, 24],
+					backgroundColor: ["rgba(29, 78, 216, 1)", "rgba(243, 244, 246, 1)"],
+					borderRadius: 50,
+				},
+				{
+					weight: 0.6,
+				},
+				{
+					borderWidth: 0,
+					data: [50, 50],
+					backgroundColor: ["rgba(236, 72, 153, 1)", "rgba(243, 244, 246, 1)"],
+					borderRadius: 50,
+				},
+				{
+					weight: 0.6,
+				},
+				{
+					borderWidth: 0,
+					data: [70, 30],
+					backgroundColor: ["rgba(99, 102, 241, 1)", "rgba(243, 244, 246, 1)"],
+					borderRadius: 50,
+				},
+				{
+					weight: 0.6,
+				},
+				{
+					borderWidth: 0,
+					data: [33, 67],
+					backgroundColor: ["rgba(234, 179, 8, 1)", "rgba(243, 244, 246, 1)"],
+					borderRadius: 50,
+
+					label: "Doughnut 2",
+				},
+			],
+		},
+		options: {
+			responsive: true,
+			legend: {
+				display: false,
+			},
+
+			animation: {
+				animateScale: true,
+				animateRotate: true,
+			},
+		},
+	};
+
+	// Render Block
+	const myChart = new Chart(document.getElementById("myChartDough"), config);
+}
+
+getDoughnut();
+
+// Main chart
+function mainChart() {
+	//Data block
+	const data = {
+		labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+		datasets: [
+			{
+				display: false,
+				label: "online",
+				data: [30, 77, 12, 45, 98, 50],
+				fill: false,
+				borderColor: "rgba(29, 78, 216, 1)",
+				backgroundColor: "rgba(29, 78, 216, 1)",
+				borderCapStyle: "round",
+				tension: 0.4,
+				pointRadius: 0,
+				pointHoverRadius: 8,
+				pointHitRadius: 10,
+				pointBackgroundColor: "#ffffff",
+			},
+			{
+				label: "sales",
+				data: [100, 50, 45, 98, 60, 25],
+				fill: false,
+				borderColor: "rgba(96, 165, 250, 1)",
+				backgroundColor: "rgba(96, 165, 250, 1)",
+				tension: 0.4,
+				pointRadius: 0,
+				pointHoverRadius: 8,
+				pointHitRadius: 10,
+				pointBackgroundColor: "#ffffff",
+			},
+		],
+	};
+	//options
+	const options = {
+		mantainAspectRatio: true,
+		responsive: true,
+		plugins: {
+			tooltip: {
+				mode: "index",
+				intersect: false,
+				titleFont: {
+					size: 16,
+				},
+				bodyFont: {
+					size: 20,
+				},
+
+				displayColors: false,
+
+				padding: 8,
+				backgroundColor: "#ffffff",
+				pointRadius: "0",
+				caretSize: 0,
+				caretPadding: 12,
+				borderColor: "#d1d5db",
+				borderWidth: 0.5,
+				boxWidth: 40,
+				titleColor: "#475569",
+				bodyColor: "#475569",
+				callbacks: {
+					title: function (tooltipItem, data) {
+						return "23 July";
+					},
+					label: function (tooltipItem, data) {
+						if (tooltipItem.datasetIndex === 0) {
+							return "49k Users";
+						}
+					},
+					labelPointStyle: function () {
+						return {
+							pointStyle: "circle",
+							pointRadius: "0",
+							padding: 0,
+						};
+					},
+				},
+			},
+			legend: {
+				display: false,
+				align: "end",
+				labels: {
+					display: false,
+					usePointStyle: true,
+					pointStyle: "circle",
+					padding: 30,
+				},
+			},
+		},
+		legend: {
+			display: true,
+		},
+		layout: {
+			padding: 20,
+		},
+		// bezierCurve: true,
+		scales: {
+			y: {
+				grid: {
+					display: false,
+				},
+				beginAtZero: true,
+				min: 10,
+				max: 100,
+				ticks: {
+					// forces step size to be 50 units
+					color: "#212121",
+
+					stepSize: 50,
+					callback: function (value, index, values) {
+						if (index === 0) {
+							return value + "k";
+						} else {
+							return value + "K";
+						}
+					},
+				},
+			},
+			x: {
+				grid: {
+					display: false,
+				},
+				ticks: {
+					color: "#212121",
+				},
+			},
+		},
+		elements: {
+			point: {
+				radius: 0,
+			},
+		},
+	};
+
+	// Config Block
+	const config = {
+		type: "line",
+		data: data,
+		options: options,
+	};
+
+	// Render Block
+	const myChart = new Chart(document.getElementById("myChart"), config);
+}
+
+mainChart();
+
+window.addEventListener("resize", () => {
+	mainChart();
+	if (window.innerWidth < 1024) {
+		const el = document.getElementById("myChart");
+		el.removeAttribute("height");
+	}
+});
