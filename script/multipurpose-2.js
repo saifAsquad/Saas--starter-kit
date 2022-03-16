@@ -308,6 +308,7 @@ function mainChart() {
 }
 
 mainChart();
+// Main chart
 
 window.addEventListener("resize", () => {
 	mainChart();
