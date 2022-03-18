@@ -234,7 +234,6 @@ function showNewMemberInteraction() {
 }
 
 const els = document.querySelector(".actions-intereaction");
-console.log(els);
 function handleActionsInteraction(el) {
 	// els.array.forEach((element) => {
 	//   element.children[1].style.display = "none";
@@ -245,4 +244,18 @@ function handleActionsInteraction(el) {
 	// const showDiv =
 	// console.log(showDiv);
 	// showDiv.classList.toggle("hidden");
+}
+
+const target = document.getElementById("add-target");
+function toggleAddTarget() {
+	target.classList.toggle("hidden");
+}
+
+function moreoptionmodal(el) {
+	el.parentElement.children[1].classList.toggle("hidden");
+}
+
+const user = document.getElementById("add-user");
+function toggleAddUser() {
+	user.classList.toggle("hidden");
 }

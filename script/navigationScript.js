@@ -126,3 +126,7 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+function moreoptionmodal(el) {
+	el.parentElement.children[1].classList.toggle("hidden");
+}
