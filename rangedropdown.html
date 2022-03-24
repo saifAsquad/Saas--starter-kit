@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Range picker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!--  -->
+</head>
+
+<body class="p-20">
+    <div>
+        <div id="reportrange"
+            class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
+            style=" cursor: pointer; padding: 5px 10px; width: fit-content">
+            <div class="flex items-center gap-2 py-3">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span id="fa-calendar font-medium">Pick a Date Range</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#2563EB" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start, end);
+
+        });
+        setTimeout(() => {
+            document.querySelector('#fa-calendar').textContent = 'Pick a Date Range';
+        }, 50)
+    </script>
+    <style>
+        .daterangepicker .ranges li.active {
+            background-color: #DBEAFE;
+            color: #1D4ED8;
+            font-weight: bold !important;
+        }
+
+        .daterangepicker .ranges li:hover {
+            background-color: #DBEAFE;
+        }
+
+        .daterangepicker .ranges ul {
+            width: 187px;
+            padding: 16px 2px 16px 2px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            border: none !important;
+        }
+
+        .daterangepicker td.active {
+            background-color: #1D4ED8 !important;
+            color: #ffffff !important;
+        }
+
+        .daterangepicker .calendar-table th,
+        .daterangepicker .calendar-table td {
+            color: #475569;
+        }
+
+        .daterangepicker td.in-range {
+            background-color: #DBEAFE;
+        }
+
+        .daterangepicker .ranges li {
+            border-radius: 4px;
+        }
+
+
+
+        .daterangepicker.opensright:before {
+            opacity: 0;
+        }
+
+        .daterangepicker.opensright:after {
+            opacity: 0;
+        }
+
+        .daterangepicker .drp-buttons .btn:hover {
+            color: #1D4ED8;
+        }
+    </style>
+</body>
+
+</html>
