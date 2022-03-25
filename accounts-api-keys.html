@@ -10,6 +10,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 
+      <!--  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!--  -->
+
 </head>
 
 <body class="bg-gray-100 relative h-full">
@@ -1323,54 +1343,941 @@
                     </div>
                     <!-- Buttons -->
                     <!-- Form -->
+                         <div class="bg-white">
+      <!-------------------------Header----------------------------->
+      <div class="p-10">
+        <div class="flex">
+          <div>
+            <p class="text-xl font-semibold leading-tight text-gray-800">
+              API Keys Description
+            </p>
+            <p class="text-sm leading-5 text-slate-600 pt-3">
+              A line that guides the user about the neccessary facts that might
+              be really useful and helpful . A line that guides the user about
+              the neccessary facts that might be really useful and helpful
+            </p>
+          </div>
+        </div>
+        <div class="pt-10 flex justify-between gap-7 lg:flex-row flex-col">
+          <div>
+            <p class="text-base font-semibold leading-4 text-slate-800">
+              Ways to set API key
+            </p>
+            <p class="text-sm leading-5 text-slate-600 pt-3">
+              A line that guides the user about the neccessary facts that might
+              be really useful and helpful
+            </p>
 
+            <button
+              class="p-3 bg-blue-50 font-medium text-xs text-blue-700 hover:bg-blue-100 rounded mt-6"
+            >
+              Get Started
+            </button>
+          </div>
+          <div>
+            <p class="text-base font-semibold leading-4 text-slate-800">
+              API key for developers
+            </p>
+            <p class="text-sm leading-5 text-slate-600 pt-3">
+              A line that guides the user about the neccessary facts that might
+              be really useful and helpful
+            </p>
+            <div class="flex">
+              <div class="div mt-6">
+                <button
+                  onclick="copylink()"
+                  class="p-3 bg-blue-50 font-medium text-xs text-blue-700 hover:bg-blue-100 rounded"
+                >
+                  Get started
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----------------------------Table ------------------------------->
+      <div class="flex flex-col w-full bg-white">
+        <div class="header flex flex-row justify-between items-center my-10">
+          <div class="div mx-6">
+            <p class="text-xl font-semibold leading-tight text-gray-800">
+              API Keys
+            </p>
+          </div>
+          <div class="div justify-between mx-6 lg:flex hidden">
+              <div
+                id="reportrange"
+                class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
+                style="cursor: pointer; padding: 5px 10px; width: fit-content"
+              >
+                <div class="flex items-center gap-2 py-2">
+                  <i class="fa fa-calendar"></i>&nbsp;
+                  <span id="fa-calendar">Pick a Date Range</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5.75L8 10.25L12.5 5.75"
+                      stroke="#2563EB"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="whitespace-nowrap w-full">
+            <thead class="border-b border-slate-100">
+              <tr class="">
+                <th
+                  align="left"
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 pl-8 pr-6"
+                >
+                  API Address
+                </th>
+
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 px-6"
+                >
+                  Status
+                </th>
+
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 px-6"
+                >
+                  API Keys
+                </th>
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 px-6"
+                >
+                  Operator
+                </th>
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-right py-6 px-6"
+                >
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                58.140.200.73
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  Lisenced
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                api_key=abcdef12345
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                marlen.com
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                67.30.191.46
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto"
+                >
+                  To be paid
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                None
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                karson.com
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                192.149.17.172
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-red-100 font-medium text-xs text-red-600 px-3 py-2 rounded mx-auto"
+                >
+                  Unknown
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                api_key=abcdef123456789
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                rachael.com
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                108.178.188.188
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  Lisenced
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                api_keynumber=abcdef123456789
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                fabiola.biz
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                156.122.61.250
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  Lisenced
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                api_key=abcdef12345
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                samara.biz
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                15.26.30.83
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-red-100 font-medium text-xs text-red-600 px-3 py-2 rounded mx-auto"
+                >
+                  Unknown
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                None
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                jamar.com
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                15.26.30.83
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-red-100 font-medium text-xs text-red-600 px-3 py-2 rounded mx-auto"
+                >
+                  Unknown
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                None
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                jamar.com
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                15.26.30.83
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  Lisenced
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                api_key=abcdef123456789
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                samara.biz
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                15.26.30.83
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto"
+                >
+                  To be Paid
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                api_key=abcdef123456789
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                marlen.com
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium pl-8 pr-6"
+              >
+                15.26.30.83
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto"
+                >
+                  To be Paid
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                api_keynumber=abcdef123456789
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6"
+              >
+                jamar.com
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer"
+              >
+                <div
+                  class="flex justify-self-center justify-end relative actions-intereaction"
+                  onclick="event.stopPropagation();handleActionsInteraction(this)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                      fill="#475569"
+                    />
+                    <path
+                      d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  <div
+                    class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                    id="hideMe"
+                  >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Edit</a
+                    >
+                    <a
+                      href=""
+                      class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                    >
+                      Delete</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex w-full justify-end py-[38px]">
+          <div class="flex mr-12 items-center">
+            <div class="svg-container mr-[29px] cursor-pointer">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 1L1 7L7 13"
+                  stroke="#6B7280"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
+            </div>
+            <div
+              class="div border border-blue-700 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
+            </div>
+            <div class="svg-container ml-[29px] cursor-pointer">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 13L7 7L1 1"
+                  stroke="#1D4ED8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
                 </div>
                 <!-- Main page -->
             </div>
             <!-- Body -->
         </div>
         <script src="./script/account-settings.js"></script>
-        <script>
-            function hideme() {
-                document.getElementById("dealtype").style.display = "none";
-            }
-
-            function plusme(el) {
-                let currentValue = parseInt(el.parentElement.children[2].innerText);
-
-                el.parentElement.children[2].innerText = currentValue + 1000;
-            }
-            function minusme(el) {
-                let currentValue = parseInt(el.parentElement.children[2].innerText);
-                if (currentValue > 0) {
-                    el.parentElement.children[2].innerText = currentValue - 1000;
-                }
-            }
-
-            function hideme(el) {
-                const index = Array.from(el.parentElement.children).indexOf(el);
-
-                const arr2 = Array.from(el.parentElement.children);
-                arr2.forEach((head) => {
-                    head.children[0].style.stroke = "#475569";
-                    head.children[1].style.color = "#475569";
-                });
-                el.children[0].style.stroke = "#1D4ED8";
-                el.children[1].style.color = "#1D4ED8";
-
-                console.log(index);
-                const parentDiv = document.getElementById("parent-content-container");
-                const arr = Array.from(parentDiv.children);
-                arr.forEach((eliment) => {
-                    eliment.style.display = "none";
-                });
-                parentDiv.children[index].style.display = "flex";
-            }
-
-            function toggleInteraction() {
-                document.getElementById("interaction-1").classList.toggle("hidden");
-            }
-        </script>
+        
         <style>
             /* The switch - the box around the slider */
             .switch {
@@ -1506,5 +2413,204 @@
             }
         </style>
 </body>
+  <script src="./script/account-settings.js"></script>
+    <script>
+         function handleActionsInteraction(el) {
+       
+        el.children[1].classList.toggle("hidden");
+         
+       
+      }
+      function toggleInteraction() {
+                document.getElementById("interaction-1").classList.toggle("hidden");
+            }
+    </script>
+     <style>
+      .daterangepicker .ranges li.active {
+        background-color: #dbeafe;
+        color: #1d4ed8;
+        font-weight: bold !important;
+      }
 
+      .daterangepicker .ranges li:hover {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges ul {
+        width: 187px;
+        padding: 16px 2px 16px 2px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
+          0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        border: none !important;
+      }
+
+      .daterangepicker td.active {
+        background-color: #1d4ed8 !important;
+        color: #ffffff !important;
+      }
+
+      .daterangepicker .calendar-table th,
+      .daterangepicker .calendar-table td {
+        color: #475569;
+      }
+
+      .daterangepicker td.in-range {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges li {
+        border-radius: 4px;
+      }
+
+      .daterangepicker.opensright:before {
+        opacity: 0;
+      }
+
+      .daterangepicker.opensright:after {
+        opacity: 0;
+      }
+
+      .daterangepicker .drp-buttons .btn:hover {
+        color: #1d4ed8;
+      }
+    </style>
+
+        <style>
+            /* The switch - the box around the slider */
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 44px;
+                height: 24px;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            /* The slider */
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 20px;
+                width: 20px;
+                left: 4px;
+                bottom: 2px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked+.slider {
+                background-color: #1D4ED8;
+            }
+
+            input:focus+.slider {
+                box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked+.slider:before {
+                -webkit-transform: translateX(18px);
+                -ms-transform: translateX(18px);
+                transform: translateX(18px);
+            }
+
+            /* Rounded sliders */
+            .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+
+            /* The container must be positioned relative: */
+            .custom-select {
+                position: relative;
+                font-family: Arial;
+
+            }
+
+            .custom-select select {
+                display: none;
+                /*hide original SELECT element: */
+            }
+
+            .select-selected {
+                background-color: #ffffff;
+
+
+            }
+
+            /* Style the arrow inside the select element: */
+            .select-selected:after {
+                position: absolute;
+                content: "";
+                top: 14px;
+                right: 10px;
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+
+            }
+
+            /* Point the arrow upwards when the select box is open (active): */
+            .select-selected.select-arrow-active:after {
+                border-color: 1px solid black;
+                top: 7px;
+            }
+
+            /* style the items (options), including the selected item: */
+            .select-items div,
+            .select-selected {
+                color: #475569;
+                padding: 16px 16px;
+                border: 1px solid white;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            /* Style items (options): */
+            .select-items {
+                position: absolute;
+                background-color: #fff;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 99;
+
+            }
+
+            /* Hide the items when the select box is closed: */
+            .select-hide {
+                display: none;
+            }
+
+            .select-items div:hover,
+            .same-as-selected {
+                background-color: #DBEAFE;
+                color: #1D4ED8;
+                font-weight: 500;
+
+            }
+        </style>
+ <!-------------------------------Choose Date Range------------ -->
+        <script type="text/javascript" src="./script/choose-date-range.js"></script>  
+        
 </html>

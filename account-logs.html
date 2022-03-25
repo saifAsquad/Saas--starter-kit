@@ -9,6 +9,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+       <!--  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!--  -->
+   
+
 
 </head>
 
@@ -1325,54 +1346,421 @@
                     </div>
                     <!-- Buttons -->
                     <!-- Form -->
+                    <div class="bg-white">
+      <!----------------------------Table ------------------------------->
+      <div class="flex flex-col w-full bg-white">
+        <div
+          class="header flex flex-row justify-between items-center my-10 px-6"
+        >
+          <div class="div">
+            <p class="text-xl font-semibold leading-tight text-gray-800">
+              Logs
+            </p>
+          </div>
+          <div class="div justify-between gap-6 lg:flex hidden">
+            <div>
+              <div
+                id="reportrange"
+                class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
+                style="cursor: pointer; padding: 5px 10px; width: fit-content"
+              >
+                <div class="flex items-center gap-2 py-2">
+                  <i class="fa fa-calendar"></i>&nbsp;
+                  <span id="fa-calendar">Pick a Date Range</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5.75L8 10.25L12.5 5.75"
+                      stroke="#2563EB"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="btn-div">
+              <button
+                class="py-[15px] px-5 bg-blue-700 text-white font-medium text-sm hover:bg-blue-600 w-[134px] rounded"
+              >
+                Export Report
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="whitespace-nowrap w-full">
+            <thead class="border-b border-slate-100">
+              <tr class="">
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 pl-6 pr-6"
+                >
+                  Status
+                </th>
+
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 px-6"
+                >
+                  Login Address
+                </th>
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-right py-6 px-6"
+                >
+                  Date / Time
+                </th>
+              </tr>
+            </thead>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  200 OK
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                4658eb9e-e736-4f71-9e9a-100fd98f83d0
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Wed Feb 06 2030 22:51:30 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto"
+                >
+                  404 WRN
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                380c83c0-9083-4d27-9bc1-a85d0dcbcb3e
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Sat Nov 18 1995 06:34:32 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  200 OK
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                39ca914f-0c41-4c6d-a378-b1d8bc3401eb
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Sat Oct 20 1990 09:16:05 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto"
+                >
+                  404 WRN
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                e0f383db-722c-4bfc-8f0e-efc459912d32
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Wed Dec 11 2075 03:26:29 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  200 OK
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                d3bde79a-fac9-47b2-8edf-ed9a01f7d50d
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Wed Apr 20 2005 21:01:10 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  200 OK
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                df5c4405-c4b9-44b8-87c5-9bb0cb4c7082
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Tue Feb 07 2096 16:04:36 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-red-100 font-medium text-xs text-red-600 px-3 py-2 rounded mx-auto"
+                >
+                  404 ERR
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                ca98b43c-8caf-4c9e-a6da-752b6fbd292e
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Sun Oct 22 2062 05:52:53 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto"
+                >
+                  200 OK
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                70daff06-0b56-4f21-a0d0-533638fa831b
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Fri Aug 13 2004 09:03:54 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto"
+                >
+                  404 WRN
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                814482e0-f9b1-4b9d-a902-76667d2a7c39
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Mon Feb 27 1995 05:13:33 GMT+0500
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                <button
+                  class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto"
+                >
+                  404 WRN
+                </button>
+              </td>
+
+              <td
+                class="text-sm font-medium leading-none text-slate-800 text-left py-7 px-6"
+              >
+                231d6aa0-6698-40d2-943c-eb054ec97f32
+              </td>
+              <td
+                class="text-sm font-medium leading-none text-slate-600 text-right py-7 px-6"
+              >
+                Sat May 24 2092 11:31:35 GMT+0500
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex w-full justify-end py-[38px]">
+          <div class="flex mr-12 items-center">
+            <div class="svg-container mr-[29px] cursor-pointer">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 1L1 7L7 13"
+                  stroke="#6B7280"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
+            </div>
+            <div
+              class="div border border-blue-700 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
+            </div>
+            <div class="svg-container ml-[29px] cursor-pointer">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 13L7 7L1 1"
+                  stroke="#1D4ED8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
                 </div>
                 <!-- Main page -->
             </div>
             <!-- Body -->
         </div>
+         <style>
+      .daterangepicker .ranges li.active {
+        background-color: #dbeafe;
+        color: #1d4ed8;
+        font-weight: bold !important;
+      }
+
+      .daterangepicker .ranges li:hover {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges ul {
+        width: 187px;
+        padding: 16px 2px 16px 2px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
+          0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        border: none !important;
+      }
+
+      .daterangepicker td.active {
+        background-color: #1d4ed8 !important;
+        color: #ffffff !important;
+      }
+
+      .daterangepicker .calendar-table th,
+      .daterangepicker .calendar-table td {
+        color: #475569;
+      }
+
+      .daterangepicker td.in-range {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges li {
+        border-radius: 4px;
+      }
+
+      .daterangepicker.opensright:before {
+        opacity: 0;
+      }
+
+      .daterangepicker.opensright:after {
+        opacity: 0;
+      }
+
+      .daterangepicker .drp-buttons .btn:hover {
+        color: #1d4ed8;
+      }
+    </style>
         <script src="./script/account-settings.js"></script>
-        <script>
-            function hideme() {
-                document.getElementById("dealtype").style.display = "none";
-            }
+    
 
-            function plusme(el) {
-                let currentValue = parseInt(el.parentElement.children[2].innerText);
-
-                el.parentElement.children[2].innerText = currentValue + 1000;
-            }
-            function minusme(el) {
-                let currentValue = parseInt(el.parentElement.children[2].innerText);
-                if (currentValue > 0) {
-                    el.parentElement.children[2].innerText = currentValue - 1000;
-                }
-            }
-
-            function hideme(el) {
-                const index = Array.from(el.parentElement.children).indexOf(el);
-
-                const arr2 = Array.from(el.parentElement.children);
-                arr2.forEach((head) => {
-                    head.children[0].style.stroke = "#475569";
-                    head.children[1].style.color = "#475569";
-                });
-                el.children[0].style.stroke = "#1D4ED8";
-                el.children[1].style.color = "#1D4ED8";
-
-                console.log(index);
-                const parentDiv = document.getElementById("parent-content-container");
-                const arr = Array.from(parentDiv.children);
-                arr.forEach((eliment) => {
-                    eliment.style.display = "none";
-                });
-                parentDiv.children[index].style.display = "flex";
-            }
-
-            function toggleInteraction() {
-                document.getElementById("interaction-1").classList.toggle("hidden");
-            }
-        </script>
         <style>
             /* The switch - the box around the slider */
             .switch {
@@ -1507,6 +1895,14 @@
 
             }
         </style>
+        <script>
+            function toggleInteraction() {
+                document.getElementById("interaction-1").classList.toggle("hidden");
+            }
+        </script>
+           <!-------------------------------Choose Date Range------------ -->
+        <script type="text/javascript" src="./script/choose-date-range.js"></script>  
+        
 </body>
 
 </html>
