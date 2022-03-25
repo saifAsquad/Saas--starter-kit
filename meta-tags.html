@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+</head>
+
+<body class=" p-20">
+    <!-- Meta Tags -->
+    <div onclick="setFocus()"
+        class="border cursor-text px-5 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full">
+        <!-- Meta Tgas -->
+        <div class="append-tags flex flex-wrap gap-4">
+
+        </div>
+        <!-- Meta Tgas -->
+        <!-- Input -->
+        <div>
+            <input onkeypress="appendSpan(this,event)" id="meta-enter"
+                class="appearance-none border-0 outline-none w-full" />
+        </div>
+        <!-- Input -->
+    </div>
+
+
+
+    <script>
+        const tagdiv = document.querySelector('.append-tags')
+        function appendSpan(el, event) {
+            if (event.code === 'Enter' && el.value.trim().length > 3) {
+                const span = document.createElement('span')
+                span.classList.add('bg-blue-100', 'rounded', 'py-1', 'px-2', 'text-xs', 'font-medium', 'text-blue-700', 'flex', 'items-center', 'justify-center', 'gap-1', "hover:opacity-90", 'cursor-pointer')
+                const spanText = document.createElement('p')
+                span.innerText += el.value
+                span.innerHTML += `
+                <svg onclick='deleteTag(this)' class='cursor-pointer hover:opacity-70' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.625 8.625L3.375 3.375" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.625 3.375L3.375 8.625" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                `
+                tagdiv.appendChild(span)
+                el.value = ''
+            }
+        }
+
+        function deleteTag(el) {
+            el.parentElement.remove()
+        }
+
+        function setFocus() {
+            document.querySelector('#meta-enter').focus()
+        }
+
+    </script>
+    <style>
+
+    </style>
+</body>
+
+</html>
