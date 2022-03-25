@@ -13,7 +13,7 @@
 <body class=" p-20">
     <!-- Meta Tags -->
     <div onclick="setFocus()"
-        class="border cursor-text px-5 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full">
+        class="border cursor-text px-4 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full">
         <!-- Meta Tgas -->
         <div class="append-tags flex flex-wrap gap-4">
 
@@ -32,13 +32,14 @@
     <script>
         const tagdiv = document.querySelector('.append-tags')
         function appendSpan(el, event) {
+            console.log(event.code)
             if (event.code === 'Enter' && el.value.trim().length > 3) {
                 const span = document.createElement('span')
                 span.classList.add('bg-blue-100', 'rounded', 'py-1', 'px-2', 'text-xs', 'font-medium', 'text-blue-700', 'flex', 'items-center', 'justify-center', 'gap-1', "hover:opacity-90", 'cursor-pointer')
                 const spanText = document.createElement('p')
                 span.innerText += el.value
                 span.innerHTML += `
-                <svg onclick='deleteTag(this)' class='cursor-pointer hover:opacity-70' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg onclick='deleteTag(this)' class='cursor-pointer mt-[2px] hover:opacity-70' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.625 8.625L3.375 3.375" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.625 3.375L3.375 8.625" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -47,6 +48,7 @@
                 tagdiv.appendChild(span)
                 el.value = ''
             }
+
         }
 
         function deleteTag(el) {

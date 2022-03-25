@@ -186,28 +186,6 @@ function tableInteract(e) {
 	e.parentElement.parentElement.parentElement.classList.remove("bg-[#EFF6FF]");
 }
 
-// Open and close dropdown
-function toggleDropdown(element) {
-	// console.log();
-	// element.classList.add("open-sub-menu");
-	if (element.nextElementSibling.classList.contains("h-0")) {
-		element.nextElementSibling.classList.remove("h-0");
-		element.nextElementSibling.classList.add("pt-4");
-		element.nextElementSibling.classList.add("h-[100%]");
-		element.nextElementSibling.classList.remove("invisible");
-		element.nextElementSibling.classList.remove("opacity-0");
-		element.children[1].children[0].classList.add("rotate-180");
-
-		return;
-	}
-	element.nextElementSibling.classList.add("invisible");
-	element.nextElementSibling.classList.remove("pt-4");
-	element.nextElementSibling.classList.add("h-0");
-	element.nextElementSibling.classList.remove("h-[100%]");
-	element.nextElementSibling.classList.add("opacity-100");
-	element.children[1].children[0].classList.remove("rotate-180");
-}
-
 // Table checkbox
 const ele = document.querySelectorAll(".check-func");
 document.querySelector(".check-main").addEventListener("change", (e) => {
@@ -220,27 +198,6 @@ document.querySelector(".check-main").addEventListener("change", (e) => {
 	ele.forEach((e) => {
 		e.checked = false;
 	});
-});
-
-// Navigation
-document.querySelector(".hamburger").addEventListener("click", () => {
-	document.querySelector(".navigation-menu").classList.toggle("hidden");
-});
-document.querySelector(".close-nav").addEventListener("click", () => {
-	document.querySelector(".navigation-menu").classList.toggle("hidden");
-});
-
-// Active link logic
-
-const links = document.querySelectorAll(".dashboard-links");
-links.forEach((link) => {
-	if (link.attributes.href.value == location.pathname) {
-		link.children[0].classList.remove("text-slate-600");
-		link.children[0].classList.add("text-blue-700", "bg-blue-100");
-		console.log(
-			(link.children[0].children[0].attributes.fill.value = "#1D4ED8")
-		);
-	}
 });
 
 //Interaction on Table
@@ -264,121 +221,4 @@ function closeAll() {
 		}
 		e.classList.add("hidden");
 	});
-}
-
-// Sub Nav Menus
-const sub = document.querySelector(".sub-ecommerce");
-function openSubEcommerce() {
-	if (sub.classList.contains("h-0")) {
-		sub.classList.remove("h-0");
-		sub.classList.add("h-30");
-		sub.classList.remove("opacity-0");
-		sub.classList.remove("pt-[-20px]");
-		sub.classList.add("pt-2");
-		sub.classList.remove("pointer-events-none");
-		sub.classList.remove("scale-y-0");
-		sub.classList.add("scale-y-100");
-		return;
-	}
-	sub.classList.add("pointer-events-none");
-	sub.classList.remove("h-30");
-	sub.classList.remove("pt-2");
-	sub.classList.add("h-0");
-	sub.classList.add("opacity-0");
-	sub.classList.add("pt-[-20px]");
-	sub.classList.remove("scale-y-100");
-	sub.classList.add("scale-y-0");
-}
-
-const sub_catalogue = document.querySelector(".sub-catalogue");
-function openSubCatalogue() {
-	if (sub_catalogue.classList.contains("h-0")) {
-		sub_catalogue.classList.remove("h-0");
-		sub_catalogue.classList.add("h-30");
-		sub_catalogue.classList.remove("opacity-0");
-		sub_catalogue.classList.remove("pt-[-20px]");
-		sub_catalogue.classList.add("pt-2");
-		sub_catalogue.classList.remove("pointer-events-none");
-		sub_catalogue.classList.remove("scale-y-0");
-		sub_catalogue.classList.add("scale-y-100");
-
-		return;
-	}
-	sub_catalogue.classList.remove("h-30");
-	sub_catalogue.classList.remove("pt-2");
-	sub_catalogue.classList.add("h-0");
-	sub_catalogue.classList.add("opacity-0");
-	sub_catalogue.classList.add("pt-[-20px]");
-	sub_catalogue.classList.add("pointer-events-none");
-	sub_catalogue.classList.remove("scale-y-100");
-	sub_catalogue.classList.add("scale-y-0");
-}
-
-const sub_order = document.querySelector(".sub-order");
-function openSubOrder() {
-	if (sub_order.classList.contains("h-0")) {
-		sub_order.classList.remove("h-0");
-		sub_order.classList.add("h-30");
-		sub_order.classList.remove("opacity-0");
-		sub_order.classList.remove("pt-[-20px]");
-		sub_order.classList.add("pt-2");
-		sub_order.classList.remove("pointer-events-none");
-		sub_order.classList.remove("scale-y-0");
-		sub_order.classList.add("scale-y-100");
-		return;
-	}
-	sub_order.classList.remove("h-30");
-	sub_order.classList.remove("pt-2");
-	sub_order.classList.add("h-0");
-	sub_order.classList.add("opacity-0");
-	sub_order.classList.add("pt-[-20px]");
-	sub_order.classList.add("pointer-events-none");
-	sub_order.classList.remove("scale-y-100");
-	sub_order.classList.add("scale-y-0");
-}
-
-const sub_overview = document.querySelector(".sub-overview");
-function openSubOverview() {
-	if (sub_overview.classList.contains("h-0")) {
-		sub_overview.classList.remove("h-0");
-		sub_overview.classList.add("h-30");
-		sub_overview.classList.remove("opacity-0");
-		sub_overview.classList.remove("pt-[-20px]");
-		sub_overview.classList.add("pt-2");
-		sub_overview.classList.remove("pointer-events-none");
-		sub_overview.classList.remove("scale-y-0");
-		sub_overview.classList.add("scale-y-100");
-		return;
-	}
-	sub_overview.classList.remove("h-30");
-	sub_overview.classList.remove("pt-2");
-	sub_overview.classList.add("h-0");
-	sub_overview.classList.add("opacity-0");
-	sub_overview.classList.add("pt-[-20px]");
-	sub_overview.classList.add("pointer-events-none");
-	sub_overview.classList.remove("scale-y-100");
-	sub_overview.classList.add("scale-y-0");
-}
-
-const sub_customers = document.querySelector(".sub-customers");
-function openSubCustomer() {
-	if (sub_customers.classList.contains("h-0")) {
-		sub_customers.classList.remove("h-0");
-		sub_customers.classList.add("h-30");
-		sub_customers.classList.remove("opacity-0");
-		sub_customers.classList.remove("pt-[-20px]");
-		sub_customers.classList.add("pt-2");
-		sub_customers.classList.remove("pointer-events-none");
-		sub_customers.classList.remove("scale-y-0");
-		sub_customers.classList.add("scale-y-100");
-		return;
-	}
-	sub_customers.classList.remove("h-30");
-	sub_customers.classList.remove("pt-2");
-	sub_customers.classList.add("h-0");
-	sub_customers.classList.add("opacity-0");
-	sub_customers.classList.add("pt-[-20px]");
-	sub_customers.classList.add("pointer-events-none");
-	sub_customers.classList.remove("scale-y-100");
-	sub_customers.classList.add("scale-y-0");
 }
