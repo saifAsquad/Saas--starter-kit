@@ -9,6 +9,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+       <!--  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!--  -->
 
 </head>
 
@@ -1576,62 +1595,30 @@
                                     </p>
                                 </div>
                                 <div class="div justify-between gap-6 lg:flex hidden">
-                                    <div
-                                        class="dropdown-one border rounded border-blue-700 w-full rounded ml-3 bg-inherit relative hover:bg-blue-100 rounded">
-                                        <button onclick="showDropDownMenu(this)"
-                                            class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-44 bg-inherit hover:bg-blue-100 rounded">
-                                            <span class="pr-4 font-medium text-blue-700 text-sm"
-                                                id="drop-down-content-setter">
-                                                Pick a Date Range
-                                            </span>
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                class="absolute top-4 right-4 stroke-blue-700" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 6L8 10L4 6" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-
-                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-12 right-0 bg-white"
-                                            id="drop-down-div">
-                                            <a class="cursor-pointer">
-                                                <p class="cr text-sm leading-3 text-slate-600 font-normal rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    Today
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="cr text-sm leading-3 text-slate-600 font-normal rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    Yesterday
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    This Week
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    Last Week
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    This Month
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    Custom Range
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
+                                      <div
+                id="reportrange"
+                class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
+                style="cursor: pointer; padding: 5px 10px; width: fit-content"
+              >
+                <div class="flex items-center gap-2 py-2">
+                  <i class="fa fa-calendar"></i>&nbsp;
+                  <span id="fa-calendar">Pick a Date Range</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5.75L8 10.25L12.5 5.75"
+                      stroke="#2563EB"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
                                     <div class="btn-div">
                                         <button
                                             class="py-[15px] px-5 bg-blue-700 text-white font-medium text-sm hover:bg-blue-600 w-[134px] rounded">
@@ -2097,21 +2084,65 @@
                 font-weight: 500;
 
             }
+/* date */
+            .daterangepicker .ranges li.active {
+        background-color: #dbeafe;
+        color: #1d4ed8;
+        font-weight: bold !important;
+      }
+
+      .daterangepicker .ranges li:hover {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges ul {
+        width: 187px;
+        padding: 16px 2px 16px 2px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
+          0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        border: none !important;
+      }
+
+      .daterangepicker td.active {
+        background-color: #1d4ed8 !important;
+        color: #ffffff !important;
+      }
+
+      .daterangepicker .calendar-table th,
+      .daterangepicker .calendar-table td {
+        color: #475569;
+      }
+
+      .daterangepicker td.in-range {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges li {
+        border-radius: 4px;
+      }
+
+      .daterangepicker.opensright:before {
+        opacity: 0;
+      }
+
+      .daterangepicker.opensright:after {
+        opacity: 0;
+      }
+
+      .daterangepicker .drp-buttons .btn:hover {
+        color: #1d4ed8;
+      }
         </style>
+            
         <script>
-            function showDropDownMenu(el) {
-                el.parentElement.children[1].classList.toggle("hidden");
-            }
-            function swaptext(el) {
-                const targetText = el.innerText;
-                document.getElementById("drop-down-content-setter").innerText =
-                    targetText;
-                document.getElementById("drop-down-div").classList.toggle("hidden");
-            }
+           
             function showPaymentMethodInteraction(inte) {
                 inte.parentElement.children[1].classList.toggle("hidden");
             }
         </script>
+         <!-------------------------------Choose Date Range------------ -->
+        <script type="text/javascript" src="./script/choose-date-range.js"></script>
 </body>
 
 </html>
