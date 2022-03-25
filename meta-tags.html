@@ -12,7 +12,8 @@
 
 <body class=" p-20">
     <!-- Meta Tags -->
-    <div class="border px-5 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full">
+    <div onclick="setFocus()"
+        class="border cursor-text px-5 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full">
         <!-- Meta Tgas -->
         <div class="append-tags flex flex-wrap gap-4">
 
@@ -50,6 +51,10 @@
 
         function deleteTag(el) {
             el.parentElement.remove()
+        }
+
+        function setFocus() {
+            document.querySelector('#meta-enter').focus()
         }
 
     </script>
