@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="ml-10 ">
+
+
+        <h1 class="font-inter font-[500] text-[16px] mt-10 ">
+            Buisness Type
+        </h1>
+
+        <div class="relative cursor-pointer status-btn flex justify-between max-w-[548px] bg-slate-300 border-2 border-bod mt-10 rounded-[4px]">
+
+            <div class="status-text p-4 font-inter font-[400] text-[14px]  ">
+
+            </div>
+            <div class="p-4 ">
+                <svg class="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <div class="status_dropdown absolute top-[50px] w-full max-h-0 overflow-hidden transition-[max-height] duration-200 max-w-[548px]  shadow-xl rounded-[4px]  border-2 border-transparent  bg-transparent ">
+                <div tabindex="1" class="status-value mt-[10px] max-w-[512px]  ml-2 p-3 flex flex-row font-inter font-[400] cursor-pointer text-[14px] text-slate-600 focus:bg-blue-100  focus:rounded-[4px]" value="Published">
+                    <p>
+                        Published
+                    </p>
+                    <svg class="mt-[5px] ml-3" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="5" cy="5" r="5" fill="#15803D"/>
+                </svg>
+
+                </div>
+                <div tabindex="2" class="status-value max-w-[512px]  ml-2 p-3 flex flex-row font-inter font-[400] text-[14px] cursor-pointer text-slate-600 focus:bg-blue-100  focus:rounded-[4px] " value="Scheduled">
+                    <p>
+                        Scheduled
+                    </p>
+                    <svg class="mt-[5px] ml-3" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="5" cy="5" r="5" fill="#1D4ED8"/>
+                </svg>
+
+
+                </div>
+                <div tabindex="3" class="status-value max-w-[512px]  ml-2 p-3 flex flex-row font-inter font-[400] text-[14px] cursor-pointer text-slate-600 focus:bg-blue-100  focus:rounded-[4px]" value="Published">
+                    <p>
+                        Draft
+                    </p>
+                    <svg class="mt-[5px] ml-3" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="5" cy="5" r="5" fill="#CA8A04"/>
+                </svg>
+
+
+                </div>
+                <div tabindex="4" class="status-value mb-[10px] max-w-[512px]  ml-2 p-3 flex flex-row font-inter font-[400] text-[14px] cursor-pointer text-slate-600 focus:bg-blue-100  focus:rounded-[4px]" value="Published">
+                    <p>
+                        Inactive
+                    </p>
+                    <svg class="mt-[5px] ml-3" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="5" cy="5" r="5" fill="#DC2626"/>
+                </svg>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script>
+        const statusBtn = document.querySelector(".status-btn")
+        const statusText = document.querySelector(".status-text")
+        const dropdown = document.querySelector(".status_dropdown")
+
+        const statusValues = document.querySelectorAll(".status-value")
+        statusBtn.addEventListener("click", ShowDorpDown);
+
+        function ShowDorpDown() {
+            dropdown.classList.toggle("active");
+
+            if (dropdown.classList.contains("active")) {
+
+                dropdown.classList.add("border-slate-300");
+                dropdown.classList.add("bg-white");
+                dropdown.style.maxHeight = dropdown.scrollHeight + "px"
+
+            } else {
+
+
+                dropdown.classList.remove("border-slate-300");
+                dropdown.classList.remove("bg-white");
+                dropdown.style.maxHeight = null;
+
+            }
+
+        }
+
+        statusValues.forEach(e => {
+            e.addEventListener("click", () => {
+                statusText.textContent = e.children[0].textContent;
+
+            });
+
+        })
+    </script>
+
+    <div class="ml-10 mt-52">
+
+
+        <h1 class="font-inter font-[500] text-[16px] mt-10 ">
+            Buisness Type
+        </h1>
+
+        <div class="relative cursor-pointer payBtn flex justify-between max-w-[548px] bg-slate-300 border-2 border-bod mt-10 rounded-[4px]">
+
+            <div class="status-text1 p-4 font-inter font-[400] text-[14px]  ">
+
+            </div>
+            <div class="p-4 ">
+                <svg class="" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </div>
+
+            <div class="status_dropdown1 absolute top-[50px] w-full max-h-0 overflow-hidden transition-[max-height] duration-200 max-w-[548px]  shadow-xl rounded-[4px]  border-2 border-transparent  bg-transparent ">
+                <div tabindex="1" class="status-value1 mt-[10px] max-w-[512px]  ml-2 p-3 flex flex-row items-center font-inter font-[400] cursor-pointer text-[14px] text-slate-600 focus:bg-blue-100  focus:rounded-[4px]" value="Published">
+                    <input class="w-4 h-4" type="checkbox" name="All" id="All">
+                    <p class="pl-3">
+                        All
+                    </p>
+
+
+                </div>
+                <div tabindex="2" class=" status-value1 max-w-[512px]  ml-2 p-3 flex flex-row items-center font-inter font-[400] text-[14px] cursor-pointer text-slate-600 focus:bg-blue-100  focus:rounded-[4px] " value="Scheduled">
+
+                    <input class="w-4 h-4" type="checkbox" name="Paypall" id="Paypall">
+                    <p class="pl-3">
+                        Paypall
+                    </p>
+
+
+
+                </div>
+                <div tabindex="3" class=" status-value1 max-w-[512px]  ml-2 p-3 flex flex-row items-center font-inter font-[400] text-[14px] cursor-pointer text-slate-600 focus:bg-blue-100  focus:rounded-[4px] " value="Scheduled">
+
+                    <input class="w-4 h-4" type="checkbox" name="Paypall" id="Paypall">
+                    <p class="pl-3">
+                        Credit Card ( Visa )
+                    </p>
+
+
+
+                </div>
+                <div tabindex="4" class=" status-value1 max-w-[512px]  ml-2 p-3 flex flex-row items-center font-inter font-[400] text-[14px] cursor-pointer text-slate-600 focus:bg-blue-100  focus:rounded-[4px] " value="Scheduled">
+
+                    <input class="w-4 h-4" type="checkbox" name="Paypall" id="Paypall">
+                    <p class="pl-3">
+                        Credit Card ( Master )
+                    </p>
+
+
+
+                </div>
+                <div tabindex="5" class=" status-value1 max-w-[512px]  ml-2 p-3 flex flex-row items-center font-inter font-[400] text-[14px] cursor-pointer text-slate-600 focus:bg-blue-100  focus:rounded-[4px] " value="Scheduled">
+
+                    <input class="w-4 h-4" type="checkbox" name="Paypall" id="Paypall">
+                    <p class="pl-3">
+                        Cash On Delivery
+                    </p>
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script>
+        const statusBtn1 = document.querySelector(".payBtn");
+
+        const statusText1 = document.querySelector(".status-text1");
+        const dropdown1 = document.querySelector(".status_dropdown1");
+
+        const statusValues1 = document.querySelectorAll(".status-value1")
+        statusBtn1.addEventListener("click", ShowDropDown);
+
+        function ShowDropDown() {
+            dropdown1.classList.toggle("active");
+
+            if (dropdown1.classList.contains("active")) {
+
+                dropdown1.classList.add("border-slate-300");
+                dropdown1.classList.add("bg-white");
+                dropdown1.style.maxHeight = dropdown1.scrollHeight + "px "
+
+            } else {
+
+
+                dropdown1.classList.remove("border-slate-300");
+                dropdown1.classList.remove("bg-white");
+                dropdown1.style.maxHeight = null;
+
+            }
+
+        }
+
+        statusValues1.forEach(e => {
+            e.addEventListener("click", () => {
+                e.classList.toggle('active')
+
+                if (e.classList.contains("active")) {
+
+                    e.children[0].checked = true;
+                    statusText1.textContent = e.children[1].textContent;
+                }
+                statusValues1.forEach(y => {
+                    if (y.classList.contains("active") && y != e) {
+                        y.classList.toggle("active");
+                        y.children[0].checked = false;
+                    }
+                })
+
+
+            });
+
+        })
+    </script>
+
+
+</body>
+
+</html>
