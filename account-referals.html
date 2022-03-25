@@ -9,6 +9,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+        <!--  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!--  -->
 
 </head>
 
@@ -1321,6 +1340,602 @@
                     </div>
                     <!-- Buttons -->
                     <!-- Form -->
+                    <div class="bg-white">
+      <!-------------------------Header----------------------------->
+      <div class="p-10">
+        <div class="flex">
+          <div>
+            <p class="text-xl font-semibold leading-tight text-gray-800">
+              Referral Description
+            </p>
+            <p class="text-sm leading-5 text-slate-600 pt-3">
+              A line that guides the user about the neccessary facts that might
+              be really useful and helpful . A line that guides the user about
+              the neccessary facts that might be really useful and helpful
+            </p>
+          </div>
+        </div>
+        <div class="pt-10 flex justify-between gap-7 lg:flex-row flex-col">
+          <div>
+            <p class="text-base font-semibold leading-4 text-slate-800">
+              Ways to use referral program
+            </p>
+            <p class="text-sm leading-5 text-slate-600 pt-3">
+              A line that guides the user about the neccessary facts that might
+              be really useful and helpful
+            </p>
+
+            <button
+              class="p-3 bg-blue-50 font-medium text-xs text-blue-700 hover:bg-blue-100 rounded mt-6"
+            >
+              Get Started
+            </button>
+          </div>
+          <div>
+            <p class="text-base font-semibold leading-4 text-slate-800">
+              Your referrel link
+            </p>
+            <p class="text-sm leading-5 text-slate-600 pt-3">
+              A line that guides the user about the neccessary facts that might
+              be really useful and helpful
+            </p>
+            <div class="flex gap-4 mt-6">
+              <div class="div p-3 bg-blue-50 rounded flex-1">
+                <p class="text-xs leading-3 text-gray-600" id="copylink">
+                  www.dummylink.com
+                </p>
+              </div>
+              <div class="div">
+                <button
+                  onclick="copylink()"
+                  class="p-3 bg-blue-50 font-medium text-xs text-blue-700 hover:bg-blue-100 rounded"
+                >
+                  Copy Link
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divs-container flex flex-wrap gap-7 mt-10">
+          <div class="border border-slate-300 py-7 px-10 rounded">
+            <p class="text-base font-medium leading-none text-slate-600">
+              Total Net Earnings
+            </p>
+            <p
+              class="text-2xl font-semibold leading-normal text-slate-800 mt-4"
+            >
+              $80,239
+            </p>
+          </div>
+          <div class="border border-slate-300 py-7 px-10 rounded">
+            <p class="text-base font-medium leading-none text-slate-600">
+              Total Balance
+            </p>
+            <p
+              class="text-2xl font-semibold leading-normal text-slate-800 mt-4"
+            >
+              $34,300
+            </p>
+          </div>
+          <div class="border border-slate-300 py-7 px-10 rounded">
+            <p class="text-base font-medium leading-none text-slate-600">
+              Average Deal Size
+            </p>
+            <p
+              class="text-2xl font-semibold leading-normal text-slate-800 mt-4"
+            >
+              $1000
+            </p>
+          </div>
+          <div class="border border-slate-300 py-7 px-10 rounded">
+            <p class="text-base font-medium leading-none text-slate-600">
+              Referrals Signups
+            </p>
+            <p
+              class="text-2xl font-semibold leading-normal text-slate-800 mt-4"
+            >
+              94
+            </p>
+          </div>
+        </div>
+      </div>
+      <!----------------------------Table ------------------------------->
+      <div class="flex flex-col w-full bg-white">
+        <div class="header flex flex-row justify-between items-center my-10">
+          <div class="div mx-10">
+            <p class="text-xl font-semibold leading-tight text-gray-800">
+              Transaction Details
+            </p>
+          </div>
+          <div class="div justify-between gap-6 lg:flex hidden">
+            <div
+                id="reportrange"
+                class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
+                style="cursor: pointer; padding: 5px 10px; width: fit-content"
+              >
+                <div class="flex items-center gap-2 py-2">
+                  <i class="fa fa-calendar"></i>&nbsp;
+                  <span id="fa-calendar">Pick a Date Range</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5.75L8 10.25L12.5 5.75"
+                      stroke="#2563EB"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            <div class="btn-div">
+              <button
+                class="py-[15px] px-5 bg-blue-700 text-white font-medium text-sm hover:bg-blue-600 w-[134px] rounded"
+              >
+                Export Report
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="whitespace-nowrap w-full">
+            <thead class="border-b border-slate-100">
+              <tr class="">
+                <th
+                  align="left"
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 pl-8 pr-6"
+                >
+                  Date
+                </th>
+
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 px-6"
+                >
+                  Description
+                </th>
+
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-left py-6 px-6"
+                >
+                  Order ID
+                </th>
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-right py-6 px-6"
+                >
+                  Percentage
+                </th>
+                <th
+                  class="text-base font-medium leading-none text-slate-600 text-right py-6 px-6"
+                >
+                  Profit
+                </th>
+              </tr>
+            </thead>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                28 / 03 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Milton Schiller
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                14.124.142.153
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p
+                    class="text-sm font-medium leading-none text-green-700 pl-1"
+                  >
+                    4.50%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 285.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                28 / 03 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Miguel Gleason
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                177.176.127.79
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p
+                    class="text-sm font-medium leading-none text-green-700 pl-1"
+                  >
+                    89.50%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 85.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                09 / 03 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Daryl Deckow
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                253.152.254.91
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p class="text-sm font-medium leading-none text-red-600 pl-1">
+                    1.20%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 89.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                18 / 04 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Mr. Delbert Abbott
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                233.75.69.255
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p
+                    class="text-sm font-medium leading-none text-green-700 pl-1"
+                  >
+                    62.90%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 90.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                22 / 05 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Homer Lang
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                155.103.153.83
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p
+                    class="text-sm font-medium leading-none text-green-700 pl-1"
+                  >
+                    9.50%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 124.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                23 / 06 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Luz Mitchell
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                69.90.122.95
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p class="text-sm font-medium leading-none text-red-600 pl-1">
+                    1.20%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 345.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                18 / 04 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Wendell Dibbert
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                35.32.54.217
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p
+                    class="text-sm font-medium leading-none text-green-700 pl-1"
+                  >
+                    4.50%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 200.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                09 / 03 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Harvey Konopelski
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                30.119.162.108
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p class="text-sm font-medium leading-none text-red-600 pl-1">
+                    0.20%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 189.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                18 / 04 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Cecil Prohaska
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                24.30.89.73
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p
+                    class="text-sm font-medium leading-none text-green-700 pl-1"
+                  >
+                    90.00%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 80.00
+              </td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td
+                class="text-sm font-medium leading-none text-slate-600 pl-8 pr-6"
+              >
+                01 / 02 / 2022
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6"
+              >
+                Bill Hayes
+              </td>
+
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-left py-7 px-6"
+              >
+                92.100.186.136
+              </td>
+              <td
+                class="text-sm leading-none text-slate-600 font-medium text-right py-7 px-6"
+              >
+                <div class="flex justify-end">
+                  <p
+                    class="text-sm font-medium leading-none text-green-700 pl-1"
+                  >
+                    4.50%
+                  </p>
+                </div>
+              </td>
+
+              <td
+                class="text-sm leading-none text-gray-800 font-semibold text-right py-7 px-6"
+              >
+                $ 50.00
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex w-full justify-end py-[38px]">
+          <div class="flex mr-12 items-center">
+            <div class="svg-container mr-[29px] cursor-pointer">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 1L1 7L7 13"
+                  stroke="#6B7280"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
+            </div>
+            <div
+              class="div border border-blue-700 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
+            </div>
+            <div
+              class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+            >
+              <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
+            </div>
+            <div class="svg-container ml-[29px] cursor-pointer">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 13L7 7L1 1"
+                  stroke="#1D4ED8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
                 </div>
                 <!-- Main page -->
@@ -1329,43 +1944,7 @@
         </div>
         <script src="./script/account-settings.js"></script>
         <script>
-            function hideme() {
-                document.getElementById("dealtype").style.display = "none";
-            }
-
-            function plusme(el) {
-                let currentValue = parseInt(el.parentElement.children[2].innerText);
-
-                el.parentElement.children[2].innerText = currentValue + 1000;
-            }
-            function minusme(el) {
-                let currentValue = parseInt(el.parentElement.children[2].innerText);
-                if (currentValue > 0) {
-                    el.parentElement.children[2].innerText = currentValue - 1000;
-                }
-            }
-
-            function hideme(el) {
-                const index = Array.from(el.parentElement.children).indexOf(el);
-
-                const arr2 = Array.from(el.parentElement.children);
-                arr2.forEach((head) => {
-                    head.children[0].style.stroke = "#475569";
-                    head.children[1].style.color = "#475569";
-                });
-                el.children[0].style.stroke = "#1D4ED8";
-                el.children[1].style.color = "#1D4ED8";
-
-                console.log(index);
-                const parentDiv = document.getElementById("parent-content-container");
-                const arr = Array.from(parentDiv.children);
-                arr.forEach((eliment) => {
-                    eliment.style.display = "none";
-                });
-                parentDiv.children[index].style.display = "flex";
-            }
-
-            function toggleInteraction() {
+          function toggleInteraction() {
                 document.getElementById("interaction-1").classList.toggle("hidden");
             }
         </script>
@@ -1503,6 +2082,59 @@
 
             }
         </style>
+         <style>
+      .daterangepicker .ranges li.active {
+        background-color: #dbeafe;
+        color: #1d4ed8;
+        font-weight: bold !important;
+      }
+
+      .daterangepicker .ranges li:hover {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges ul {
+        width: 187px;
+        padding: 16px 2px 16px 2px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
+          0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        border: none !important;
+      }
+
+      .daterangepicker td.active {
+        background-color: #1d4ed8 !important;
+        color: #ffffff !important;
+      }
+
+      .daterangepicker .calendar-table th,
+      .daterangepicker .calendar-table td {
+        color: #475569;
+      }
+
+      .daterangepicker td.in-range {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges li {
+        border-radius: 4px;
+      }
+
+      .daterangepicker.opensright:before {
+        opacity: 0;
+      }
+
+      .daterangepicker.opensright:after {
+        opacity: 0;
+      }
+
+      .daterangepicker .drp-buttons .btn:hover {
+        color: #1d4ed8;
+      }
+    </style>
+
+         <!-------------------------------Choose Date Range------------ -->
+        <script type="text/javascript" src="./script/choose-date-range.js"></script>
 </body>
 
 </html>
