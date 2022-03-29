@@ -404,9 +404,43 @@
                             Select a Team Member
                         </p>
                     </div>
-                    <input type="text" name="target-title" id=""
-                        class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
-                        placeholder="Select the member you want to assign the target to" />
+                 <div class="dropdown relative w-full mt-4">
+        <div
+          onclick="myWeight()"
+          class="weightdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="weightdropbtnspan text-sm text-slate-600">Select the member you want to assign the target to</span>
+          <svg
+            class="absolute weight-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="weightDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <a label="Gram">Ira Brown</a>
+          <a label="Kilogram">Levi Leuschke</a>
+          <a label="Ounce">Bridget Daniel</a>
+          <a label="Pound">Greg Bartoletti</a>
+          <a label="Stone">Ted Gulgowski</a>
+          <a label="Ton">Pearl Williamson</a>
+          <a label="Milligram">Milligram</a>
+          <a label="Microgram">Microgram</a>
+        </div>
+      </div>
+                   
                 </div>
                 <div class="input-group pt-6">
                     <div class="flex">
@@ -425,7 +459,7 @@
                             Time</p>
                         </p>
                     </div>
-                    <input type="text" name="target-title" id=""
+                    <input type="datetime-local" name="target-title" id=""
                         class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
                         placeholder="23 Sep 2023 , 02:40 PM " />
                 </div>
@@ -435,9 +469,20 @@
                         <p class="text-base font-medium leading-none text-gray-800">Target Tags</p>
                         </p>
                     </div>
-                    <input type="text" name="target-title" id=""
-                        class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
-                        placeholder="#tags" />
+                   <div onclick="setFocus()"
+        class="border cursor-text px-4 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full mt-4">
+        <!-- Meta Tgas -->
+        <div class="append-tags flex flex-wrap gap-4">
+
+        </div>
+        <!-- Meta Tgas -->
+        <!-- Input -->
+        <div>
+            <input onkeypress="appendSpan(this,event)" id="meta-enter"
+                class="appearance-none border-0 outline-none w-full" />
+        </div>
+        <!-- Input -->
+    </div>
                 </div>
                 <div class="flex justify-between items-center py-8">
                     <div class="div ">
@@ -4202,7 +4247,7 @@
         </div>
         <script src="./script/project-management.js"></script>
         <script src="./script/navigationScript.js"></script>
-<script src="./script/navigationScript.js"></script>
+
 
         <style>
             /* The switch - the box around the slider */
@@ -4450,6 +4495,7 @@
         </style>
            <!-------------------------------Choose Date Range------------ -->
         <script type="text/javascript" src="./script/choose-date-range.js"></script>
+        
           <script src="./script/dropdowns.js"></script>
 </body>
 
