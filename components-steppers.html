@@ -2259,7 +2259,7 @@
       <!--  -->
       <!--  -->
       <div class="p-7 shadow bg-slate-50 rounded pb-8 mt-7">
-        <p class="text-xl font-semibold leading-tight text-slate-800">
+        <p class="text-xl font-semibold leading-5 text-slate-800">
           Stepper 1
         </p>
         <p class="text-sm leading-none text-slate-600 pt-3">
@@ -2340,7 +2340,7 @@
         </div>
       </div>
       <div class="p-7 shadow bg-slate-50 rounded pb-8 mt-7">
-        <p class="text-xl font-semibold leading-tight text-slate-800">
+        <p class="text-xl font-semibold leading-5 text-slate-800">
           Stepper 2
         </p>
         <p class="text-sm leading-none text-slate-600 pt-3">
@@ -2408,7 +2408,7 @@
         </div>
       </div>
       <div class="p-7 shadow bg-slate-50 rounded pb-8 mt-7">
-        <p class="text-xl font-semibold leading-tight text-slate-800">
+        <p class="text-xl font-semibold leading-5 text-slate-800">
           Stepper 3
         </p>
         <p class="text-sm leading-none text-slate-600 pt-3">
@@ -2434,7 +2434,7 @@
             </div>
           </div>
           <div class="flex w-full mb-14 group">
-            <div class="relative second-item">
+            <div class="relative second-item education">
               <svg class="ring-[1px] ring-blue-700 border border-white rounded-full" width="40" height="40"
                 viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="white" />
@@ -2473,7 +2473,7 @@
             <div class="details-container pl-6">
               <p class="w-56 text-xs leading-3 text-slate-600">Step 03</p>
               <p class="w-56 text-base font-semibold leading-none text-slate-600 pt-1">
-                Education
+                Upload Resume
               </p>
               <p class="w-56 text-xs leading-3 text-slate-600 pt-2">Pending</p>
             </div>
@@ -2481,14 +2481,14 @@
         </div>
       </div>
       <div class="p-7 shadow bg-slate-50 rounded pb-8 mt-7">
-        <p class="text-xl font-semibold leading-tight text-slate-800">
+        <p class="text-xl font-semibold leading-5 text-slate-800">
           Stepper 4
         </p>
         <p class="text-sm leading-none text-slate-600 pt-3">
           It shows default button style
         </p>
         <div class="px-5 py-5 bg-white rounded shadow-md max-w-[1032px] mt-6 flex lg:flex-row flex-col gap-4">
-          <div class="flex w-full group forth-item relative items-center">
+          <div class="flex w-full group personal forth-item relative items-center">
             <div class="">
               <svg class="ring-[1px] ring-blue-700 border border-white rounded-full" width="40" height="40"
                 viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2505,7 +2505,7 @@
             </div>
           </div>
 
-          <div class="flex w-full group third-item relative items-center">
+          <div class="flex w-full group forth-item relative items-center">
             <div class="">
               <svg class="ring-[1px] ring-blue-700 border border-white rounded-full" class="" width="41" height="40"
                 viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2572,10 +2572,13 @@
     position: absolute;
     height: 100%;
     width: 1px;
-    background-color: #d1d5db;
+    background-color: #1D4ED8;
     top: 45px;
     left: 50%;
     z-index: 2;
+  }
+  .second-item.education::after{
+    background-color: #CBD5E1;
   }
 
   .third-item::after {
@@ -2594,10 +2597,18 @@
     position: absolute;
     height: 1px;
     width: 38%;
-    background-color: #d1d5db;
+    background-color: #CBD5E1;
     top: 50%;
     left: 60%;
     z-index: 2;
+  }
+  .fourth-item.personal::after {
+	  background-color: #475569;
+  }
+  @media screen and (max-width:1024px){
+	  .forth-item::after{
+		  display: none;
+	  }
   }
 </style>
 </body>

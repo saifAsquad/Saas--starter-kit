@@ -12,8 +12,7 @@
   border-radius: 10px;
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
 }
 .first-item::after {
