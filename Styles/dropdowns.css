@@ -240,7 +240,8 @@
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
     0px 4px 6px -1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 4px 8px 8px 4px;
+  padding: 4px 4px 4px 4px;
+
 }
 
 #tempDropdown a {
