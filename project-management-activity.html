@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+        <link rel="stylesheet" href="./Styles/dropdowns.css">
 </head>
 
 <body class="bg-gray-100 relative h-full">
@@ -322,7 +323,7 @@
     </div>
     <!-- Interaction -->
     <!-- Interaction2 -->
-    <div id="add-target"
+      <div id="add-target"
         class=" overflow-auto pt-8 bg-opacity-80 hidden    bg-gray-800 z-[200] flex justify-center fixed inset-0">
         <div class="blur-none div h-fit max-w-740px bg-white mx-auto rounded">
             <div class="p-10">
@@ -383,9 +384,43 @@
                             Select a Team Member
                         </p>
                     </div>
-                    <input type="text" name="target-title" id=""
-                        class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
-                        placeholder="Select the member you want to assign the target to" />
+                 <div class="dropdown relative w-full mt-4">
+        <div
+          onclick="myWeight()"
+          class="weightdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="weightdropbtnspan text-sm text-slate-600">Select the member you want to assign the target to</span>
+          <svg
+            class="absolute weight-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="weightDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <a label="Gram">Ira Brown</a>
+          <a label="Kilogram">Levi Leuschke</a>
+          <a label="Ounce">Bridget Daniel</a>
+          <a label="Pound">Greg Bartoletti</a>
+          <a label="Stone">Ted Gulgowski</a>
+          <a label="Ton">Pearl Williamson</a>
+          <a label="Milligram">Milligram</a>
+          <a label="Microgram">Microgram</a>
+        </div>
+      </div>
+                   
                 </div>
                 <div class="input-group pt-6">
                     <div class="flex">
@@ -404,7 +439,7 @@
                             Time</p>
                         </p>
                     </div>
-                    <input type="text" name="target-title" id=""
+                    <input type="datetime-local" name="target-title" id=""
                         class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
                         placeholder="23 Sep 2023 , 02:40 PM " />
                 </div>
@@ -414,9 +449,20 @@
                         <p class="text-base font-medium leading-none text-gray-800">Target Tags</p>
                         </p>
                     </div>
-                    <input type="text" name="target-title" id=""
-                        class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
-                        placeholder="#tags" />
+                   <div onclick="setFocus()"
+        class="border cursor-text px-4 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full mt-4">
+        <!-- Meta Tgas -->
+        <div class="append-tags flex flex-wrap gap-4">
+
+        </div>
+        <!-- Meta Tgas -->
+        <!-- Input -->
+        <div>
+            <input onkeypress="appendSpan(this,event)" id="meta-enter"
+                class="appearance-none border-0 outline-none w-full" />
+        </div>
+        <!-- Input -->
+    </div>
                 </div>
                 <div class="flex justify-between items-center py-8">
                     <div class="div ">
@@ -2910,14 +2956,16 @@
                             </div>
 
                             <!-- Buttons -->
-                            <div class="flex gap-3">
+                            <div class="flex gap-3 relative">
                                 <button onclick="toggleAddUser()"
                                     class="bg-blue-100  text-blue-700  text-xs font-medium py-2 px-4 hover:bg-blue-200 rounded-[4px]">Add
                                     User</button>
                                 <button onclick="toggleAddTarget()"
                                     class="bg-blue-700  text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]">Add
                                     Target</button>
-                                <button class="p-2 bg-blue-100 hover:bg-blue-200">
+                                <button
+                                onclick="toggleQuickActions()"
+                                class="p-2 bg-blue-100 hover:bg-blue-200 rounded">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -2930,6 +2978,86 @@
                                             d="M2.625 8.3125C3.34987 8.3125 3.9375 7.72487 3.9375 7C3.9375 6.27513 3.34987 5.6875 2.625 5.6875C1.90013 5.6875 1.3125 6.27513 1.3125 7C1.3125 7.72487 1.90013 8.3125 2.625 8.3125Z"
                                             fill="#475569" />
                                     </svg>
+                                      <!-- quick links -->
+                                        <div id="handleClick" class="hidden absolute top-8 right-0 max-w-[176px] w-full">
+                                            <div
+                                                class="dropdown  bg-white rounded border-b border-gray-200 shadow">
+                                                <div class="dropdown-content shadow border-t border-gray-200  py-2">
+                                                    <p class="text-left text-xs font-semibold leading-3 text-slate-800 px-3 py-3 border-b border-slate-200">
+                                                        Quick Actions
+                                                    </p>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Create Invoice
+                                                        </p>
+                                                    </a>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Generate Report
+                                                        </p>
+                                                    </a>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Payment
+                                                        </p>
+                                                    </a>
+                                                    <div onmouseover="show();" onmouseout="hide()"
+                                                        class="text-left relative flex 
+                                                        
+                                                        justify-between itemes-center hover:bg-blue-100 cursor-pointer group subscription hover:text-blue-700 hover:font-medium hover:rounded mx-1">
+                                                        <a href="#" class="">
+                                                            <p class=" sub text-xs leading-3 text-gray-600 p-2 group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
+                                                                Subscription
+                                                            </p>
+                                                        </a>
+                                                        <svg width="6"
+                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                                                            height="8" viewBox="0 0 6 8" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1.3125 7.375L4.6875 4L1.3125 0.625" stroke=""
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                        <div id="plans"
+                                                            class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:block">
+                                                            <div class="plan shadow border-t border-gray-200 bg-white px-1 py-2 rounded">
+                                                                <a href="#">
+                                                                    <p class="font-normal  text-xs leading-3 text-gray-600  p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Plans
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="font-normal  text-xs leading-3 text-gray-600  p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Bills
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="font-normal  text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Reports
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="font-normal 
+                                                                    text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Invoices
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="cr text-xs leading-3 font-normal text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Statements
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Settings
+                                                        </p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end -->
 
 
                                 </button>
@@ -3285,6 +3413,41 @@
                 target.classList.toggle("hidden");
             }
 
+
+              //meta tags
+             const tagdiv = document.querySelector('.append-tags')
+        function appendSpan(el, event) {
+            console.log(event.code)
+            if (event.code === 'Enter' && el.value.trim().length > 3) {
+                const span = document.createElement('span')
+                span.classList.add('bg-blue-100', 'rounded', 'py-1', 'px-2', 'text-xs', 'font-medium', 'text-blue-700', 'flex', 'items-center', 'justify-center', 'gap-1', "hover:opacity-90", 'cursor-pointer')
+                const spanText = document.createElement('p')
+                span.innerText += el.value
+                span.innerHTML += `
+                <svg onclick='deleteTag(this)' class='cursor-pointer mt-[2px] hover:opacity-70' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.625 8.625L3.375 3.375" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.625 3.375L3.375 8.625" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                `
+                tagdiv.appendChild(span)
+                el.value = ''
+            }
+
+        }
+
+        function deleteTag(el) {
+            el.parentElement.remove()
+        }
+
+        function setFocus() {
+            document.querySelector('#meta-enter').focus()
+        }
+
+        function toggleQuickActions(){
+    document.getElementById('handleClick').classList.toggle('hidden');
+}
+
         </script>
 
         <style>
@@ -3499,6 +3662,7 @@
                 background-color: #dbeafe;
             }
         </style>
+        <script src="./script/dropdowns.js"></script>
 </body>
 
 </html>
