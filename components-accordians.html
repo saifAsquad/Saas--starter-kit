@@ -2408,7 +2408,7 @@
                                 </div>
                             </div>
                         </button>
-                        <div class="panel max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out">
+                        <div class="panel max-h-0 transition-[max-height] rotate- duration-200 overflow-hidden ease-out">
                             <p class="text-slate-600 p-4 text-sm leading-6">
                                 There was a connection error that’s why the quiz was not created, so
                                 please try again or cancel to return.
@@ -2452,7 +2452,7 @@
                 );
                 this.children[0].children[1].classList.remove("text-slate-600");
                 this.children[0].children[1].classList.add("text-white");
-                this.children[0].children[1].children[0].classList.add("rotate-90");
+                this.children[0].children[1].children[0].classList.add("rotate-[270deg]");
                 // console.log(this.children[0].children[0].children[1]);
             } else {
                 this.classList.remove("bg-blue-700");
@@ -2470,7 +2470,7 @@
                 this.children[0].children[1].classList.add("text-slate-600");
                 this.children[0].children[1].classList.remove("text-white");
                 this.children[0].children[1].children[0].classList.remove(
-                    "rotate-90"
+                    "rotate-[270deg]"
                 );
                 // question.classList.remove("mb-4");
             }
