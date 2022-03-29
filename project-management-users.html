@@ -9,6 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
+      <!--  -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <!--  -->
 </head>
 
 <body class="bg-gray-100 relative h-full">
@@ -2955,14 +2962,16 @@
                             </div>
 
                             <!-- Buttons -->
-                            <div class="flex gap-3">
+                            <div class="flex gap-3 relative">
                                 <button onclick="toggleAddUser()"
                                     class="bg-blue-100  text-blue-700  text-xs font-medium py-2 px-4 hover:bg-blue-200 rounded-[4px]">Add
                                     User</button>
                                 <button onclick="toggleAddTarget()"
                                     class="bg-blue-700  text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]">Add
                                     Target</button>
-                                <button class="p-2 bg-blue-100 hover:bg-blue-200">
+                                     <button
+                                onclick="toggleQuickActions()"
+                                class="p-2 bg-blue-100 hover:bg-blue-200 rounded">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -2975,9 +2984,90 @@
                                             d="M2.625 8.3125C3.34987 8.3125 3.9375 7.72487 3.9375 7C3.9375 6.27513 3.34987 5.6875 2.625 5.6875C1.90013 5.6875 1.3125 6.27513 1.3125 7C1.3125 7.72487 1.90013 8.3125 2.625 8.3125Z"
                                             fill="#475569" />
                                     </svg>
+                                      <!-- quick links -->
+                                        <div id="handleClick" class="hidden absolute top-8 right-0 max-w-[176px] w-full">
+                                            <div
+                                                class="dropdown  bg-white rounded border-b border-gray-200 shadow">
+                                                <div class="dropdown-content shadow border-t border-gray-200  py-2">
+                                                    <p class="text-left text-xs font-semibold leading-3 text-slate-800 px-3 py-3 border-b border-slate-200">
+                                                        Quick Actions
+                                                    </p>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Create Invoice
+                                                        </p>
+                                                    </a>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Generate Report
+                                                        </p>
+                                                    </a>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Payment
+                                                        </p>
+                                                    </a>
+                                                    <div onmouseover="show();" onmouseout="hide()"
+                                                        class="text-left relative flex 
+                                                        
+                                                        justify-between itemes-center hover:bg-blue-100 cursor-pointer group subscription hover:text-blue-700 hover:font-medium hover:rounded mx-1">
+                                                        <a href="#" class="">
+                                                            <p class=" sub text-xs leading-3 text-gray-600 p-2 group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
+                                                                Subscription
+                                                            </p>
+                                                        </a>
+                                                        <svg width="6"
+                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                                                            height="8" viewBox="0 0 6 8" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1.3125 7.375L4.6875 4L1.3125 0.625" stroke=""
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                        <div id="plans"
+                                                            class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:block">
+                                                            <div class="plan shadow border-t border-gray-200 bg-white px-1 py-2 rounded">
+                                                                <a href="#">
+                                                                    <p class="font-normal  text-xs leading-3 text-gray-600  p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Plans
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="font-normal  text-xs leading-3 text-gray-600  p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Bills
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="font-normal  text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Reports
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="font-normal 
+                                                                    text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Invoices
+                                                                    </p>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <p class="cr text-xs leading-3 font-normal text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Statements
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#">
+                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                            Settings
+                                                        </p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end -->
 
 
                                 </button>
+                               
                             </div>
                         </div>
                         <!-- Buttonsss -->
@@ -3050,7 +3140,7 @@
                                 </p>
                             </div>
                             <div class="div mr-6 lg:block md:block hidden">
-                                <div class="mx-auto mt-6 w-full flex">
+                                <div class="mx-auto mt-6 w-full flex gap-3">
                                     <div class="flex border border-slate-400 rounded items-center">
                                         <input type="text" name="serach" id=""
                                             class="rounded py-[13px] px-4 border-none outline-none placeholder-slate-600 text-sm bg-inherit"
@@ -3066,56 +3156,20 @@
                                         </svg>
                                     </div>
 
-                                    <div
-                                        class="dropdown-one border rounded border-blue-700 w-full rounded ml-3 bg-inherit relative">
-                                        <button onclick="showDropDownMenu(this)"
-                                            class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-36 bg-inherit">
-                                            <span class="pr-4 font-medium text-blue-700 text-sm"
-                                                id="drop-down-content-setter">
-                                                Time
-                                            </span>
-                                            <svg width="16" height="16" viewBox="0 0 16 16"
-                                                class="absolute top-4 right-4 stroke-blue-700" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 6L8 10L4 6" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-
-                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-12 right-0 bg-white"
-                                            id="drop-down-div">
-                                            <a class="cursor-pointer" >
-                                                <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    Yesterday
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    This Week
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    Last Week
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    This Month
-                                                </p>
-                                            </a>
-                                            <a class="cursor-pointer">
-                                                <p class="text-sm leading-3 text-slate-600 py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
-                                                    onclick="swaptext(this)">
-                                                    Custom
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
+                                                    <div id="reportrange"
+                    class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700 "
+                    style="cursor: pointer; padding: 5px 10px; width: fit-content">
+                    <div class="flex items-center w-32 gap-2 py-2 relative">
+                      <i class="fa fa-calendar"></i>&nbsp;
+                      <span id="fa-calendar">Time</span>
+                      <svg
+                      class="absolute top-3 right-4"
+                      width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#2563EB" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
                                 </div>
                             </div>
                         </div>
@@ -3503,7 +3557,9 @@
         function setFocus() {
             document.querySelector('#meta-enter').focus()
         }
-            
+            function toggleQuickActions(){
+    document.getElementById('handleClick').classList.toggle('hidden');
+}
 
         </script>
 
@@ -3707,9 +3763,61 @@
                 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
                 background-color: #dbeafe;
             }
+
+                .daterangepicker .ranges li.active {
+            background-color: #DBEAFE;
+            color: #1D4ED8;
+            font-weight: bold !important;
+        }
+
+        .daterangepicker .ranges li:hover {
+            background-color: #DBEAFE;
+        }
+
+        .daterangepicker .ranges ul {
+            width: 187px;
+            padding: 16px 2px 16px 2px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            border: none !important;
+        }
+
+        .daterangepicker td.active {
+            background-color: #1D4ED8 !important;
+            color: #ffffff !important;
+        }
+
+        .daterangepicker .calendar-table th,
+        .daterangepicker .calendar-table td {
+            color: #475569;
+        }
+
+        .daterangepicker td.in-range {
+            background-color: #DBEAFE;
+        }
+
+        .daterangepicker .ranges li {
+            border-radius: 4px;
+        }
+
+
+
+        .daterangepicker.opensright:before {
+            opacity: 0;
+        }
+
+        .daterangepicker.opensright:after {
+            opacity: 0;
+        }
+
+        .daterangepicker .drp-buttons .btn:hover {
+            color: #1D4ED8;
+        }
         </style>
 
-        
+          <!-------------------------------Choose Date Range------------ -->
+    <script type="text/javascript" src="./script/Time.js"></script>
+
 
            <script src="./script/dropdowns.js"></script>
 </body>
