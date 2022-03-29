@@ -11,36 +11,36 @@
 </head>
 
 <body>
-    <div class="bg-slate-50 h-screen flex justify-center pt-10">
-        <div class="p-12 max-w-[547px] shadow rounded w-full bg-white">
-            <div class="head-logo mx-auto">
+    <div class="flex justify-center h-screen pt-10 pb-10 bg-slate-50" >
+        <div class="p-12 pb-0 max-w-[547px] shadow rounded w-full bg-white">
+            <div class="mx-auto head-logo">
                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Group%20811988.png" alt="" class="mx-auto" />
-                <p class="text-2xl font-semibold text-slate-800 pt-6 text-center">
+                <p class="pt-6 text-2xl font-semibold leading-6 text-center text-slate-800">
                     Sign Up Now
                 </p>
-                <p class="text-sm leading-none text-slate-600 mt-4 text-center">
-                    Don’t have an account?
+                <p class="mt-4 text-sm leading-none text-center text-slate-600">
+                    Already have an account? Click here 
                     <a href="pages-login.html" class="text-blue-700 border-b border-blue-700 border-dashed">
                         Click here</a>
-                    to Sign up
+                        to Sign In
                 </p>
             </div>
-            <div class="input-group mt-8">
+            <div class="mt-8 input-group">
                 <p class="text-base font-medium leading-none text-slate-800">Email</p>
                 <input type="text" name="" id=""
-                    class="p-4 outline-none placeholder:text-base placeholder:text-slate-600 focus:bg-gray-50 mt-2 w-full border border-slate-300 rounded"
+                    class="w-full p-4 mt-2 border rounded outline-none placeholder:text-base placeholder:text-slate-600 focus:bg-gray-50 border-slate-300"
                     placeholder="Hoyt_Blick@mail.com" />
             </div>
-            <div class="input-group mt-6">
+            <div class="mt-6 input-group">
                 <p class="text-base font-medium leading-none text-slate-800">
                     Password
                 </p>
 
-                <div class="border border-slate-300 rounded mt-2 flex items-center">
+                <div class="flex items-center mt-2 border rounded border-slate-300">
                     <input type="password" name="" id="password"
-                        class="p-4 outline-none placeholder:text-base placeholder:text-slate-600 focus:bg-gray-50 w-full rounded"
+                        class="w-full p-4 rounded outline-none placeholder:text-base placeholder:text-slate-600 focus:bg-gray-50"
                         value="" placeholder="" />
-                    <div class="div cursor-pointer hidden" id="openeyesvg">
+                    <div class="hidden cursor-pointer div" id="openeyesvg">
                         <svg width="24" class="ml-2 mr-4" height="16" viewBox="0 0 24 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -48,7 +48,7 @@
                                 fill="#475569" />
                         </svg>
                     </div>
-                    <div class="div cursor-pointer" id="closeeyesvg">
+                    <div class="cursor-pointer div" id="closeeyesvg">
                         <svg class="ml-2 mr-4" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -77,7 +77,7 @@
                         fill="#16A34A" />
                 </svg>
 
-                <p class="text-sm leading-none text-slate-600 pl-2">
+                <p class="pl-2 text-sm leading-none text-slate-600">
                     Use 8 or more characters
                 </p>
             </div>
@@ -88,33 +88,33 @@
                         fill="#16A34A" />
                 </svg>
 
-                <p class="text-sm leading-none text-slate-600 pl-2">
+                <p class="pl-2 text-sm leading-none text-slate-600">
                     Use letters, numbers and symbols
                 </p>
             </div>
-            <div class="input-group mt-6">
+            <div class="mt-6 input-group">
                 <p class="text-base font-medium leading-none text-slate-800">
                     Confirm Password
                 </p>
 
-                <div class="border border-slate-300 rounded mt-2 flex items-center">
+                <div class="flex items-center mt-2 border rounded border-slate-300">
                     <input type="password" name="" id="password"
-                        class="p-4 outline-none placeholder:text-base placeholder:text-slate-600 focus:bg-gray-50 w-full rounded"
+                        class="w-full p-4 rounded outline-none placeholder:text-base placeholder:text-slate-600 focus:bg-gray-50"
                         value="" placeholder="" />
                 </div>
             </div>
-            <div class="flex mt-4 items-center">
-                <input type="checkbox" name="termsandConditions" id="" class="h-5 w-5 accent-blue-700" />
+            <div class="flex items-center mt-4">
+                <input type="checkbox" name="termsandConditions" id="" class="w-5 h-5 border-none accent-blue-700" />
 
-                <p class="text-sm leading-none pl-3">
+                <p class="pl-3 text-sm leading-none">
                     I agree with the
                     <a href="" class="text-blue-700">terms and conditions</a>
                 </p>
             </div>
 
-            <div class="input-group mt-12">
+            <div class="mt-12 input-group">
                 <button
-                    class="bg-blue-700 text-white text-base font-medium py-4 text-center w-full hover:bg-blue-600 rounded">
+                    class="w-full py-4 text-base font-medium leading-4 text-center text-white bg-blue-700 rounded hover:bg-blue-600">
                     Create Account
                 </button>
             </div>
