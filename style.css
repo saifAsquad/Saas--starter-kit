@@ -26,3 +26,13 @@ body {
   left: 50%;
   z-index: -1;
 }
+.searchDropDown,
+.notiDropDown,
+.avatarDropDown {
+  z-index: -1;
+}
+.searchDropDown.active,
+.notiDropDown.active,
+.avatarDropDown.active {
+  z-index: 1;
+}
