@@ -8,6 +8,7 @@
     <title>Dashboard Template</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="./Styles/dropdowns.css">
 </head>
 
 <body class="bg-gray-100 relative h-full"></body>
@@ -1283,17 +1284,88 @@
                 <div class="mt-10">
                     <p class="text-xl font-semibold leading-tight text-gray-800">General Product Details</p>
                     <div class="grid grid-cols-2 w-full gap-7 mt-7 ">
-                        <div>
+                        <div >
                             <p class="text-base font-medium leading-none text-gray-800">Theme</p>
-                            <input
-                                class="mt-4 focus:bg-gray-50 rounded border border-gray-300 w-full outline-none p-4 h-12">
+                           <!---Dropdown-->
+                             <div class="dropdown mt-3 relative">
+        <div
+          onclick="myLen()"
+          class="lendropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="lendropbtnspan"> </span>
+          <svg
+            class="absolute len-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="lenDropdown"
+          class="dropdown-content absolute w-full bg-white hidden  overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <a label="Theme 1">Theme 1</a>
+            <a label="Theme 2">Theme 2</a>
+            <a label="Theme 3">Theme 3</a>
+            <a label="Theme 4">Theme 4</a>
+            <a label="Theme 5">Theme 5</a>
+            <a label="Theme 6">Theme 6</a>
+
+         
+        </div>
+                             </div>
+                          
                             <p class="text-xs leading-3 text-gray-600 mt-3">Set the product theme of your liking</p>
                         </div>
 
                         <div>
                             <p class="text-base font-medium leading-none text-gray-800">Default Layout</p>
-                            <input
-                                class="mt-4 rounded border focus:bg-gray-50 border-gray-300 w-full outline-none p-4 h-12">
+                            <div class="dropdown relative  mt-3">
+        <div
+          onclick="myWeight()"
+          class="weightdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="weightdropbtnspan"></span>
+          <svg
+            class="absolute weight-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="weightDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <a label="Layout 1">Layout 1</a>
+            <a label="Layout 2">Layout 2</a>
+            <a label="Layout 3">Layout 3</a>
+            <a label="Layout 4">Layout 4</a>
+            <a label="Layout 5">Layout 5</a>
+            <a label="Layout 6">Layout 6</a>
+           
+          
+    
+        </div>
+      </div>
                             <p class="text-xs leading-3 text-gray-600 mt-3">Select a layout to show your product display
                             </p>
                         </div>
@@ -1402,6 +1474,7 @@
     <!-- Body -->
 </div>
 <script src="/script/navigationScript.js"></script>
+    <script src="./script/dropdowns.js"></script>
 </body>
 
 </html>

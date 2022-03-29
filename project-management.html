@@ -8,6 +8,27 @@
     <title>Dashboard Template</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+     <link rel="stylesheet" href="./Styles/dropdowns.css">
+
+       <!--  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!--  -->
 </head>
 
 <body class="bg-gray-100 relative h-full">
@@ -2192,7 +2213,7 @@
                                     </p>
                                 </div>
                                 <div class="div mr-6 lg:block md:block hidden">
-                                    <div class="mx-auto mt-6 w-full flex">
+                                    <div class="mx-auto mt-6 w-full flex gap-4">
                                         <div class="flex border border-slate-400 rounded items-center">
                                             <input type="text" name="serach" id=""
                                                 class="rounded py-[13px] px-4 border-none outline-none placeholder-slate-600 text-sm"
@@ -2207,83 +2228,81 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </div>
-                                        <div
-                                            class="dropdown-one border rounded border-blue-700 w-full bg-white rounded ml-3">
-                                            <button
-                                                class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-auto">
-                                                <span class="pr-4 font-medium text-blue-700 text-sm">
-                                                    Status
-                                                </span>
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                    class="absolute top-4 right-4 stroke-blue-700" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 6L8 10L4 6" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
+                                         <div
+                                        class="dropdown-one border rounded border-blue-700 w-36 rounded  bg-inherit relative">
+                                        <button onclick="showDropDownMenu(this)"
+                                            class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-[146px] bg-inherit ">
+                                            <span class="pr-4 font-medium text-blue-700 text-sm"
+                                                id="drop-down-content-setter">
+                                                Status
+                                            </span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                class="absolute top-4 right-4 stroke-blue-700" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 6L8 10L4 6" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
 
-                                            <div class="dwy rounded w-full shadow border-t border-gray-200">
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">
-                                                        Published
-                                                    </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">
-                                                        Processing
-                                                    </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">Pending</p>
-                                                </a>
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">
-                                                        Inactive
-                                                    </p>
-                                                </a>
-                                            </div>
+                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
+                                            id="drop-down-div">
+                                            <a class="cursor-pointer" >
+                                                <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                Completed
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                    Processing
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                   Pending
+                                                </p>
+                                            </a>
+                                             <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                   Failed
+                                                </p>
+                                            </a>
+                                             <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                  Refunded
+                                                </p>
+                                            </a>
+                                           
                                         </div>
-                                        <div
-                                            class="dropdown-one border rounded border-blue-700 w-full bg-white rounded ml-3">
-                                            <button
-                                                class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-auto">
-                                                <span class="pr-4 font-medium text-blue-700 text-sm">
-                                                    Time
-                                                </span>
-                                                <svg width="16" height="16" viewBox="0 0 16 16"
-                                                    class="absolute top-4 right-4 stroke-blue-700" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 6L8 10L4 6" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-
-                                            <div class="dwy rounded w-full shadow border-t border-gray-200">
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">
-                                                        Yesterday
-                                                    </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">
-                                                        This Week
-                                                    </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">
-                                                        Last Week
-                                                    </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">
-                                                        This Month
-                                                    </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p class="cr text-xs leading-3 text-slate-600">Custom</p>
-                                                </a>
-                                            </div>
-                                        </div>
+                                    </div>
+                                                                   <div
+                id="reportrange"
+                class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
+                style="cursor: pointer; padding: 5px 10px; width:100%"
+              >
+                <div class="flex items-center gap-2 py-2">
+                  <i class="fa fa-calendar"></i>&nbsp;
+                  <span id="fa-calendar">Pick a Date Range</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.5 5.75L8 10.25L12.5 5.75"
+                      stroke="#2563EB"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
                                     </div>
                                 </div>
                             </div>
@@ -3202,7 +3221,53 @@
                 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
                 background-color: #dbeafe;
             }
+
+              .daterangepicker .ranges li:hover {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges ul {
+        width: 187px;
+        padding: 16px 2px 16px 2px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
+          0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        border: none !important;
+      }
+
+      .daterangepicker td.active {
+        background-color: #1d4ed8 !important;
+        color: #ffffff !important;
+      }
+
+      .daterangepicker .calendar-table th,
+      .daterangepicker .calendar-table td {
+        color: #475569;
+      }
+
+      .daterangepicker td.in-range {
+        background-color: #dbeafe;
+      }
+
+      .daterangepicker .ranges li {
+        border-radius: 4px;
+      }
+
+      .daterangepicker.opensright:before {
+        opacity: 0;
+      }
+
+      .daterangepicker.opensright:after {
+        opacity: 0;
+      }
+
+      .daterangepicker .drp-buttons .btn:hover {
+        color: #1d4ed8;
+      }
         </style>
+           <!-------------------------------Choose Date Range------------ -->
+        <script type="text/javascript" src="./script/choose-date-range.js"></script>
+          <script src="./script/dropdowns.js"></script>
 </body>
 
 </html>

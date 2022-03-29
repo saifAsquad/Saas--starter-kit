@@ -8,6 +8,13 @@
     <title>Dashboard Template</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+     <link rel="stylesheet" href="./Styles/dropdowns.css">
+          <!--  -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <!--  -->
 </head>
 
 <body class="bg-gray-100 relative h-full"></body>
@@ -1167,68 +1174,111 @@
                             <p class="text-base leading-none text-slate-800 mb-4">
                                 Payment Method
                             </p>
-                            <div class="dropdown-one border rounded border-gray-300 w-full bg-white rounded">
-                                <button
-                                    class="dropbtn-one text-slate-600 p-4 flex items-center justify-between w-full relative">
-                                    Select an option
-                                    <svg width="16" height="16" viewBox="0 0 16 16" class="absolute top-5 right-4"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 6L8 10L4 6" stroke="#4B5563" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
+                               <div
+                                        class="dropdown-one border rounded border-slate-300 w-full rounded  bg-inherit relative">
+                                        <button onclick="showDropDownMenu(this)"
+                                            class="dropbtn-one  px-5 py-[12px] flex items-center justify-between bg-inherit m-0">
+                                            <span class="pr-4 text-slate-600 text-sm"
+                                                id="drop-down-content-setter">
+                                                Select an option
+                                            </span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                class="absolute top-4 right-4 stroke-slate-600" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 6L8 10L4 6" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
 
-                                <div class="dwy rounded w-full shadow border-t border-gray-200">
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-gray-600">Pakistan</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-gray-600">USA</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-gray-600">
-                                            Australia
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
+                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
+                                            id="drop-down-div">
+                                            <a class="cursor-pointer" >
+                                                <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                Pay Pal
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                   Credit Card ( Visa )
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                  Credit Card ( Master )
+                                                </p>
+                                            </a>
+                                             <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                   Cash On Delivery
+                                                </p>
+                                            </a>
+                                            
+                                           
+                                        </div>
+                                    </div>
                         </div>
                         <div class="ml-[42px] col w-full">
                             <p class="text-base leading-none text-slate-800 mb-4">
                                 Shipping Method
                             </p>
-                            <div class="dropdown-one border rounded border-gray-300 w-full bg-white rounded">
-                                <button
-                                    class="dropbtn-one text-slate-600 p-4 flex items-center justify-between w-full relative">
-                                    Select an option
-                                    <svg width="16" height="16" viewBox="0 0 16 16" class="absolute top-5 right-4"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 6L8 10L4 6" stroke="#4B5563" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
+                             <div
+                                        class="dropdown-one border rounded border-slate-300 w-full rounded  bg-inherit relative">
+                                        <button onclick="showDropDownMenu(this)"
+                                            class="dropbtn-one  px-5 py-[12px] flex items-center justify-between bg-inherit m-0">
+                                            <span class="pr-4 text-slate-600 text-sm"
+                                                id="drop-down-content-setter2">
+                                                Select an option
+                                            </span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                class="absolute top-4 right-4 stroke-slate-600" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 6L8 10L4 6" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
 
-                                <div class="dwy rounded w-full shadow border-t border-gray-200">
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-gray-600">Pakistan</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-gray-600">USA</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-gray-600">
-                                            Australia
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
+                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
+                                            id="drop-down-div2">
+                                            <a class="cursor-pointer" >
+                                                <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext2(this)">
+                                              N/A
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext2(this)">
+                                                  Standard Rate
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext2(this)">
+                                                Express Rate
+                                                </p>
+                                            </a>
+                                             <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext2(this)">
+                                                   Speed Overnight Rate
+                                                </p>
+                                            </a>
+                                            
+                                           
+                                        </div>
+                                    </div>
                         </div>
                         <div class="ml-[42px] col w-full">
                             <p class="text-base leading-none text-slate-800 mb-4">Order Date</p>
                             <div class="dropdown-one border rounded border-gray-300 w-full bg-white rounded">
                                 <button
                                     class="dropbtn-one text-slate-600  flex items-center justify-between w-full relative">
-                                    <input type="date" class="appearance-none w-full p-4 outline-none">
+                                    <input type="date" class="appearance-none w-full p-2
+                                     outline-none">
                                 </button>
                             </div>
                         </div>
@@ -1669,13 +1719,421 @@
                     <div class="flex my-8">
                         <div class="flex flex-col input-group w-full">
                             <label class="text-base leading-none text-gray-800 mb-4">City</label>
-                            <input type="text" name="" id=""
-                                class="p-2 border border-slate-300 w-full outline-none focus:bg-gray-50 rounded w-full" />
+                                            <!---------------------------------Cities DropDown------------------------------------>
+      <div class="dropdown relative w-full">
+        <div
+          onclick="myCities()"
+          class="citydropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="citydropbtnspan"> </span>
+          <svg
+            class="absolute city-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="cityDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
+            id="cityInput"
+            onkeyup="filterCities()"
+          />
+     
+
+          <a label="Abu Dhabi">Abu Dhabi</a>
+          <a label="Amman">Amman</a>
+          <a label="Ankara">Ankara</a>
+          <a label="Bangkok">Bangkok</a>
+          <a label="Beijing">Beijing</a>
+          <a label="Bogota">Bogota</a>
+          <a label="Bratislava">Bratislava</a>
+          <a label="Brussels">Brussels</a>
+          <a label="Bucharest">Bucharest</a>
+          <a label="Budapest">Budapest</a>
+          <a label="Cairo">Cairo</a>
+          <a label="Chiang Mai">Chiang Mai</a>
+          <a label="Copenhagen">Copenhagen</a>
+          <a label="Dakar">Dakar</a>
+          <a label="Damascus">Damascus</a>
+          <a label="Dhaka">Dhaka</a>
+          <a label="Doha">Doha</a>
+          <a label="Dubai">Dubai</a>
+          <a label="Dublin">Dublin</a>
+          <a label="Dusseldorf">Dusseldorf</a>
+          <a label="Frankfurt">Frankfurt</a>
+          <a label="Geneva">Geneva</a>
+          <a label="Hanoi">Hanoi</a>
+          <a label="Helsinki">Helsinki</a>
+          <a label="Hong Kong">Hong Kong</a>
+          <a label="Istanbul">Istanbul</a>
+          <a label="Jakarta">Jakarta</a>
+          <a label="Jerusalem">Jerusalem</a>
+          <a label="Johannesburg">Johannesburg</a>
+          <a label="Kiev">Kiev</a>
+          <a label="Kuala Lumpur">Kuala Lumpur</a>
+          <a label="Kuwait City">Kuwait City</a>
+          <a label="Lahore">Lahore</a>
+          <a label="Lima">Lima</a>
+          <a label="Lisbon">Lisbon</a>
+          <a label="London">London</a>
+          <a label="Los Angeles">Los Angeles</a>
+          <a label="Luxembourg">Luxembourg</a>
+          <a label="Lyon">Lyon</a>
+          <a label="Madrid">Madrid</a>
+          <a label="Manila">Manila</a>
+          <a label="Marseille">Marseille</a>
+          <a label="Mexico City">Mexico City</a>
+          <a label="Miami">Miami</a>
+          <a label="Milan">Milan</a>
+          <a label="Montreal">Montreal</a>
+          <a label="Moscow">Moscow</a>
+          <a label="Mumbai">Mumbai</a>
+          <a label="Munich">Munich</a>
+          <a label="New York">New York</a>
+          <a label="Osaka">Osaka</a>
+          <a label="Paris">Paris</a>
+          <a label="Prague">Prague</a>
+          <a label="Reykjavik">Reykjavik</a>
+          <a label="Rome">Rome</a>
+          <a label="Santiago">Santiago</a>
+          <a label="Sao Paulo">Sao Paulo</a>
+          <a label="Seoul">Seoul</a>
+          <a label="Shanghai">Shanghai</a>
+          <a label="Singapore">Singapore</a>
+          <a label="Sofia">Sofia</a>
+          <a label="Stockholm">Stockholm</a>
+          <a label="Sydney">Sydney</a>
+          <a label="Taipei">Taipei</a>
+          <a label="Tehran">Tehran</a>
+          <a label="Tokyo">Tokyo</a>
+          <a label="Toronto">Toronto</a>
+          <a label="Vienna">Vienna</a>
+          <a label="Warsaw">Warsaw</a>
+          <a label="Washington">Washington</a>
+          <a label="Zurich">Zurich</a>
+        </div>
+      </div>
                         </div>
                         <div class="flex flex-col input-group w-full ml-7">
                             <label class="text-base leading-none text-gray-800 mb-4">Country</label>
-                            <input type="text" name="" id=""
-                                class="p-2 border border-slate-300 w-full outline-none focus:bg-gray-50 rounded w-full" />
+                                          <div class="dropdown bg-white relative w-full">
+        <div
+          onclick="myFunction()"
+          class="dropbtn broder-slate-300 relative border rounded max-w-[712px] bg-white text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="dropbtnspan"> </span>
+          <svg
+            class="absolute arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="myDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
+            id="myInput"
+            onkeyup="filterFunction()"
+          />
+          <a> </a>
+          <a label="Algeria">Algeria</a>
+          <a label="Angola">Angola</a>
+          <a label="Benin">Benin</a>
+          <a label="Botswana">Botswana</a>
+          <a label="Burkina Faso">Burkina Faso</a>
+          <a label="Burundi">Burundi</a>
+          <a label="Cameroon">Cameroon</a>
+          <a label="Cape Verde">Cape Verde</a>
+          <a label="Central African Republic">Central African Republic</a>
+          <a label="Chad">Chad</a>
+          <a label="Comoros">Comoros</a>
+          <a label="Congo - Brazzaville">Congo - Brazzaville</a>
+          <a label="Congo - Kinshasa">Congo - Kinshasa</a>
+          <a label="Côte d’Ivoire">Côte d’Ivoire</a>
+          <a label="Djibouti">Djibouti</a>
+          <a label="Egypt">Egypt</a>
+          <a label="Equatorial Guinea">Equatorial Guinea</a>
+          <a label="Eritrea">Eritrea</a>
+          <a label="Ethiopia">Ethiopia</a>
+          <a label="Gabon">Gabon</a>
+          <a label="Gambia">Gambia</a>
+          <a label="Ghana">Ghana</a>
+          <a label="Guinea">Guinea</a>
+          <a label="Guinea-Bissau">Guinea-Bissau</a>
+          <a label="Kenya">Kenya</a>
+          <a label="Lesotho">Lesotho</a>
+          <a label="Liberia">Liberia</a>
+          <a label="Libya">Libya</a>
+          <a label="Madagascar">Madagascar</a>
+          <a label="Malawi">Malawi</a>
+          <a label="Mali">Mali</a>
+          <a label="Mauritania">Mauritania</a>
+          <a label="Mauritius">Mauritius</a>
+          <a label="Mayotte">Mayotte</a>
+          <a label="Morocco">Morocco</a>
+          <a label="Mozambique">Mozambique</a>
+          <a label="Namibia">Namibia</a>
+          <a label="Niger">Niger</a>
+          <a label="Nigeria">Nigeria</a>
+          <a label="Rwanda">Rwanda</a>
+          <a label="Réunion">Réunion</a>
+          <a label="Saint Helena">Saint Helena</a>
+          <a label="Senegal">Senegal</a>
+          <a label="Seychelles">Seychelles</a>
+          <a label="Sierra Leone">Sierra Leone</a>
+          <a label="Somalia">Somalia</a>
+          <a label="South Africa">South Africa</a>
+          <a label="Sudan">Sudan</a>
+          <a label="Swaziland">Swaziland</a>
+          <a label="São Tomé and Príncipe">São Tomé and Príncipe</a>
+          <a label="Tanzania">Tanzania</a>
+          <a label="Togo">Togo</a>
+          <a label="Tunisia">Tunisia</a>
+          <a label="Uganda">Uganda</a>
+          <a label="Western Sahara">Western Sahara</a>
+          <a label="Zambia">Zambia</a>
+          <a label="Zimbabwe">Zimbabwe</a>
+          <a label="Anguilla">Anguilla</a>
+          <a label="Antigua and Barbuda">Antigua and Barbuda</a>
+          <a label="Argentina">Argentina</a>
+          <a label="Aruba">Aruba</a>
+          <a label="Bahamas">Bahamas</a>
+          <a label="Barbados">Barbados</a>
+          <a label="Belize">Belize</a>
+          <a label="Bermuda">Bermuda</a>
+          <a label="Bolivia">Bolivia</a>
+          <a label="Brazil">Brazil</a>
+          <a label="British Virgin Islands">British Virgin Islands</a>
+          <a label="Canada">Canada</a>
+          <a label="Cayman Islands">Cayman Islands</a>
+          <a label="Chile">Chile</a>
+          <a label="Colombia">Colombia</a>
+          <a label="Costa Rica">Costa Rica</a>
+          <a label="Cuba">Cuba</a>
+          <a label="Dominica">Dominica</a>
+          <a label="Dominican Republic">Dominican Republic</a>
+          <a label="Ecuador">Ecuador</a>
+          <a label="El Salvador">El Salvador</a>
+          <a label="Falkland Islands">Falkland Islands</a>
+          <a label="French Guiana">French Guiana</a>
+          <a label="Greenland">Greenland</a>
+          <a label="Grenada">Grenada</a>
+          <a label="Guadeloupe">Guadeloupe</a>
+          <a label="Guatemala">Guatemala</a>
+          <a label="Guyana">Guyana</a>
+          <a label="Haiti">Haiti</a>
+          <a label="Honduras">Honduras</a>
+          <a label="Jamaica">Jamaica</a>
+          <a label="Martinique">Martinique</a>
+          <a label="Mexico">Mexico</a>
+          <a label="Montserrat">Montserrat</a>
+          <a label="Netherlands Antilles">Netherlands Antilles</a>
+          <a label="Nicaragua">Nicaragua</a>
+          <a label="Panama">Panama</a>
+          <a label="Paraguay">Paraguay</a>
+          <a label="Peru">Peru</a>
+          <a label="Puerto Rico">Puerto Rico</a>
+          <a label="Saint Barthélemy">Saint Barthélemy</a>
+          <a label="Saint Kitts and Nevis">Saint Kitts and Nevis</a>
+          <a label="Saint Lucia">Saint Lucia</a>
+          <a label="Saint Martin">Saint Martin</a>
+          <a label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</a>
+          <a label="Saint Vincent and the Grenadines"
+            >Saint Vincent and the Grenadines</a
+          >
+          <a label="Suriname">Suriname</a>
+          <a label="Trinidad and Tobago">Trinidad and Tobago</a>
+          <a label="Turks and Caicos Islands">Turks and Caicos Islands</a>
+          <a label="U.S. Virgin Islands">U.S. Virgin Islands</a>
+          <a label="United States">United States</a>
+          <a label="Uruguay">Uruguay</a>
+          <a label="Venezuela">Venezuela</a>
+          <a label="Afghanistan">Afghanistan</a>
+          <a label="Armenia">Armenia</a>
+          <a label="Azerbaijan">Azerbaijan</a>
+          <a label="Bahrain">Bahrain</a>
+          <a label="Bangladesh">Bangladesh</a>
+          <a label="Bhutan">Bhutan</a>
+          <a label="Brunei">Brunei</a>
+          <a label="Cambodia">Cambodia</a>
+          <a label="China">China</a>
+          <a label="Georgia">Georgia</a>
+          <a label="Hong Kong SAR China">Hong Kong SAR China</a>
+          <a label="India">India</a>
+          <a label="Indonesia">Indonesia</a>
+          <a label="Iran">Iran</a>
+          <a label="Iraq">Iraq</a>
+          <a label="Israel">Israel</a>
+          <a label="Japan">Japan</a>
+          <a label="Jordan">Jordan</a>
+          <a label="Kazakhstan">Kazakhstan</a>
+          <a label="Kuwait">Kuwait</a>
+          <a label="Kyrgyzstan">Kyrgyzstan</a>
+          <a label="Laos">Laos</a>
+          <a label="Lebanon">Lebanon</a>
+          <a label="Macau SAR China">Macau SAR China</a>
+          <a label="Malaysia">Malaysia</a>
+          <a label="Maldives">Maldives</a>
+          <a label="Mongolia">Mongolia</a>
+          <a label="Myanmar [Burma]">Myanmar [Burma]</a>
+          <a label="Nepal">Nepal</a>
+          <a label="Neutral Zone">Neutral Zone</a>
+          <a label="North Korea">North Korea</a>
+          <a label="Oman">Oman</a>
+          <a label="Pakistan">Pakistan</a>
+          <a label="Palestinian Territories">Palestinian Territories</a>
+          <a label="People's Democratic Republic of Yemen"
+            >People's Democratic Republic of Yemen
+          </a>
+          <a label="Philippines">Philippines</a>
+          <a label="Qatar">Qatar</a>
+          <a label="Saudi Arabia">Saudi Arabia</a>
+          <a label="Singapore">Singapore</a>
+          <a label="South Korea">South Korea</a>
+          <a label="Sri Lanka">Sri Lanka</a>
+          <a label="Syria">Syria</a>
+          <a label="Taiwan">Taiwan</a>
+          <a label="Tajikistan">Tajikistan</a>
+          <a label="Thailand">Thailand</a>
+          <a label="Timor-Leste">Timor-Leste</a>
+          <a label="Turkey">Turkey</a>
+          <a label="Turkmenistan">Turkmenistan</a>
+          <a label="United Arab Emirates">United Arab Emirates</a>
+          <a label="Uzbekistan">Uzbekistan</a>
+          <a label="Vietnam">Vietnam</a>
+          <a label="Yemen">Yemen</a>
+          <a label="Albania">Albania</a>
+          <a label="Andorra">Andorra</a>
+          <a label="Austria">Austria</a>
+          <a label="Belarus">Belarus</a>
+          <a label="Belgium">Belgium</a>
+          <a label="Bosnia and Herzegovina">Bosnia and Herzegovina</a>
+          <a label="Bulgaria">Bulgaria</a>
+          <a label="Croatia">Croatia</a>
+          <a label="Cyprus">Cyprus</a>
+          <a label="Czech Republic">Czech Republic</a>
+          <a label="Denmark">Denmark</a>
+          <a label="East Germany">East Germany</a>
+          <a label="Estonia">Estonia</a>
+          <a label="Faroe Islands">Faroe Islands</a>
+          <a label="Finland">Finland</a>
+          <a label="France">France</a>
+          <a label="Germany">Germany</a>
+          <a label="Gibraltar">Gibraltar</a>
+          <a label="Greece">Greece</a>
+          <a label="Guernsey">Guernsey</a>
+          <a label="Hungary">Hungary</a>
+          <a label="Iceland">Iceland</a>
+          <a label="Ireland">Ireland</a>
+          <a label="Isle of Man">Isle of Man</a>
+          <a label="Italy">Italy</a>
+          <a label="Jersey">Jersey</a>
+          <a label="Latvia">Latvia</a>
+          <a label="Liechtenstein">Liechtenstein</a>
+          <a label="Lithuania">Lithuania</a>
+          <a label="Luxembourg">Luxembourg</a>
+          <a label="Macedonia">Macedonia</a>
+          <a label="Malta">Malta</a>
+          <a label="Metropolitan France">Metropolitan France</a>
+          <a label="Moldova">Moldova</a>
+          <a label="Monaco">Monaco</a>
+          <a label="Montenegro">Montenegro</a>
+          <a label="Netherlands">Netherlands</a>
+          <a label="Norway">Norway</a>
+          <a label="Poland">Poland</a>
+          <a label="Portugal">Portugal</a>
+          <a label="Romania">Romania</a>
+          <a label="Russia">Russia</a>
+          <a label="San Marino">San Marino</a>
+          <a label="Serbia">Serbia</a>
+          <a label="Serbia and Montenegro">Serbia and Montenegro</a>
+          <a label="Slovakia">Slovakia</a>
+          <a label="Slovenia">Slovenia</a>
+          <a label="Spain">Spain</a>
+          <a label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</a>
+          <a label="Sweden">Sweden</a>
+          <a label="Switzerland">Switzerland</a>
+          <a label="Ukraine">Ukraine</a>
+          <a label="Union of Soviet Socialist Republics"
+            >Union of Soviet Socialist Republics
+          </a>
+          <a label="United Kingdom">United Kingdom</a>
+          <a label="Vatican City">Vatican City</a>
+          <a label="Åland Islands">Åland Islands</a>
+          <a label="American Samoa">American Samoa</a>
+          <a label="Antarctica">Antarctica</a>
+          <a label="Australia">Australia</a>
+          <a label="Bouvet Island">Bouvet Island</a>
+          <a label="British Indian Ocean Territory"
+            >British Indian Ocean Territory</a
+          >
+          <a label="Christmas Island">Christmas Island</a>
+          <a label="Cocos [Keeling] Islands">Cocos [Keeling] Islands</a>
+          <a label="Cook Islands">Cook Islands</a>
+          <a label="Fiji">Fiji</a>
+          <a label="French Polynesia">French Polynesia</a>
+          <a label="French Southern Territories">French Southern Territories</a>
+          <a label="Guam">Guam</a>
+          <a label="Heard Island and McDonald Islands"
+            >Heard Island and McDonald Islands</a
+          >
+          <a label="Kiribati">Kiribati</a>
+          <a label="Marshall Islands">Marshall Islands</a>
+          <a label="Micronesia">Micronesia</a>
+          <a label="Nauru">Nauru</a>
+          <a label="New Caledonia">New Caledonia</a>
+          <a label="New Zealand">New Zealand</a>
+          <a label="Niue">Niue</a>
+          <a label="Norfolk Island">Norfolk Island</a>
+          <a label="Northern Mariana Islands">Northern Mariana Islands</a>
+          <a value="PW" label="Palau">Palau</a>
+          <a value="PG" label="Papua New Guinea">Papua New Guinea</a>
+          <a value="PN" label="Pitcairn Islands">Pitcairn Islands</a>
+          <a value="WS" label="Samoa">Samoa</a>
+          <a value="SB" label="Solomon Islands">Solomon Islands</a>
+          <a value="GS" label="South Georgia and the South Sandwich Islands"
+            >South Georgia and the South Sandwich Islands</a
+          >
+          <a value="TK" label="Tokelau">Tokelau</a>
+          <a value="TO" label="Tonga">Tonga</a>
+          <a value="TV" label="Tuvalu">Tuvalu</a>
+          <a value="UM" label="U.S. Minor Outlying Islands"
+            >U.S. Minor Outlying Islands</a
+          >
+          <a value="VU" label="Vanuatu">Vanuatu</a>
+          <a value="WF" label="Wallis and Futuna">Wallis and Futuna</a>
+        </div>
+      </div>
+                           
                         </div>
                         <div class="flex flex-col input-group w-full ml-7">
                             <label class="text-base leading-none text-gray-800 mb-4">Post code</label>
@@ -1703,13 +2161,420 @@
                     <div class="flex my-8">
                         <div class="flex flex-col input-group w-full">
                             <label class="text-base leading-none text-gray-800 mb-4">City</label>
-                            <input type="text" name="" id=""
-                                class="p-2 border border-slate-300 w-full outline-none focus:bg-gray-50 rounded w-full" />
+                                             <div class="dropdown relative w-full">
+        <div
+          onclick="myCities()"
+          class="citydropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="citydropbtnspan"> </span>
+          <svg
+            class="absolute city-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="cityDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
+            id="cityInput"
+            onkeyup="filterCities()"
+          />
+     
+
+          <a label="Abu Dhabi">Abu Dhabi</a>
+          <a label="Amman">Amman</a>
+          <a label="Ankara">Ankara</a>
+          <a label="Bangkok">Bangkok</a>
+          <a label="Beijing">Beijing</a>
+          <a label="Bogota">Bogota</a>
+          <a label="Bratislava">Bratislava</a>
+          <a label="Brussels">Brussels</a>
+          <a label="Bucharest">Bucharest</a>
+          <a label="Budapest">Budapest</a>
+          <a label="Cairo">Cairo</a>
+          <a label="Chiang Mai">Chiang Mai</a>
+          <a label="Copenhagen">Copenhagen</a>
+          <a label="Dakar">Dakar</a>
+          <a label="Damascus">Damascus</a>
+          <a label="Dhaka">Dhaka</a>
+          <a label="Doha">Doha</a>
+          <a label="Dubai">Dubai</a>
+          <a label="Dublin">Dublin</a>
+          <a label="Dusseldorf">Dusseldorf</a>
+          <a label="Frankfurt">Frankfurt</a>
+          <a label="Geneva">Geneva</a>
+          <a label="Hanoi">Hanoi</a>
+          <a label="Helsinki">Helsinki</a>
+          <a label="Hong Kong">Hong Kong</a>
+          <a label="Istanbul">Istanbul</a>
+          <a label="Jakarta">Jakarta</a>
+          <a label="Jerusalem">Jerusalem</a>
+          <a label="Johannesburg">Johannesburg</a>
+          <a label="Kiev">Kiev</a>
+          <a label="Kuala Lumpur">Kuala Lumpur</a>
+          <a label="Kuwait City">Kuwait City</a>
+          <a label="Lahore">Lahore</a>
+          <a label="Lima">Lima</a>
+          <a label="Lisbon">Lisbon</a>
+          <a label="London">London</a>
+          <a label="Los Angeles">Los Angeles</a>
+          <a label="Luxembourg">Luxembourg</a>
+          <a label="Lyon">Lyon</a>
+          <a label="Madrid">Madrid</a>
+          <a label="Manila">Manila</a>
+          <a label="Marseille">Marseille</a>
+          <a label="Mexico City">Mexico City</a>
+          <a label="Miami">Miami</a>
+          <a label="Milan">Milan</a>
+          <a label="Montreal">Montreal</a>
+          <a label="Moscow">Moscow</a>
+          <a label="Mumbai">Mumbai</a>
+          <a label="Munich">Munich</a>
+          <a label="New York">New York</a>
+          <a label="Osaka">Osaka</a>
+          <a label="Paris">Paris</a>
+          <a label="Prague">Prague</a>
+          <a label="Reykjavik">Reykjavik</a>
+          <a label="Rome">Rome</a>
+          <a label="Santiago">Santiago</a>
+          <a label="Sao Paulo">Sao Paulo</a>
+          <a label="Seoul">Seoul</a>
+          <a label="Shanghai">Shanghai</a>
+          <a label="Singapore">Singapore</a>
+          <a label="Sofia">Sofia</a>
+          <a label="Stockholm">Stockholm</a>
+          <a label="Sydney">Sydney</a>
+          <a label="Taipei">Taipei</a>
+          <a label="Tehran">Tehran</a>
+          <a label="Tokyo">Tokyo</a>
+          <a label="Toronto">Toronto</a>
+          <a label="Vienna">Vienna</a>
+          <a label="Warsaw">Warsaw</a>
+          <a label="Washington">Washington</a>
+          <a label="Zurich">Zurich</a>
+        </div>
+      </div>
                         </div>
                         <div class="flex flex-col input-group w-full ml-7">
                             <label class="text-base leading-none text-gray-800 mb-4">Country</label>
-                            <input type="text" name="" id=""
-                                class="p-2 border border-slate-300 w-full outline-none focus:bg-gray-50 rounded w-full" />
+                                                           <div class="dropdown bg-white relative w-full">
+        <div
+          onclick="myFunction()"
+          class="dropbtn broder-slate-300 relative border rounded max-w-[712px] bg-white text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="dropbtnspan"> </span>
+          <svg
+            class="absolute arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="myDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
+            id="myInput"
+            onkeyup="filterFunction()"
+          />
+          <a> </a>
+          <a label="Algeria">Algeria</a>
+          <a label="Angola">Angola</a>
+          <a label="Benin">Benin</a>
+          <a label="Botswana">Botswana</a>
+          <a label="Burkina Faso">Burkina Faso</a>
+          <a label="Burundi">Burundi</a>
+          <a label="Cameroon">Cameroon</a>
+          <a label="Cape Verde">Cape Verde</a>
+          <a label="Central African Republic">Central African Republic</a>
+          <a label="Chad">Chad</a>
+          <a label="Comoros">Comoros</a>
+          <a label="Congo - Brazzaville">Congo - Brazzaville</a>
+          <a label="Congo - Kinshasa">Congo - Kinshasa</a>
+          <a label="Côte d’Ivoire">Côte d’Ivoire</a>
+          <a label="Djibouti">Djibouti</a>
+          <a label="Egypt">Egypt</a>
+          <a label="Equatorial Guinea">Equatorial Guinea</a>
+          <a label="Eritrea">Eritrea</a>
+          <a label="Ethiopia">Ethiopia</a>
+          <a label="Gabon">Gabon</a>
+          <a label="Gambia">Gambia</a>
+          <a label="Ghana">Ghana</a>
+          <a label="Guinea">Guinea</a>
+          <a label="Guinea-Bissau">Guinea-Bissau</a>
+          <a label="Kenya">Kenya</a>
+          <a label="Lesotho">Lesotho</a>
+          <a label="Liberia">Liberia</a>
+          <a label="Libya">Libya</a>
+          <a label="Madagascar">Madagascar</a>
+          <a label="Malawi">Malawi</a>
+          <a label="Mali">Mali</a>
+          <a label="Mauritania">Mauritania</a>
+          <a label="Mauritius">Mauritius</a>
+          <a label="Mayotte">Mayotte</a>
+          <a label="Morocco">Morocco</a>
+          <a label="Mozambique">Mozambique</a>
+          <a label="Namibia">Namibia</a>
+          <a label="Niger">Niger</a>
+          <a label="Nigeria">Nigeria</a>
+          <a label="Rwanda">Rwanda</a>
+          <a label="Réunion">Réunion</a>
+          <a label="Saint Helena">Saint Helena</a>
+          <a label="Senegal">Senegal</a>
+          <a label="Seychelles">Seychelles</a>
+          <a label="Sierra Leone">Sierra Leone</a>
+          <a label="Somalia">Somalia</a>
+          <a label="South Africa">South Africa</a>
+          <a label="Sudan">Sudan</a>
+          <a label="Swaziland">Swaziland</a>
+          <a label="São Tomé and Príncipe">São Tomé and Príncipe</a>
+          <a label="Tanzania">Tanzania</a>
+          <a label="Togo">Togo</a>
+          <a label="Tunisia">Tunisia</a>
+          <a label="Uganda">Uganda</a>
+          <a label="Western Sahara">Western Sahara</a>
+          <a label="Zambia">Zambia</a>
+          <a label="Zimbabwe">Zimbabwe</a>
+          <a label="Anguilla">Anguilla</a>
+          <a label="Antigua and Barbuda">Antigua and Barbuda</a>
+          <a label="Argentina">Argentina</a>
+          <a label="Aruba">Aruba</a>
+          <a label="Bahamas">Bahamas</a>
+          <a label="Barbados">Barbados</a>
+          <a label="Belize">Belize</a>
+          <a label="Bermuda">Bermuda</a>
+          <a label="Bolivia">Bolivia</a>
+          <a label="Brazil">Brazil</a>
+          <a label="British Virgin Islands">British Virgin Islands</a>
+          <a label="Canada">Canada</a>
+          <a label="Cayman Islands">Cayman Islands</a>
+          <a label="Chile">Chile</a>
+          <a label="Colombia">Colombia</a>
+          <a label="Costa Rica">Costa Rica</a>
+          <a label="Cuba">Cuba</a>
+          <a label="Dominica">Dominica</a>
+          <a label="Dominican Republic">Dominican Republic</a>
+          <a label="Ecuador">Ecuador</a>
+          <a label="El Salvador">El Salvador</a>
+          <a label="Falkland Islands">Falkland Islands</a>
+          <a label="French Guiana">French Guiana</a>
+          <a label="Greenland">Greenland</a>
+          <a label="Grenada">Grenada</a>
+          <a label="Guadeloupe">Guadeloupe</a>
+          <a label="Guatemala">Guatemala</a>
+          <a label="Guyana">Guyana</a>
+          <a label="Haiti">Haiti</a>
+          <a label="Honduras">Honduras</a>
+          <a label="Jamaica">Jamaica</a>
+          <a label="Martinique">Martinique</a>
+          <a label="Mexico">Mexico</a>
+          <a label="Montserrat">Montserrat</a>
+          <a label="Netherlands Antilles">Netherlands Antilles</a>
+          <a label="Nicaragua">Nicaragua</a>
+          <a label="Panama">Panama</a>
+          <a label="Paraguay">Paraguay</a>
+          <a label="Peru">Peru</a>
+          <a label="Puerto Rico">Puerto Rico</a>
+          <a label="Saint Barthélemy">Saint Barthélemy</a>
+          <a label="Saint Kitts and Nevis">Saint Kitts and Nevis</a>
+          <a label="Saint Lucia">Saint Lucia</a>
+          <a label="Saint Martin">Saint Martin</a>
+          <a label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</a>
+          <a label="Saint Vincent and the Grenadines"
+            >Saint Vincent and the Grenadines</a
+          >
+          <a label="Suriname">Suriname</a>
+          <a label="Trinidad and Tobago">Trinidad and Tobago</a>
+          <a label="Turks and Caicos Islands">Turks and Caicos Islands</a>
+          <a label="U.S. Virgin Islands">U.S. Virgin Islands</a>
+          <a label="United States">United States</a>
+          <a label="Uruguay">Uruguay</a>
+          <a label="Venezuela">Venezuela</a>
+          <a label="Afghanistan">Afghanistan</a>
+          <a label="Armenia">Armenia</a>
+          <a label="Azerbaijan">Azerbaijan</a>
+          <a label="Bahrain">Bahrain</a>
+          <a label="Bangladesh">Bangladesh</a>
+          <a label="Bhutan">Bhutan</a>
+          <a label="Brunei">Brunei</a>
+          <a label="Cambodia">Cambodia</a>
+          <a label="China">China</a>
+          <a label="Georgia">Georgia</a>
+          <a label="Hong Kong SAR China">Hong Kong SAR China</a>
+          <a label="India">India</a>
+          <a label="Indonesia">Indonesia</a>
+          <a label="Iran">Iran</a>
+          <a label="Iraq">Iraq</a>
+          <a label="Israel">Israel</a>
+          <a label="Japan">Japan</a>
+          <a label="Jordan">Jordan</a>
+          <a label="Kazakhstan">Kazakhstan</a>
+          <a label="Kuwait">Kuwait</a>
+          <a label="Kyrgyzstan">Kyrgyzstan</a>
+          <a label="Laos">Laos</a>
+          <a label="Lebanon">Lebanon</a>
+          <a label="Macau SAR China">Macau SAR China</a>
+          <a label="Malaysia">Malaysia</a>
+          <a label="Maldives">Maldives</a>
+          <a label="Mongolia">Mongolia</a>
+          <a label="Myanmar [Burma]">Myanmar [Burma]</a>
+          <a label="Nepal">Nepal</a>
+          <a label="Neutral Zone">Neutral Zone</a>
+          <a label="North Korea">North Korea</a>
+          <a label="Oman">Oman</a>
+          <a label="Pakistan">Pakistan</a>
+          <a label="Palestinian Territories">Palestinian Territories</a>
+          <a label="People's Democratic Republic of Yemen"
+            >People's Democratic Republic of Yemen
+          </a>
+          <a label="Philippines">Philippines</a>
+          <a label="Qatar">Qatar</a>
+          <a label="Saudi Arabia">Saudi Arabia</a>
+          <a label="Singapore">Singapore</a>
+          <a label="South Korea">South Korea</a>
+          <a label="Sri Lanka">Sri Lanka</a>
+          <a label="Syria">Syria</a>
+          <a label="Taiwan">Taiwan</a>
+          <a label="Tajikistan">Tajikistan</a>
+          <a label="Thailand">Thailand</a>
+          <a label="Timor-Leste">Timor-Leste</a>
+          <a label="Turkey">Turkey</a>
+          <a label="Turkmenistan">Turkmenistan</a>
+          <a label="United Arab Emirates">United Arab Emirates</a>
+          <a label="Uzbekistan">Uzbekistan</a>
+          <a label="Vietnam">Vietnam</a>
+          <a label="Yemen">Yemen</a>
+          <a label="Albania">Albania</a>
+          <a label="Andorra">Andorra</a>
+          <a label="Austria">Austria</a>
+          <a label="Belarus">Belarus</a>
+          <a label="Belgium">Belgium</a>
+          <a label="Bosnia and Herzegovina">Bosnia and Herzegovina</a>
+          <a label="Bulgaria">Bulgaria</a>
+          <a label="Croatia">Croatia</a>
+          <a label="Cyprus">Cyprus</a>
+          <a label="Czech Republic">Czech Republic</a>
+          <a label="Denmark">Denmark</a>
+          <a label="East Germany">East Germany</a>
+          <a label="Estonia">Estonia</a>
+          <a label="Faroe Islands">Faroe Islands</a>
+          <a label="Finland">Finland</a>
+          <a label="France">France</a>
+          <a label="Germany">Germany</a>
+          <a label="Gibraltar">Gibraltar</a>
+          <a label="Greece">Greece</a>
+          <a label="Guernsey">Guernsey</a>
+          <a label="Hungary">Hungary</a>
+          <a label="Iceland">Iceland</a>
+          <a label="Ireland">Ireland</a>
+          <a label="Isle of Man">Isle of Man</a>
+          <a label="Italy">Italy</a>
+          <a label="Jersey">Jersey</a>
+          <a label="Latvia">Latvia</a>
+          <a label="Liechtenstein">Liechtenstein</a>
+          <a label="Lithuania">Lithuania</a>
+          <a label="Luxembourg">Luxembourg</a>
+          <a label="Macedonia">Macedonia</a>
+          <a label="Malta">Malta</a>
+          <a label="Metropolitan France">Metropolitan France</a>
+          <a label="Moldova">Moldova</a>
+          <a label="Monaco">Monaco</a>
+          <a label="Montenegro">Montenegro</a>
+          <a label="Netherlands">Netherlands</a>
+          <a label="Norway">Norway</a>
+          <a label="Poland">Poland</a>
+          <a label="Portugal">Portugal</a>
+          <a label="Romania">Romania</a>
+          <a label="Russia">Russia</a>
+          <a label="San Marino">San Marino</a>
+          <a label="Serbia">Serbia</a>
+          <a label="Serbia and Montenegro">Serbia and Montenegro</a>
+          <a label="Slovakia">Slovakia</a>
+          <a label="Slovenia">Slovenia</a>
+          <a label="Spain">Spain</a>
+          <a label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</a>
+          <a label="Sweden">Sweden</a>
+          <a label="Switzerland">Switzerland</a>
+          <a label="Ukraine">Ukraine</a>
+          <a label="Union of Soviet Socialist Republics"
+            >Union of Soviet Socialist Republics
+          </a>
+          <a label="United Kingdom">United Kingdom</a>
+          <a label="Vatican City">Vatican City</a>
+          <a label="Åland Islands">Åland Islands</a>
+          <a label="American Samoa">American Samoa</a>
+          <a label="Antarctica">Antarctica</a>
+          <a label="Australia">Australia</a>
+          <a label="Bouvet Island">Bouvet Island</a>
+          <a label="British Indian Ocean Territory"
+            >British Indian Ocean Territory</a
+          >
+          <a label="Christmas Island">Christmas Island</a>
+          <a label="Cocos [Keeling] Islands">Cocos [Keeling] Islands</a>
+          <a label="Cook Islands">Cook Islands</a>
+          <a label="Fiji">Fiji</a>
+          <a label="French Polynesia">French Polynesia</a>
+          <a label="French Southern Territories">French Southern Territories</a>
+          <a label="Guam">Guam</a>
+          <a label="Heard Island and McDonald Islands"
+            >Heard Island and McDonald Islands</a
+          >
+          <a label="Kiribati">Kiribati</a>
+          <a label="Marshall Islands">Marshall Islands</a>
+          <a label="Micronesia">Micronesia</a>
+          <a label="Nauru">Nauru</a>
+          <a label="New Caledonia">New Caledonia</a>
+          <a label="New Zealand">New Zealand</a>
+          <a label="Niue">Niue</a>
+          <a label="Norfolk Island">Norfolk Island</a>
+          <a label="Northern Mariana Islands">Northern Mariana Islands</a>
+          <a value="PW" label="Palau">Palau</a>
+          <a value="PG" label="Papua New Guinea">Papua New Guinea</a>
+          <a value="PN" label="Pitcairn Islands">Pitcairn Islands</a>
+          <a value="WS" label="Samoa">Samoa</a>
+          <a value="SB" label="Solomon Islands">Solomon Islands</a>
+          <a value="GS" label="South Georgia and the South Sandwich Islands"
+            >South Georgia and the South Sandwich Islands</a
+          >
+          <a value="TK" label="Tokelau">Tokelau</a>
+          <a value="TO" label="Tonga">Tonga</a>
+          <a value="TV" label="Tuvalu">Tuvalu</a>
+          <a value="UM" label="U.S. Minor Outlying Islands"
+            >U.S. Minor Outlying Islands</a
+          >
+          <a value="VU" label="Vanuatu">Vanuatu</a>
+          <a value="WF" label="Wallis and Futuna">Wallis and Futuna</a>
+        </div>
+      </div>
+                            
                         </div>
                         <div class="flex flex-col input-group w-full ml-7">
                             <label class="text-base leading-none text-gray-800 mb-4">Post code</label>
@@ -1764,47 +2629,10 @@
         background-color: #1d4ed8;
     }
 
-    .dropbtn-one {
-        border: none;
-        cursor: pointer;
-    }
-
-    .dropdown-one {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dwy a:hover .cr {
-        color: rgb(29 78 216);
-    }
-
-    * {
-        /* border: 1px solid red; */
-    }
-
-    .dwy a:hover {
-        background-color: rgb(191 219 254);
-        font-weight: bold;
-        color: rgba(29, 78, 216, 1);
-    }
-
-    .dwy a {
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dwy {
-        display: none;
-        position: absolute;
-        background-color: white;
-        z-index: 1;
-    }
-
-    .dropdown-one:hover .dwy {
-        display: block;
-    }
+    
+    
 </style>
+   <script src="./script/dropdowns.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
     <title>Dashboard Template</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+       <link rel="stylesheet" href="./Styles/dropdowns.css">
 </head>
 
 <body class="bg-gray-100 relative h-full"></body>
@@ -1177,46 +1178,64 @@
                         </div>
                     </div>
                     <div class="div mr-6 lg:block md:block hidden">
-                        <div class="mx-auto mt-6 w-full flex">
-                            <div class="dropdown-one border rounded border-blue-700 w-full bg-white rounded">
-                                <button
-                                    class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-auto">
-                                    <span class="pr-4 font-medium text-blue-700 text-sm">
-                                        Status
-                                    </span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16"
-                                        class="absolute top-4 right-4 stroke-blue-700" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 6L8 10L4 6" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
+                        <div class="mx-auto mt-6 w-full flex gap-4">
+                             <div
+                                        class="dropdown-one border rounded border-blue-700 w-full rounded ml-3 bg-inherit relative">
+                                        <button onclick="showDropDownMenu(this)"
+                                            class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-[146px] bg-inherit">
+                                            <span class="pr-4 font-medium text-blue-700 text-sm"
+                                                id="drop-down-content-setter">
+                                                Status
+                                            </span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16"
+                                                class="absolute top-4 right-4 stroke-blue-700" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 6L8 10L4 6" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
 
-                                <div class="dwy rounded w-full shadow border-t border-gray-200">
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-slate-600">
-                                            Completed
-                                        </p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-slate-600">
-                                            Processing
-                                        </p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-slate-600">Pending</p>
-                                    </a>
-                                    <a href="#">
-                                        <p class="cr text-xs leading-3 text-slate-600">
-                                            Inactive
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
+                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
+                                            id="drop-down-div">
+                                            <a class="cursor-pointer" >
+                                                <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                Completed
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                    Processing
+                                                </p>
+                                            </a>
+                                            <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                   Pending
+                                                </p>
+                                            </a>
+                                             <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                   Failed
+                                                </p>
+                                            </a>
+                                             <a class="cursor-pointer">
+                                                <p class="text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
+                                                    onclick="swaptext(this)">
+                                                  Refunded
+                                                </p>
+                                            </a>
+                                           
+                                        </div>
+                                    </div>
                             <div class="div">
-                                <button
-                                    class="px-5 py-[15px] rounded bg-blue-700 text-white text-sm font-medium ml-4 w-32">
+                                <a
+                                href="./catalogue-add-product.html"
+                                    class="px-5 py-[15px] rounded bg-blue-700 text-white text-sm font-medium text-center hover:bg-blue-600 w-32 block">
                                     Add Order
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1805,47 +1824,7 @@
 </div>
 <script src="/script/navigationScript.js"></script>
 
-<style>
-    .dropbtn-one {
-        border: none;
-        cursor: pointer;
-    }
-
-    .dropdown-one {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dwy a:hover .cr {
-        color: rgba(29, 78, 216, 1);
-    }
-
-    * {
-        /* border: 1px solid red; */
-    }
-
-    .dwy a:hover {
-        background-color: rgb(191 219 254);
-        font-weight: 500;
-    }
-
-    .dwy a {
-        padding: 8px 12px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dwy {
-        display: none;
-        position: absolute;
-        background-color: white;
-        z-index: 1;
-    }
-
-    .dropdown-one:hover .dwy {
-        display: block;
-    }
-</style>
+  <script src="./script/dropdowns.js"></script>
 </body>
 
 </html>
