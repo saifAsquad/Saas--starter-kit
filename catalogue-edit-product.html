@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="./Styles/dropdowns.css">
 </head>
 
 <body class="bg-gray-100 relative h-full"></body>
@@ -2413,82 +2414,188 @@
                 <div class="mt-7 grid grid-cols-2 gap-7">
                     <div>
                         <p class="text-base font-medium leading-none text-gray-800">Status</p>
-                        <div class="custom-select col-span-2 border border-[#CBD5E1] h-fit mt-3 rounded-[4px] relative"
-                            style="width:100%;">
-                            <svg class="cursor-pointer top-4 right-5 absolute" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <select>
-                                <option value="0">Select a Status</option>
-                                <option class="flex gap-4" value="1"> Published
-                                </option>
-                                <option value="2">Draft</option>
-                                <option value="3">Inactive</option>
-                                <option value="4">Scheduled</option>
-                            </select>
-                        </div>
+                       <!---Dropdown-->
+                             <div class="dropdown mt-3 relative">
+        <div
+          onclick="myLen()"
+          class="lendropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="lendropbtnspan py-1">Published </span>
+          <svg
+            class="absolute len-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="lenDropdown"
+          class="dropdown-content absolute w-full bg-white hidden  overflow-auto  flex flex-col z-10"
+        >
+          <a label="Theme 1" class="flex items-center">Published 
+
+            <svg
+            class="ml-3" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#15803D"/>
+</svg>
+
+          </a>
+            <a label="Theme 2" class="flex items-center">Scheduled 
+
+                <svg 
+                class="ml-3"
+                width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#1D4ED8"/>
+</svg>
+
+            </a>
+            <a label="Theme 3" class="flex items-center">Draft
+                <svg 
+                class="ml-3"
+                width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#CA8A04"/>
+</svg>
+
+                </a>
+            <a label="Theme 4" class="flex items-center">Inactive zdcn
+                
+            <svg
+            class="ml-3"
+            width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#DC2626"/>
+</svg>
+    
+            </a>
+           
+
+         
+        </div>
+                             </div>
                         <p class="text-xs leading-3 text-gray-600 mt-3">Set the product status</p>
                     </div>
                     <div>
                         <p class="text-base font-medium leading-none text-gray-800">Categories</p>
-                        <div class="custom-select col-span-2 border border-[#CBD5E1] h-fit mt-3 rounded-[4px] relative"
-                            style="width:100%;">
-                            <svg class="cursor-pointer top-4 right-5 absolute" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                        <div class="dropdown relative w-full mt-3">
+        <div
+          onclick="myWeight()"
+          class="weightdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="weightdropbtnspan py-1">Electronics</span>
+          <svg
+            class="absolute weight-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="weightDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <a label="Electronics">Electronics</a>
+            <a label="Fashion">Fashion</a>
+            <a label="Home &amp; Living">Home &amp; Living</a>
+            <a label="Jewelry">Jewelry</a>
+            <a label="Sports &amp; Outdoors">Sports &amp; Outdoors</a>
+            <a label="Toys &amp; Games">Toys &amp; Games</a>
+            <a label="Automotive">Automotive</a>
+            <a label="Health &amp; Beauty">Health &amp; Beauty</a>
+            <a label="Home &amp; Garden">Home &amp; Garden</a>
+            <a label="Pet Supplies">Pet Supplies</a>
+            <a label="Tools &amp; Hardware">Tools &amp; Hardware</a>
+            <a label="Weddings">Weddings</a>
+            <a label="Baby">Baby</a>
+            <a label="Clothing">Clothing</a>
+            <a label="Movies &amp; TV">Movies &amp; TV</a>
+            <a label="Music">Music</a>
+            <a label="Office Products">Office Products</a>
+            <a label="Industrial &amp; Scientific">Industrial &amp; Scientific</a>
+            <a label="Automotive">Automotive</a>
+            <a label="Health &amp; Beauty">Health &amp; Beauty</a>
+            <a label="Home &amp; Garden">Home &amp; Garden</a>
 
-                            <select>
-                                <option value="0">Select a Category</option>
-                                <option value="1">Electronics</option>
-                                <option value="2">Kitchen Essentials</option>
-                                <option value="3">Clothing</option>
-                                <option value="4">Household</option>
-                            </select>
-                        </div>
+         
+        </div>
+      </div>
                         <p class="text-xs leading-3 text-gray-600 mt-3">Add product to a category</p>
                     </div>
                     <div>
                         <p class="text-base font-medium leading-none text-gray-800">Tags</p>
-                        <div class="custom-select col-span-2 border border-[#CBD5E1] h-fit mt-3 rounded-[4px] relative"
-                            style="width:100%;">
-                            <svg class="cursor-pointer top-4 right-5 absolute" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+             <div onclick="setFocus()"
+        class="border cursor-text px-4 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full mt-3">
+        <!-- Meta Tgas -->
+        <div class="append-tags flex flex-wrap gap-4">
 
-                            <select>
-                                <option value="0">Select a Category</option>
-                                <option value="1">Electronics</option>
-                                <option value="2">Kitchen Essentials</option>
-                                <option value="3">Clothing</option>
-                                <option value="4">Household</option>
-                            </select>
-                        </div>
+        </div>
+        <!-- Meta Tgas -->
+        <!-- Input -->
+        <div>
+            <input onkeypress="appendSpan(this,event)" id="meta-enter"
+                class="appearance-none border-0 outline-none w-full" />
+        </div>
+        <!-- Input -->
+    </div>
                         <p class="text-xs leading-3 text-gray-600 mt-3">Add tags to your product</p>
                     </div>
                     <div>
                         <p class="text-base font-medium leading-none text-gray-800">Template</p>
-                        <div class="custom-select col-span-2 border border-[#CBD5E1] h-fit mt-3 rounded-[4px] relative"
-                            style="width:100%;">
-                            <svg class="cursor-pointer top-4 right-5 absolute" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                                   <div class="dropdown relative w-full mt-3">
+        <div
+          onclick="myTemp()"
+          class="tempdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="tempdropbtnspan py-1"></span>
+          <svg
+            class="absolute weight-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="tempDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto  flex flex-col z-10"
+        >
+          <a label="Template 1">Template 1</a>
+            <a label="Template 2">Template 2</a>
+            <a label="Template 3">Template 3</a>
+            <a label="Template 4">Template 4</a>
+            <a label="Template 5">Template 5</a>
+            <a label="Template 6">Template 6</a>
+          
+            
 
-                            <select>
-                                <option value="0">Select a Template</option>
-                                <option value="1">Template 1</option>
-                                <option value="2">Template 2</option>
-                                <option value="3">Template 3</option>
-                                <option value="4">Template 4</option>
-                            </select>
-                        </div>
+         
+        </div>
+      </div>
+                        
                         <p class="text-xs leading-3 text-gray-600 mt-3">Select a template to show your product display
                         </p>
                     </div>
@@ -2748,11 +2855,14 @@
     }
 
     .custom-select select {
+
         display: none;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
         /*hide original SELECT element: */
     }
 
     .select-selected {
+        
         background-color: #ffffff;
 
 
@@ -2762,10 +2872,11 @@
     .select-selected:after {
         position: absolute;
         content: "";
-        top: 14px;
+        top: 20px;
         right: 10px;
         width: 0;
         height: 0;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
         border: 6px solid transparent;
 
     }
@@ -2811,6 +2922,40 @@
 
     }
 </style>
+
+  <script src="./script/dropdowns.js"></script>
+
+  <script>
+        const tagdiv = document.querySelector('.append-tags')
+        function appendSpan(el, event) {
+            console.log(event.code)
+            if (event.code === 'Enter' && el.value.trim().length > 3) {
+                const span = document.createElement('span')
+                span.classList.add('bg-blue-100', 'rounded', 'py-1', 'px-2', 'text-xs', 'font-medium', 'text-blue-700', 'flex', 'items-center', 'justify-center', 'gap-1', "hover:opacity-90", 'cursor-pointer')
+                const spanText = document.createElement('p')
+                span.innerText += el.value
+                span.innerHTML += `
+                <svg onclick='deleteTag(this)' class='cursor-pointer mt-[2px] hover:opacity-70' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.625 8.625L3.375 3.375" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.625 3.375L3.375 8.625" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                `
+                tagdiv.appendChild(span)
+                el.value = ''
+            }
+
+        }
+
+        function deleteTag(el) {
+            el.parentElement.remove()
+        }
+
+        function setFocus() {
+            document.querySelector('#meta-enter').focus()
+        }
+
+    </script>
 </body>
 
 </html>

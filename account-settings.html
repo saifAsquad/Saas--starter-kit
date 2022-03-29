@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link rel="stylesheet" href="./Styles/dropdowns.css">
 
 </head>
 
@@ -308,7 +309,7 @@
                                 <p class="text-base font-medium leading-none text-slate-800">
                                     Allow Changes
                                 </p>
-                                <p class="text-xs leading-3 text-gray-600 pt-3">
+                                <p class="text-xs leading-3 text-slate-600 pt-3">
                                     Choose what type of account you need carefully
                                 </p>
                             </div>
@@ -1487,6 +1488,73 @@
         <!-- Body -->
         <div class="w-full xl:ml-[312px]">
             <!-- Header -->
+<<<<<<< HEAD
+            <div class="flex items-center justify-between border-b border-gray-200 px-7 h-[72px] w-full">
+                <div class="w-64 relative flex items-center py-4">
+                    <div class="absolute left-0 ml-4">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.66667 10.3333C8.24399 10.3333 10.3333 8.24399 10.3333 5.66667C10.3333 3.08934 8.24399 1 5.66667 1C3.08934 1 1 3.08934 1 5.66667C1 8.24399 3.08934 10.3333 5.66667 10.3333Z"
+                                stroke="#475569" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13 13L9 9" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <input
+                        class="text-sm leading-none text-slate-600 bg-transparent h-full focus:outline-none py-3 pl-10 pr-4 border rounded border-gray-300 w-full focus:ring-1 focus:ring-indigo-600 focus:border-transparent"
+                        placeholder="Search" />
+                </div>
+                <img class="flex xl:hidden cursor-pointer hamburger"
+                    src="https://img.icons8.com/ios-filled/25/000000/menu--v1.png" />
+                <div class="hidden xl:flex items-center border-l py-4">
+                    <div class="flex items-center">
+                        <!-- Notification -->
+                        <div onclick="dropdownHandler()" class="relative w-7 mx-7 cursor-pointer">
+                            <div class="w-6 h-6">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.0475 16.4733C18.8437 15 17.9939 14.25 17.9939 10.1883C17.9939 6.46875 16.0945 5.14359 14.5312 4.5C14.3236 4.41469 14.1281 4.21875 14.0648 4.00547C13.7906 3.07219 13.0219 2.25 12 2.25C10.9781 2.25 10.2089 3.07266 9.93749 4.00641C9.87421 4.22203 9.67874 4.41469 9.47108 4.5C7.90593 5.14453 6.00843 6.465 6.00843 10.1883C6.00608 14.25 5.15624 15 3.95249 16.4733C3.45374 17.0836 3.89061 18 4.76296 18H19.2417C20.1094 18 20.5434 17.0808 20.0475 16.4733Z"
+                                        stroke="#475569" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path
+                                        d="M15 18V18.75C15 19.5456 14.6839 20.3087 14.1213 20.8713C13.5587 21.4339 12.7956 21.75 12 21.75C11.2044 21.75 10.4413 21.4339 9.87868 20.8713C9.31607 20.3087 9 19.5456 9 18.75V18"
+                                        stroke="#475569" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="w-2 h-2 my-shadow rounded-full absolute right-0 top-0">
+                                <div class="w-full h-full animate-ping my-shadow rounded-full absolute right-0 top-0">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Notification -->
+                        <!-- Notification Dropwdonw -->
+                        <div id="notification" class="bg-red-500 hidden w-64 h-24 absolute right-0 top-6"></div>
+                        <!-- Notification Dropwdonw -->
+                    </div>
+                    <!-- Profile -->
+                    <div class="flex items-center justify-center cursor-pointer">
+                        <div class="w-10 h-10 rounded-full">
+                            <img alt="Profile Picture" class="w-full h-full"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/profile-picture.png" />
+                        </div>
+                        <div class="flex flex-col ml-3">
+                            <p class="text-base font-semibold leading-4 text-gray-800">
+                                David Hulk
+                            </p>
+                            <p class="text-xs leading-3 mt-1 text-gray-600">
+                                david@alphahulk.com
+                            </p>
+                        </div>
+                        <div class="ml-5">
+                            <svg width="16" height="8" viewBox="0 0 16 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.25 0.625L8 7.375L14.75 0.625" stroke="#1E293B" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Profile -->
+                </div>
+            </div>
+=======
              <nav class="px-7 bg-white py-3 flex justify-between items-center shadow-[0px_1px_2px_rgba(0,0,0,0.07)]">
 				<!-- **Humburger SVG Icon -->
 				<div class="lg:hidden hamburger cursor-pointer">
@@ -2734,6 +2802,7 @@
 					</div>
 				</div>
 			</div>
+>>>>>>> 383389b2d38264010cc3c390fdef496db66d715b
             <!-- Header -->
             <!-- Main page -->
             <div class="px-7 py-4">
@@ -2743,7 +2812,7 @@
                         <h1 class="text-2xl font-semibold leading-normal text-gray-800">
                             Dashboard
                         </h1>
-                        <p class="text-sm leading-none text-gray-600 mt-1">
+                        <p class="text-sm leading-none text-slate-600 mt-1">
                             Home - Acccount - Settings
                         </p>
                     </div>
@@ -2758,97 +2827,163 @@
                 <!--  -->
                 <!--  -->
                 <!--  -->
-                <div class="mt-7 bg-white rounded-[4px] w-full p-7 pb-10">
-                    <!-- Profile -->
-                    <div class=" flex justify-between items-start flex-wrap gap-8">
-                        <div>
-                            <img alt="Profile Picture" class="w-[155px] h-[155px]"
-                                src="/overview-assetts/stephanie-liverani-Zz5LQe-VSMY-unsplash 1.png" />
-                        </div>
-                        <!-- Info -->
-                        <div class="flex flex-col gap-4">
-                            <div class="flex gap-x-4 flex-wrap">
-                                <p class="text-xl font-semibold leading-tight text-gray-800">Meredith Larson</p>
-                                <!-- badge -->
-                                <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700">
-                                    Premium User
-                                </div>
-                            </div>
-                            <div class="flex gap-2 flex-wrap">
-                                <div class="flex gap-2 items-center">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4.75 8C5.99264 8 7 6.99264 7 5.75C7 4.50736 5.99264 3.5 4.75 3.5C3.50736 3.5 2.5 4.50736 2.5 5.75C2.5 6.99264 3.50736 8 4.75 8Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M7.3125 9.25C6.4325 8.80312 5.46125 8.625 4.75 8.625C3.35687 8.625 0.5 9.47938 0.5 11.1875V12.5H5.1875V11.9978C5.1875 11.4041 5.4375 10.8087 5.875 10.3125C6.22406 9.91625 6.71281 9.54844 7.3125 9.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M10.625 9C8.99781 9 5.75 10.005 5.75 12V13.5H15.5V12C15.5 10.005 12.2522 9 10.625 9Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M10.625 8C12.1438 8 13.375 6.76878 13.375 5.25C13.375 3.73122 12.1438 2.5 10.625 2.5C9.10622 2.5 7.875 3.73122 7.875 5.25C7.875 6.76878 9.10622 8 10.625 8Z"
-                                            fill="#475569" />
-                                    </svg>
-                                    <p class="text-sm leading-none text-gray-600">UI / UX Designer</p>
-                                </div>
-                                <div class="flex gap-2 items-center">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8 1C5.23969 1 3 3.01594 3 5.5C3 9.5 8 15 8 15C8 15 13 9.5 13 5.5C13 3.01594 10.7603 1 8 1ZM8 8C7.60444 8 7.21776 7.8827 6.88886 7.66294C6.55996 7.44318 6.30362 7.13082 6.15224 6.76537C6.00087 6.39991 5.96126 5.99778 6.03843 5.60982C6.1156 5.22186 6.30608 4.86549 6.58579 4.58579C6.86549 4.30608 7.22186 4.1156 7.60982 4.03843C7.99778 3.96126 8.39991 4.00087 8.76537 4.15224C9.13082 4.30362 9.44318 4.55996 9.66294 4.88886C9.8827 5.21776 10 5.60444 10 6C9.99942 6.53026 9.78852 7.03863 9.41357 7.41357C9.03863 7.78852 8.53026 7.99942 8 8Z"
-                                            fill="#475569" />
-                                    </svg>
-
-                                    <p class="text-sm leading-none text-gray-600">Los Angeles, California</p>
-                                </div>
-                                <div class="flex gap-2 items-center">
-                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13.7203 3.26119L7.22625 0.052752C7.15588 0.0180494 7.07846 0 7 0C6.92154 0 6.84412 0.0180494 6.77375 0.052752L0.28125 3.26119C0.197294 3.30204 0.126451 3.36557 0.0767444 3.44461C0.0270377 3.52364 0.00045274 3.61501 0 3.70838V11.4999C0.000368216 11.566 0.0137492 11.6313 0.0393783 11.6922C0.0650074 11.7531 0.102382 11.8083 0.149367 11.8548C0.196352 11.9012 0.252026 11.9379 0.313208 11.9628C0.37439 11.9877 0.439881 12.0004 0.505937 11.9999H13.4941C13.5601 12.0004 13.6256 11.9877 13.6868 11.9628C13.748 11.9379 13.8036 11.9012 13.8506 11.8548C13.8976 11.8083 13.935 11.7531 13.9606 11.6922C13.9863 11.6313 13.9996 11.566 14 11.4999V3.70838C13.9997 3.61518 13.9733 3.52392 13.9239 3.4449C13.8745 3.36589 13.804 3.30226 13.7203 3.26119ZM7 1.059L12.4062 3.729L6.91563 6.44088L1.50938 3.77088L7 1.059Z"
-                                            fill="#475569" />
-                                    </svg>
-
-
-                                    <p class="text-sm leading-none text-gray-600">Meredith@alpha.com</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-6 flex-wrap">
-                                <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
-                                    <p class="text-sm leading-none text-gray-600">Earnings</p>
-                                    <p class="text-base font-semibold leading-none mt-2 text-gray-800">$5,200</p>
-                                </div>
-                                <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
-                                    <p class="text-sm leading-none text-gray-600">Projects</p>
-                                    <p class="text-base font-semibold leading-none mt-2 text-gray-800">80</p>
-                                </div>
-                                <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
-                                    <p class="text-sm leading-none text-gray-600">Success Rate</p>
-                                    <p class="text-base font-semibold leading-none mt-2 text-gray-800">79%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Buttons -->
-                        <div>
-                            <button onclick="toggleInteraction()"
-                                class="bg-blue-700 mr-6 text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]">Hire
-                                me</button>
-                            <button class="p-2 bg-blue-100 hover:bg-blue-200">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 3.0625V10.9375" stroke="#1D4ED8" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M10.9375 7H3.0625" stroke="#1D4ED8" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-
-                            </button>
-                        </div>
+                <div class="mt-7 bg-white shadow-sm rounded-[4px] w-full  pb-10">
+                      <!-- Profile -->
+            <div class="p-7 flex justify-between items-start flex-wrap gap-8">
+              <div class="div max-w-[705px] flex gap-7 flex-wrap">
+                <div>
+                  <img
+                    alt="Profile Picture"
+                    class="w-[155px] h-[155px]"
+                    src="/overview-assetts/stephanie-liverani-Zz5LQe-VSMY-unsplash 1.png"
+                  />
+                </div>
+                <!-- Info -->
+                <div class="flex flex-col gap-4">
+                  <div class="flex gap-x-4 flex-wrap">
+                    <p
+                      class="text-xl font-semibold leading-tight text-gray-800"
+                    >
+                      Meredith Larson
+                    </p>
+                    <!-- badge -->
+                    <div
+                      class="bg-blue-100 font-medium rounded-[4px] p-1 text-blue-700 text-xs"
+                    >
+                      Premium User
                     </div>
+                  </div>
+                  <div class="flex gap-7 flex-wrap">
+                    <div class="flex gap-2 items-center">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.75 8C5.99264 8 7 6.99264 7 5.75C7 4.50736 5.99264 3.5 4.75 3.5C3.50736 3.5 2.5 4.50736 2.5 5.75C2.5 6.99264 3.50736 8 4.75 8Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M7.3125 9.25C6.4325 8.80312 5.46125 8.625 4.75 8.625C3.35687 8.625 0.5 9.47938 0.5 11.1875V12.5H5.1875V11.9978C5.1875 11.4041 5.4375 10.8087 5.875 10.3125C6.22406 9.91625 6.71281 9.54844 7.3125 9.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M10.625 9C8.99781 9 5.75 10.005 5.75 12V13.5H15.5V12C15.5 10.005 12.2522 9 10.625 9Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M10.625 8C12.1438 8 13.375 6.76878 13.375 5.25C13.375 3.73122 12.1438 2.5 10.625 2.5C9.10622 2.5 7.875 3.73122 7.875 5.25C7.875 6.76878 9.10622 8 10.625 8Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <p class="text-sm leading-none text-gray-600">
+                        UI / UX Designer
+                      </p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 1C5.23969 1 3 3.01594 3 5.5C3 9.5 8 15 8 15C8 15 13 9.5 13 5.5C13 3.01594 10.7603 1 8 1ZM8 8C7.60444 8 7.21776 7.8827 6.88886 7.66294C6.55996 7.44318 6.30362 7.13082 6.15224 6.76537C6.00087 6.39991 5.96126 5.99778 6.03843 5.60982C6.1156 5.22186 6.30608 4.86549 6.58579 4.58579C6.86549 4.30608 7.22186 4.1156 7.60982 4.03843C7.99778 3.96126 8.39991 4.00087 8.76537 4.15224C9.13082 4.30362 9.44318 4.55996 9.66294 4.88886C9.8827 5.21776 10 5.60444 10 6C9.99942 6.53026 9.78852 7.03863 9.41357 7.41357C9.03863 7.78852 8.53026 7.99942 8 8Z"
+                          fill="#475569"
+                        />
+                      </svg>
+
+                      <p class="text-sm leading-none text-gray-600">
+                        Los Angeles, California
+                      </p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                      <svg
+                        width="14"
+                        height="12"
+                        viewBox="0 0 14 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.7203 3.26119L7.22625 0.052752C7.15588 0.0180494 7.07846 0 7 0C6.92154 0 6.84412 0.0180494 6.77375 0.052752L0.28125 3.26119C0.197294 3.30204 0.126451 3.36557 0.0767444 3.44461C0.0270377 3.52364 0.00045274 3.61501 0 3.70838V11.4999C0.000368216 11.566 0.0137492 11.6313 0.0393783 11.6922C0.0650074 11.7531 0.102382 11.8083 0.149367 11.8548C0.196352 11.9012 0.252026 11.9379 0.313208 11.9628C0.37439 11.9877 0.439881 12.0004 0.505937 11.9999H13.4941C13.5601 12.0004 13.6256 11.9877 13.6868 11.9628C13.748 11.9379 13.8036 11.9012 13.8506 11.8548C13.8976 11.8083 13.935 11.7531 13.9606 11.6922C13.9863 11.6313 13.9996 11.566 14 11.4999V3.70838C13.9997 3.61518 13.9733 3.52392 13.9239 3.4449C13.8745 3.36589 13.804 3.30226 13.7203 3.26119ZM7 1.059L12.4062 3.729L6.91563 6.44088L1.50938 3.77088L7 1.059Z"
+                          fill="#475569"
+                        />
+                      </svg>
+
+                      <p class="text-sm leading-none text-gray-600">
+                        Meredith@alpha.com
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex gap-6 flex-wrap">
+                    <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
+                      <p class="text-sm leading-none text-gray-600">Earnings</p>
+                      <p
+                        class="text-base font-semibold leading-none mt-2 text-gray-800"
+                      >
+                        $5,200
+                      </p>
+                    </div>
+                    <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
+                      <p class="text-sm leading-none text-gray-600">Projects</p>
+                      <p
+                        class="text-base font-semibold leading-none mt-2 text-gray-800"
+                      >
+                        80
+                      </p>
+                    </div>
+                    <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
+                      <p class="text-sm leading-none text-gray-600">
+                        Success Rate
+                      </p>
+                      <p
+                        class="text-base font-semibold leading-none mt-2 text-gray-800"
+                      >
+                        79%
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Buttons -->
+              <div class="flex items-center gap-3">
+                <button
+                  onclick="toggleInteraction()"
+                  class="bg-blue-700 text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]"
+                >
+                  Hire me
+                </button>
+                <button class="p-2 rounded bg-blue-100 hover:bg-blue-200">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 8.3125C7.72487 8.3125 8.3125 7.72487 8.3125 7C8.3125 6.27513 7.72487 5.6875 7 5.6875C6.27513 5.6875 5.6875 6.27513 5.6875 7C5.6875 7.72487 6.27513 8.3125 7 8.3125Z"
+                      fill="#1D4ED8"
+                    />
+                    <path
+                      d="M11.375 8.3125C12.0999 8.3125 12.6875 7.72487 12.6875 7C12.6875 6.27513 12.0999 5.6875 11.375 5.6875C10.6501 5.6875 10.0625 6.27513 10.0625 7C10.0625 7.72487 10.6501 8.3125 11.375 8.3125Z"
+                      fill="#1D4ED8"
+                    />
+                    <path
+                      d="M2.625 8.3125C3.34987 8.3125 3.9375 7.72487 3.9375 7C3.9375 6.27513 3.34987 5.6875 2.625 5.6875C1.90013 5.6875 1.3125 6.27513 1.3125 7C1.3125 7.72487 1.90013 8.3125 2.625 8.3125Z"
+                      fill="#1D4ED8"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
                     <!-- Buttonsss -->
-                    <div class="border-y py-4 border-[#F1F5F9] mt-6">
+                    <div class="px-7 border-y py-4 border-[#F1F5F9] mt-6">
                         <a href="account-overview.html">
 
                             <button
@@ -2905,15 +3040,15 @@
                     </div>
                     <!-- Buttons -->
                     <!-- Form -->
-                    <div class="mt-10">
+                    <div class="px-7 mt-10">
                         <div class="flex justify-between items-center">
                             <p class="text-xl font-semibold leading-tight text-gray-800">Edit Profile</p>
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <p class="text-base font-medium leading-none text-gray-600 col-span-1">Avatar</p>
-                            <div class="col-span-2 flex gap-4 items-center">
+                        <div class="grid lg:grid-cols-6 grid-cols-3  mt-8 items-center">
+                            <p class="text-base font-medium leading-none text-slate-600 col-span-1 lg:col-span-2">Avatar</p>
+                            <div class="col-span-2 lg:col-span-4 flex gap-4 items-center">
                                 <img src="/overview-assetts/stephanie-liverani-Zz5LQe-VSMY-unsplash 1.png"
-                                    class="w-[68px] h-[68px]">
+                                    class="w-[68px] h-[68px] rounded">
                                 <div class="flex flex-col gap-4">
                                     <div class="flex gap-2">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -2926,7 +3061,7 @@
                                                 fill="#475569" />
                                         </svg>
 
-                                        <p class="text-sm leading-none text-gray-600 cursor-pointer hover:underline">
+                                        <p class="text-sm leading-none text-slate-600 cursor-pointer hover:underline">
                                             Change
                                             Image</p>
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -2952,7 +3087,7 @@
                                                 d="M9.375 3.40992L8.59008 2.625L6 5.21508L3.40992 2.625L2.625 3.40992L5.21508 6L2.625 8.59008L3.40992 9.375L6 6.78492L8.59008 9.375L9.375 8.59008L6.78492 6L9.375 3.40992Z"
                                                 fill="#475569" />
                                         </svg>
-                                        <p class="text-sm leading-none text-gray-600 cursor-pointer hover:underline">
+                                        <p class="text-sm leading-none text-slate-600 cursor-pointer hover:underline">
                                             Remove
                                             Image</p>
 
@@ -2960,24 +3095,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <p class="text-base font-medium leading-none text-gray-600 col-span-1">First Name</p>
-                            <input class="col-span-2 border border-gray-300 rounded-[4px] p-4 text-slate-800"
-                                placeholder="Name">
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <p class="text-base font-medium leading-none text-slate-600 col-span-1 lg:col-span-2">First Name</p>
+                            <input class="col-span-2 lg:col-span-4 border border-gray-300 rounded-[4px] p-4 text-slate-800 placeholder:text-sm placeholder:text-slate-800"
+                                placeholder="Meredith">
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <p class="text-base font-medium leading-none text-gray-600 col-span-1">Last Name</p>
-                            <input class="col-span-2 border border-gray-300 rounded-[4px] p-4 text-slate-800"
-                                placeholder="Last Name">
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <p class="text-base font-medium leading-none text-slate-600 col-span-1 lg:col-span-2">Last Name</p>
+                            <input class="col-span-2 lg:col-span-4 border border-gray-300 rounded-[4px] p-4 text-slate-800
+                            placeholder:text-sm placeholder:text-slate-800
+                            "
+                                placeholder="Larson">
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <p class="text-base font-medium leading-none text-gray-600 col-span-1">Company Name</p>
-                            <input class="col-span-2 border border-gray-300 rounded-[4px] p-4 text-slate-800"
-                                placeholder="Company Name">
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <p class="text-base font-medium leading-none text-slate-600 col-span-1 lg:col-span-2">Company Name</p>
+                            <input class="col-span-2 lg:col-span-4 border border-gray-300 rounded-[4px] p-4 text-slate-800
+                            placeholder:text-sm placeholder:text-slate-800"
+                                placeholder="">
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <div class="flex gap-2">
-                                <p class="text-base font-medium leading-none text-gray-600 col-span-1">Contact Number
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <div class="flex gap-2 col-span-1 lg:col-span-2">
+                                <p class="text-base font-medium leading-none text-slate-600 placeholder:text-sm placeholder:text-slate-800">Contact Number
                                 </p>
                                 <svg class="cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -2997,11 +3135,11 @@
 
 
 
-                            <input class="col-span-2 border border-gray-300 rounded-[4px] p-4 text-slate-800"
-                                placeholder="Contact Number">
+                            <input class="col-span-2 lg:col-span-4 border border-gray-300 rounded-[4px] p-4 text-slate-800 placeholder:text-sm placeholder:text-slate-800"
+                                placeholder="">
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <div class="flex gap-4 ">
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <div class="flex gap-4 col-span-1 lg:col-span-2">
 
                                 <p class="text-base font-medium leading-none text-gray-600">Country</p>
                                 <svg class="cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -3019,72 +3157,441 @@
                                 </svg>
 
                             </div>
-                            <div class="custom-select col-span-2 border border-[#CBD5E1] h-fit rounded-[4px] relative"
-                                style="width:100%;">
-                                <svg class="cursor-pointer top-5 right-5 absolute" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-
-                                <select>
-                                    <option value="0">Select a country</option>
-                                    <option value="1">Afghanistan</option>
-                                    <option value="2">Algeria</option>
-                                    <option value="3">Albania</option>
-                                    <option value="4">USA</option>
-                                    <option value="5">Canada</option>
-                                    <option value="6">Pakisan</option>
-                                </select>
-                            </div>
+                            <div class="dropdown  bg-white relative w-full col-span-2 lg:col-span-4">
+        <div
+          onclick="myFunction()"
+          class="dropbtn broder-slate-300 relative border rounded max-w-full bg-white text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50 flex items-center"
+        >
+          <span class="dropbtnspan text-slate-600 text-sm"> Select a country</span>
+          <svg
+            class="absolute arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="myDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
+            id="myInput"
+            onkeyup="filterFunction()"
+          />
+          
+          <a label="Algeria">Algeria</a>
+          <a label="Angola">Angola</a>
+          <a label="Benin">Benin</a>
+          <a label="Botswana">Botswana</a>
+          <a label="Burkina Faso">Burkina Faso</a>
+          <a label="Burundi">Burundi</a>
+          <a label="Cameroon">Cameroon</a>
+          <a label="Cape Verde">Cape Verde</a>
+          <a label="Central African Republic">Central African Republic</a>
+          <a label="Chad">Chad</a>
+          <a label="Comoros">Comoros</a>
+          <a label="Congo - Brazzaville">Congo - Brazzaville</a>
+          <a label="Congo - Kinshasa">Congo - Kinshasa</a>
+          <a label="Côte d’Ivoire">Côte d’Ivoire</a>
+          <a label="Djibouti">Djibouti</a>
+          <a label="Egypt">Egypt</a>
+          <a label="Equatorial Guinea">Equatorial Guinea</a>
+          <a label="Eritrea">Eritrea</a>
+          <a label="Ethiopia">Ethiopia</a>
+          <a label="Gabon">Gabon</a>
+          <a label="Gambia">Gambia</a>
+          <a label="Ghana">Ghana</a>
+          <a label="Guinea">Guinea</a>
+          <a label="Guinea-Bissau">Guinea-Bissau</a>
+          <a label="Kenya">Kenya</a>
+          <a label="Lesotho">Lesotho</a>
+          <a label="Liberia">Liberia</a>
+          <a label="Libya">Libya</a>
+          <a label="Madagascar">Madagascar</a>
+          <a label="Malawi">Malawi</a>
+          <a label="Mali">Mali</a>
+          <a label="Mauritania">Mauritania</a>
+          <a label="Mauritius">Mauritius</a>
+          <a label="Mayotte">Mayotte</a>
+          <a label="Morocco">Morocco</a>
+          <a label="Mozambique">Mozambique</a>
+          <a label="Namibia">Namibia</a>
+          <a label="Niger">Niger</a>
+          <a label="Nigeria">Nigeria</a>
+          <a label="Rwanda">Rwanda</a>
+          <a label="Réunion">Réunion</a>
+          <a label="Saint Helena">Saint Helena</a>
+          <a label="Senegal">Senegal</a>
+          <a label="Seychelles">Seychelles</a>
+          <a label="Sierra Leone">Sierra Leone</a>
+          <a label="Somalia">Somalia</a>
+          <a label="South Africa">South Africa</a>
+          <a label="Sudan">Sudan</a>
+          <a label="Swaziland">Swaziland</a>
+          <a label="São Tomé and Príncipe">São Tomé and Príncipe</a>
+          <a label="Tanzania">Tanzania</a>
+          <a label="Togo">Togo</a>
+          <a label="Tunisia">Tunisia</a>
+          <a label="Uganda">Uganda</a>
+          <a label="Western Sahara">Western Sahara</a>
+          <a label="Zambia">Zambia</a>
+          <a label="Zimbabwe">Zimbabwe</a>
+          <a label="Anguilla">Anguilla</a>
+          <a label="Antigua and Barbuda">Antigua and Barbuda</a>
+          <a label="Argentina">Argentina</a>
+          <a label="Aruba">Aruba</a>
+          <a label="Bahamas">Bahamas</a>
+          <a label="Barbados">Barbados</a>
+          <a label="Belize">Belize</a>
+          <a label="Bermuda">Bermuda</a>
+          <a label="Bolivia">Bolivia</a>
+          <a label="Brazil">Brazil</a>
+          <a label="British Virgin Islands">British Virgin Islands</a>
+          <a label="Canada">Canada</a>
+          <a label="Cayman Islands">Cayman Islands</a>
+          <a label="Chile">Chile</a>
+          <a label="Colombia">Colombia</a>
+          <a label="Costa Rica">Costa Rica</a>
+          <a label="Cuba">Cuba</a>
+          <a label="Dominica">Dominica</a>
+          <a label="Dominican Republic">Dominican Republic</a>
+          <a label="Ecuador">Ecuador</a>
+          <a label="El Salvador">El Salvador</a>
+          <a label="Falkland Islands">Falkland Islands</a>
+          <a label="French Guiana">French Guiana</a>
+          <a label="Greenland">Greenland</a>
+          <a label="Grenada">Grenada</a>
+          <a label="Guadeloupe">Guadeloupe</a>
+          <a label="Guatemala">Guatemala</a>
+          <a label="Guyana">Guyana</a>
+          <a label="Haiti">Haiti</a>
+          <a label="Honduras">Honduras</a>
+          <a label="Jamaica">Jamaica</a>
+          <a label="Martinique">Martinique</a>
+          <a label="Mexico">Mexico</a>
+          <a label="Montserrat">Montserrat</a>
+          <a label="Netherlands Antilles">Netherlands Antilles</a>
+          <a label="Nicaragua">Nicaragua</a>
+          <a label="Panama">Panama</a>
+          <a label="Paraguay">Paraguay</a>
+          <a label="Peru">Peru</a>
+          <a label="Puerto Rico">Puerto Rico</a>
+          <a label="Saint Barthélemy">Saint Barthélemy</a>
+          <a label="Saint Kitts and Nevis">Saint Kitts and Nevis</a>
+          <a label="Saint Lucia">Saint Lucia</a>
+          <a label="Saint Martin">Saint Martin</a>
+          <a label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</a>
+          <a label="Saint Vincent and the Grenadines"
+            >Saint Vincent and the Grenadines</a
+          >
+          <a label="Suriname">Suriname</a>
+          <a label="Trinidad and Tobago">Trinidad and Tobago</a>
+          <a label="Turks and Caicos Islands">Turks and Caicos Islands</a>
+          <a label="U.S. Virgin Islands">U.S. Virgin Islands</a>
+          <a label="United States">United States</a>
+          <a label="Uruguay">Uruguay</a>
+          <a label="Venezuela">Venezuela</a>
+          <a label="Afghanistan">Afghanistan</a>
+          <a label="Armenia">Armenia</a>
+          <a label="Azerbaijan">Azerbaijan</a>
+          <a label="Bahrain">Bahrain</a>
+          <a label="Bangladesh">Bangladesh</a>
+          <a label="Bhutan">Bhutan</a>
+          <a label="Brunei">Brunei</a>
+          <a label="Cambodia">Cambodia</a>
+          <a label="China">China</a>
+          <a label="Georgia">Georgia</a>
+          <a label="Hong Kong SAR China">Hong Kong SAR China</a>
+          <a label="India">India</a>
+          <a label="Indonesia">Indonesia</a>
+          <a label="Iran">Iran</a>
+          <a label="Iraq">Iraq</a>
+          <a label="Israel">Israel</a>
+          <a label="Japan">Japan</a>
+          <a label="Jordan">Jordan</a>
+          <a label="Kazakhstan">Kazakhstan</a>
+          <a label="Kuwait">Kuwait</a>
+          <a label="Kyrgyzstan">Kyrgyzstan</a>
+          <a label="Laos">Laos</a>
+          <a label="Lebanon">Lebanon</a>
+          <a label="Macau SAR China">Macau SAR China</a>
+          <a label="Malaysia">Malaysia</a>
+          <a label="Maldives">Maldives</a>
+          <a label="Mongolia">Mongolia</a>
+          <a label="Myanmar [Burma]">Myanmar [Burma]</a>
+          <a label="Nepal">Nepal</a>
+          <a label="Neutral Zone">Neutral Zone</a>
+          <a label="North Korea">North Korea</a>
+          <a label="Oman">Oman</a>
+          <a label="Pakistan">Pakistan</a>
+          <a label="Palestinian Territories">Palestinian Territories</a>
+          <a label="People's Democratic Republic of Yemen"
+            >People's Democratic Republic of Yemen
+          </a>
+          <a label="Philippines">Philippines</a>
+          <a label="Qatar">Qatar</a>
+          <a label="Saudi Arabia">Saudi Arabia</a>
+          <a label="Singapore">Singapore</a>
+          <a label="South Korea">South Korea</a>
+          <a label="Sri Lanka">Sri Lanka</a>
+          <a label="Syria">Syria</a>
+          <a label="Taiwan">Taiwan</a>
+          <a label="Tajikistan">Tajikistan</a>
+          <a label="Thailand">Thailand</a>
+          <a label="Timor-Leste">Timor-Leste</a>
+          <a label="Turkey">Turkey</a>
+          <a label="Turkmenistan">Turkmenistan</a>
+          <a label="United Arab Emirates">United Arab Emirates</a>
+          <a label="Uzbekistan">Uzbekistan</a>
+          <a label="Vietnam">Vietnam</a>
+          <a label="Yemen">Yemen</a>
+          <a label="Albania">Albania</a>
+          <a label="Andorra">Andorra</a>
+          <a label="Austria">Austria</a>
+          <a label="Belarus">Belarus</a>
+          <a label="Belgium">Belgium</a>
+          <a label="Bosnia and Herzegovina">Bosnia and Herzegovina</a>
+          <a label="Bulgaria">Bulgaria</a>
+          <a label="Croatia">Croatia</a>
+          <a label="Cyprus">Cyprus</a>
+          <a label="Czech Republic">Czech Republic</a>
+          <a label="Denmark">Denmark</a>
+          <a label="East Germany">East Germany</a>
+          <a label="Estonia">Estonia</a>
+          <a label="Faroe Islands">Faroe Islands</a>
+          <a label="Finland">Finland</a>
+          <a label="France">France</a>
+          <a label="Germany">Germany</a>
+          <a label="Gibraltar">Gibraltar</a>
+          <a label="Greece">Greece</a>
+          <a label="Guernsey">Guernsey</a>
+          <a label="Hungary">Hungary</a>
+          <a label="Iceland">Iceland</a>
+          <a label="Ireland">Ireland</a>
+          <a label="Isle of Man">Isle of Man</a>
+          <a label="Italy">Italy</a>
+          <a label="Jersey">Jersey</a>
+          <a label="Latvia">Latvia</a>
+          <a label="Liechtenstein">Liechtenstein</a>
+          <a label="Lithuania">Lithuania</a>
+          <a label="Luxembourg">Luxembourg</a>
+          <a label="Macedonia">Macedonia</a>
+          <a label="Malta">Malta</a>
+          <a label="Metropolitan France">Metropolitan France</a>
+          <a label="Moldova">Moldova</a>
+          <a label="Monaco">Monaco</a>
+          <a label="Montenegro">Montenegro</a>
+          <a label="Netherlands">Netherlands</a>
+          <a label="Norway">Norway</a>
+          <a label="Poland">Poland</a>
+          <a label="Portugal">Portugal</a>
+          <a label="Romania">Romania</a>
+          <a label="Russia">Russia</a>
+          <a label="San Marino">San Marino</a>
+          <a label="Serbia">Serbia</a>
+          <a label="Serbia and Montenegro">Serbia and Montenegro</a>
+          <a label="Slovakia">Slovakia</a>
+          <a label="Slovenia">Slovenia</a>
+          <a label="Spain">Spain</a>
+          <a label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</a>
+          <a label="Sweden">Sweden</a>
+          <a label="Switzerland">Switzerland</a>
+          <a label="Ukraine">Ukraine</a>
+          <a label="Union of Soviet Socialist Republics"
+            >Union of Soviet Socialist Republics
+          </a>
+          <a label="United Kingdom">United Kingdom</a>
+          <a label="Vatican City">Vatican City</a>
+          <a label="Åland Islands">Åland Islands</a>
+          <a label="American Samoa">American Samoa</a>
+          <a label="Antarctica">Antarctica</a>
+          <a label="Australia">Australia</a>
+          <a label="Bouvet Island">Bouvet Island</a>
+          <a label="British Indian Ocean Territory"
+            >British Indian Ocean Territory</a
+          >
+          <a label="Christmas Island">Christmas Island</a>
+          <a label="Cocos [Keeling] Islands">Cocos [Keeling] Islands</a>
+          <a label="Cook Islands">Cook Islands</a>
+          <a label="Fiji">Fiji</a>
+          <a label="French Polynesia">French Polynesia</a>
+          <a label="French Southern Territories">French Southern Territories</a>
+          <a label="Guam">Guam</a>
+          <a label="Heard Island and McDonald Islands"
+            >Heard Island and McDonald Islands</a
+          >
+          <a label="Kiribati">Kiribati</a>
+          <a label="Marshall Islands">Marshall Islands</a>
+          <a label="Micronesia">Micronesia</a>
+          <a label="Nauru">Nauru</a>
+          <a label="New Caledonia">New Caledonia</a>
+          <a label="New Zealand">New Zealand</a>
+          <a label="Niue">Niue</a>
+          <a label="Norfolk Island">Norfolk Island</a>
+          <a label="Northern Mariana Islands">Northern Mariana Islands</a>
+          <a value="PW" label="Palau">Palau</a>
+          <a value="PG" label="Papua New Guinea">Papua New Guinea</a>
+          <a value="PN" label="Pitcairn Islands">Pitcairn Islands</a>
+          <a value="WS" label="Samoa">Samoa</a>
+          <a value="SB" label="Solomon Islands">Solomon Islands</a>
+          <a value="GS" label="South Georgia and the South Sandwich Islands"
+            >South Georgia and the South Sandwich Islands</a
+          >
+          <a value="TK" label="Tokelau">Tokelau</a>
+          <a value="TO" label="Tonga">Tonga</a>
+          <a value="TV" label="Tuvalu">Tuvalu</a>
+          <a value="UM" label="U.S. Minor Outlying Islands"
+            >U.S. Minor Outlying Islands</a
+          >
+          <a value="VU" label="Vanuatu">Vanuatu</a>
+          <a value="WF" label="Wallis and Futuna">Wallis and Futuna</a>
+        </div>
+      </div>
+                            
+                            
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <div class="flex gap-4 ">
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <div class="flex gap-4 col-span-1 lg:col-span-2">
 
                                 <p class="text-base font-medium leading-none text-gray-600">Language</p>
                             </div>
-                            <div class="custom-select col-span-2 border border-[#CBD5E1] rounded-[4px] relative"
-                                style="width:100%;">
-                                <svg class="cursor-pointer top-5 right-5 absolute" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                            <div class="dropdown relative w-full col-span-2 lg:col-span-4">
+        <div
+          onclick="myLang()"
+          class="langdropbtn broder-slate-300 relative border rounded max-w-full text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="langdropbtnspan text-sm text-slate-600"> Select a language </span>
+          <svg
+            class="absolute lang-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="langDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
+            id="stateInput"
+            onkeyup="filterLang()"
+          />
+          <a> </a>
 
-                                <select>
-                                    <option value="0">Select a language</option>
-                                    <option value="1">German</option>
-                                    <option value="2">English</option>
-                                    <option value="3">French</option>
-                                    <option value="4">Italian</option>
-                                </select>
-                            </div>
+          <a label="English">English</a>
+          <a label="Arabic">Arabic</a>
+          <a label="Bengali">Bengali</a>
+          <a label="Chinese">Chinese</a>
+          <a label="French">French</a>
+          <a label="German">German</a>
+          <a label="Hindi">Hindi</a>
+          <a label="Italian">Italian</a>
+          <a label="Japanese">Japanese</a>
+          <a label="Korean">Korean</a>
+          <a label="Portuguese">Portuguese</a>
+          <a label="Russian">Russian</a>
+          <a label="Spanish">Spanish</a>
+          <a label="Tamil">Tamil</a>
+          <a label="Telugu">Telugu</a>
+          <a label="Urdu">Urdu</a>
+        </div>
+      </div>
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <div class="flex gap-4 ">
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <div class="flex gap-4 col-span-1 lg:col-span-2">
 
                                 <p class="text-base font-medium leading-none text-gray-600">Currency</p>
                             </div>
-                            <div class="custom-select col-span-2 border border-[#CBD5E1] rounded-[4px] relative"
-                                style="width:100%;">
-                                <svg class="cursor-pointer top-5 right-5 absolute" width="16" height="16"
-                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                            <div class="dropdown relative w-full col-span-2 lg:col-span-4">
+        <div
+          onclick="myStates()"
+          class="statedropbtn broder-slate-300 relative border rounded text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="statedropbtnspan text-slate-600 text-sm"> Select a currency</span>
+          <svg
+            class="absolute states-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="stateDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
+            id="stateInput"
+            onkeyup="filterStates()"
+          />
+          
+          <a label="USD - USA Dollar">USD - USA Dollar</a>
+            <a label="AED - United Arab Emirates Dirham">AED - United Arab Emirates Dirham</a>
+            <a label="AFN - Afghanistan Afghani">AFN - Afghanistan Afghani</a>
+            <a label="ALL - Albania Lek">ALL - Albania Lek</a>
+            <a label="AMD - Armenia Dram">AMD - Armenia Dram</a>
+            <a label="ANG - Netherlands Antilles Guilder">ANG - Netherlands Antilles Guilder</a>
+            <a label="AOA - Angola Kwanza">AOA - Angola Kwanza</a>
+            <a label="ARS - Argentina Peso">ARS - Argentina Peso</a>
+            <a label="AUD - Australia Dollar">AUD - Australia Dollar</a>
+            <a label="AWG - Aruba Guilder">AWG - Aruba Guilder</a>
+            <a label="AZN - Azerbaijan New Manat">AZN - Azerbaijan New Manat</a>
+            <a label="BAM - Bosnia and Herzegovina Convertible Marka">BAM - Bosnia and Herzegovina Convertible Marka</a>
+            <a label="BBD - Barbados Dollar">BBD - Barbados Dollar</a>
+            <a label="BDT - Bangladesh Taka">BDT - Bangladesh Taka</a>
+            <a label="BGN - Bulgaria Lev">BGN - Bulgaria Lev</a>
+            <a label="BHD - Bahrain Dinar">BHD - Bahrain Dinar</a>
+            <a label="BIF - Burundi Franc">BIF - Burundi Franc</a>
+            <a label="BMD - Bermuda Dollar">BMD - Bermuda Dollar</a>
+            <a label="BND - Brunei Darussalam Dollar">BND - Brunei Darussalam Dollar</a>
+            <a label="BOB - Bolivia Boliviano">BOB - Bolivia Boliviano</a>
+            <a label="BRL - Brazil Real">BRL - Brazil Real</a>
+            <a label="BSD - Bahamas Dollar">BSD - Bahamas Dollar</a>
+            <a label="BTN - Bhutan Ngultrum">BTN - Bhutan Ngultrum</a>
+            <a label="BWP - Botswana Pula">BWP - Botswana Pula</a>
 
-                                <select>
-                                    <option value="0">Select a currency</option>
-                                    <option value="1">USD - USA Dollar</option>
-                                    <option value="2">GBP - British Pound</option>
-                                    <option value="3">AUD - Austrailian Dollar</option>
-                                    <option value="4">JPY - Japanese Yen</option>
-                                </select>
-                            </div>
+          
+        </div>
+      </div>
                         </div>
-                        <div class="grid grid-cols-3 mt-8 items-center">
-                            <p class="text-base font-medium leading-none text-gray-600">Communication</p>
-                            <div class="col-span-2 flex gap-6  w-full">
+                        <div class="grid lg:grid-cols-6  grid-cols-3 mt-8 items-center">
+                            <p class="text-base font-medium leading-none text-gray-600 col-span-1 lg:col-span-2">Communication</p>
+                            <div class="col-span-2 lg:col-span-4 flex gap-6  w-full">
                                 <div class="flex gap-3">
                                     <input type="checkbox"
                                         class="rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer" />
@@ -3106,7 +3613,7 @@
                                 <div id="email-button" class="flex mt-10 justify-between ">
                                     <div>
                                         <p class="text-base font-medium leading-none text-gray-800">Email Address</p>
-                                        <p class="text-xs leading-3 text-gray-600 mt-3">MeredithLarson97@gmail.com</p>
+                                        <p class="text-xs leading-3 text-slate-600 mt-3">MeredithLarson97@gmail.com</p>
                                     </div>
                                     <button onclick="emailInteracton(this)"
                                         class="border border-blue-700 rounded-[4px] text-blue-700 hover:bg-blue-100 font-medium text-[14px] py-4 px-6">
@@ -3123,7 +3630,7 @@
                                             <input
                                                 class="col-span-2 w-full mt-4 border border-gray-300 rounded-[4px] p-4 text-slate-800"
                                                 placeholder="Company Name">
-                                            <p class="text-xs leading-3 text-gray-600 mt-3">Enter a new email address
+                                            <p class="text-xs leading-3 text-slate-600 mt-3">Enter a new email address
                                             </p>
                                         </div>
 
@@ -3134,7 +3641,7 @@
                                             <input
                                                 class="col-span-2 w-full w-full mt-4 border border-gray-300 rounded-[4px] p-4 text-slate-800"
                                                 placeholder="Company Name">
-                                            <p class="text-xs leading-3 text-gray-600 mt-3">Enter your password to
+                                            <p class="text-xs leading-3 text-slate-600 mt-3">Enter your password to
                                                 change
                                                 the
                                                 email
@@ -3159,7 +3666,7 @@
                                 <div id="password-button" class="flex  justify-between ">
                                     <div>
                                         <p class="text-base font-medium leading-none text-gray-800">Password</p>
-                                        <p class="text-xs leading-3 text-gray-600 mt-3">* * * * * * * * * * *</p>
+                                        <p class="text-xs leading-3 text-slate-600 mt-3">* * * * * * * * * * *</p>
                                     </div>
 
                                     <button onclick="passwordInteraction(this)"
@@ -3616,6 +4123,8 @@
 
             }
         </style>
+
+          <script src="./script/dropdowns.js"></script>
 </body>
 
 </html>

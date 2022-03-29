@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="./Styles/dropdowns.css">
+
 </head>
 
 <body class="bg-gray-100 relative h-full"></body>
@@ -2402,50 +2404,98 @@
                             class=" border border-gray-300 outline-none focus:bg-gray-50 rounded-[4px] w-full p-4 h-12 mt-4 text-slate-800"
                             placeholder="For example “1010 1010 1010 1010”">
                     </div>
-                    <p class="text-base font-medium leading-none text-gray-800 mt-12">Card Number</p>
+                    <p class="text-base font-medium leading-none text-gray-800 mt-12">Expiration Date</p>
                     <div class="grid grid-cols-3 gap-4 mt-3">
-                        <div class="custom-select col-span-1 border border-[#CBD5E1] h-fit rounded-[4px] relative">
-                            <svg class="cursor-pointer top-4 right-5 absolute" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                                    <div class="dropdown relative w-full ">
+        <div
+          onclick="myWeight()"
+          class="weightdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="weightdropbtnspan py-1">Month</span>
+          <svg
+            class="absolute weight-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="weightDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10"
+        >
+          <a label="1">1</a>
+            <a label="2">2</a>
+            <a label="3">3</a>
+            <a label="4">4</a>
+            <a label="5">5</a>
+            <a label="6">6</a>
+            <a label="7">7</a>
+            <a label="8">8</a>
+            <a label="9">9</a>
+            <a label="10">10</a>
+            <a label="11">11</a>    
+            <a label="12">12</a>
+           
 
-                            <select>
-                                <option value="0">Month</option>
-                                <option value="1">January</option>
-                                <option value="2">February</option>
-                                <option value="3">March</option>
-                                <option value="4">April</option>
-                                <option value="5">May</option>
-                                <option value="6">June</option>
-                                <option value="7">July</option>
-                                <option value="8">August</option>
-                                <option value="9">September</option>
-                                <option value="10">October</option>
-                                <option value="11">November</option>
-                                <option value="12">December</option>
-                            </select>
-                        </div>
-                        <div
-                            class="custom-select col-span-1 h-12  border border-[#CBD5E1] h-fit  rounded-[4px] relative">
-                            <svg class="cursor-pointer top-4 right-5 absolute" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+            
 
-                            <select>
-                                <option value="0">Year</option>
-                                <option value="9">2018</option>
-                                <option value="10">2019</option>
-                                <option value="11">2020</option>
-                                <option value="12">2021</option>
-                                <option value="13">2022</option>
-                            </select>
-                        </div>
+         
+        </div>
+      </div>
+                                              <div class="dropdown relative w-full ">
+        <div
+          onclick="myTemp()"
+          class="tempdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+        >
+          <span class="tempdropbtnspan py-1">Year</span>
+          <svg
+            class="absolute weight-arrow top-4 right-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.5 5.75L8 10.25L12.5 5.75"
+              stroke="#475569"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          id="tempDropdown"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto  flex flex-col z-10"
+        >
+          <a label="2022">2022</a>
+          <a label="2023">2023</a>
+            <a label="2024">2024</a>
+            <a label="2025">2025</a>
+            <a label="2026">2026</a>
+            <a label="2027">2027</a>
+            <a label="2028">2028</a>
+
+
+        
+            
+          
+            
+
+         
+        </div>
+      </div>
                         <input
-                            class=" border border-gray-300 outline-none focus:bg-gray-50 rounded-[4px] w-full p-4 h-[50px] text-slate-800"
+                            class=" border border-gray-300 outline-none focus:bg-gray-50 rounded-[4px] w-full p-2 h-[48px] text-slate-800"
                             placeholder="CVV">
                     </div>
 
@@ -2548,6 +2598,7 @@
 
     }
 </style>
+ <script src="./script/dropdowns.js"></script>
 </body>
 
 </html>
