@@ -152,9 +152,9 @@ links.forEach((link) => {
 	if (link.attributes.href.value == location.pathname) {
 		link.children[0].classList.remove("text-slate-600");
 		link.children[0].classList.add("text-blue-700", "bg-blue-100");
-		console.log(
-			(link.children[0].children[0].attributes.fill.value = "#1D4ED8")
-		);
+		// console.log(
+		// 	(link.children[0].children[0].attributes.fill.value = "#1D4ED8")
+		// );
 	}
 });
 
@@ -175,12 +175,12 @@ for (i = 0; i < l; i++) {
 	b.setAttribute("class", "select-items select-hide");
 	for (j = 1; j < ll; j++) {
 		/* For each option in the original select element,
-    create a new DIV that will act as an option item: */
+	create a new DIV that will act as an option item: */
 		c = document.createElement("DIV");
 		c.innerHTML = selElmnt.options[j].innerHTML;
 		c.addEventListener("click", function (e) {
 			/* When an item is clicked, update the original select box,
-        and the selected item: */
+		and the selected item: */
 			var y, i, k, s, h, sl, yl;
 			s = this.parentNode.parentNode.getElementsByTagName("select")[0];
 			sl = s.length;
@@ -205,7 +205,7 @@ for (i = 0; i < l; i++) {
 	x[i].appendChild(b);
 	a.addEventListener("click", function (e) {
 		/* When the select box is clicked, close any other select boxes,
-    and open/close the current select box: */
+	and open/close the current select box: */
 		e.stopPropagation();
 		closeAllSelect(this);
 		this.nextSibling.classList.toggle("select-hide");
@@ -349,7 +349,7 @@ allDropDowns.forEach((e) => {
 				btn.children[0].textContent = e.textContent;
 				dropdown.style.maxHeight = null;
 				arrow.classList.remove("rotate-90");
-				console.log(arrow);
+				// console.log(arrow);
 			});
 		});
 	}
@@ -402,10 +402,10 @@ const notify = [
 	},
 ];
 notify.forEach((e) => {
-	console.log(e.btn);
+	// console.log(e.btn);
 
 	e.btn.addEventListener("click", () => {
-		console.log(e.list.classList);
+
 		e.list.classList.toggle("active");
 		if (e.list.classList.contains("active")) {
 			e.btn.classList.add("bg-blue-50");

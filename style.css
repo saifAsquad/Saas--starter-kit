@@ -1,0 +1,38 @@
+.scrollList::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollList::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background: #ffffff;
+}
+
+.scrollList::-webkit-scrollbar-thumb {
+  background: #dbeafe;
+  border-radius: 10px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+.first-item::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #dbeafe;
+  top: 40px;
+  left: 50%;
+  z-index: -1;
+}
+.searchDropDown,
+.notiDropDown,
+.avatarDropDown {
+  z-index: -1;
+}
+.searchDropDown.active,
+.notiDropDown.active,
+.avatarDropDown.active {
+  z-index: 1;
+}
