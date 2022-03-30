@@ -2347,7 +2347,7 @@
             <!--  -->
             <div class="bg-white rounded w-full p-7 mt-7">
                 <div class=" rounded border-gray-300 border p-7">
-                    <p class="text-xl font-semibold leading-tight text-gray-800">Thumbnail</p>
+                    <p class="text-xl font-semibold leading-[1.25rem] text-gray-800">Thumbnail</p>
                     <p class="text-sm leading-none text-gray-600 mt-4">Set the product thumbnail image. Only Png , jpg ,
                         jpeg type of files are allowed </p>
                     <div class="mt-6 flex gap-7 items-center">
@@ -2381,7 +2381,7 @@
                                         fill="#475569" />
                                 </svg>
 
-                                <p class="text-sm leading-none text-gray-600 cursor-pointer hover:underline">Change
+                                <p class="text-sm leading-none text-gray-600 cursor-pointer hover:underline">Upload
                                     Image
                                 </p>
                             </div>
@@ -2400,7 +2400,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="text-xl font-semibold leading-tight text-gray-800 mt-10">Set Details</p>
+                <p class="text-xl font-semibold leading-[1.25rem] text-gray-800 mt-10">Set Details</p>
                 <div class="mt-7 grid grid-cols-2 gap-7">
                     <div>
                         <p class="text-base font-medium leading-none text-gray-800">Status</p>
@@ -2472,13 +2472,13 @@
                         <p class="text-xs leading-3 text-gray-600 mt-3">Set the product status</p>
                     </div>
                     <div>
-                        <p class="text-base font-medium leading-none text-gray-800">Template</p>
+                        <p class="text-base font-medium leading-none text-gray-800">Categories</p>
                                               <div class="dropdown relative w-full mt-3">
         <div
           onclick="myTemp()"
           class="tempdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
         >
-          <span class="tempdropbtnspan py-1"></span>
+          <span class="tempdropbtnspan py-1">Electronics</span>
           <svg
             class="absolute weight-arrow top-4 right-4"
             width="16"
@@ -2499,12 +2499,12 @@
           id="tempDropdown"
           class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto  flex flex-col z-10"
         >
-          <a label="Template 1">Template 1</a>
-            <a label="Template 2">Template 2</a>
-            <a label="Template 3">Template 3</a>
-            <a label="Template 4">Template 4</a>
-            <a label="Template 5">Template 5</a>
-            <a label="Template 6">Template 6</a>
+          <a label="Template 1">Electronics</a>
+            <a label="Template 2">Footwear</a>
+            <a label="Template 3">Kitchen Essentials</a>
+            <a label="Template 4">Clothing</a>
+            <a label="Template 5">Household</a>
+      
           
             
 
@@ -2518,7 +2518,7 @@
 
                 <!-- next -->
                 <div class="mt-14 border-t border-gray-300 pt-12">
-                    <p class="text-xl font-semibold leading-tight text-gray-800">General Product Details</p>
+                    <p class="text-xl font-semibold leading-[1.25rem] text-gray-800">General Product Details</p>
                     <div class="grid grid-cols-1 w-full gap-7 mt-7 ">
                         <div>
                             <p class="text-base font-medium leading-none text-gray-800">Category Name</p>
@@ -2529,7 +2529,9 @@
                     </div>
                 </div>
                 <!-- next -->
-                <div class="mt-10 rounded border border-gray-300">
+                    <p class="text-base font-medium leading-none text-gray-800 mt-10 mb-4">Category Name</p>
+
+                <div class="rounded border border-gray-300">
                     <div class="px-4 py-3 border-b flex items-center border-gray-300">
                         <div class="flex gap-2 rounded hover:bg-blue-50 w-fit cursor-pointer h-full p-2">
                             <p class="text-sm leading-none text-gray-600">Normal</p> <svg width="12" height="12"
@@ -2538,7 +2540,9 @@
                                     stroke-linejoin="round" />
                             </svg>
                         </div>
+                        
                         <div class="ml-7 gap-5 flex items-center">
+                            
                             <button class="hover:bg-gray-100 p-1 focus:bg-gray-100">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -2588,15 +2592,16 @@
 
                         </div>
                     </div>
+                    
                     <textarea
-                        class="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600"> Start typing here ...</textarea>
+                        class="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600" placeholder="Start typing here..."></textarea>
                 </div>
                 <p class="text-xs leading-3 text-gray-600 mt-3 focus:bg-gray-50">Enter product description for better
                     understanding</p>
 
                 <!-- Next -->
                 <div class="mt-14 pt-6  border-t border-gray-300">
-                    <p class="text-xl font-semibold leading-tight text-gray-800">Meta Details</p>
+                    <p class="text-xl font-semibold leading-[1.25rem] text-gray-800">Meta Details</p>
                     <div class="grid grid-cols-2 w-full gap-7 mt-7 ">
                         <div>
                             <p class="text-base font-medium leading-none text-gray-800">Meta Title</p>
@@ -2678,12 +2683,12 @@
                             </div>
                         </div>
                         <textarea
-                            class="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600"> Start typing here ...</textarea>
+                            class="resize-none w-full h-[170px] px-4 py-4 text-base outline-none text-slate-600" placeholder="Start typing here..."></textarea>
                     </div>
                 </div>
                 <p class="text-xs leading-3 text-gray-600 mt-3">Enter product meta description for better understanding
                 </p>
-                <div class="mt-12 pt-10 border-t border-t border-gray-300">
+                <div class="mt-12 pt-10 border-t  border-gray-300">
                     <p class="text-xl font-semibold leading-tight text-gray-800">Automation</p>
                     <p class="text-sm leading-none text-gray-600 mt-3">Select method for product assignment method</p>
                     <div class="border flex gap-4 items-center border-gray-300 rounded p-6 mt-6">
@@ -2750,7 +2755,7 @@
                                         <option value="0"></option>
                                         <option class="flex gap-4" value="1">Ends With
                                         </option>
-                                        <option value="2">Is Equal To</option>
+                                        <option value="2">Is Equal To pew</option>
                                         <option value="3">Is Not Equal To</option>
                                         <option value="4">Is Less Than</option>
                                         <option value="5">Is Greater Than</option>
@@ -2771,11 +2776,11 @@
                     </div>
                     <div class="w-full flex items-center justify-end gap-4 mt-10">
                         <button
-                            class="bg-white border-blue-700 rounded hover:bg-blue-100 text-[14px] font-medium px-6 py-4 text-blue-700 border">
+                            class="bg-white border-blue-700 rounded hover:bg-blue-100 text-[14px] leading-[14px] font-medium px-6 py-4 text-blue-700 border">
                             Cancel
                         </button>
                         <button
-                            class="bg-blue-700 rounded hover:bg-blue-600 text-[14px] font-medium px-6 py-4 text-white">
+                            class="bg-blue-700 rounded hover:bg-blue-600 text-[14px] font-medium leading-[14px] px-6 py-4 text-white">
                             Save Changes
                         </button>
                     </div>
@@ -2836,6 +2841,9 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        .select-items div:hover{
+color:#1D4ED8
+        }
 
         /* Style items (options): */
         .select-items {
@@ -2845,9 +2853,25 @@
             left: 0;
             right: 0;
             z-index: 99;
+            max-height:150px;
+            overflow-y: auto;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
 
         }
+  .select-items::-webkit-scrollbar {
+        width: 4px;
+      }
 
+      .select-items::-webkit-scrollbar-track {
+        border-radius: 50px;
+        background: #ffffff;
+      }
+
+      .select-items::-webkit-scrollbar-thumb {
+        background: #dbeafe;
+        border-radius: 10px;
+      }
         /* Hide the items when the select box is closed: */
         .select-hide {
             display: none;
@@ -2855,10 +2879,14 @@
 
         .select-items div:hover,
         .same-as-selected {
-            background-color: #DBEAFE;
-            color: #1D4ED8;
-            font-weight: 500;
+            background-color: #DBEAFE !important;
+            color: #1D4ED8 !important;
+            font-weight: 500 !important;
 
+        }
+        input[type="radio"]{
+            
+            cursor: pointer;
         }
     </style>
       <script src="./script/dropdowns.js"></script>
