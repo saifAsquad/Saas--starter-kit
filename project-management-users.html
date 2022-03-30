@@ -18,23 +18,23 @@
   <!--  -->
 </head>
 
-<body class="bg-gray-100 relative h-full">
+<body class="relative h-full bg-gray-100">
     <!-- Interaction -->
     <div id="add-user"
         class=" overflow-auto pt-8 bg-opacity-80 hidden   bg-gray-800 z-[200] flex justify-center fixed inset-0">
-        <div class="blur-none div max-w-740px h-fit bg-white mx-auto rounded">
+        <div class="mx-auto bg-white rounded blur-none div max-w-740px h-fit">
             <div class="absolute top-10 right-10">
-                <svg onclick="toggleAddUser()" class="hover:bg-gray-50 cursor-pointer" width="24" height="24"
+                <svg onclick="toggleAddUser()" class="cursor-pointer hover:bg-gray-50" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.25 17.25L6.75 6.75" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M17.25 6.75L6.75 17.25" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            <div class="py-10 px-24">
-                <p class="text-2xl font-semibold leading-normal text-slate-800 text-center">
+            <div class="px-24 py-10">
+                <p class="text-2xl font-semibold leading-normal text-center text-slate-800">
                     Search Users
                 </p>
-                <p class="text-sm leading-tight text-center text-gray-600 pt-4">
+                <p class="pt-4 text-sm leading-tight text-center text-gray-600">
                     Invite people you want to collaborate with
                 </p>
 
@@ -60,254 +60,254 @@
 
                 <div class="p-7 mt-[35px] bg-slate-50 rounded max-h-[460px] overflow-y-auto" id="style-2">
                     <div class="flex flex-col">
-                        <div class="profile flex justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%20199.png" alt=""
                                         class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">
                                         Harry Fritsch
                                     </p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                    <p class="mt-1 text-sm text-gray-600">
                                         Harry1230@gmail.com
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
 
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile flex mt-7 justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile mt-7">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0000s_0035_azamat-zhanisov-a5sRFieA3BY-unsplash%201.png"
                                         alt="" class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">Kesha John</p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">Kesha John</p>
+                                    <p class="mt-1 text-sm text-gray-600">
                                         02 pending and 73 completed tasks
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile flex mt-7 justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile mt-7">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0020_ardalan-hamedani-8WAcVr1BVjw-unsplash.png"
                                         alt="" class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">
                                         Kristen Bernier
                                     </p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                    <p class="mt-1 text-sm text-gray-600">
                                         00 pending and 55 completed tasks
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile flex mt-7 justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile mt-7">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0029_azamat-zhanisov-4yhHhpAMC3U-unsplash.png"
                                         alt="" class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">
                                         Brittany Ankunding
                                     </p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                    <p class="mt-1 text-sm text-gray-600">
                                         09 pending and 18 completed tasks
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile flex mt-7 justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile mt-7">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0002s_0004_alfred-kenneally-JwzpdmSYIDc-unsplash.png"
                                         alt="" class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">
                                         Nelson Blick
                                     </p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                    <p class="mt-1 text-sm text-gray-600">
                                         05 pending and 104 completed tasks
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile flex mt-7 justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile mt-7">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0016_olena-sergienko-XttWKETqCCQ-unsplash.png"
                                         alt="" class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">Tasha Hahn</p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">Tasha Hahn</p>
+                                    <p class="mt-1 text-sm text-gray-600">
                                         Juvenal_King@gmail.com
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile flex mt-7 justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile mt-7">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0000s_0035_azamat-zhanisov-a5sRFieA3BY-unsplash%201.png"
                                         alt="" class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">Kesha John</p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">Kesha John</p>
+                                    <p class="mt-1 text-sm text-gray-600">
                                         02 pending and 73 completed tasks
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile flex mt-7 justify-between">
-                            <div class="div flex items-center">
+                        <div class="flex justify-between profile mt-7">
+                            <div class="flex items-center div">
                                 <input type="checkbox" name="" id="" class="w-5 h-5 rounded accent-blue-700 mr-7" />
                                 <div class="imgContainer">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0029_azamat-zhanisov-4yhHhpAMC3U-unsplash.png"
                                         alt="" class="w-10 h-10 rounded" />
                                 </div>
-                                <div class="detailContainer ml-3">
-                                    <p class="font-medium text-sm text-slate-800">
+                                <div class="ml-3 detailContainer">
+                                    <p class="text-sm font-medium text-slate-800">
                                         Brittany Ankunding
                                     </p>
-                                    <p class="text-gray-600 text-sm mt-1">
+                                    <p class="mt-1 text-sm text-gray-600">
                                         09 pending and 18 completed tasks
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-conatiner relative">
+                            <div class="relative button-conatiner">
                                 <button onclick="moreoptionmodal(this)"
                                     class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]">
                                     More Options
                                 </button>
-                                <div class="absolute py-2 px-1 hidden top-12 right-0 bg-white shadow rounded w-32 z-10"
+                                <div class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
                                     id="newMemberInteraction">
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Guest</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Guest</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Owner</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Owner</a>
                                     <a href=""
-                                        class="block text-xs text-slate-600 px-2 py-2 hover:bg-blue-100 hover:font-medium hover:text-blue-700 rounded">Editor</a>
+                                        class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700">Editor</a>
                                 </div>
                             </div>
                         </div>
@@ -315,12 +315,12 @@
                 </div>
             </div>
             <hr class="h-[1px] bg-slate-100" />
-            <div class="btn-container flex justify-end px-7 pt-7 pb-10">
+            <div class="flex justify-end pb-10 btn-container px-7 pt-7">
                 <div class="flex gap-x-4">
-                    <button class="bg-white text-blue-700 border border-blue-700 rounded hover:bg-blue-100 px-6 py-4">
+                    <button class="px-6 py-4 text-blue-700 bg-white border border-blue-700 rounded hover:bg-blue-100">
                         Cancel
                     </button>
-                    <button class="text-white bg-blue-700 rounded hover:bg-blue-600 px-6 py-4">
+                    <button class="px-6 py-4 text-white bg-blue-700 rounded hover:bg-blue-600">
                         Save Changes
                     </button>
                 </div>
@@ -331,20 +331,20 @@
     <!-- Interaction2 -->
      <div id="add-target"
         class=" overflow-auto pt-8 bg-opacity-80 hidden    bg-gray-800 z-[200] flex justify-center fixed inset-0">
-        <div class="blur-none div h-fit max-w-740px bg-white mx-auto rounded">
+        <div class="mx-auto bg-white rounded blur-none div h-fit max-w-740px">
             <div class="p-10">
                 <div class="flex justify-between">
                     <div class="header">
                         <p class="text-2xl font-semibold leading-normal text-gray-800">
                             Set Your Target
                         </p>
-                        <p class="text-sm leading-tight text-slate-600 mt-4">
+                        <p class="mt-4 text-sm leading-tight text-slate-600">
                             Choose what type of account you need carefully as billing is based
                             upon your account type
                         </p>
                     </div>
                     <div class="cross-svg-container">
-                        <svg onclick="toggleAddTarget()" class="hover:bg-gray-100 cursor-pointer" width="24" height="24"
+                        <svg onclick="toggleAddTarget()" class="cursor-pointer hover:bg-gray-100" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.25 17.25L6.75 6.75" stroke="#1E293B" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -353,12 +353,12 @@
                         </svg>
                     </div>
                 </div>
-                <div class="input-group pt-10">
+                <div class="pt-10 input-group">
                     <div class="flex">
                         <p class="text-base font-medium leading-none text-gray-800">
                             Target Title
                         </p>
-                        <div class="relative group cursor-pointer">
+                        <div class="relative cursor-pointer group">
                             <svg class="ml-[10px] cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -373,7 +373,7 @@
                                     fill="#475569" />
                             </svg>
                             <div
-                                class="custom-tooltip absolute hidden bottom-4 -left-5 rounded-t group-hover:block border px-2 pt-3 pb-7 bg-gray-50">
+                                class="absolute hidden px-2 pt-3 border rounded-t custom-tooltip bottom-4 -left-5 group-hover:block pb-7 bg-gray-50">
                                 <p class="w-32 text-xs leading-none text-slate-600">
                                     Specify a name for future usage
                                 </p>
@@ -381,21 +381,21 @@
                         </div>
                     </div>
                     <input type="text" name="target-title" id=""
-                        class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
+                        class="w-full p-4 mt-4 border rounded outline-none placeholder:text-slate-600 placeholder:text-sm focus:bg-gray-50 border-slate-300"
                         placeholder="Enter Target Title Here" />
                 </div>
-                <div class="input-group pt-6">
+                <div class="pt-6 input-group">
                     <div class="flex">
                         <p class="text-base font-medium leading-none text-gray-800">
                             Select a Team Member
                         </p>
                     </div>
-                 <div class="dropdown relative w-full mt-4">
+                 <div class="relative w-full mt-4 dropdown">
         <div
           onclick="myWeight()"
           class="weightdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
         >
-          <span class="weightdropbtnspan text-sm text-slate-600">Select the member you want to assign the target to</span>
+          <span class="text-sm weightdropbtnspan text-slate-600">Select the member you want to assign the target to</span>
           <svg
             class="absolute weight-arrow top-4 right-4"
             width="16"
@@ -428,7 +428,7 @@
       </div>
                    
                 </div>
-                <div class="input-group pt-6">
+                <div class="pt-6 input-group">
                     <div class="flex">
                         <p class="text-base font-medium leading-none text-gray-800">
                         <p class="text-base font-medium leading-none text-gray-800">Target Details
@@ -436,9 +436,9 @@
                         </p>
                     </div>
                     <textarea rows="8" type="text" name="target-title" id=""
-                        class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"></textarea>
+                        class="w-full p-4 mt-4 border rounded outline-none placeholder:text-slate-600 placeholder:text-sm focus:bg-gray-50 border-slate-300"></textarea>
                 </div>
-                <div class="input-group pt-6">
+                <div class="pt-6 input-group">
                     <div class="flex">
                         <p class="text-base font-medium leading-none text-gray-800">
                         <p class="text-base font-medium leading-none text-gray-800">Due Date and
@@ -446,10 +446,10 @@
                         </p>
                     </div>
                     <input type="datetime-local" name="target-title" id=""
-                        class="p-4 placeholder:text-slate-600 placeholder:text-sm outline-none focus:bg-gray-50 border border-slate-300 w-full rounded mt-4"
+                        class="w-full p-4 mt-4 border rounded outline-none placeholder:text-slate-600 placeholder:text-sm focus:bg-gray-50 border-slate-300"
                         placeholder="23 Sep 2023 , 02:40 PM " />
                 </div>
-                <div class="input-group pt-6">
+                <div class="pt-6 input-group">
                     <div class="flex">
                         <p class="text-base font-medium leading-none text-gray-800">
                         <p class="text-base font-medium leading-none text-gray-800">Target Tags</p>
@@ -458,45 +458,45 @@
                    <div onclick="setFocus()"
         class="border cursor-text px-4 gap-4 flex border-slate-300 rounded py-3  max-w-[712px] w-full mt-4">
         <!-- Meta Tgas -->
-        <div class="append-tags flex flex-wrap gap-4">
+        <div class="flex flex-wrap gap-4 append-tags">
 
         </div>
         <!-- Meta Tgas -->
         <!-- Input -->
         <div>
             <input onkeypress="appendSpan(this,event)" id="meta-enter"
-                class="appearance-none border-0 outline-none w-full" />
+                class="w-full border-0 outline-none appearance-none" />
         </div>
         <!-- Input -->
     </div>
                 </div>
-                <div class="flex justify-between items-center py-8">
+                <div class="flex items-center justify-between py-8">
                     <div class="div ">
                         <p class="text-base font-medium leading-none text-gray-800">Notifications
                         </p>
                     </div>
-                    <div class="chceckbox-container flex items-center">
-                        <div class="checkbox-instance flex">
-                            <input type="checkbox" checked name="" id="" class="accent-blue-700 w-5 h-5 cursor-pointer">
-                            <p class="text-base leading-none text-slate-600 pl-3">Email</p>
+                    <div class="flex items-center chceckbox-container">
+                        <div class="flex checkbox-instance">
+                            <input type="checkbox" checked name="" id="" class="w-5 h-5 cursor-pointer accent-blue-700">
+                            <p class="pl-3 text-base leading-none text-slate-600">Email</p>
                         </div>
-                        <div class="checkbox-instance flex pl-4">
+                        <div class="flex pl-4 checkbox-instance">
                             <input type="checkbox" name="" id=""
-                                class="accent-blue-700 w-5 h-5 cursor-pointer text-blue-100"
+                                class="w-5 h-5 text-blue-100 cursor-pointer accent-blue-700"
                                 style="background-color: black;">
-                            <p class="text-base leading-none text-slate-600 pl-3 ">Phone</p>
+                            <p class="pl-3 text-base leading-none text-slate-600 ">Phone</p>
                         </div>
 
                     </div>
                 </div>
             </div>
             <hr class="h-[1px] bg-slate-100 ">
-            <div class="btn-container flex justify-end px-7 pt-7 pb-10">
+            <div class="flex justify-end pb-10 btn-container px-7 pt-7">
                 <div class="flex gap-x-4">
-                    <button class="bg-white text-blue-700 border border-blue-700 rounded hover:bg-blue-100  px-6 py-4">
+                    <button class="px-6 py-4 text-blue-700 bg-white border border-blue-700 rounded hover:bg-blue-100">
                         Cancel
                     </button>
-                    <button class=" text-white bg-blue-700 rounded hover:bg-blue-600  px-6 py-4">
+                    <button class="px-6 py-4 text-white bg-blue-700 rounded hover:bg-blue-600">
                         Save Changes
                     </button>
                 </div>
@@ -504,13 +504,13 @@
         </div>
     </div>
     <!-- Interaction2 -->
-    <div class="flex items-start flex-no-wrap">
+    <div class="flex flex-no-wrap items-start">
         <!-- Sidebar starts -->
         <section class="hidden xl:block navigation-menu">
             <div
                 class="w-[52px] z-50 absolute h-full items-center  bg-white shadow md:h-full flex-col justify-between flex">
                 <div class="flex flex-col items-center justify-center">
-                    <svg class="cursor-pointer mt-4" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg class="mt-4 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 17.799 6.20101 22.5 12 22.5Z"
@@ -521,7 +521,7 @@
                         <path d="M6.75 5.25L12 10.25H17.25V5.25H6.75Z" fill="#88DDFF" />
                     </svg>
 
-                    <svg class="cursor-pointer mt-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg class="mt-5 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M6.08181 3.59263L12 3L17.9181 3.59263L22.5 9.41851L12 20.9999L1.5 9.41851L6.08181 3.59263Z"
@@ -540,7 +540,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9992 3L5.7522 9.41844H18.2461"
                             fill="#FEEEB7" />
                     </svg>
-                    <svg class="cursor-pointer mt-5" width="18" height="24" viewBox="0 0 18 24" fill="none"
+                    <svg class="mt-5 cursor-pointer" width="18" height="24" viewBox="0 0 18 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_252_348)">
                             <path
@@ -565,7 +565,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <svg class="cursor-pointer mt-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg class="mt-5 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 17.799 6.20101 22.5 12 22.5Z"
@@ -575,7 +575,7 @@
                             fill="white" />
                     </svg>
 
-                    <svg class="cursor-pointer mt-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg class="mt-5 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="12" r="10.5" fill="#105DFB" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -588,7 +588,7 @@
                             d="M5.15625 16.4696V7.30762H9.3917C10.7521 7.30762 11.855 8.41047 11.855 9.7709C11.855 10.6354 11.5892 11.1709 10.6145 11.7203C11.7808 12.2517 12.1048 12.9883 12.1048 14.0156C12.1048 15.4054 10.8701 16.4696 9.4803 16.4696H5.15625ZM6.94851 8.82423V11.0274H9.04617C9.04617 11.0274 10.0657 11.0274 10.0657 9.9258C10.0657 8.82423 9.04617 8.82423 9.04617 8.82423H6.94851ZM6.94851 14.918V12.5391H9.19851C9.56179 12.5391 10.3235 12.7266 10.3235 13.8516C10.3235 14.686 9.57351 14.9102 9.19851 14.918H6.94851ZM15.9368 9.83205C14.6477 9.83205 12.7376 10.7578 12.7376 13.2188C12.7376 14.7173 13.5579 16.6406 16.0188 16.6406C17.9876 16.6406 18.8938 15.1953 19.1009 14.4727H17.2493C17.1555 14.8008 16.7923 15.1641 16.0188 15.1641C14.8938 15.1641 14.4954 14.2031 14.4368 13.7227H19.1009V13.2188C19.1009 10.7578 17.2259 9.83205 15.9368 9.83205ZM15.9368 11.2383C14.8868 11.2383 14.4993 12.1055 14.4368 12.5391H17.2493C17.2493 12.1055 16.9868 11.2383 15.9368 11.2383ZM13.6985 7.82814V8.96486H18.1165V7.82814H13.6985Z"
                             fill="white" />
                     </svg>
-                    <svg class="cursor-pointer mt-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg class="mt-5 cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="12" r="10.5" fill="#FF3366" />
                         <path
@@ -599,7 +599,7 @@
                             fill="white" />
                     </svg>
 
-                    <svg class="cursor-pointer mt-5" width="24" height="27" viewBox="0 0 24 27" fill="none"
+                    <svg class="mt-5 cursor-pointer" width="24" height="27" viewBox="0 0 24 27" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4.73679 15.1262L3.63821 15.5207L3.57922 18.7331L7.38215 17.3676C6.07779 16.9369 5.12527 16.1792 4.73679 15.1262Z"
@@ -652,17 +652,17 @@
             <div
                 class="w-[260px] ml-[52px] z-50 absolute h-full bg-white shadow md:h-full flex-col justify-between flex overflow-auto">
                 <div class="relative">
-                    <img class="absolute top-3 right-2 cursor-pointer xl:hidden close-nav"
+                    <img class="absolute cursor-pointer top-3 right-2 xl:hidden close-nav"
                         src="https://img.icons8.com/ios-filled/25/000000/delete-sign--v1.png" />
-                    <div class="h-16 w-full px-8 flex items-center">
+                    <div class="flex items-center w-full h-16 px-8">
                         <img src="./pictures/logo.svg">
                     </div>
                     <ul class="mt-8 ">
                         <!-- Dashboards -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex  border-l-2 border-blue-700   w-full  justify-between text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
+                                class="flex items-center justify-between w-full text-blue-700 border-l-2 border-blue-700 cursor-pointer hover:bg-blue-50 ">
+                                <a href="#" class="flex items-center px-8 py-2">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -675,10 +675,10 @@
                                             stroke-linejoin="round" />
                                     </svg>
 
-                                    <span class="text-sm ml-2">Dashboards</span>
+                                    <span class="ml-2 text-sm">Dashboards</span>
                                 </a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+                                <div class="flex items-center justify-center py-1 text-xs text-gray-300 rounded">
                                     <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
@@ -691,7 +691,7 @@
 
                             </li>
                             <ul
-                                class="invisible opacity-0   flex flex-col  mb-2 h-0 transition-all ease-in-out duration-600  ">
+                                class="flex flex-col invisible h-0 mb-2 transition-all ease-in-out opacity-0 duration-600 ">
                                 <a class="dashboard-links" href="/">
                                     <li
                                         class="text-xs pl-14 hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
@@ -748,8 +748,8 @@
                         <!-- Pages -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex     w-full  justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
+                                class="flex items-center justify-between w-full cursor-pointer text-slate-800 hover:text-blue-700 hover:bg-blue-50 ">
+                                <a href="#" class="flex items-center px-8 py-2">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -765,10 +765,10 @@
                                     </svg>
 
 
-                                    <span class="text-sm ml-2">Pages</span>
+                                    <span class="ml-2 text-sm">Pages</span>
                                 </a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+                                <div class="flex items-center justify-center py-1 text-xs text-gray-300 rounded">
                                     <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
@@ -781,7 +781,7 @@
 
                             </li>
                             <ul
-                                class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
+                                class="flex flex-col invisible h-0 mb-4 transition-all ease-in-out opacity-0 pl-14 duration-600 ">
                                 <a href="pages-login.html">
 
                                     <li
@@ -852,8 +852,8 @@
                         <!-- Account -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex     w-full  justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
+                                class="flex items-center justify-between w-full cursor-pointer text-slate-800 hover:text-blue-700 hover:bg-blue-50 ">
+                                <a href="#" class="flex items-center px-8 py-2">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -866,10 +866,10 @@
 
 
 
-                                    <span class="text-sm ml-2">Account</span>
+                                    <span class="ml-2 text-sm">Account</span>
                                 </a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+                                <div class="flex items-center justify-center py-1 text-xs text-gray-300 rounded">
                                     <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
@@ -882,7 +882,7 @@
 
                             </li>
                             <ul
-                                class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
+                                class="flex flex-col invisible h-0 mb-4 transition-all ease-in-out opacity-0 pl-14 duration-600 ">
                                 <a class="dashboard-links" href="/account-overview.html">
                                     <li
                                         class="text-xs  hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
@@ -912,8 +912,8 @@
                         <!-- widgets -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex     w-full  justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
+                                class="flex items-center justify-between w-full cursor-pointer text-slate-800 hover:text-blue-700 hover:bg-blue-50 ">
+                                <a href="#" class="flex items-center px-8 py-2">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -923,10 +923,10 @@
 
 
 
-                                    <span class="text-sm ml-2">Widgets</span>
+                                    <span class="ml-2 text-sm">Widgets</span>
                                 </a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+                                <div class="flex items-center justify-center py-1 text-xs text-gray-300 rounded">
                                     <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
@@ -939,7 +939,7 @@
 
                             </li>
                             <ul
-                                class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
+                                class="flex flex-col invisible h-0 mb-4 transition-all ease-in-out opacity-0 pl-14 duration-600 ">
                                 <a href="widgets-lists.html">
                                     <li
                                         class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
@@ -985,8 +985,8 @@
                         <!-- utilities -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex     w-full  justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
+                                class="flex items-center justify-between w-full cursor-pointer text-slate-800 hover:text-blue-700 hover:bg-blue-50 ">
+                                <a href="#" class="flex items-center px-8 py-2">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.5 10H1L5.75 1.5L10.5 10Z" stroke="currentColor"
@@ -999,10 +999,10 @@
 
 
 
-                                    <span class="text-sm ml-2">Utilities</span>
+                                    <span class="ml-2 text-sm">Utilities</span>
                                 </a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+                                <div class="flex items-center justify-center py-1 text-xs text-gray-300 rounded">
                                     <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
@@ -1015,7 +1015,7 @@
 
                             </li>
                             <ul
-                                class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
+                                class="flex flex-col invisible h-0 mb-4 transition-all ease-in-out opacity-0 pl-14 duration-600 ">
                                 <a class="dashboard-links" href="/horizontol-search.html">
                                     <li
                                         class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
@@ -1074,8 +1074,8 @@
                         <!-- ui Components -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex     w-full  justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
+                                class="flex items-center justify-between w-full cursor-pointer text-slate-800 hover:text-blue-700 hover:bg-blue-50 ">
+                                <a href="#" class="flex items-center px-8 py-2">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -1090,10 +1090,10 @@
 
 
 
-                                    <span class="text-sm ml-2">UI Components</span>
+                                    <span class="ml-2 text-sm">UI Components</span>
                                 </a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+                                <div class="flex items-center justify-center py-1 text-xs text-gray-300 rounded">
                                     <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
@@ -1106,7 +1106,7 @@
 
                             </li>
                             <ul
-                                class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
+                                class="flex flex-col invisible h-0 mb-4 transition-all ease-in-out opacity-0 pl-14 duration-600 ">
                                 <a href="components-buttons.html">
                                     <li
                                         class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
@@ -1237,8 +1237,8 @@
                         <!-- Applications -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex     w-full  justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
+                                class="flex items-center justify-between w-full cursor-pointer text-slate-800 hover:text-blue-700 hover:bg-blue-50 ">
+                                <a href="#" class="flex items-center px-8 py-2">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -1260,10 +1260,10 @@
 
 
 
-                                    <span class="text-sm ml-2">Applications</span>
+                                    <span class="ml-2 text-sm">Applications</span>
                                 </a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+                                <div class="flex items-center justify-center py-1 text-xs text-gray-300 rounded">
                                     <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
@@ -1276,7 +1276,7 @@
 
                             </li>
                             <ul
-                                class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
+                                class="flex flex-col invisible h-0 mb-4 transition-all ease-in-out opacity-0 pl-14 duration-600 ">
                                 <a href="project-management.html">
                                     <li
                                         class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
@@ -1572,7 +1572,7 @@
             <!-- Header -->
             <nav class="px-7 bg-white py-3 flex justify-between items-center shadow-[0px_1px_2px_rgba(0,0,0,0.07)]">
 				<!-- **Humburger SVG Icon -->
-				<div class="lg:hidden hamburger cursor-pointer">
+				<div class="cursor-pointer lg:hidden hamburger">
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd"
 							d="M3 7.125C3 6.50368 3.50368 6 4.125 6H19.875C20.4963 6 21 6.50368 21 7.125C21 7.74632 20.4963 8.25 19.875 8.25H4.125C3.50368 8.25 3 7.74632 3 7.125Z"
@@ -1586,32 +1586,32 @@
 					</svg>
 				</div>
 				<!-- ***Links -->
-				<ul class="text-slate-600 lg:flex items-center gap-x-6 hidden">
-					<li class="text-blue-700 bg-blue-50 font-medium p-3 rounded cursor-pointer">
+				<ul class="items-center hidden text-slate-600 lg:flex gap-x-6">
+					<li class="p-3 font-medium text-blue-700 rounded cursor-pointer bg-blue-50">
 						Dashboards
 					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+					<li class="p-3 transition duration-200 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700">
 						Pages
 					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+					<li class="p-3 transition duration-200 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700">
 						Account
 					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+					<li class="p-3 transition duration-200 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700">
 						Widgets
 					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+					<li class="p-3 transition duration-200 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700">
 						Utilities
 					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+					<li class="p-3 transition duration-200 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700">
 						UI Components
 					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+					<li class="p-3 transition duration-200 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700">
 						Applications
 					</li>
 				</ul>
-				<div class="flex gap-x-7 items-center">
+				<div class="flex items-center gap-x-7">
 					<!-- ***Search Icon*** -->
-					<div class="search cursor-pointer relative">
+					<div class="relative cursor-pointer search">
 						<div class="searchBtn">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -1629,7 +1629,7 @@
 							<!-- *Search Inputs* -->
 							<div class="relative">
 								<div class="border-b border-slate-100">
-									<div class="px-4 flex items-center justify-between">
+									<div class="flex items-center justify-between px-4">
 										<div class="flex items-center">
 											<div>
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1643,7 +1643,7 @@
 												</svg>
 											</div>
 											<input type="text" name="search" id="search" placeholder="Search"
-												class="outline-none p-4 placeholder-slate-600" />
+												class="p-4 outline-none placeholder-slate-600" />
 										</div>
 										<!-- *Setting Btn -->
 										<div class="settingsBtn">
@@ -1659,16 +1659,16 @@
 
 								<div class="scrollList max-h-[264px] overflow-y-auto">
 									<div class="px-4 pt-4">
-										<h1 class="font-semibold text-base">Latest Searches</h1>
-										<p class="text-xs text-slate-600 mt-3">23 November 2022</p>
+										<h1 class="text-base font-semibold">Latest Searches</h1>
+										<p class="mt-3 text-xs text-slate-600">23 November 2022</p>
 									</div>
 									<!-- *search List -->
 									<ul
-										class="searchList active cursor-pointer flex flex-col justify-center py-5 gap-y-5">
-										<li class="px-4 text-slate-600 flex justify-between items-center">
-											<div class="flex gap-x-3 items-center">
+										class="flex flex-col justify-center py-5 cursor-pointer searchList active gap-y-5">
+										<li class="flex items-center justify-between px-4 text-slate-600">
+											<div class="flex items-center gap-x-3">
 												<!-- *Icon -->
-												<div class="p-2 bg-blue-50 rounded">
+												<div class="p-2 rounded bg-blue-50">
 													<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 														xmlns="http://www.w3.org/2000/svg">
 														<path
@@ -1690,17 +1690,17 @@
 													<h3 class="font-medium text-slate-800">
 														Project Alpha
 													</h3>
-													<p class="text-slate-600 text-xs">
+													<p class="text-xs text-slate-600">
 														Trading tool for stoks and funds
 													</p>
 												</div>
 											</div>
 										</li>
 										<li
-											class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-											<div class="flex gap-x-3 items-center">
+											class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+											<div class="flex items-center gap-x-3">
 												<!-- *Icon -->
-												<div class="p-2 bg-blue-50 rounded">
+												<div class="p-2 rounded bg-blue-50">
 													<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 														xmlns="http://www.w3.org/2000/svg">
 														<path
@@ -1719,17 +1719,17 @@
 													<h3 class="font-medium text-slate-800">
 														CNN News Report
 													</h3>
-													<p class="text-slate-600 text-xs">
+													<p class="text-xs text-slate-600">
 														News and communications
 													</p>
 												</div>
 											</div>
 										</li>
 										<li
-											class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-											<div class="flex gap-x-3 items-center">
+											class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+											<div class="flex items-center gap-x-3">
 												<!-- *Icon -->
-												<div class="p-2 bg-blue-50 rounded">
+												<div class="p-2 rounded bg-blue-50">
 													<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 														xmlns="http://www.w3.org/2000/svg">
 														<path
@@ -1748,7 +1748,7 @@
 													<h3 class="font-medium text-slate-800">
 														Project Beta Ideation and Research
 													</h3>
-													<p class="text-slate-600 text-xs">
+													<p class="text-xs text-slate-600">
 														News and communications
 													</p>
 												</div>
@@ -1756,16 +1756,16 @@
 										</li>
 									</ul>
 								</div>
-								<div class="flex flex-col border-t border-slate-100 cursor-pointer">
-									<h1 class="font-semibold text-sm text-slate-800 pt-4 px-4">
+								<div class="flex flex-col border-t cursor-pointer border-slate-100">
+									<h1 class="px-4 pt-4 text-sm font-semibold text-slate-800">
 										Users
 									</h1>
 									<ul
-										class="userList active cursor-pointer flex flex-col justify-center py-5 gap-y-5">
-										<li class="px-4 text-slate-600 flex justify-between items-center">
-											<div class="flex gap-x-3 items-center">
+										class="flex flex-col justify-center py-5 cursor-pointer userList active gap-y-5">
+										<li class="flex items-center justify-between px-4 text-slate-600">
+											<div class="flex items-center gap-x-3">
 												<!-- *Icon -->
-												<div class="rounded overflow-hidden">
+												<div class="overflow-hidden rounded">
 													<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sdfwsfs.png"
 														alt="avatar 1" />
 												</div>
@@ -1774,16 +1774,16 @@
 													<h3 class="font-medium text-slate-800">
 														Frankie Streich
 													</h3>
-													<p class="text-slate-600 text-xs">
+													<p class="text-xs text-slate-600">
 														Global Research Designer
 													</p>
 												</div>
 											</div>
 										</li>
-										<li class="px-4 text-slate-600 flex justify-between items-center">
-											<div class="flex gap-x-3 items-center">
+										<li class="flex items-center justify-between px-4 text-slate-600">
+											<div class="flex items-center gap-x-3">
 												<!-- *Icon -->
-												<div class="rounded overflow-hidden">
+												<div class="overflow-hidden rounded">
 													<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/dfhdh.png"
 														alt="avatar 2" />
 												</div>
@@ -1792,7 +1792,7 @@
 													<h3 class="font-medium text-slate-800">
 														Frankie Streich
 													</h3>
-													<p class="text-slate-600 text-xs">
+													<p class="text-xs text-slate-600">
 														Global Research Designer
 													</p>
 												</div>
@@ -1802,9 +1802,9 @@
 								</div>
 								<!-- *Search Prefernces -->
 								<div
-									class="absolute inset-0 bg-white h-fit translate-x-full searchPreference transition duration-200">
-									<div class="flex justify-between items-center px-6 py-5">
-										<h1 class="text-slate-800 font-semibold text-base">
+									class="absolute inset-0 transition duration-200 translate-x-full bg-white h-fit searchPreference">
+									<div class="flex items-center justify-between px-6 py-5">
+										<h1 class="text-base font-semibold text-slate-800">
 											Search Preferences
 										</h1>
 										<div class="searchCrossBtn">
@@ -1818,14 +1818,14 @@
 										</div>
 									</div>
 									<div class="border-t border-b border-slate-100">
-										<ul class="px-6 py-4 flex flex-col gap-y-6">
-											<li class="flex justify-between items-center">
-												<p class="text-slate-600 text-sm">Projects</p>
+										<ul class="flex flex-col px-6 py-4 gap-y-6">
+											<li class="flex items-center justify-between">
+												<p class="text-sm text-slate-600">Projects</p>
 												<div
 													class="toggleBtn cursor-pointer transition duration-200 pt-[0.5px] rounded-[20px] bg-slate-300 w-11 h-6 mt-1">
 													<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
 														xmlns="http://www.w3.org/2000/svg"
-														class="translate-x-0 toggle transition duration-200">
+														class="transition duration-200 translate-x-0 toggle">
 														<g filter="url(#filter0_d_1144_13505)">
 															<rect x="2" y="1.00195" width="20" height="20" rx="10"
 																fill="white" />
@@ -1854,12 +1854,12 @@
 												</div>
 											</li>
 											<li class="flex justify-between">
-												<p class="text-slate-600 text-sm">Projects</p>
+												<p class="text-sm text-slate-600">Projects</p>
 												<div
 													class="toggleBtn cursor-pointer transition duration-200 pt-[0.5px] rounded-[20px] bg-slate-300 w-11 h-6 mt-1">
 													<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
 														xmlns="http://www.w3.org/2000/svg"
-														class="translate-x-0 toggle transition duration-200">
+														class="transition duration-200 translate-x-0 toggle">
 														<g filter="url(#filter0_d_1144_13505)">
 															<rect x="2" y="1.00195" width="20" height="20" rx="10"
 																fill="white" />
@@ -1888,12 +1888,12 @@
 												</div>
 											</li>
 											<li class="flex justify-between">
-												<p class="text-slate-600 text-sm">Projects</p>
+												<p class="text-sm text-slate-600">Projects</p>
 												<div
 													class="toggleBtn cursor-pointer transition duration-200 pt-[0.5px] rounded-[20px] bg-slate-300 w-11 h-6 mt-1">
 													<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
 														xmlns="http://www.w3.org/2000/svg"
-														class="translate-x-0 toggle transition duration-200">
+														class="transition duration-200 translate-x-0 toggle">
 														<g filter="url(#filter0_d_1144_13505)">
 															<rect x="2" y="1.00195" width="20" height="20" rx="10"
 																fill="white" />
@@ -1922,12 +1922,12 @@
 												</div>
 											</li>
 											<li class="flex justify-between">
-												<p class="text-slate-600 text-sm">Projects</p>
+												<p class="text-sm text-slate-600">Projects</p>
 												<div
 													class="toggleBtn cursor-pointer transition duration-200 pt-[0.5px] rounded-[20px] bg-slate-300 w-11 h-6 mt-1">
 													<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
 														xmlns="http://www.w3.org/2000/svg"
-														class="translate-x-0 toggle transition duration-200">
+														class="transition duration-200 translate-x-0 toggle">
 														<g filter="url(#filter0_d_1144_13505)">
 															<rect x="2" y="1.00195" width="20" height="20" rx="10"
 																fill="white" />
@@ -1956,12 +1956,12 @@
 												</div>
 											</li>
 											<li class="flex justify-between">
-												<p class="text-slate-600 text-sm">Projects</p>
+												<p class="text-sm text-slate-600">Projects</p>
 												<div
 													class="toggleBtn cursor-pointer transition duration-200 pt-[0.5px] rounded-[20px] bg-slate-300 w-11 h-6 mt-1">
 													<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
 														xmlns="http://www.w3.org/2000/svg"
-														class="translate-x-0 toggle transition duration-200">
+														class="transition duration-200 translate-x-0 toggle">
 														<g filter="url(#filter0_d_1144_13505)">
 															<rect x="2" y="1.00195" width="20" height="20" rx="10"
 																fill="white" />
@@ -1991,7 +1991,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="flex justify-end gap-x-2 items-center px-6 py-5">
+									<div class="flex items-center justify-end px-6 py-5 gap-x-2">
 										<button
 											class="sBtn py-[12px] px-[16px] text-sm font-medium text-blue-700 border-2 rounded-md border-blue-700 hover:bg-blue-100 transition duration-200">
 											Cancel
@@ -2006,8 +2006,8 @@
 						</div>
 					</div>
 					<!-- ***Notification Icon*** -->
-					<div class="notification relative">
-						<div class="notificationBtn cursor-pointer">
+					<div class="relative notification">
+						<div class="cursor-pointer notificationBtn">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -2025,37 +2025,37 @@
 							class="notiDropDown absolute w-full opacity-0 min-w-[280px] left-[100%] translate-x-[-50%] sm:translate-x-0 sm:left-[unset] sm:min-w-[356px] max-h-fit rounded overflow-hidden bg-white top-9 right-0 transition-[top,opacity] duration-200 shadow-[0px_2px_5px_rgba(0,0,0,0.06),0px_4px_6px_-1px_rgba(0,0,0,0.1)]">
 							<!-- *Notification Info* -->
 							<div class="py-4 border-b border-slate-100">
-								<div class="px-4 flex items-center">
-									<h1 class="font-semibold text-xl">
+								<div class="flex items-center px-4">
+									<h1 class="text-xl font-semibold">
 										Notifications
 										<span
 											class="text-blue-700 bg-blue-50 font-medium text-xs w-[15px] h-[12px] p-1 rounded ml-2">07</span>
 									</h1>
 								</div>
-								<p class="px-4 text-xs text-slate-600 mt-1">23 November 2022</p>
+								<p class="px-4 mt-1 text-xs text-slate-600">23 November 2022</p>
 							</div>
 							<!-- **Tabs Alerts updates logs -->
-							<ul class="text-slate-600 flex items-center gap-x-6 py-4 border-b border-slate-100">
+							<ul class="flex items-center py-4 border-b text-slate-600 gap-x-6 border-slate-100">
 								<li
-									class="text-blue-700 ml-4 alertBtn bg-blue-50 hover:text-blue-700 hover:bg-blue-50 font-medium px-3 py-2 rounded cursor-pointer transition duration-200">
+									class="px-3 py-2 ml-4 font-medium text-blue-700 transition duration-200 rounded cursor-pointer alertBtn bg-blue-50 hover:text-blue-700 hover:bg-blue-50">
 									Alerts
 								</li>
 								<li
-									class="hover:text-blue-700 updateBtn hover:bg-blue-50 font-medium px-3 py-2 rounded cursor-pointer transition duration-200">
+									class="px-3 py-2 font-medium transition duration-200 rounded cursor-pointer hover:text-blue-700 updateBtn hover:bg-blue-50">
 									Updates
 								</li>
 								<li
-									class="hover:text-blue-700 logBtn hover:bg-blue-50 font-medium px-3 py-2 rounded cursor-pointer transition duration-200">
+									class="px-3 py-2 font-medium transition duration-200 rounded cursor-pointer hover:text-blue-700 logBtn hover:bg-blue-50">
 									Logs
 								</li>
 							</ul>
 							<div class="scrollList max-h-[264px] overflow-y-auto">
 								<!-- *Alert List -->
-								<ul class="alertList active cursor-pointer flex flex-col justify-center py-5 gap-y-5">
-									<li class="px-4 text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+								<ul class="flex flex-col justify-center py-5 cursor-pointer alertList active gap-y-5">
+									<li class="flex items-center justify-between px-4 text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Icon -->
-											<div class="p-2 bg-blue-50 rounded">
+											<div class="p-2 rounded bg-blue-50">
 												<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 													xmlns="http://www.w3.org/2000/svg">
 													<path
@@ -2075,17 +2075,17 @@
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">Project Alpha</h3>
-												<p class="text-slate-600 text-xs">25 minutes ago</p>
+												<p class="text-xs text-slate-600">25 minutes ago</p>
 											</div>
 										</div>
 										<h4 class="text-green-700 bg-green-100 px-2 py-1 text-xs rounded-[2px]">
 											Completed
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Icon -->
-											<div class="p-2 bg-blue-50 rounded">
+											<div class="p-2 rounded bg-blue-50">
 												<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 													xmlns="http://www.w3.org/2000/svg">
 													<path
@@ -2098,17 +2098,17 @@
 												<h3 class="font-medium text-slate-800">
 													HR Meeting Credentials
 												</h3>
-												<p class="text-slate-600 text-xs">01 hour ago</p>
+												<p class="text-xs text-slate-600">01 hour ago</p>
 											</div>
 										</div>
 										<h4 class="text-blue-700 bg-blue-100 px-2 py-1 text-xs rounded-[2px]">
 											In Progress
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Icon -->
-											<div class="p-2 bg-blue-50 rounded">
+											<div class="p-2 rounded bg-blue-50">
 												<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 													xmlns="http://www.w3.org/2000/svg">
 													<path
@@ -2127,17 +2127,17 @@
 												<h3 class="font-medium text-slate-800">
 													Design Research
 												</h3>
-												<p class="text-slate-600 text-xs">02 hours ago</p>
+												<p class="text-xs text-slate-600">02 hours ago</p>
 											</div>
 										</div>
 										<h4 class="text-green-700 bg-green-100 px-2 py-1 text-xs rounded-[2px]">
 											Completed
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Icon -->
-											<div class="p-2 bg-blue-50 rounded">
+											<div class="p-2 rounded bg-blue-50">
 												<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 													xmlns="http://www.w3.org/2000/svg">
 													<path
@@ -2154,17 +2154,17 @@
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">Project Beta</h3>
-												<p class="text-slate-600 text-xs">12 hours ago</p>
+												<p class="text-xs text-slate-600">12 hours ago</p>
 											</div>
 										</div>
 										<h4 class="text-red-700 bg-red-100 px-2 py-1 text-xs rounded-[2px]">
 											Incomplete
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Icon -->
-											<div class="p-2 bg-blue-50 rounded">
+											<div class="p-2 rounded bg-blue-50">
 												<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 													xmlns="http://www.w3.org/2000/svg">
 													<path
@@ -2181,7 +2181,7 @@
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">Project Beta</h3>
-												<p class="text-slate-600 text-xs">12 hours ago</p>
+												<p class="text-xs text-slate-600">12 hours ago</p>
 											</div>
 										</div>
 										<h4 class="text-red-700 bg-red-100 px-2 py-1 text-xs rounded-[2px]">
@@ -2190,138 +2190,138 @@
 									</li>
 								</ul>
 								<!-- *Update List -->
-								<ul class="updateList hidden cursor-pointer flex-col justify-center py-5 gap-y-5">
-									<li class="px-4 text-slate-600 flex justify-between items-center">
+								<ul class="flex-col justify-center hidden py-5 cursor-pointer updateList gap-y-5">
+									<li class="flex items-center justify-between px-4 text-slate-600">
 										<!-- *Info -->
 										<div class="flex items-center w-full">
 											<div class="border-l-4 border-l-blue-300 rounded w-[2px] h-[22px]">
 											</div>
-											<div class="flex justify-between items-center w-full">
-												<h3 class="font-medium text-slate-800 pl-3">
+											<div class="flex items-center justify-between w-full">
+												<h3 class="pl-3 font-medium text-slate-800">
 													Project Alpha
 												</h3>
 
-												<p class="text-slate-600 text-sm">09:00 AM</p>
+												<p class="text-sm text-slate-600">09:00 AM</p>
 											</div>
 										</div>
 									</li>
-									<li class="px-4 text-slate-600 flex justify-between items-center">
+									<li class="flex items-center justify-between px-4 text-slate-600">
 										<!-- *Info -->
 										<div class="flex items-center w-full">
 											<div class="border-l-4 border-l-blue-500 rounded w-[2px] h-[22px]">
 											</div>
-											<div class="flex justify-between items-center w-full">
-												<h3 class="font-medium text-slate-800 pl-3">
+											<div class="flex items-center justify-between w-full">
+												<h3 class="pl-3 font-medium text-slate-800">
 													Design team meeting
 												</h3>
 
-												<p class="text-slate-600 text-sm">09:00 AM</p>
+												<p class="text-sm text-slate-600">09:00 AM</p>
 											</div>
 										</div>
 									</li>
-									<li class="px-4 text-slate-600 flex justify-between items-center">
+									<li class="flex items-center justify-between px-4 text-slate-600">
 										<!-- *Info -->
 										<div class="flex items-center w-full">
 											<div class="border-l-4 border-l-blue-500 rounded w-[2px] h-[22px]">
 											</div>
-											<div class="flex justify-between items-center w-full">
-												<h3 class="font-medium text-slate-800 pl-3">
+											<div class="flex items-center justify-between w-full">
+												<h3 class="pl-3 font-medium text-slate-800">
 													Figma app showcase
 												</h3>
 
-												<p class="text-slate-600 text-sm">09:00 AM</p>
+												<p class="text-sm text-slate-600">09:00 AM</p>
 											</div>
 										</div>
 									</li>
-									<li class="px-4 text-slate-600 flex justify-between items-center">
+									<li class="flex items-center justify-between px-4 text-slate-600">
 										<!-- *Info -->
 										<div class="flex items-center w-full">
 											<div class="border-l-4 border-l-blue-300 rounded w-[2px] h-[22px]">
 											</div>
-											<div class="flex justify-between items-center w-full">
-												<h3 class="font-medium text-slate-800 pl-3">
+											<div class="flex items-center justify-between w-full">
+												<h3 class="pl-3 font-medium text-slate-800">
 													Figit launch
 												</h3>
 
-												<p class="text-slate-600 text-sm">09:00 AM</p>
+												<p class="text-sm text-slate-600">09:00 AM</p>
 											</div>
 										</div>
 									</li>
-									<li class="px-4 text-slate-600 flex justify-between items-center">
+									<li class="flex items-center justify-between px-4 text-slate-600">
 										<!-- *Info -->
 										<div class="flex items-center w-full">
 											<div class="border-l-4 border-l-blue-300 rounded w-[2px] h-[22px]">
 											</div>
-											<div class="flex justify-between items-center w-full">
-												<h3 class="font-medium text-slate-800 pl-3">
+											<div class="flex items-center justify-between w-full">
+												<h3 class="pl-3 font-medium text-slate-800">
 													Zoom meeting
 												</h3>
 
-												<p class="text-slate-600 text-sm">09:00 AM</p>
+												<p class="text-sm text-slate-600">09:00 AM</p>
 											</div>
 										</div>
 									</li>
 								</ul>
 								<!-- *Log List -->
-								<ul class="logList hidden cursor-pointer flex-col justify-center py-5 gap-y-5">
-									<li class="px-4 text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+								<ul class="flex-col justify-center hidden py-5 cursor-pointer logList gap-y-5">
+									<li class="flex items-center justify-between px-4 text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">Project Alpha</h3>
-												<p class="text-slate-600 text-xs">25 minutes ago</p>
+												<p class="text-xs text-slate-600">25 minutes ago</p>
 											</div>
 										</div>
 										<h4 class="text-green-700 bg-green-100 px-2 py-1 text-xs rounded-[2px]">
 											Completed
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">
 													HR Meeting Credentials
 												</h3>
-												<p class="text-slate-600 text-xs">01 hour ago</p>
+												<p class="text-xs text-slate-600">01 hour ago</p>
 											</div>
 										</div>
 										<h4 class="text-blue-700 bg-blue-100 px-2 py-1 text-xs rounded-[2px]">
 											In Progress
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">
 													Design Research
 												</h3>
-												<p class="text-slate-600 text-xs">02 hours ago</p>
+												<p class="text-xs text-slate-600">02 hours ago</p>
 											</div>
 										</div>
 										<h4 class="text-green-700 bg-green-100 px-2 py-1 text-xs rounded-[2px]">
 											Completed
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">Project Beta</h3>
-												<p class="text-slate-600 text-xs">12 hours ago</p>
+												<p class="text-xs text-slate-600">12 hours ago</p>
 											</div>
 										</div>
 										<h4 class="text-red-700 bg-red-100 px-2 py-1 text-xs rounded-[2px]">
 											Incomplete
 										</h4>
 									</li>
-									<li class="px-4 cursor-pointer text-slate-600 flex justify-between items-center">
-										<div class="flex gap-x-3 items-center">
+									<li class="flex items-center justify-between px-4 cursor-pointer text-slate-600">
+										<div class="flex items-center gap-x-3">
 											<!-- *Info -->
 											<div>
 												<h3 class="font-medium text-slate-800">Project Beta</h3>
-												<p class="text-slate-600 text-xs">12 hours ago</p>
+												<p class="text-xs text-slate-600">12 hours ago</p>
 											</div>
 										</div>
 										<h4 class="text-red-700 bg-red-100 px-2 py-1 text-xs rounded-[2px]">
@@ -2330,8 +2330,8 @@
 									</li>
 								</ul>
 							</div>
-							<div class="flex gap-4 border-t border-slate-100 items-center cursor-pointer">
-								<p class="text-base text-gray-600 py-5 pl-4">View All Activies</p>
+							<div class="flex items-center gap-4 border-t cursor-pointer border-slate-100">
+								<p class="py-5 pl-4 text-base text-gray-600">View All Activies</p>
 								<div>
 									<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
@@ -2345,7 +2345,7 @@
 						</div>
 					</div>
 					<!-- ***Stats Chart Icon*** -->
-					<div class="statsChart cursor-pointer relative">
+					<div class="relative cursor-pointer statsChart">
 						<div class="statsChartBtn">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -2369,7 +2369,7 @@
 						</div>
 					</div>
 					<!-- ***Profile Picture*** -->
-					<div class="cursor-pointer relative">
+					<div class="relative cursor-pointer">
 						<img class="avatarBtn"
 							src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0029_azamat-zhanisov-4yhHhpAMC3U-unsplash.png"
 							alt="avatar" />
@@ -2377,38 +2377,38 @@
 						<div
 							class="avatarDropDown absolute w-full min-w-[242px] max-h-fit rounded overflow-hidden bg-white top-9 opacity-0 right-0 transition-[top,opacity] duration-200 shadow-[0px_2px_5px_rgba(0,0,0,0.06),0px_4px_6px_-1px_rgba(0,0,0,0.1)]">
 							<!-- *Picture Info* -->
-							<div class="py-4 border-b border-slate-100 flex gap-x-2 items-center">
+							<div class="flex items-center py-4 border-b border-slate-100 gap-x-2">
 								<img class="pl-4"
 									src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0029_azamat-zhanisov-4yhHhpAMC3U-unsplash.png"
 									alt="avatar" />
 								<div class="pr-4">
-									<h1 class="font-semibold text-sm">
+									<h1 class="text-sm font-semibold">
 										Jenna Davidson
 										<span
 											class="text-blue-700 bg-blue-50 font-medium text-[8px] p-1 rounded ml-2">Premium</span>
 									</h1>
-									<p class="text-xs text-slate-600 mt-1">
+									<p class="mt-1 text-xs text-slate-600">
 										Jennadavidson98@gmail.com
 									</p>
 								</div>
 							</div>
 							<!-- *List having My Projects, Profile, Subscription DropDown, Statements* -->
 							<ul class="flex flex-col justify-center py-5 gap-y-5">
-								<li class="group text-sm px-4 text-slate-600 flex justify-between items-center">
+								<li class="flex items-center justify-between px-4 text-sm group text-slate-600">
 									<p class="group-hover:text-slate-900">My Projects</p>
 									<p class="text-blue-700 bg-blue-50 font-medium text-xs py-1 px-[6px] rounded">
 										8
 									</p>
 								</li>
-								<li class="text-sm px-4 text-slate-600 hover:text-slate-900">
+								<li class="px-4 text-sm text-slate-600 hover:text-slate-900">
 									My Profile
 								</li>
 								<!-- * Subscription Drop Down Component -->
-								<li class="text-sm text-slate-600 rounded">
+								<li class="text-sm rounded text-slate-600">
 									<!-- * Subscription Drop Down Btn -->
-									<div class="subDropDownBtn group flex justify-between items-center px-4">
+									<div class="flex items-center justify-between px-4 subDropDownBtn group">
 										<p class="group-hover:text-slate-900">My Subscriptions</p>
-										<div class="subArrowIcon transition duration-200">
+										<div class="transition duration-200 subArrowIcon">
 											<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 												xmlns="http://www.w3.org/2000/svg">
 												<path d="M6 12L10 8L6 4" stroke="#475569" stroke-width="1.5"
@@ -2421,34 +2421,34 @@
 										class="subDropDown overflow-hidden max-h-0 transition-[max-height] transtion-all duration-200">
 										<ul class="m-4">
 											<li
-												class="text-sm px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												Plans
 											</li>
 											<li
-												class="text-sm px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												Bills
 											</li>
 											<li
-												class="text-sm px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												Reports
 											</li>
 											<li
-												class="text-sm px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												Invoices
 											</li>
 											<li
-												class="text-sm px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												Statements
 											</li>
 										</ul>
 										<!-- *Notification toggler -->
-										<ul class="border-t my-4 border-slate-100">
+										<ul class="my-4 border-t border-slate-100">
 											<li class="mx-4">
 												<div class="p-4">
-													<h5 class="text-slate-800 font-medium text-sm">
+													<h5 class="text-sm font-medium text-slate-800">
 														Notifications
 													</h5>
-													<div class="flex gap-x-2 items-center mt-4">
+													<div class="flex items-center mt-4 gap-x-2">
 														<!-- *toggle Button of Subscription DropDown -->
 														<div
 															class="toggleBtn cursor-pointer transition duration-200 active pt-[0.5px] rounded-[20px] bg-blue-700 w-11 h-6 mt-[1px]">
@@ -2490,18 +2490,18 @@
 									</div>
 								</li>
 
-								<li class="text-sm px-4 text-slate-600 hover:text-slate-900">
+								<li class="px-4 text-sm text-slate-600 hover:text-slate-900">
 									My Statements
 								</li>
 							</ul>
 							<!-- ** Language, Account, Sign Out -->
-							<ul class="flex flex-col justify-center py-5 gap-y-5 border-t border-slate-100">
+							<ul class="flex flex-col justify-center py-5 border-t gap-y-5 border-slate-100">
 								<!-- * Languages Drop Down Component-->
-								<li class="text-sm text-slate-600 rounded">
+								<li class="text-sm rounded text-slate-600">
 									<!-- * Language Drop Down Btn -->
-									<div class="langDropDownBtn changeText flex justify-between items-center px-4">
+									<div class="flex items-center justify-between px-4 langDropDownBtn changeText">
 										<p class="">Languages</p>
-										<div class="langArrowIcon transition duration-200">
+										<div class="transition duration-200 langArrowIcon">
 											<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
 												xmlns="http://www.w3.org/2000/svg">
 												<path d="M6 12L10 8L6 4" stroke="#475569" stroke-width="1.5"
@@ -2514,32 +2514,32 @@
 										class="langDropDown overflow-hidden max-h-0 transition-[max-height] transtion-all duration-200">
 										<ul class="m-4">
 											<li
-												class="text-sm selectLang px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded selectLang text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												English
 											</li>
 											<li
-												class="text-sm selectLang px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded selectLang text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												French
 											</li>
 											<li
-												class="text-sm selectLang px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded selectLang text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												Spansih
 											</li>
 											<li
-												class="text-sm selectLang px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded selectLang text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												German
 											</li>
 											<li
-												class="text-sm selectLang px-4 py-2 text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50 rounded transition duration-200">
+												class="px-4 py-2 text-sm transition duration-200 rounded selectLang text-slate-600 hover:text-blue-700 hover:font-medium hover:bg-blue-50">
 												Japanese
 											</li>
 										</ul>
 									</div>
 								</li>
-								<li class="cursor-pointer text-sm px-4 text-slate-600">
+								<li class="px-4 text-sm cursor-pointer text-slate-600">
 									Account Settings
 								</li>
-								<li class="cursor-pointer text-sm px-4 text-slate-600">
+								<li class="px-4 text-sm cursor-pointer text-slate-600">
 									Sign Out
 								</li>
 							</ul>
@@ -2550,15 +2550,15 @@
 			<!-- ***Stats Chart Component  -->
 			<div
 				class="bg-white rounded statsComponent z-10 max-w-3xl absolute top-0 right-0 translate-x-full transition duration-200 ease-in-out shadow-[0px_10px_10px_-5px_rgba(0,0,0,0.06),0px_20px_25px_-5px_rgba(0,0,0,0.1)]">
-				<div class="header py-6 border-b border-slate-100">
-					<div class="px-7 flex justify-between items-center">
+				<div class="py-6 border-b header border-slate-100">
+					<div class="flex items-center justify-between px-7">
 						<div class="heading">
 							<p class="text-xl font-semibold leading-tight text-gray-800">
 								Daily Activities
 							</p>
 							<p class="text-gray-600">23 March 2022</p>
 						</div>
-						<div class="statCrossBtn cursor-pointer">
+						<div class="cursor-pointer statCrossBtn">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path d="M17.25 17.25L6.75 6.75" stroke="#1E293B" stroke-linecap="round"
@@ -2571,7 +2571,7 @@
 				</div>
 				<div class="px-7">
 					<div class="flex pt-7">
-						<div class="first-item relative">
+						<div class="relative first-item">
 							<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<circle cx="20" cy="20" r="20" fill="#DBEAFE" />
@@ -2594,27 +2594,27 @@
 							<p class="text-sm font-semibold leading-none text-slate-800">
 								AlphaDesign meeting schedule
 							</p>
-							<p class="text-xs leading-3 text-slate-600 pt-3">
-								<span class="text-xs leading-3 text-slate-600 font-medium">Time:</span>
+							<p class="pt-3 text-xs leading-3 text-slate-600">
+								<span class="text-xs font-medium leading-3 text-slate-600">Time:</span>
 								5:40 pm
 							</p>
-							<div class="div flex items-center">
+							<div class="flex items-center div">
 								<div class="div">
-									<p class="text-xs leading-3 text-gray-600 pt-3">
-										<span class="text-xs leading-3 text-slate-600 font-medium">Initiated
+									<p class="pt-3 text-xs leading-3 text-gray-600">
+										<span class="text-xs font-medium leading-3 text-slate-600">Initiated
 											By:</span>
 										Kesha Jhonson
 									</p>
 								</div>
-								<div class="div pt-3 pl-2">
+								<div class="pt-3 pl-2 div">
 									<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/kjhkj.png" alt=""
-										class="rounded-full w-4 h-4" />
+										class="w-4 h-4 rounded-full" />
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="flex pt-10">
-						<div class="svg-container relative first-item">
+						<div class="relative svg-container first-item">
 							<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<circle cx="20" cy="20" r="20" fill="#DBEAFE" />
@@ -2633,61 +2633,61 @@
 							<p class="text-sm font-semibold leading-none text-slate-800">
 								Pinpoint project reasearch files
 							</p>
-							<p class="text-xs leading-3 text-slate-600 pt-3">
-								<span class="text-xs leading-3 text-slate-600 font-medium">Sending Time:</span>
+							<p class="pt-3 text-xs leading-3 text-slate-600">
+								<span class="text-xs font-medium leading-3 text-slate-600">Sending Time:</span>
 								11:05 am
 							</p>
-							<div class="div flex items-center">
+							<div class="flex items-center div">
 								<div class="div">
-									<p class="text-xs leading-3 text-gray-600 pt-3">
-										<span class="text-xs leading-3 text-slate-600 font-medium">Sent By:</span>
+									<p class="pt-3 text-xs leading-3 text-gray-600">
+										<span class="text-xs font-medium leading-3 text-slate-600">Sent By:</span>
 										James Bond
 									</p>
 								</div>
-								<div class="div pt-3 pl-2">
+								<div class="pt-3 pl-2 div">
 									<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/lkejfew.png" alt=""
-										class="rounded-full w-4 h-4" />
+										class="w-4 h-4 rounded-full" />
 								</div>
 							</div>
-							<div class="flex gap-7 pt-7 lg:flex-row flex-col">
-								<div class="flex p-7 border border-slate-300 rounded">
+							<div class="flex flex-col gap-7 pt-7 lg:flex-row">
+								<div class="flex border rounded p-7 border-slate-300">
 									<div class="img-container">
 										<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/ai%201.png" alt="" />
 									</div>
-									<div class="details pl-4">
+									<div class="pl-4 details">
 										<p class="text-sm font-medium leading-none text-slate-800">
 											Logo Design Research
 										</p>
-										<p class="text-xs leading-3 text-gray-600 pt-3">2 MB</p>
+										<p class="pt-3 text-xs leading-3 text-gray-600">2 MB</p>
 									</div>
 								</div>
-								<div class="flex p-7 border border-slate-300 rounded">
+								<div class="flex border rounded p-7 border-slate-300">
 									<div class="img-container">
 										<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/doc%201.png" alt="" />
 									</div>
-									<div class="details pl-4">
+									<div class="pl-4 details">
 										<p class="text-sm font-medium leading-none text-slate-800">
 											Clients Testing Research
 										</p>
-										<p class="text-xs leading-3 text-gray-600 pt-3">2 MB</p>
+										<p class="pt-3 text-xs leading-3 text-gray-600">2 MB</p>
 									</div>
 								</div>
-								<div class="flex p-7 border border-slate-300 rounded">
+								<div class="flex border rounded p-7 border-slate-300">
 									<div class="img-container">
 										<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/pdf%201.png" alt="" />
 									</div>
-									<div class="details pl-4">
+									<div class="pl-4 details">
 										<p class="text-sm font-medium leading-none text-slate-800">
 											Logo Visuals
 										</p>
-										<p class="text-xs leading-3 text-gray-600 pt-3">2 MB</p>
+										<p class="pt-3 text-xs leading-3 text-gray-600">2 MB</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="flex pt-10">
-						<div class="svg-container relative first-item">
+						<div class="relative svg-container first-item">
 							<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<circle cx="20" cy="20" r="20" fill="#DBEAFE" />
@@ -2706,14 +2706,14 @@
 							<p class="text-sm font-semibold leading-none text-slate-800">
 								Placement of order #567234 in budget estimation
 							</p>
-							<p class="text-xs leading-3 text-slate-600 pt-3">
-								<span class="text-xs leading-3 text-slate-600 font-medium">Initiation Time:</span>
+							<p class="pt-3 text-xs leading-3 text-slate-600">
+								<span class="text-xs font-medium leading-3 text-slate-600">Initiation Time:</span>
 								11:05 am
 							</p>
-							<div class="div flex items-center">
+							<div class="flex items-center div">
 								<div class="div">
-									<p class="text-xs leading-3 text-gray-600 pt-3">
-										<span class="text-xs leading-3 text-slate-600 font-medium">Initiated
+									<p class="pt-3 text-xs leading-3 text-gray-600">
+										<span class="text-xs font-medium leading-3 text-slate-600">Initiated
 											By:</span>
 										Charlie Puth
 									</p>
@@ -2722,7 +2722,7 @@
 						</div>
 					</div>
 					<div class="flex pt-10">
-						<div class="svg-container relative first-item">
+						<div class="relative svg-container first-item">
 							<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<circle cx="20" cy="20" r="20" fill="#DBEAFE" />
@@ -2738,25 +2738,25 @@
 							<p class="text-sm font-semibold leading-none text-slate-800">
 								Application design concepts addition and final revision
 							</p>
-							<p class="text-xs leading-3 text-slate-600 pt-3">
-								<span class="text-xs leading-3 text-slate-600 font-medium">Initiation Time:</span>
+							<p class="pt-3 text-xs leading-3 text-slate-600">
+								<span class="text-xs font-medium leading-3 text-slate-600">Initiation Time:</span>
 								11:05 am
 							</p>
-							<div class="div flex items-center">
+							<div class="flex items-center div">
 								<div class="div">
-									<p class="text-xs leading-3 text-gray-600 pt-3">
-										<span class="text-xs leading-3 text-slate-600 font-medium">Initiated
+									<p class="pt-3 text-xs leading-3 text-gray-600">
+										<span class="text-xs font-medium leading-3 text-slate-600">Initiated
 											By:</span>
 										Laurein Smith
 									</p>
 								</div>
-								<div class="div pt-3 pl-2">
+								<div class="pt-3 pl-2 div">
 									<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sgkjheogih.png" alt=""
-										class="rounded-full w-4 h-4" />
+										class="w-4 h-4 rounded-full" />
 								</div>
 							</div>
-							<div class="border border-slate-300 p-6 mt-5">
-								<div class="flex gap-4 lg:flex-row flex-col">
+							<div class="p-6 mt-5 border border-slate-300">
+								<div class="flex flex-col gap-4 lg:flex-row">
 									<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/ux-indonesia-pqzRfBhd9r0-unsplash%201.png"
 										alt="" class="rounded" />
 									<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/nick-adams-yTWq8n3-4k0-unsplash%201.png"
@@ -2790,14 +2790,14 @@
 							<p class="text-sm font-semibold leading-none text-slate-800">
 								New task assigned to you in Q/A of multipurpose dashboard
 							</p>
-							<p class="text-xs leading-3 text-slate-600 pt-3">
-								<span class="text-xs leading-3 text-slate-600 font-medium">Initiation Time:</span>
+							<p class="pt-3 text-xs leading-3 text-slate-600">
+								<span class="text-xs font-medium leading-3 text-slate-600">Initiation Time:</span>
 								11:05 am
 							</p>
-							<div class="div flex items-center">
+							<div class="flex items-center div">
 								<div class="div">
-									<p class="text-xs leading-3 text-gray-600 pt-3">
-										<span class="text-xs leading-3 text-slate-600 font-medium">Initiated
+									<p class="pt-3 text-xs leading-3 text-gray-600">
+										<span class="text-xs font-medium leading-3 text-slate-600">Initiated
 											By:</span>
 										Bella Hadid
 									</p>
@@ -2806,7 +2806,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex gap-4 border-t border-slate-100 items-center cursor-pointer pb-7 pt-7 mt-7">
+				<div class="flex items-center gap-4 border-t cursor-pointer border-slate-100 pb-7 pt-7 mt-7">
 					<p class="text-base text-gray-600 pl-7">View All Activies</p>
 					<div class="">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2819,14 +2819,14 @@
 			</div>
             <!-- Header -->
             <!-- Main page -->
-            <div class="px-7 py-4">
+            <div class="py-4 px-7">
                 <!-- Page Heading -->
-                <div class="flex items-center flex-wrap gap-4 justify-between">
+                <div class="flex flex-wrap items-center justify-between gap-4">
                     <div>
                         <h1 class="text-2xl font-semibold leading-normal text-gray-800">
                             Dashboard
                         </h1>
-                        <p class="text-sm leading-none text-gray-600 mt-1">
+                        <p class="mt-1 text-sm leading-none text-gray-600">
                             Home - Application - Project Management - Users
                         </p>
                     </div>
@@ -2845,41 +2845,41 @@
                     <!-- First card -->
                     <div class="mt-7 bg-white rounded-[4px] w-full p-7 pb-0 shadow">
                         <!-- Profile -->
-                        <div class=" flex justify-between items-start flex-wrap gap-8">
+                        <div class="flex flex-wrap items-start justify-between gap-8 ">
                             <div>
                                 <img alt="Profile Picture" class="w-[155px] h-[155px]"
                                     src="/overview-assetts/vuetify.png" />
                             </div>
                             <!-- Info -->
                             <div class="flex flex-col gap-4 ">
-                                <div class="flex gap-x-4 flex-wrap">
+                                <div class="flex flex-wrap gap-x-4">
                                     <p class="text-xl font-semibold leading-tight text-gray-800">Project Point</p>
                                     <!-- badge -->
-                                    <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700">
+                                    <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700 text-xs font-medium leading-3">
                                         In Progress
                                     </div>
                                 </div>
-                                <div class="flex gap-2 flex-wrap">
-                                    <div class="flex gap-2 items-center">
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="flex items-center gap-2">
                                         <p class="text-sm leading-none text-gray-600">An awesome line about how great
                                             this
                                             project is and all its achievements</p>
                                     </div>
                                 </div>
-                                <div class="flex gap-6 flex-wrap">
+                                <div class="flex flex-wrap gap-6">
                                     <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
                                         <p class="text-sm leading-none text-gray-600">Due Date</p>
-                                        <p class="text-base font-semibold leading-none mt-2 text-gray-800">23 August
+                                        <p class="mt-2 text-base font-semibold leading-none text-gray-800">23 August
                                             2022
                                         </p>
                                     </div>
                                     <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
                                         <p class="text-sm leading-none text-gray-600">Budget</p>
-                                        <p class="text-base font-semibold leading-none mt-2 text-gray-800">$ 74, 800</p>
+                                        <p class="mt-2 text-base font-semibold leading-none text-gray-800">$ 74, 800</p>
                                     </div>
                                     <div class="p-4 border border-[#CBD5E1] rounded-[4px]">
                                         <p class="text-sm leading-none text-gray-600">Open Tasks</p>
-                                        <p class="text-base font-semibold leading-none mt-2 text-gray-800">72</p>
+                                        <p class="mt-2 text-base font-semibold leading-none text-gray-800">72</p>
                                     </div>
                                     <div class="flex items-center">
                                         <svg width="139" height="33" viewBox="0 0 139 33" fill="none"
@@ -2962,7 +2962,7 @@
                             </div>
 
                             <!-- Buttons -->
-                            <div class="flex gap-3 relative">
+                            <div class="relative flex gap-3">
                                 <button onclick="toggleAddUser()"
                                     class="bg-blue-100  text-blue-700  text-xs font-medium py-2 px-4 hover:bg-blue-200 rounded-[4px]">Add
                                     User</button>
@@ -2971,7 +2971,7 @@
                                     Target</button>
                                      <button
                                 onclick="toggleQuickActions()"
-                                class="p-2 bg-blue-100 hover:bg-blue-200 rounded">
+                                class="p-2 bg-blue-100 rounded hover:bg-blue-200">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -2987,68 +2987,66 @@
                                       <!-- quick links -->
                                         <div id="handleClick" class="hidden absolute top-8 right-0 max-w-[176px] w-full">
                                             <div
-                                                class="dropdown  bg-white rounded border-b border-gray-200 shadow">
-                                                <div class="dropdown-content shadow border-t border-gray-200  py-2">
-                                                    <p class="text-left text-xs font-semibold leading-3 text-slate-800 px-3 py-3 border-b border-slate-200">
+                                                class="bg-white border-b border-gray-200 rounded shadow dropdown">
+                                                <div class="py-2 border-t border-gray-200 shadow dropdown-content">
+                                                    <p class="px-3 py-3 text-xs font-semibold leading-3 text-left border-b text-slate-800 border-slate-200">
                                                         Quick Actions
                                                     </p>
                                                     <a href="#">
-                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Create Invoice
                                                         </p>
                                                     </a>
                                                     <a href="#">
-                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Generate Report
                                                         </p>
                                                     </a>
                                                     <a href="#">
-                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Payment
                                                         </p>
                                                     </a>
-                                                    <div onmouseover="show();" onmouseout="hide()"
-                                                        class="text-left relative flex 
-                                                        
-                                                        justify-between itemes-center hover:bg-blue-100 cursor-pointer group subscription hover:text-blue-700 hover:font-medium hover:rounded mx-1">
+                                                    <!-- onmouseover="show();" onmouseout="hide()" -->
+                                                    <div 
+                                                        class="relative flex justify-between mx-1 text-left cursor-pointer itemes-center hover:bg-blue-100 group subscription hover:text-blue-700 hover:font-medium hover:rounded">
                                                         <a href="#" class="">
-                                                            <p class=" sub text-xs leading-3 text-gray-600 p-2 group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
+                                                            <p class="p-2 text-xs leading-3 text-gray-600 sub group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
                                                                 Subscription
                                                             </p>
                                                         </a>
-                                                        <svg width="6"
+                                                        <!-- <svg width="6"
                                                             class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
                                                             height="8" viewBox="0 0 6 8" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M1.3125 7.375L4.6875 4L1.3125 0.625" stroke=""
                                                                 stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
+                                                        </svg> -->
                                                         <div id="plans"
-                                                            class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:block">
-                                                            <div class="plan shadow border-t border-gray-200 bg-white px-1 py-2 rounded">
+                                                            class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:hidden">
+                                                            <div class="px-1 py-2 bg-white border-t border-gray-200 rounded shadow plan">
                                                                 <a href="#">
-                                                                    <p class="font-normal  text-xs leading-3 text-gray-600  p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Plans
                                                                     </p>
                                                                 </a>
                                                                 <a href="#">
-                                                                    <p class="font-normal  text-xs leading-3 text-gray-600  p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Bills
                                                                     </p>
                                                                 </a>
                                                                 <a href="#">
-                                                                    <p class="font-normal  text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Reports
                                                                     </p>
                                                                 </a>
                                                                 <a href="#">
-                                                                    <p class="font-normal 
-                                                                    text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Invoices
                                                                     </p>
                                                                 </a>
                                                                 <a href="#">
-                                                                    <p class="cr text-xs leading-3 font-normal text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 cr hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Statements
                                                                     </p>
                                                                 </a>
@@ -3056,7 +3054,7 @@
                                                         </div>
                                                     </div>
                                                     <a href="#">
-                                                        <p class="text-left text-xs leading-3 text-gray-600 p-2 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100 mx-1">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Settings
                                                         </p>
                                                     </a>
@@ -3130,18 +3128,18 @@
                     </div>
                     <!-- First card -->
                     <div class="div ">
-                        <div class="header flex flex-row justify-between items-center py-7">
-                            <div class="div ml-6">
+                        <div class="flex flex-row items-center justify-between header py-7">
+                            <div class="ml-6 div">
                                 <p class="text-xl font-semibold leading-tight text-slate-800">
                                     Users
                                 </p>
-                                <p class="text-sm leading-none text-slate-600 pt-2">
+                                <p class="pt-2 text-sm leading-none text-slate-600">
                                     There are total 46 users
                                 </p>
                             </div>
-                            <div class="div mr-6 lg:block md:block hidden">
-                                <div class="mx-auto mt-6 w-full flex gap-3">
-                                    <div class="flex border border-slate-400 rounded items-center">
+                            <div class="hidden mr-6 div lg:block md:block">
+                                <div class="flex w-full gap-3 mx-auto mt-6">
+                                    <div class="flex items-center border rounded border-slate-400">
                                         <input type="text" name="serach" id=""
                                             class="rounded py-[13px] px-4 border-none outline-none placeholder-slate-600 text-sm bg-inherit"
                                             placeholder="Search" />
@@ -3159,7 +3157,7 @@
                                                     <div id="reportrange"
                     class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700 "
                     style="cursor: pointer; padding: 5px 10px; width: fit-content">
-                    <div class="flex items-center w-32 gap-2 py-2 relative">
+                    <div class="relative flex items-center w-32 gap-2 py-2">
                       <i class="fa fa-calendar"></i>&nbsp;
                       <span id="fa-calendar">Time</span>
                       <svg
@@ -3173,281 +3171,281 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-7">
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/jhkjcx.png" alt=""
+                        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-7">
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/avtar-girl00000.png" alt=""
                                     class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Kesha John
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Product and UX Designer
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 14, 800
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             92
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 904, 800
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0002s_0004_alfred-kenneally-JwzpdmSYIDc-unsplash.png"
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/avtar-boy-0909.png"
                                     alt="" class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Philip Bernier
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Customer Research Representative
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 14, 800
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             122
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 23,800
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0016_olena-sergienko-XttWKETqCCQ-unsplash.png"
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/avtrat-red-girl-888.png"
                                     alt="" class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Diane Kuhic
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Human Mobility Technician
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 34,00
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             32
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 60,900
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0020_ardalan-hamedani-8WAcVr1BVjw-unsplash.png"
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/wilbur-099999.png"
                                     alt="" class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Wilbur Renner
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Dynamic Creative Analyst
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 62,900
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             12
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 23,449
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0029_azamat-zhanisov-4yhHhpAMC3U-unsplash.png"
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/lawrence9898988.png"
                                     alt="" class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Lawrence Hane
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Lead Directives Agent
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 62,900
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             12
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 23,449
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/efkjlewgl.png" alt=""
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/richard098933.png" alt=""
                                     class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Richard Ullrich
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Forward Operations Consultant
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 62,900
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             12
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 23,449
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/hvreluh.png" alt=""
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/erik0222.png" alt=""
                                     class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Erik Dietrich
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Internal Creative Executive
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 62,900
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             12
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 23,449
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sgkjheogih.png" alt=""
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/paul123.png" alt=""
                                     class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Paul Joe
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Lead Creative Administrator
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 62,900
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             12
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 23,449
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile bg-white py-7 px-9 rounded shadow flex flex-col">
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%20199.png" alt=""
+                            <div class="flex flex-col bg-white rounded shadow profile py-7 px-9">
+                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/ian33443545.png" alt=""
                                     class="w-16 h-16 mx-auto rounded" />
-                                <p class="text-sm font-medium leading-none text-slate-800 mt-4 text-center">
+                                <p class="mt-4 text-sm font-medium leading-none text-center text-slate-800">
                                     Ian Davis
                                 </p>
-                                <p class="text-sm leading-none text-gray-600 mt-2 text-center">
+                                <p class="mt-2 text-sm leading-none text-center text-gray-600">
                                     Human Communications Officer
                                 </p>
 
-                                <div class="flex mt-7 gap-x-4 mx-auto">
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                <div class="flex mx-auto mt-7 gap-x-4">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Earnings</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 62,900
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Tasks</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             12
                                         </p>
                                     </div>
-                                    <div class="div py-2 px-3 rounded border border-slate-300">
+                                    <div class="px-3 py-2 border rounded div border-slate-300">
                                         <p class="text-sm leading-none text-slate-600">Sales</p>
-                                        <p class="text-sm font-semibold leading-none text-slate-800 pt-2">
+                                        <p class="pt-2 text-sm font-semibold leading-none text-slate-800">
                                             $ 23,449
                                         </p>
                                     </div>
@@ -3455,7 +3453,7 @@
                             </div>
                         </div>
                         <div class="flex w-full justify-end py-[38px]">
-                            <div class="flex mr-12 items-center">
+                            <div class="flex items-center mr-12">
                                 <div class="svg-container mr-[29px] cursor-pointer">
                                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
