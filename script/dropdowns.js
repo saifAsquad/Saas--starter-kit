@@ -220,13 +220,13 @@ weightoptions.forEach((item) => {
 
 //script for Weight
 function myTemp() {
-  const arrow = document.querySelector(".temp-arrow");
+  const arrow = document.querySelector(".tempdropbtnspan");
   const down = document.getElementById("tempDropdown");
   document.getElementById("tempDropdown").classList.toggle("hidden");
   if (!down.classList.contains("hidden")) {
-    arrow.classList.add("rotate-180");
+    arrow.nextElementSibling.classList.add("rotate-180");
   } else {
-    arrow.classList.remove("rotate-180");
+    arrow.nextElementSibling.classList.remove("rotate-180");
   }
 }
 

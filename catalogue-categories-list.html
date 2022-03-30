@@ -4904,6 +4904,13 @@
       .show {
         display: flex;
       }
+      tr {
+        border-bottom: 1px solid #f1f5f9;
+      }
+      table input {
+        cursor: pointer;
+        margin-top: 7px;
+      }
     </style>
     <script src="./script/dropdowns.js"></script>
     <script>
@@ -4913,10 +4920,27 @@
       productCheckBox.addEventListener("click", (e) => {
         const isChecked = e.target.checked;
         if (isChecked) {
-          allCheckBox.forEach((e) => (e.checked = true));
+          allCheckBox.forEach((e) => {
+            e.checked = true;
+            e.parentElement.parentElement.className = "bg-blue-50";
+          });
         } else {
-          allCheckBox.forEach((e) => (e.checked = false));
+          allCheckBox.forEach((e) => {
+            e.checked = false;
+            e.parentElement.parentElement.className = "";
+          });
         }
+      });
+      allCheckBox.forEach((e) => {
+        e.addEventListener("click", (y) => {
+          if (y.target.checked) {
+            console.log("in if");
+
+            e.parentElement.parentElement.className = "bg-blue-50";
+          } else {
+            e.parentElement.parentElement.className = "";
+          }
+        });
       });
     </script>
   </body>

@@ -3632,19 +3632,34 @@
 </style>
   <script src="./script/dropdowns.js"></script>
   <script>
-      const productCheckBox = document.querySelector('.allCheckProduct');
-      const allCheckBox = document.querySelectorAll('tbody tr td input');
+       const productCheckBox = document.querySelector(".allCheckProduct");
+      const allCheckBox = document.querySelectorAll("tbody tr td input");
       console.log(allCheckBox);
-      productCheckBox.addEventListener('click',e=>{
-          const isChecked = e.target.checked;
-          if(isChecked){
-          
-              allCheckBox.forEach(e=>e.checked = true);
-          }else{
-              allCheckBox.forEach(e=>e.checked = false);
-        
-           
-          }
+      productCheckBox.addEventListener("click", (e) => {
+        const isChecked = e.target.checked;
+        if (isChecked) {
+          allCheckBox.forEach((e) => {
+
+              e.checked = true;
+            e.parentElement.parentElement.className = 'bg-blue-50';});
+        } else {
+          allCheckBox.forEach((e) => {
+              e.checked = false
+              e.parentElement.parentElement.className = '';
+        }
+        );
+        }
+      });
+      allCheckBox.forEach(e=>{
+          e.addEventListener("click", (y) =>{
+              if(y.target.checked){
+                  console.log('in if')
+                  
+                  e.parentElement.parentElement.className = 'bg-blue-50';
+              }else{
+                   e.parentElement.parentElement.className = '';
+              }
+          })
       })
   </script>
 </body>
