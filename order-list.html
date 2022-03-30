@@ -2431,7 +2431,7 @@
                             <tr class="">
                                 <th class="pl-6" align="left">
                                     <input type="checkbox" name="" id=""
-                                        class="w-5 h-5 rounded border-slate-400 border accent-blue-700" />
+                                        class="w-5 h-5 rounded border-slate-400 border accent-blue-700 allCheckProduct" />
                                 </th>
                                 <th align="left"
                                     class="text-base font-medium leading-none text-slate-600 text-left py-6 pl-8 pr-6">
@@ -2479,7 +2479,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2533,7 +2533,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2586,7 +2586,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2640,7 +2640,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2694,7 +2694,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2748,7 +2748,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2802,7 +2802,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2856,7 +2856,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2910,7 +2910,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -2964,7 +2964,7 @@
                                 </div>
                             </td>
 
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6">
+                            <td class="text-sm font-medium leading-none text-slate-600 text-left py-7 px-6">
                                 14/2/2023
                             </td>
                             <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
@@ -3007,9 +3007,51 @@
     </div>
     <!-- Body -->
 </div>
+<style>
+    tr{
+      
+        border-bottom: 1px solid #F1F5F9;
+     
+    }
+    table input{
+        cursor: pointer;
+        margin-top: 7px;
+    }
+</style>
 <script src="/script/navigationScript.js"></script>
 
   <script src="./script/dropdowns.js"></script>
+      <script>
+      const productCheckBox = document.querySelector(".allCheckProduct");
+      const allCheckBox = document.querySelectorAll("tbody tr td input");
+      console.log(allCheckBox);
+      productCheckBox.addEventListener("click", (e) => {
+        const isChecked = e.target.checked;
+        if (isChecked) {
+          allCheckBox.forEach((e) => {
+
+              e.checked = true;
+            e.parentElement.parentElement.className = 'bg-blue-50';});
+        } else {
+          allCheckBox.forEach((e) => {
+              e.checked = false
+              e.parentElement.parentElement.className = '';
+        }
+        );
+        }
+      });
+      allCheckBox.forEach(e=>{
+          e.addEventListener("click", (y) =>{
+              if(y.target.checked){
+                  console.log('in if')
+                  
+                  e.parentElement.parentElement.className = 'bg-blue-50';
+              }else{
+                   e.parentElement.parentElement.className = '';
+              }
+          })
+      })
+    </script>
 </body>
 
 </html>
