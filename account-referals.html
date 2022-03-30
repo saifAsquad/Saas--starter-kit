@@ -2944,7 +2944,7 @@
                   <p class="text-base font-medium leading-none text-slate-600">
                     Total Net Earnings
                   </p>
-                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4">
+                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4 text-center">
                     $80,239
                   </p>
                 </div>
@@ -2952,7 +2952,7 @@
                   <p class="text-base font-medium leading-none text-slate-600">
                     Total Balance
                   </p>
-                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4">
+                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4 text-center">
                     $34,300
                   </p>
                 </div>
@@ -2960,7 +2960,7 @@
                   <p class="text-base font-medium leading-none text-slate-600">
                     Average Deal Size
                   </p>
-                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4">
+                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4 text-center">
                     $1000
                   </p>
                 </div>
@@ -2968,7 +2968,7 @@
                   <p class="text-base font-medium leading-none text-slate-600">
                     Referrals Signups
                   </p>
-                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4">
+                  <p class="text-2xl font-semibold leading-normal text-slate-800 mt-4 text-center">
                     94
                   </p>
                 </div>
@@ -2976,7 +2976,7 @@
             </div>
             <!----------------------------Table ------------------------------->
             <div class="flex flex-col w-full bg-white">
-              <div class="header flex flex-row justify-between items-center my-10">
+              <div class="header flex flex-row justify-between items-end my-10">
                 <div class="div mx-10">
                   <p class="text-xl font-semibold leading-tight text-gray-800">
                     Transaction Details
@@ -3311,6 +3311,24 @@
     <script src="./script/account-settings.js"></script>
     <script src="script/navigationScript.js"></script>
     <script>
+      function copylink() {
+        const linktext = document.getElementById("copylink");
+        // linktext.select();
+        navigator.clipboard.writeText(linktext.innerText);
+        
+       
+          // linktext.innerText = "Copied!";
+          let divv=document.createElement("div")
+          divv.className = "rounded-full bg-blue-700 text-sm text-white px-5 py-3 fixed right-[45%] bottom-4 mr-2 mt-2";
+        divv.innerText="Link Copied";
+        linktext.append(divv);
+       
+        setTimeout(() => {
+          divv.remove();
+        }, 3000);
+        
+        // alert("Copied the text: " + linktext.innerText);
+      }
       function toggleInteraction() {
         document.getElementById("interaction-1").classList.toggle("hidden");
       }

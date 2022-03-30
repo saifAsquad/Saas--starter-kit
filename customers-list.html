@@ -1085,7 +1085,7 @@
     <!-- Body -->
     <div class="w-full xl:ml-[312px]">
         <!-- Header -->
-         <nav class="px-7 bg-white py-3 flex justify-between items-center shadow-[0px_1px_2px_rgba(0,0,0,0.07)]">
+         <nav class=" px-7 bg-white py-3 flex justify-between items-center shadow-[0px_1px_2px_rgba(0,0,0,0.07)]">
 				<!-- **Humburger SVG Icon -->
 				<div class="lg:hidden hamburger cursor-pointer">
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2356,7 +2356,7 @@
                     <div class="p-10">
                         <div class="flex justify-between items-center">
 
-                            <p class="text-2xl font-semibold leading-normal text-gray-800">Export Files</p>
+                            <p class="text-2xl font-semibold leading-6 text-gray-800">Export Files</p>
                             <svg onclick="toggleModal2()" class="cursor-pointer" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.25 17.25L6.75 6.75" stroke="#1E293B" stroke-linecap="round"
@@ -2366,7 +2366,7 @@
                             </svg>
 
                         </div>
-                        <p class="text-sm leading-normal text-gray-600 mt-4">Choose what type of account you need
+                        <p class="text-sm leading-5 text-gray-600 mt-4">Choose what type of account you need
                             carefully
                             as
                             billing is based upon your account type</p>
@@ -2483,11 +2483,11 @@
                     <hr class="bg-slate-100 my-5 w-full" />
                     <div class="p-10 flex gap-4 justify-end items-center">
                         <button
-                            class="text-blue-700 border border-blue-700 rounded px-6 py-4 text-[14px] font-medium hover:bg-gray-50">
+                            class="text-blue-700 border border-blue-700 rounded px-6 py-4 text-[14px] leading-[14px] font-medium hover:bg-gray-50">
                             Cancel
                         </button>
                         <button
-                            class="text-white bg-blue-700 border border-blue-700 rounded px-6 py-4 text-[14px] font-medium hover:bg-blue-600">
+                            class="text-white bg-blue-700 border border-blue-700 rounded px-6 py-4 text-[14px] leading-[14px] font-medium hover:bg-blue-600">
                             Save Changes
                         </button>
                     </div>
@@ -2501,9 +2501,9 @@
             <div class="fixed modal py-[20px] hidden inset-0  bg-gray-800 bg-opacity-40 z-50 backdrop-blue-md">
                 <!-- Interactions -->
                 <div id="style-2"
-                    class="bg-white md:max-w-[500px] h-screen overflow-y-auto relative z-[2000] lg:max-w-[768px] xl:max-w-[768px] mx-auto p-10">
-                    <div class="flex justify-between">
-                        <h1 class="font-semibold text-2xl">Add a Customer</h1>
+                    class="bg-white md:max-w-[500px] h-screen overflow-y-auto relative z-[2000] lg:max-w-[768px] xl:max-w-[768px] mx-auto ">
+                    <div class="p-10 flex justify-between">
+                        <h1 class="font-semibold text-2xl leading-6">Add a Customer</h1>
                         <div>
                             <svg onclick="toggleModal()" class="cursor-pointer" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2515,24 +2515,24 @@
 
                         </div>
                     </div>
-                    <p class="mt-4 mb-6 text-[#475569]">
+                    <p class="px-10 mt-4 mb-6 text-[#475569] text-sm leading-[14px]">
                         Choose what type of account you need carefully as billing is based upon
                         your account type
                     </p>
-                    <div>
-                        <h2 class="font-bold mb-10">General Information</h2>
+                    <div class="px-10">
+                        <h2 class="font-semibold text-xl leading-5 mb-10 text-gray-800">General Information</h2>
                         <div>
                             <div class="mb-8">
                                 <div class="mb-4">
-                                    <label for="fullName">Full Name</label>
+                                    <label for="fullName" class="font-medium text-base text-slate-800">Full Name</label>
                                 </div>
                                 <input type="text" name="fullName" placeholder="Max Jhonsor"
-                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none" />
+                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none placeholder:text-sm" />
                             </div>
                             <div class="mb-8">
                                 <div class="mb-4 ">
                                     <label class="inline-flex w-full
-                               gap-x-[10px] items-center
+                               gap-x-[10px] items-center font-medium text-base text-slate-800
                                 " for="email">Email Address
                                         <div class="transition-all before:hidden after:hidden hover:before:block hover:after:block relative
                                 after:absolute after:w-[150px] after:h-[48px] after:text-[#475569] after:bottom-[1.75rem] after:left-[-1rem]
@@ -2564,37 +2564,37 @@
                                 </label>
 
                                 <input type="text" name="email" placeholder="alpha123@gmail.com"
-                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none" />
+                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none placeholder:text-sm" />
                             </div>
                             <div class="mb-8">
                                 <div class="mb-4">
-                                    <label for="description">Description</label>
+                                    <label for="description" class="font-medium text-base text-slate-800">Description</label>
                                 </div>
                                 <input type="text" name="description" placeholder=""
                                     class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none" />
                             </div>
                         </div>
                     </div>
-                    <div class="mt-12">
-                        <h2 class="font-bold">Shipping Information</h2>
+                    <div class="mt-12 px-10">
+                        <h2 class="font-semibold text-xl leading-5 text-gray-800">Shipping Information</h2>
                         <div class="mt-10">
                             <div class="mb-8">
                                 <div class="mb-4">
-                                    <label for="fullName">Address Line 1</label>
+                                    <label for="fullName" class="font-medium text-base text-slate-800">Address Line 1</label>
                                 </div>
                                 <input type="text" name="addressline1" placeholder="Max Jhonsor"
-                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none" />
+                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none placeholder:text-sm" />
                             </div>
                             <div class="mb-8">
                                 <div class="mb-4">
-                                    <label for="fullName">Address Line 2</label>
+                                    <label for="fullName" class="font-medium text-base text-slate-800">Address Line 2</label>
                                 </div>
                                 <input type="text" name="addressline2" placeholder="alpha123@gmail.com"
-                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none" />
+                                    class="border border-grey-500 rounded p-4 w-full focus:bg-gray-50 outline-none placeholder:text-sm" />
                             </div>
                             <div class="flex justify-between w-full gap-x-7 flex-col sm:flex-row">
                                 <div class="w-full">
-                                    <label class="inline-flex gap-x-[10px] items-center ">Country
+                                    <label class="inline-flex gap-x-[10px] items-center font-medium text-base text-slate-800">Country
                                         <div class="transition-all before:hidden after:hidden hover:before:block hover:after:block relative
                                 after:absolute after:w-[150px] after:h-[48px] after:text-[#475569] after:bottom-[1.75rem] after:left-[-1rem]
                                 after:text-xs after:p-4 after:bg-white after:content-['Country_of_origination']                                 
@@ -2924,7 +2924,7 @@
       </div>
                                 </div>
                                 <div class="w-full mt-4 sm:mt-0">
-                                    <label>City</label>
+                                    <label class="font-medium text-base text-slate-800">City</label>
                                      <div class="dropdown relative w-full mt-4">
         <div
           onclick="myCities()"
@@ -3038,7 +3038,7 @@
                             <div class="mt-8 flex flex-col sm:flex-row justify-between w-full gap-x-7">
                                 <div class="w-full">
                                     <div class="mb-4">
-                                        <label>State</label>
+                                        <label class="font-medium text-base text-slate-800">State</label>
                                           <!---------------------------------States DropDown-------------------------------->
       <div class="dropdown relative w-full mt-4">
         <div
@@ -3132,7 +3132,7 @@
                                 </div>
                                 <div class="w-full mt-4 sm:mt-0">
                                     <div class="mb-4">
-                                        <label>ZIP Code</label>
+                                        <label class="font-medium text-base text-slate-800">ZIP Code</label>
                                     </div>
 
                                     <input type="text"
@@ -3141,7 +3141,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-[176px] flex justify-end gap-x-3">
+                    <hr class="h-[1px] bg-slate-100 mt-10">
+                    <div class="px-10 pb-10 mt-10 flex justify-end gap-x-3">
                         <button class="border border-[#1D4ED8] text-[#1D4ED8] px-6 py-4 rounded-md hover:bg-gray-50">
                             Cancel
                         </button>
@@ -3157,7 +3158,7 @@
             <!--  -->
             <!--  -->
 
-            <div class="flex flex-col  shadow rounded bg-white mt-7">
+            <div class="flex flex-col  shadow rounded bg-white mt-7 ">
                 <div class="header flex flex-row justify-between items-center mb-12">
                     <div class="div ml-6 mt-6">
                         <div class="flex border border-slate-300 rounded items-center">
@@ -3230,13 +3231,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto overflow-y-hidden">
                     <table class="whitespace-nowrap w-full">
                         <thead class="border-b border-slate-100">
-                            <tr class="">
-                                <th class="pl-6" align="left">
+                            <tr  align="center">
+                                <th class="pl-6 pt-2" align="left">
                                     <input type="checkbox" name="" id=""
-                                        class="w-5 h-5 rounded border-slate-400 border accent-blue-700" />
+                                        class="w-5 h-5 rounded border-slate-400 border accent-blue-700 " />
                                 </th>
                                 <th align="left"
                                     class="text-base font-medium leading-none text-slate-600 text-left py-6 pl-8 pr-6">
@@ -3304,6 +3305,9 @@
                                     </svg>
                                     <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
                                         id="hideMe">
+                                         <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
@@ -3356,6 +3360,9 @@
                                     </svg>
                                     <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
                                         id="hideMe">
+                                         <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
@@ -3411,6 +3418,9 @@
                                         id="hideMe">
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
+                                        <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3462,6 +3472,9 @@
                                     </svg>
                                     <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
                                         id="hideMe">
+                                         <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
@@ -3515,6 +3528,9 @@
                                     </svg>
                                     <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
                                         id="hideMe">
+                                         <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
@@ -3568,6 +3584,9 @@
                                     </svg>
                                     <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
                                         id="hideMe">
+                                         <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
@@ -3621,6 +3640,9 @@
                                     </svg>
                                     <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
                                         id="hideMe">
+                                         <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
@@ -3674,6 +3696,9 @@
                                     </svg>
                                     <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
                                         id="hideMe">
+                                         <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
@@ -3729,6 +3754,9 @@
                                         id="hideMe">
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
+                                        <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3778,8 +3806,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                                    <div class="px-1 absolute bottom-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10"
                                         id="hideMe">
+                                        <a href=""
+                                            class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
+                                            View</a>
                                         <a href=""
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             Edit</a>
