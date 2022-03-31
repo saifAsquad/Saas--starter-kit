@@ -302,3 +302,9 @@ function deleteTag(el) {
 function setFocus() {
   document.querySelector("#meta-enter").focus();
 }
+//New Member Interaction
+
+function showNewMemberInteraction(el) {
+  el.parentElement.children[1].classList.toggle("hidden");
+  // document.getElementById("newMemberInteraction").classList.toggle("hidden");
+}
