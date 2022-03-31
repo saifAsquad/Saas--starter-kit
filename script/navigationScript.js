@@ -139,10 +139,10 @@ function toggleDropdown(element) {
 
 // Navigation
 document.querySelector(".hamburger").addEventListener("click", () => {
-	document.querySelector(".navigation-menu").classList.toggle("hidden");
+	document.querySelector(".navigation-menu").classList.toggle("active");
 });
 document.querySelector(".close-nav").addEventListener("click", () => {
-	document.querySelector(".navigation-menu").classList.toggle("hidden");
+	document.querySelector(".navigation-menu").classList.toggle("active");
 });
 
 // Active link logic
