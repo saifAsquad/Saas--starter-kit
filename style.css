@@ -36,3 +36,45 @@ body {
 .avatarDropDown.active {
   z-index: 1;
 }
+.avatarBtn {
+  min-width: 40px;
+}
+@media screen and (min-width: 1280px) {
+  .navigation-menu {
+    display: none !important;
+  }
+  .navigation-menu ~ div {
+    margin: 0 !important;
+  }
+  .close-nav {
+    display: block !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hamburger {
+    display: block !important;
+  }
+  .hamburger ~ ul {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navigation-menu {
+    display: block !important;
+  }
+  .navigation-menu ~ div {
+    margin-left: 312px !important;
+  }
+  .close-nav {
+    display: none !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+  .hamburger ~ ul {
+    display: flex !important;
+  }
+}
+.navigation-menu.active {
+  display: block !important;
+}
