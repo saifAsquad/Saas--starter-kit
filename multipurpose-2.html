@@ -3709,61 +3709,43 @@
                 <!-- Interactipon -->
                 <div
                   id="members-interaction"
-                  class="absolute hidden right-0 top-8 max-w-[176px] w-full"
+                  class="absolute hidden right-0 top-8 max-w-[176px] w-full z-10 bg-white"
                 >
+                <div class=" max-w-[176px] w-full">
                   <div
-                    class="dropdown-btn inline-block relative max-w-[176px] w-full bg-white rounded border-b border-gray-200 my-shadow"
-                  >
-                    <button
-                      class="dropbtn-btn bg-white border-none cursor-pointer"
-                    >
-                      <p
-                        class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4"
-                      >
-                        Quick Actions
-                      </p>
-                    </button>
-                    <div
-                      class="dropdown-content-btn max-w-[176px] block bg-white my-shadow border-t border-gray-200"
-                    >
-                      <a href="#">
-                        <p
-                          class="qb no-underline text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          New Ticket
-                        </p>
-                      </a>
-                      <a href="#">
-                        <p
-                          class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          New Customer
-                        </p>
-                      </a>
-                      <a href="#">
-                        <p
-                          class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          New Contact
-                        </p>
-                      </a>
-                      <a href="#">
-                        <p
-                          class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          Settings
-                        </p>
-                      </a>
-                      <hr class="border-gray-200" />
-                      <button
-                        class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300"
-                      >
-                        <p class="text-xs font-medium leading-3 text-white">
-                          Generate Reports
-                        </p>
+                      class="dropdown-btn inline-block relative max-w-[176px] w-full bg-white  rounded border-b border-gray-200 shadow">
+                      <button class="dropbtn-btn bg-white border-none cursor-pointer">
+                          <p class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4 ">
+                              Quick Actions
+                          </p>
                       </button>
-                    </div>
+                      <div
+                          class="dropdown-content-btn max-w-[176px] block  bg-white  shadow border-t border-gray-200 px-1 py-2">
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline  text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Ticket</p>
+                          </a>
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Customer</p>
+                          </a>
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Contact</p>
+                          </a>
+                          <hr class=" border-slate-200 ">
+                          <button
+                              class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300
+                              text-xs font-medium leading-3 text-white">Generate Reports
+                              
+                          </button>
+                      </div>
                   </div>
+
+              </div>
                 </div>
                 <!-- Interactipon -->
               </div>
@@ -4204,101 +4186,103 @@
                   </svg>
                 </div>
                 <!-- quick links -->
-                <div id="handleClick" class="hidden absolute top-4 right-44">
-                  <div
-                    class="dropdown max-w-[176px] bg-white rounded border-b border-gray-200 shadow"
-                  >
-                    <div
-                      class="dropdown-content shadow border-t border-gray-200"
-                    >
-                      <p
-                        class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4"
-                      >
-                        Quick Actions
-                      </p>
-                      <a href="javascript:void(0)">
-                        <p class="cr text-xs leading-3 text-gray-600">
-                          Create Invoice
-                        </p>
-                      </a>
-                      <a href="javascript:void(0)">
-                        <p class="cr text-xs leading-3 text-gray-600">
-                          Generate Report
-                        </p>
-                      </a>
-                      <a href="javascript:void(0)">
-                        <p class="cr text-xs leading-3 text-gray-600">
-                          Payment
-                        </p>
-                      </a>
-                      <div
-                        onmouseover="show();"
-                        onmouseout="hide()"
-                        class="cr relative flex justify-between itemes-center hover:bg-blue-200 cursor-pointer group subscription"
-                      >
-                        <a href="javascript:void(0)" class="">
-                          <p class="cr sub text-xs leading-3 text-gray-600">
-                            Subscription
-                          </p>
-                        </a>
-                        <svg
-                          width="6"
-                          class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
-                          height="8"
-                          viewBox="0 0 6 8"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.3125 7.375L4.6875 4L1.3125 0.625"
-                            stroke=""
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        <div
-                          id="plans"
-                          class="absolute right-44 top-0 hidden max-w-[112px]"
-                        >
-                          <div
-                            class="plan shadow border-t border-gray-200 bg-white px-1 py-2"
-                          >
-                            <a href="javascript:void(0)" class="hover:rounded">
-                              <p class="cr text-xs leading-3 text-gray-600">
-                                Plans
-                              </p>
-                            </a>
-                            <a href="javascript:void(0)" class="hover:rounded">
-                              <p class="cr text-xs leading-3 text-gray-600">
-                                Bills
-                              </p>
-                            </a>
-                            <a href="javascript:void(0)" class="hover:rounded">
-                              <p class="cr text-xs leading-3 text-gray-600">
-                                Reports
-                              </p>
-                            </a>
-                            <a href="javascript:void(0)" class="hover:rounded">
-                              <p class="cr text-xs leading-3 text-gray-600">
-                                Invoices
-                              </p>
-                            </a>
-                            <a href="javascript:void(0)" class="hover:rounded">
-                              <p class="cr text-xs leading-3 text-gray-600">
-                                Statements
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <a href="javascript:void(0)">
-                        <p class="cr text-xs leading-3 text-gray-600">
-                          Settings
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <div id="handleClick" class="hidden absolute top-7 right-44">
+                                            <div
+                                                class="max-w-[176px] bg-white rounded border-b border-gray-200 shadow">
+                                                <div class="dropdown-content shadow border-t border-gray-200">
+                                                    <p class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4 border-b border-slate-200">
+                                                        Quick Actions
+                                                    </p>
+                                                    <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded mt-2 mx-1">
+                                                            Create Invoice
+                                                        
+                                                    </a>
+                                                    <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded mx-1">
+                                                             Generate Report
+                                                        
+                                                    </a>
+                                                    <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded mx-1">
+                                                              Payment
+                                                        
+                                                    </a>
+                                                    
+                                                    
+                                                    <div 
+                                                        class=" relative flex justify-between itemes-center hover:bg-blue-200 cursor-pointer group subscription rounded ">
+                                                        <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 group-hover:font-medium group-hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 group-hover:rounded ">
+                                                            Description
+                                                        
+                                                    </a>
+                                                        
+                                                        <svg width="6"
+                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                                                            height="8" viewBox="0 0 6 8" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1.3125 7.375L4.6875 4L1.3125 0.625" stroke=""
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                        <div
+                                                            class="absolute right-[174px] rounded top-0 hidden group-hover:block hover:block max-w-[112px] ">
+                                                            <div class=" shadow rounded border-t border-slate-200 p-1  bg-white">
+                                                              <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded ">
+                                                              Plans
+                                                        
+                                                    </a>
+                                                      <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded ">
+                                                              Bills
+                                                        
+                                                    </a>
+                                                     <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded ">
+                                                               Reports
+                                                        
+                                                    </a>
+                                                    <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded ">
+                                                               Invoices
+                                                        
+                                                    </a>
+                                                     <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded ">
+                                                              Statements
+                                                        
+                                                    </a>
+                                                    
+                                                    
+                                                              
+                                                                
+                                                               
+                                                                
+                                                                
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:void(0)" 
+                                                    class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
+                                                   text-xs leading-3 text-slate-600 hover:rounded mb-2 mx-1">
+                                                               Settings
+                                                        
+                                                    </a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
               </div>
               <div>
                 <p class="text-sm leading-none text-gray-500">Tuesday</p>

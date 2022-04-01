@@ -2529,27 +2529,27 @@
                                     </p>
                                 </button>
                                 <div
-                                    class="dropdown-content-btn max-w-[176px] block  bg-white  shadow border-t border-gray-200">
+                                    class="dropdown-content-btn max-w-[176px] block  bg-white  shadow border-t border-gray-200 px-1 py-2">
                                     <a href="javascript:void(0)">
                                         <p
-                                            class="qb no-underline  text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200">
+                                            class="qb no-underline  text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
                                             New Ticket</p>
                                     </a>
                                     <a href="javascript:void(0)">
                                         <p
-                                            class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200">
+                                            class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
                                             New Customer</p>
                                     </a>
                                     <a href="javascript:void(0)">
                                         <p
-                                            class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200">
+                                            class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
                                             New Contact</p>
                                     </a>
-                                    <hr class=" border-gray-200 ">
+                                    <hr class=" border-slate-200 ">
                                     <button
-                                        class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300">
-                                        <p class="text-xs font-medium leading-3 text-white">Generate Reports
-                                        </p>
+                                        class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300
+                                        text-xs font-medium leading-3 text-white">Generate Reports
+                                        
                                     </button>
                                 </div>
                             </div>
@@ -2710,7 +2710,7 @@
                             </p>
                         </div>
                         <div class="div relative">
-                            <button onclick="showDiv()" class="p-2  bg-blue-100 mr-8 hover:cursor-pointer">
+                            <button onclick="showDiv()" class="p-2  bg-blue-100 mr-8 hover:cursor-pointer hover:bg-blue-200">
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="red"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 3.0625V10.9375" stroke="#1D4ED8" stroke-linecap="round"
@@ -2721,20 +2721,20 @@
                             </button>
 
                             <div id="handleClick"
-                                class="hidden bg-white max-h-auto min-w-[216px] rounded shadow top-10 absolute right-5">
+                                class="hidden bg-white max-h-auto min-w-[216px] rounded shadow top-10 absolute right-[32px]">
                                 <div class="flex flex-col">
                                     <div class="header border-b border-gray-200">
-                                        <p class="text-xs font-bold text-slate-800 my-3 ml-3">
+                                        <p  class="text-xs font-bold text-slate-800 my-3 ml-3">
                                             Filter Options
                                         </p>
                                     </div>
                                     <div class="details p-3">
                                         <div class="dropdown group relative">
-                                            <p class="text-xs leading-3 text-slate-800 mb-2">Status</p>
-                                            <button onclick="" id="dropdownDividerButton"
+                                            <p class="text-xs leading-3 text-slate-800 mb-2" >Status</p>
+                                            <button onclick="showFilteroptionInteraction()" id="dropdownDividerButton"
                                                 class="bg-slate-100 font-normal rounded text-xs text-slate-400 p-2 text-left inline-flex items-center w-full mb-6"
                                                 type="button">
-                                                Select Options
+                                                 <span id="setfilterText">Select Options</span>  
                                                 <svg class="ml-auto w-4 h-4" fill="none" stroke="currentColor"
                                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -2742,22 +2742,18 @@
                                                 </svg>
                                             </button>
                                             <div id="dropdownDivider"
-                                                class="hidden group-hover:flex z-10 w-full text-base list-none bg-slate-100 divide-y divide-gray-100 shadow pt-3 pb-4 absolute top-[52px] left-0">
-                                                <ul class="">
-                                                    <li>
+                                                class="hidden  z-10 w-full text-base list-none bg-slate-100 divide-y divide-gray-100 shadow pt-3 pb-4 absolute top-[56px] left-0">
+                                                
+                                                    
                                                         <a href="javascript:void(0)"
-                                                            class="pl-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium">Approved
+                                                            class="py-2 px-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded">Approved
                                                         </a>
-                                                    </li>
-                                                    <li>
                                                         <a href="javascript:void(0)"
-                                                            class="mt-4 pl-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium">Success</a>
-                                                    </li>
-                                                    <li>
+                                                            class="py-2 px-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded">Success</a>
                                                         <a href="javascript:void(0)"
-                                                            class="mt-4 pl-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium">Rejected</a>
-                                                    </li>
-                                                </ul>
+                                                            class="py-2 px-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded">Rejected</a>
+                                                   
+                                                
                                             </div>
                                         </div>
                                         <div class="members">
