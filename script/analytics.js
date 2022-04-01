@@ -478,12 +478,12 @@ function showChartMenu() {
 	document.getElementById("chart-menu").classList.toggle("hidden");
 }
 
-document
-	.getElementById("main-checkbox")
-	.addEventListener("change", function (e) {
-		console.log(e.target.checked);
-		const allChecks = document.querySelectorAll(".form-check-input");
-		allChecks.forEach((check) => {
-			check.checked = e.target.checked;
-		});
-	});
+// document
+// 	.getElementById("main-checkbox")
+// 	.addEventListener("change", function (e) {
+// 		console.log(e.target.checked);
+// 		const allChecks = document.querySelectorAll(".form-check-input");
+// 		allChecks.forEach((check) => {
+// 			check.checked = e.target.checked;
+// 		});
+// 	});
