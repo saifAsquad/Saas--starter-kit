@@ -277,6 +277,7 @@ const allIcons = [
 statChartBtn.addEventListener("click", statsToggler);
 statCrossBtn.addEventListener("click", statsToggler);
 function statsToggler() {
+	statChartBtn.classList.toggle("active")
 	statChart.classList.toggle("active");
 	if (statChart.classList.contains("active")) {
 		allIcons.forEach((y) => {
@@ -307,6 +308,7 @@ allIcons.forEach((e) => {
 				y.component.classList.remove("z-10");
 			}
 		});
+		e.icon.classList.toggle("active");
 		e.component.classList.toggle("active");
 
 		if (e.component.classList.contains("active")) {
