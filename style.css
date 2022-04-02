@@ -26,6 +26,7 @@ body {
   left: 50%;
   z-index: -1;
 }
+
 .searchDropDown,
 .notiDropDown,
 .avatarDropDown {
@@ -38,6 +39,7 @@ body {
 }
 .avatarBtn {
   min-width: 40px;
+  border-radius: 4px;
 }
 @media screen and (min-width: 1280px) {
   .navigation-menu {
@@ -144,4 +146,7 @@ body {
 .statsChartBtn.active:hover::after,
 .statsChartBtn.active:hover::before {
   display: none;
+}
+input[type="checkbox"] {
+  cursor: pointer;
 }
