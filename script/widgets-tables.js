@@ -22,18 +22,18 @@ function closeAll() {
 }
 
 // Table checkbox
-const ele = document.querySelectorAll(".check-func");
-document.querySelector(".check-main").addEventListener("change", (e) => {
-	if (e.target.checked == true) {
-		ele.forEach((e) => {
-			e.checked = true;
-		});
-		return;
-	}
-	ele.forEach((e) => {
-		e.checked = false;
-	});
-});
+// const ele = document.querySelectorAll(".check-func");
+// document.querySelector(".check-main").addEventListener("change", (e) => {
+// 	if (e.target.checked == true) {
+// 		ele.forEach((e) => {
+// 			e.checked = true;
+// 		});
+// 		return;
+// 	}
+// 	ele.forEach((e) => {
+// 		e.checked = false;
+// 	});
+// });
 
 function tableInteract(e) {
 	if (e.checked == true) {

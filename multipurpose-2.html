@@ -3709,61 +3709,43 @@
                 <!-- Interactipon -->
                 <div
                   id="members-interaction"
-                  class="absolute hidden right-0 top-8 max-w-[176px] w-full"
+                  class="absolute hidden right-0 top-8 max-w-[176px] w-full z-10 bg-white"
                 >
+                <div class=" max-w-[176px] w-full">
                   <div
-                    class="dropdown-btn inline-block relative max-w-[176px] w-full bg-white rounded border-b border-gray-200 my-shadow"
-                  >
-                    <button
-                      class="dropbtn-btn bg-white border-none cursor-pointer"
-                    >
-                      <p
-                        class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4"
-                      >
-                        Quick Actions
-                      </p>
-                    </button>
-                    <div
-                      class="dropdown-content-btn max-w-[176px] block bg-white my-shadow border-t border-gray-200"
-                    >
-                      <a href="#">
-                        <p
-                          class="qb no-underline text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          New Ticket
-                        </p>
-                      </a>
-                      <a href="#">
-                        <p
-                          class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          New Customer
-                        </p>
-                      </a>
-                      <a href="#">
-                        <p
-                          class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          New Contact
-                        </p>
-                      </a>
-                      <a href="#">
-                        <p
-                          class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200"
-                        >
-                          Settings
-                        </p>
-                      </a>
-                      <hr class="border-gray-200" />
-                      <button
-                        class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300"
-                      >
-                        <p class="text-xs font-medium leading-3 text-white">
-                          Generate Reports
-                        </p>
+                      class="dropdown-btn inline-block relative max-w-[176px] w-full bg-white  rounded border-b border-gray-200 shadow">
+                      <button class="dropbtn-btn bg-white border-none cursor-pointer">
+                          <p class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4 ">
+                              Quick Actions
+                          </p>
                       </button>
-                    </div>
+                      <div
+                          class="dropdown-content-btn max-w-[176px] block  bg-white  shadow border-t border-gray-200 px-1 py-2">
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline  text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Ticket</p>
+                          </a>
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Customer</p>
+                          </a>
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Contact</p>
+                          </a>
+                          <hr class=" border-slate-200 ">
+                          <button
+                              class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300
+                              text-xs font-medium leading-3 text-white">Generate Reports
+                              
+                          </button>
+                      </div>
                   </div>
+
+              </div>
                 </div>
                 <!-- Interactipon -->
               </div>
@@ -4204,7 +4186,7 @@
                   </svg>
                 </div>
                 <!-- quick links -->
-                <div id="handleClick" class="hidden absolute top-4 right-44">
+                <div id="handleClick" class="hidden absolute top-7 right-44">
                                             <div
                                                 class="max-w-[176px] bg-white rounded border-b border-gray-200 shadow">
                                                 <div class="dropdown-content shadow border-t border-gray-200">
@@ -4319,14 +4301,18 @@
                       09:00 AM
                     </p>
                   </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input h-4 w-4 border border-gray-400 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                  </div>
+                 <div class="form-check relative  ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
                   <!-- form-check -->
                 </div>
               </div>
@@ -4343,14 +4329,18 @@
                       11:00 AM
                     </p>
                   </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input h-4 w-4 border border-gray-400 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                  </div>
+                   <div class="form-check relative  ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
                   <!-- form-check -->
                 </div>
               </div>
@@ -4368,14 +4358,18 @@
                       12:30 PM
                     </p>
                   </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input h-4 w-4 border border-gray-400 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                  </div>
+                  <div class="form-check relative  ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
                   <!-- form-check -->
                 </div>
               </div>
@@ -4392,14 +4386,18 @@
                       02:30 PM
                     </p>
                   </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input h-4 w-4 border border-gray-400 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                  </div>
+                    <div class="form-check relative  ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
                   <!-- form-check -->
                 </div>
               </div>
@@ -4416,14 +4414,18 @@
                       05:00 PM
                     </p>
                   </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input h-4 w-4 border border-gray-400 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                  </div>
+                   <div class="form-check relative  ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
                   <!-- form-check -->
                 </div>
               </div>
@@ -4440,14 +4442,18 @@
                       06:15 PM
                     </p>
                   </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input h-4 w-4 border border-gray-400 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                  </div>
+                   <div class="form-check relative  ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
                   <!-- form-check -->
                 </div>
               </div>
@@ -4791,5 +4797,56 @@
         }
     </style>
     </style>
+    <script>
+        	      
+     
+      const allCheckBoxStat = document.querySelectorAll(".checkStat");
+      const allSvgTicksStat = document.querySelectorAll('.svgTickStats');
+  const classestoToggle = ['bg-blue-700','border-transparent','active','accent-white','accent-blue-700'];
+  
+     allCheckBoxStat.forEach(e=>{
+          e.addEventListener("click", (y) =>{
+              classestoToggle.forEach(c=>{
+                  y.target.classList.toggle(c);
+
+              })
+            
+              if(y.target.checked){
+                     e.nextElementSibling.classList.toggle("-z-10");
+                     e.nextElementSibling.classList.toggle("active");
+        
+              }else{
+ 
+       
+
+              }
+          })
+      })
+      allSvgTicksStat.forEach(e=>{
+          e.addEventListener('click',y=>{
+             classestoToggle.forEach(c=>{
+                 e.previousElementSibling.classList.toggle(c);
+             })
+             e.classList.toggle('-z-10');
+             e.classList.toggle('active');
+           
+             e.previousElementSibling.checked = false;
+            
+
+              if(statTick.classList.contains('active')){
+                
+                statTick.classList.add('-z-10');
+                statTick.classList.remove('active')
+                statsCheckBox.checked = false;
+                classestoToggle.forEach(c=>{
+                    
+                 statsCheckBox.classList.toggle(c);
+                 
+             })
+              }
+
+          })
+      })
+    </script>
   </body>
 </html>
