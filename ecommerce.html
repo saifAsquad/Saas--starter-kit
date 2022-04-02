@@ -2874,20 +2874,29 @@
                                     </button>
                                 </td>
                                 <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                    <div class="flex justify-self-center justify-center">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                                fill="#475569" />
-                                            <path
-                                                d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                                fill="#475569" />
-                                            <path
-                                                d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                                fill="#475569" />
-                                        </svg>
+                                    <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                                            fill="#475569" />
+                                        <path
+                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                                            fill="#475569" />
+                                        <path
+                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                                            fill="#475569" />
+                                    </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 lg:right-[37px] md:right-[30px] right-[20px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
                                     </div>
+                                </div>
                                 </td>
                             </tr>
                             <tr class="odd:bg-white even:bg-slate-100">
@@ -3091,6 +3100,12 @@
             }
         }
     </style>
+    <script>
+         //table interaction
+     function tableInteraction(el){
+        el.parentElement.children[1].classList.toggle('hidden');
+     }
+    </script>
     <script src="./script/ecommerceScript.js">
     </script>
     <script src="script/navigationScript.js"></script>
