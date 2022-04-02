@@ -3432,57 +3432,7 @@
 </div>
 <script src="/script/navigationScript.js"></script>
 <script src="/script/widgets-list.js"></script>
-<script>
-        	      
-     
-      const allCheckBoxStat = document.querySelectorAll(".checkStat");
-      const allSvgTicksStat = document.querySelectorAll('.svgTickStats');
-  const classestoToggle = ['bg-blue-700','border-transparent','active','accent-white','accent-blue-700'];
-  
-     allCheckBoxStat.forEach(e=>{
-          e.addEventListener("click", (y) =>{
-              classestoToggle.forEach(c=>{
-                  y.target.classList.toggle(c);
-
-              })
-            
-              if(y.target.checked){
-                     e.nextElementSibling.classList.toggle("-z-10");
-                     e.nextElementSibling.classList.toggle("active");
-        
-              }else{
- 
-       
-
-              }
-          })
-      })
-      allSvgTicksStat.forEach(e=>{
-          e.addEventListener('click',y=>{
-             classestoToggle.forEach(c=>{
-                 e.previousElementSibling.classList.toggle(c);
-             })
-             e.classList.toggle('-z-10');
-             e.classList.toggle('active');
-           
-             e.previousElementSibling.checked = false;
-            
-
-              if(statTick.classList.contains('active')){
-                
-                statTick.classList.add('-z-10');
-                statTick.classList.remove('active')
-                statsCheckBox.checked = false;
-                classestoToggle.forEach(c=>{
-                    
-                 statsCheckBox.classList.toggle(c);
-                 
-             })
-              }
-
-          })
-      })
-    </script>
+ <script src="script/singlecheckBox.js"></script>
 </body>
 
 </html>
