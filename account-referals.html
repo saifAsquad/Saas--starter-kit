@@ -3311,6 +3311,47 @@
     <script src="./script/account-settings.js"></script>
     <script src="script/navigationScript.js"></script>
     <script>
+      function hideme() {
+          document.getElementById("dealtype").style.display = "none";
+      }
+
+      function plusme(el) {
+          let currentValue = parseInt(el.parentElement.children[2].innerText);
+
+          el.parentElement.children[2].innerText = currentValue + 1000;
+      }
+      function minusme(el) {
+          let currentValue = parseInt(el.parentElement.children[2].innerText);
+          if (currentValue > 0) {
+              el.parentElement.children[2].innerText = currentValue - 1000;
+          }
+      }
+
+      function hideme(el) {
+          const index = Array.from(el.parentElement.children).indexOf(el);
+
+          const arr2 = Array.from(el.parentElement.children);
+          arr2.forEach((head) => {
+              head.children[0].style.stroke = "#475569";
+              head.children[1].style.color = "#475569";
+          });
+          el.children[0].style.stroke = "#1D4ED8";
+          el.children[1].style.color = "#1D4ED8";
+
+          console.log(index);
+          const parentDiv = document.getElementById("parent-content-container");
+          const arr = Array.from(parentDiv.children);
+          arr.forEach((eliment) => {
+              eliment.style.display = "none";
+          });
+          parentDiv.children[index].style.display = "flex";
+      }
+
+      function toggleInteraction() {
+          document.getElementById("interaction-1").classList.toggle("hidden");
+      }
+  </script>
+    <script>
       function copylink() {
         const linktext = document.getElementById("copylink");
         // linktext.select();
