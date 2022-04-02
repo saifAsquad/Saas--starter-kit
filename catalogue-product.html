@@ -2425,7 +2425,7 @@
                     </div>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="whitespace-nowrap w-full">
+                    <table class="whitespace-nowrap w-full" id="table">
                         <thead class="border-b border-slate-100">
                             <tr class="">
                                 <th class="pl-6 relative" align="left">
@@ -2555,8 +2555,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -2568,6 +2572,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -2659,8 +2668,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                               <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -2672,6 +2685,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -2770,8 +2788,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -2783,6 +2805,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -2894,8 +2921,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -2907,6 +2938,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -3012,8 +3048,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -3025,6 +3065,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -3117,8 +3162,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -3130,6 +3179,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -3236,8 +3290,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -3249,6 +3307,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -3334,8 +3397,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -3347,6 +3414,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -3460,8 +3532,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                               <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -3473,6 +3549,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden top-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -3579,8 +3660,12 @@
                                 </button>
                             </td>
                             <td class="text-sm leading-none text-gray-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                               <div 
+                               
+                                class="relative flex justify-self-center justify-center">
+                                    <svg 
+                                     onclick="tableInteraction(this)"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
@@ -3592,6 +3677,11 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
+                                    <div class="tableSvgInt absolute hidden bottom-5 right-[44px] px-1 py-2 flex flex-col w-[124px] shadow-[0_2px_5px_rgba(0,0,0,0.3),0_4px_6px_-1px_rgba(0,0,0,0.1)] rounded z-10 bg-white">
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Edit</p>
+                                       <p class=" text-slate-600 text-xs hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded py-2 px-3">Delete</p>
+
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -3699,7 +3789,132 @@
    
 </style>
   <script src="./script/dropdowns.js"></script>
+<<<<<<< HEAD
   <script src="./script/allcheckbox.js"></script>
+=======
+  <script>
+       const productCheckBox = document.querySelector(".allCheckProduct");
+       const tick =document.querySelector(".allSvgTick");
+      const allCheckBox = document.querySelectorAll("tbody tr td input");
+      const allSvgTicks = document.querySelectorAll('.svgTick');
+ const classestoToggle = ['appearance-none','bg-blue-700','border-transparent','active','accent-white','accent-blue-700'];
+  
+      productCheckBox.addEventListener("click", (e) => {
+        const isChecked = e.target.checked;
+        tick.classList.add('active');
+        if (isChecked) {
+classestoToggle.forEach(c=>{
+                  productCheckBox.classList.toggle(c);
+
+})
+          allCheckBox.forEach((ac) => {
+              if(!ac.checked){
+classestoToggle.forEach(c=>{
+                  ac.classList.toggle(c);
+                  
+
+              })
+              ac.checked = true;
+            ac.parentElement.parentElement.className = 'bg-blue-50';
+            ac.nextElementSibling.classList.toggle("-z-10");
+            tick.classList.remove('-z-10');
+              }
+              
+        });
+        } else {
+          allCheckBox.forEach((ac) => {
+              ac.checked = false
+              ac.parentElement.parentElement.className = '';
+        }
+        );
+        }
+      });
+      tick.addEventListener('click', t=>{
+          tick.classList.toggle('-z-10');
+            
+         productCheckBox.checked = false;
+             classestoToggle.forEach(c=>{
+                 productCheckBox.classList.toggle(c);
+             })
+             allSvgTicks.forEach(at=>{
+
+             classestoToggle.forEach(c=>{
+                 at.previousElementSibling.classList.toggle(c);
+             })
+             at.classList.toggle('-z-10');
+           
+             at.previousElementSibling.checked = false;
+          
+              at.parentElement.parentElement.className = '';
+             })
+        
+      })
+      allCheckBox.forEach(e=>{
+          e.addEventListener("click", (y) =>{
+              classestoToggle.forEach(c=>{
+                  y.target.classList.toggle(c);
+
+              })
+            
+              if(y.target.checked){
+                     e.nextElementSibling.classList.toggle("-z-10");
+                     e.nextElementSibling.classList.toggle("active");
+                     e.parentElement.parentElement.className = 'bg-blue-50';
+              }else{
+ 
+                   e.parentElement.parentElement.className = '';
+
+              }
+          })
+      })
+      allSvgTicks.forEach(e=>{
+          e.addEventListener('click',y=>{
+             classestoToggle.forEach(c=>{
+                 e.previousElementSibling.classList.toggle(c);
+             })
+             e.classList.toggle('-z-10');
+             e.classList.toggle('active');
+           
+             e.previousElementSibling.checked = false;
+            
+              e.parentElement.parentElement.className = '';
+              if(tick.classList.contains('active')){
+                
+                tick.classList.add('-z-10');
+                tick.classList.remove('active')
+                productCheckBox.checked = false;
+                classestoToggle.forEach(c=>{
+                    
+                 productCheckBox.classList.toggle(c);
+                 
+             })
+              }
+
+          })
+      })
+
+      //table interaction
+     function tableInteraction(el){
+        el.parentElement.children[1].classList.toggle('hidden');
+     }
+     //
+   document.getElementsByTagName('table')[0].addEventListener('click',closeAll());
+       
+     
+     
+     function closeAll() {
+         document.querySelectorAll('.tableSvgInt').forEach(e=>{
+         if(e.classList.contains('hidden')){
+             return;
+            
+             
+         }
+         e.classList.add("hidden");
+     })
+	
+}
+  </script>
+>>>>>>> fa9253d972732f1aefd4ac6879d4972a7039050b
 </body>
 
 </html>
