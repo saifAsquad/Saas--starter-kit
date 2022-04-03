@@ -138,6 +138,7 @@ function myLang() {
 }
 
 function filterLang() {
+  console.log("filterLang");
   var input, filter, ul, li, a, i;
   input = document.getElementById("langInput");
   filter = input.value.toUpperCase();
