@@ -2,11 +2,11 @@
 
 const allCheckBoxStat = document.querySelectorAll(".checkStat");
 const allSvgTicksStat = document.querySelectorAll('.svgTickStats');
-const classestoToggle = ['bg-blue-700', 'border-transparent', 'active', 'accent-white', 'accent-blue-700'];
+const classestoTogglev2 = ['bg-blue-700', 'border-transparent', 'active', 'accent-white', 'accent-blue-700'];
 
 allCheckBoxStat.forEach(e => {
     e.addEventListener("click", (y) => {
-        classestoToggle.forEach(c => {
+        classestoTogglev2.forEach(c => {
             y.target.classList.toggle(c);
 
         })
@@ -24,7 +24,7 @@ allCheckBoxStat.forEach(e => {
 })
 allSvgTicksStat.forEach(e => {
     e.addEventListener('click', y => {
-        classestoToggle.forEach(c => {
+        classestoTogglev2.forEach(c => {
             e.previousElementSibling.classList.toggle(c);
         })
         e.classList.toggle('-z-10');

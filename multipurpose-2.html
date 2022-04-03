@@ -4560,34 +4560,35 @@
                 This paragraph can include all the serious details about the
                 project that the user might want ....
               </p>
-              <div class="flex mt-8">
+              <div class="flex items-center mt-8">
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0016_olena-sergienko-XttWKETqCCQ-unsplash.png"
-                  class="rounded-full"
+                  class="rounded-full min-w-[40px]"
                   alt=""
                 />
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0002s_0004_alfred-kenneally-JwzpdmSYIDc-unsplash.png"
-                  class="rounded-full mx-1"
+                  class="rounded-full mx-1 min-w-[40px]"
                   alt=""
                 />
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0005_laurence-cruz-P7yvmajPvkM-unsplash.png"
-                  class="rounded-full mx-1"
+                  class="rounded-full mx-1 min-w-[40px]"
                   alt=""
                 />
                 <img
                   src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0000s_0035_azamat-zhanisov-a5sRFieA3BY-unsplash%201.png"
-                  class="rounded-full mx-1"
+                  class="rounded-full mx-1 min-w-[40px]"
                   alt=""
                 />
                 <svg
                   width="24"
                   height="24"
-                  class="cursor-pointer"
+                  class="cursor-pointer mx-1"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+              
                 >
                   <circle
                     cx="12"
@@ -4797,56 +4798,6 @@
         }
     </style>
     </style>
-    <script>
-        	      
-     
-      const allCheckBoxStat = document.querySelectorAll(".checkStat");
-      const allSvgTicksStat = document.querySelectorAll('.svgTickStats');
-  const classestoToggle = ['bg-blue-700','border-transparent','active','accent-white','accent-blue-700'];
-  
-     allCheckBoxStat.forEach(e=>{
-          e.addEventListener("click", (y) =>{
-              classestoToggle.forEach(c=>{
-                  y.target.classList.toggle(c);
-
-              })
-            
-              if(y.target.checked){
-                     e.nextElementSibling.classList.toggle("-z-10");
-                     e.nextElementSibling.classList.toggle("active");
-        
-              }else{
- 
-       
-
-              }
-          })
-      })
-      allSvgTicksStat.forEach(e=>{
-          e.addEventListener('click',y=>{
-             classestoToggle.forEach(c=>{
-                 e.previousElementSibling.classList.toggle(c);
-             })
-             e.classList.toggle('-z-10');
-             e.classList.toggle('active');
-           
-             e.previousElementSibling.checked = false;
-            
-
-              if(statTick.classList.contains('active')){
-                
-                statTick.classList.add('-z-10');
-                statTick.classList.remove('active')
-                statsCheckBox.checked = false;
-                classestoToggle.forEach(c=>{
-                    
-                 statsCheckBox.classList.toggle(c);
-                 
-             })
-              }
-
-          })
-      })
-    </script>
-  </body>
+    <script src="script/singlecheckBox.js"></script>
+ </body>
 </html>

@@ -219,8 +219,8 @@
                                     <div>
                                          <div class="relative">
                                         <input type="checkbox" checked name="Notification"
-                                            class="checkbox rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer bg-blue-100  appearance-none" />
-         <div class="svgTick cursor-pointer absolute top-[2px] left-[2px] -z-10">
+                                            class="checkbox rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer bg-blue-700  appearance-none" />
+         <div class="svgTick cursor-pointer absolute top-[2px] left-[2px] ">
                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3293 3.62347C13.5371 3.80532 13.5581 4.1212 13.3763 4.32902L6.37629 12.329C6.28516 12.4332 6.15495 12.4949 6.01664 12.4995C5.87833 12.5041 5.7443 12.4512 5.64645 12.3533L2.64645 9.35332C2.45118 9.15805 2.45118 8.84147 2.64645 8.64621C2.84171 8.45095 3.15829 8.45095 3.35355 8.64621L5.97564 11.2683L12.6237 3.67051C12.8056 3.46269 13.1214 3.44163 13.3293 3.62347Z" fill="white"/>
 </svg>
@@ -4109,25 +4109,8 @@
         </style>
 
         <script src="./script/dropdowns.js"></script>
-        <script>
-            const allCheckBox = document.querySelectorAll('.checkbox');
-            const allSvgTicks = document.querySelectorAll('.svgTick');
-            allCheckBox.forEach(e=>{
-                e.addEventListener("click",()=>{
-                    e.classList.toggle('bg-blue-100');
-                    e.classList.toggle('bg-blue-700');
-                    e.nextElementSibling.classList.toggle('-z-10');
-                })
-            });
-            allSvgTicks.forEach(e=>{
-                e.addEventListener("click",()=>{
-                    e.classList.toggle('-z-10');
-                    e.previousElementSibling.classList.toggle('bg-blue-100');
-                    e.previousElementSibling.classList.toggle('bg-blue-700');
-                    e.previousElementSibling.checked = false;
-                })
-            })
-        </script>
+        <script src="./script/singlecheckboxv2.js"></script>
+       
 </body>
 
 </html>
