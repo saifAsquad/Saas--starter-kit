@@ -644,6 +644,7 @@ const closeAll = () => {
 };
 //Filter options interaction dropdown
 function showFilteroptionInteraction() {
+  console.log("in status");
   document.getElementById("dropdownDivider").classList.toggle("hidden");
 }
 document.querySelectorAll("#dropdownDivider a").forEach((a) => {
