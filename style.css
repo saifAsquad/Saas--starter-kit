@@ -150,3 +150,6 @@ body {
 input[type="checkbox"] {
   cursor: pointer;
 }
+table tbody tr:hover {
+  background-color: #eff6ff;
+}
