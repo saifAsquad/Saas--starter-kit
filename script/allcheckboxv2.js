@@ -22,6 +22,7 @@ productCheckBox.addEventListener("click", (e) => {
                 ac.checked = true;
 
                 ac.nextElementSibling.classList.toggle("-z-10");
+                ac.parentElement.parentElement.classList.toggle('bg-blue-50');
                 tick.classList.remove('-z-10');
             }
 
@@ -47,7 +48,7 @@ tick.addEventListener('click', t => {
             at.previousElementSibling.classList.toggle(c);
         })
         at.classList.toggle('-z-10');
-
+        at.parentElement.parentElement.classList.toggle('bg-blue-50');
         at.previousElementSibling.checked = false;
 
     })
@@ -63,7 +64,7 @@ allCheckBox.forEach(e => {
         if (y.target.checked) {
             e.nextElementSibling.classList.toggle("-z-10");
             e.nextElementSibling.classList.toggle("active");
-
+            e.parentElement.parentElement.classList.toggle('bg-blue-50');
         } else {
 
 
@@ -80,7 +81,7 @@ allSvgTicks.forEach(e => {
         e.classList.toggle('active');
 
         e.previousElementSibling.checked = false;
-
+        e.parentElement.parentElement.classList.toggle('bg-blue-50');
 
         if (tick.classList.contains('active')) {
 
