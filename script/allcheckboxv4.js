@@ -1,10 +1,9 @@
 const productCheckBox = document.querySelector(".allCheckProduct");
 const tick = document.querySelector(".allSvgTick");
-const allCheckBoxArr = [...allCheckBox];
 const allCheckBox = document.querySelectorAll("tbody tr td input");
+const allCheckBoxArr = [...allCheckBox];
 const allSvgTicks = document.querySelectorAll(".svgTick");
 const classestoToggle = [
-  "appearance-none",
   "bg-blue-700",
   "border-transparent",
   "active",
@@ -14,26 +13,26 @@ const classestoToggle = [
 
 productCheckBox.addEventListener("click", (e) => {
   const isChecked = e.target.checked;
-  tick.classList.add("active");
+  tick.classList.toggle("active");
   if (isChecked) {
     classestoToggle.forEach((c) => {
       productCheckBox.classList.toggle(c);
     });
+    tick.classList.toggle("-z-10");
     allCheckBox.forEach((ac) => {
-      if (!ac.checked) {
+      if (!ac.checked && !ac.classList.contains("checkStat")) {
         classestoToggle.forEach((c) => {
           ac.classList.toggle(c);
         });
         ac.checked = true;
-        ac.parentElement.parentElement.className = "bg-blue-50";
         ac.nextElementSibling.classList.toggle("-z-10");
-        tick.classList.remove("-z-10");
+
+        console.log(tick);
       }
     });
   } else {
     allCheckBox.forEach((ac) => {
       ac.checked = false;
-      ac.parentElement.parentElement.className = "";
     });
   }
 });
@@ -49,10 +48,7 @@ tick.addEventListener("click", (t) => {
       at.previousElementSibling.classList.toggle(c);
     });
     at.classList.toggle("-z-10");
-
     at.previousElementSibling.checked = false;
-
-    at.parentElement.parentElement.className = "";
   });
 });
 allCheckBox.forEach((e) => {
@@ -64,13 +60,10 @@ allCheckBox.forEach((e) => {
     if (y.target.checked) {
       e.nextElementSibling.classList.toggle("-z-10");
       e.nextElementSibling.classList.toggle("active");
-      e.parentElement.parentElement.className = "bg-blue-50";
-      console.log(e.parentElement.parentElement);
     } else {
-      e.parentElement.parentElement.className = "";
     }
     if (allCheckBoxArr.every((aca) => aca.checked)) {
-      console.log("in every");
+      console.log("in every allCheckBox");
       classestoToggle.forEach((c) => {
         productCheckBox.classList.toggle(c);
       });
@@ -85,10 +78,7 @@ allSvgTicks.forEach((e) => {
     });
     e.classList.toggle("-z-10");
     e.classList.toggle("active");
-
     e.previousElementSibling.checked = false;
-
-    e.parentElement.parentElement.className = "";
     if (!allCheckBoxArr.every((aca) => aca.checked)) {
       console.log("in every");
       productCheckBox.checked = false;
