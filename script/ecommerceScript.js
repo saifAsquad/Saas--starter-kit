@@ -616,13 +616,16 @@ document.querySelectorAll(".cr").forEach((e) => {
 
 // Table interaction
 function showDiv() {
-  const val = document.getElementById("handleClick").style.display;
+  const val = document.getElementById("handleClick");
   console.log(val);
-  if (val === "block") {
-    document.getElementById("handleClick").style.display = "none";
-    return;
-  }
-  document.getElementById("handleClick").style.display = "block";
+  val.classList.toggle("hidden");
+  val.classList.toggle("z-10");
+  // if (val === "block") {
+  //   val.classList.add
+  //   document.getElementById("handleClick").style.display = "none";
+  //   return;
+  // }
+  // document.getElementById("handleClick").style.display = "block";
 }
 
 // Overview Interaction
