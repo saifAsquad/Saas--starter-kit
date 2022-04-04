@@ -22,4 +22,15 @@ function openTableMenuD(element) {
 }
 function showFilterDropDown(id) {
   document.getElementById(id).classList.toggle("hidden");
+  document.querySelectorAll(`#${id} a`).forEach((a) => {
+    a.style.cursor = "pointer";
+    a.style.display = "block";
+
+    a.addEventListener("click", function (e) {
+      console.log(e.target.textContent);
+      document.getElementById("setfilterText1").innerText =
+        e.target.textContent;
+      document.getElementById(id).classList.add("hidden");
+    });
+  });
 }

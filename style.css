@@ -153,13 +153,13 @@ input[type="checkbox"] {
 table tbody tr:hover {
   background-color: #eff6ff;
 }
-.toggle-checkbox:checked {
+.toggle-checkboxf:checked {
   @apply: right-0 border-green-400;
   right: 0;
   border-color: #1d4ed8;
 }
 
-.toggle-checkbox:checked + .toggle-label {
+.toggle-checkboxf:checked + .toggle-labelf {
   @apply: bg-green-400;
   background-color: #1d4ed8;
 }
