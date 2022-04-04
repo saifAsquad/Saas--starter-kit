@@ -2314,9 +2314,9 @@
             <!--  -->
             <!--  -->
             <div class="flex flex-col mt-7  shadow rounded bg-white">
-                <div class="header flex flex-row justify-between items-center mb-12">
-                    <div class="div ml-6 mt-6">
-                        <div class="flex border border-slate-400 rounded items-center">
+                <div class="header flex flex-row flex-wrap gap-4 justify-between items-center mb-12 mt-6">
+                    <div class="div mx-6 ">
+                        <div class="flex border border-slate-300 rounded items-center max-w-[234px] w-full">
                             <input type="text" name="serach" id=""
                                 class="rounded py-[13px] px-4 border-none outline-none placeholder-slate-600 text-sm"
                                 placeholder="Search" />
@@ -2331,20 +2331,23 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="div mr-6 lg:block md:block hidden">
-                        <div class="mx-auto mt-6 w-full flex gap-4">
+                    <div class="div mx-6 ">
+                        <div class="w-full  flex flex-wrap  gap-4">
                             <div
-                                class="dropdown-one border rounded border-blue-700 w-full rounded ml-3 bg-inherit relative">
+                                class="dropdown-one border rounded border-blue-700    bg-inherit relative min-w-[146px] 
+                                 ">
                                 <button onclick="showDropDownMenu(this)"
-                                    class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-[146px] bg-inherit">
+                                    class="dropbtn-one  px-5 py-[12px]   bg-inherit m-0">
                                     <span class="pr-4 font-medium text-blue-700 text-sm" id="drop-down-content-setter">
                                         Status
                                     </span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16"
-                                        class="absolute top-4 right-4 stroke-blue-700" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 6L8 10L4 6" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
+                                    <svg
+                                    class="absolute top-[17px] right-[14px] z-10"
+                                    width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                  
                                 </button>
 
                                 <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
@@ -2422,7 +2425,7 @@
                                 <th class="text-base font-medium leading-none text-slate-600 text-left py-6 px-6">
                                     Status
                                 </th>
-                                <th class="text-base font-medium leading-none text-slate-600 text-center py-6 px-6">
+                                <th class="text-base font-medium leading-none text-slate-600 text-right py-6 px-6">
                                     Actions
                                 </th>
                             </tr>
@@ -2468,21 +2471,55 @@
                                     Pending
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer px-6 ">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2525,21 +2562,55 @@
                                     Failed
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2583,21 +2654,55 @@
                                     Completed
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2641,21 +2746,55 @@
                                     Completed
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2699,21 +2838,55 @@
                                     Refunded
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2757,21 +2930,55 @@
                                     Completed
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2815,21 +3022,55 @@
                                     Completed
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2873,21 +3114,55 @@
                                     Completed
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2931,21 +3206,55 @@
                                     Pending
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                         <tr>
@@ -2989,24 +3298,95 @@
                                     Completed
                                 </button>
                             </td>
-                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
-                                <div class="flex justify-self-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
-                                            fill="#475569" />
-                                        <path
-                                            d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
-                                            fill="#475569" />
-                                    </svg>
-                                </div>
+                            <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer px-6">
+                                 <div
+                      class="flex justify-self-center justify-end relative actions-intereaction"
+                      onclick="handleActionsInteraction(this)"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12C9.75 13.2426 10.7574 14.25 12 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M19.5 14.25C20.7426 14.25 21.75 13.2426 21.75 12C21.75 10.7574 20.7426 9.75 19.5 9.75C18.2574 9.75 17.25 10.7574 17.25 12C17.25 13.2426 18.2574 14.25 19.5 14.25Z"
+                          fill="#475569"
+                        />
+                        <path
+                          d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
+                          fill="#475569"
+                        />
+                      </svg>
+                      <div
+                        class="px-1 absolute bottom-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        id="hideMe"
+                      >
+                      <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          View Details
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Edit
+                        </p>
+                        <p
+                          href=""
+                          class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block"
+                        >
+                          Delete
+                        </p>
+                      </div>
+                    </div>
                             </td>
                         </tr>
                     </table>
+                </div>
+                <div class="flex w-full justify-end py-[38px]">
+                    <div class="flex mx-9 items-center flex-wrap gap-4">
+                        <div class="svg-container mr-1 cursor-pointer">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1 7L7 13" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
+                        </div>
+                        <div
+                            class="div border border-blue-700 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
+                        </div>
+                        <div class="svg-container ml-1 cursor-pointer">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L1 1" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--  -->
@@ -3017,6 +3397,14 @@
     </div>
     <!-- Body -->
 </div>
+<script>
+
+     function handleActionsInteraction(el) {
+       
+        el.children[1].classList.toggle("hidden");
+       
+      }
+</script>
 <style>
     tr {
 
