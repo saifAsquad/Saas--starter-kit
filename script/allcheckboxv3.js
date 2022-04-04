@@ -28,7 +28,7 @@ statsCheckBox.addEventListener("click", (e) => {
         ac.checked = true;
 
         ac.nextElementSibling.classList.toggle("-z-10");
-        tick.classList.remove("-z-10");
+        statTick.classList.remove("-z-10");
       }
     });
   } else {
