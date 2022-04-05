@@ -34,6 +34,43 @@
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #dbeafe;
 }
+/*Countries*/
+#myDropdown2 {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
+    0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  padding: 20px 16px 20px 16px;
+}
+
+#myDropdown2 a {
+  padding: 8px 0 8px 16px;
+  cursor: pointer;
+}
+
+#myDropdown2 a:hover {
+  background-color: #dbeafe;
+  border-radius: 4px;
+  color: #1d4ed8;
+}
+
+/* Scroll bar */
+#myDropdown2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(241, 241, 241, 0.3);
+  border-radius: 10px;
+  background-color: #dbeafe;
+}
+
+#myDropdown2::-webkit-scrollbar {
+  width: 6px;
+  background-color: #dbeafe;
+}
+
+#myDropdown2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #dbeafe;
+}
 
 /*   Styling for cities*/
 
@@ -73,6 +110,44 @@
   background-color: #dbeafe;
 }
 /*   Styling for cities*/
+
+/*   Styling for cities 2*/
+
+#cityDropdown2 {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06),
+    0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px 16px 20px 16px;
+}
+
+#cityDropdown2 a {
+  padding: 8px 0 8px 16px;
+  cursor: pointer;
+}
+
+#cityDropdown2 a:hover {
+  background-color: #dbeafe;
+  border-radius: 4px;
+  color: #1d4ed8;
+}
+
+/* Scroll bar */
+#cityDropdown2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(241, 241, 241, 0.3);
+  border-radius: 10px;
+  background-color: #dbeafe;
+}
+
+#cityDropdown2::-webkit-scrollbar {
+  width: 6px;
+  background-color: #dbeafe;
+}
+
+#cityDropdown2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #dbeafe;
+}
 
 /*   Styling for States*/
 
@@ -241,7 +316,6 @@
     0px 4px 6px -1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 4px 4px 4px 4px;
-
 }
 
 #tempDropdown a {
