@@ -45,3 +45,12 @@ function showFilterDropDown(id) {
     });
   });
 }
+document.querySelector("body").addEventListener("click", () => {
+  tooltip.forEach((e) => {
+    // console.log(element.parentElement.children[1]);
+    if (e.classList.contains("active")) {
+      e.classList.add("hidden");
+      e.classList.remove("active");
+    }
+  });
+});

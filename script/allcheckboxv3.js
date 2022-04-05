@@ -37,6 +37,7 @@ statsCheckBox.addEventListener("click", (e) => {
     });
   }
 });
+
 statTick.addEventListener("click", (t) => {
   statTick.classList.toggle("-z-10");
 
@@ -83,7 +84,10 @@ allSvgTicksStat.forEach((e) => {
     e.classList.toggle("active");
 
     e.previousElementSibling.checked = false;
-    if (!allCheckBoxStatArr.every((aca) => aca.checked)) {
+    if (
+      !allCheckBoxStatArr.every((aca) => aca.checked) &&
+      !statTick.classList.contains("-z-10")
+    ) {
       console.log("in every allCheckBox");
       statsCheckBox.checked = false;
       classestoTogglev3.forEach((c) => {

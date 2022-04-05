@@ -88,7 +88,10 @@ allSvgTicks.forEach((e) => {
     e.previousElementSibling.checked = false;
     e.parentElement.parentElement.classList.toggle("bg-blue-50");
 
-    if (!allCheckBoxArr.every((aca) => aca.checked)) {
+    if (
+      !allCheckBoxArr.every((aca) => aca.checked) &&
+      !tick.classList.contains("-z-10")
+    ) {
       console.log("in every svgticks");
       productCheckBox.checked = false;
       classestoToggle.forEach((c) => {
