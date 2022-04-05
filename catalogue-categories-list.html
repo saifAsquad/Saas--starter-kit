@@ -3717,15 +3717,15 @@
           <!--  -->
           <div class="flex flex-col mt-7 shadow rounded bg-white">
             <div
-              class="header flex flex-row justify-between items-center mb-12"
+              class="header mt-6 flex flex-row flex-wrap gap-4 justify-between items-center mb-12"
             >
-              <div class="div ml-6 mt-6">
+              <div class="div mx-6">
                 <div class="flex border border-slate-300 rounded items-center">
                   <input
                     type="text"
                     name="serach"
                     id=""
-                    class="py-[13px] rounded px-4 border-none outline-none"
+                    class="max-w-[234px] w-full py-[13px] rounded px-4 border-none outline-none"
                     placeholder="Search"
                   />
 
@@ -3752,10 +3752,10 @@
                   </svg>
                 </div>
               </div>
-              <div class="div mr-6 lg:block md:block hidden">
-                <div class="mx-auto mt-6 w-full flex">
+              <div class="div mx-6">
+                <div class="mx-auto w-full flex flex-wrap gap-4">
                   <div
-                    class="dropdown-one border rounded border-blue-700 w-full rounded ml-3 bg-inherit relative"
+                    class="dropdown-one border border-blue-700 rounded bg-inherit relative"
                   >
                     <button
                       onclick="showDropDownMenu(this)"
@@ -3822,11 +3822,13 @@
                     </div>
                   </div>
                   <div class="div">
-                    <button
-                      class="px-5 py-[15px] rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-medium ml-4 w-36"
-                    >
-                      Add Category
-                    </button>
+                    <a href="./catalogue-add-category.html">
+                      <button
+                        class="px-5 py-[15px] rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-medium w-36"
+                      >
+                        Add Category
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -3977,7 +3979,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
                         id="hideMe"
                       >
                         <p
@@ -4088,7 +4090,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                         id="hideMe"
                       >
                         <p
@@ -4198,7 +4200,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
                         id="hideMe"
                       >
                         <p
@@ -4308,7 +4310,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
                         id="hideMe"
                       >
                         <p
@@ -4418,7 +4420,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                         id="hideMe"
                       >
                         <p
@@ -4528,7 +4530,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                         id="hideMe"
                       >
                         <p
@@ -4638,7 +4640,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
                         id="hideMe"
                       >
                         <p
@@ -4748,7 +4750,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                         id="hideMe"
                       >
                         <p
@@ -4858,7 +4860,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                         id="hideMe"
                       >
                         <p
@@ -4968,7 +4970,7 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden"
+                        class="px-1 absolute bottom-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
                         id="hideMe"
                       >
                         <p
@@ -4990,8 +4992,8 @@
               </table>
             </div>
             <div class="flex w-full justify-end py-[38px]">
-              <div class="flex mr-12 items-center">
-                <div class="svg-container mr-[29px] cursor-pointer">
+              <div class="flex mx-9 items-center flex-wrap gap-4">
+                <div class="svg-container mr-1 cursor-pointer">
                   <svg
                     width="8"
                     height="14"
@@ -5014,26 +5016,26 @@
                   <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
                 </div>
                 <div
-                  class="div border border-blue-700 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+                  class="div border border-blue-700 rounded-[6px] cursor-pointer hover:bg-blue-100"
                 >
                   <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
                 </div>
                 <div
-                  class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+                  class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100"
                 >
                   <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
                 </div>
                 <div
-                  class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+                  class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100"
                 >
                   <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
                 </div>
                 <div
-                  class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100"
+                  class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100"
                 >
                   <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
                 </div>
-                <div class="svg-container ml-[29px] cursor-pointer">
+                <div class="svg-container ml-1 cursor-pointer">
                   <svg
                     width="8"
                     height="14"
@@ -5066,71 +5068,10 @@
       const els = document.querySelector(".actions-intereaction");
       console.log(els);
       function handleActionsInteraction(el) {
-        // els.array.forEach((element) => {
-        //   element.children[1].style.display = "none";
-        // });
         el.children[1].classList.toggle("hidden");
-        // document.getElementsByClassName("actions-intereaction").style.display =
-        //   "flex";
-        // const showDiv =
-        // console.log(showDiv);
-        // showDiv.classList.toggle("hidden");
       }
     </script>
     <style>
-      .dropbtn-one {
-        border: none;
-        cursor: pointer;
-      }
-
-      .dropdown-one {
-        position: relative;
-        display: inline-block;
-      }
-
-      .dwy a:hover .cr {
-        color: rgba(29, 78, 216, 1);
-      }
-
-      * {
-        /* border: 1px solid red; */
-      }
-
-      .dwy a:hover {
-        background-color: rgb(191 219 254);
-        font-weight: 500;
-      }
-
-      .dwy a {
-        padding: 8px 12px;
-        text-decoration: none;
-        display: block;
-      }
-
-      .dwy {
-        display: none;
-        position: absolute;
-        background-color: white;
-        z-index: 1;
-      }
-
-      .dropdown-one:hover .dwy {
-        display: block;
-      }
-
-      .show {
-        display: flex;
-      }
-
-      tr {
-        border-bottom: 1px solid #f1f5f9;
-      }
-
-      table input {
-        cursor: pointer;
-        margin-top: 7px;
-      }
-
       table img {
         max-width: 40px;
       }

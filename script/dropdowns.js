@@ -42,6 +42,48 @@ options.forEach((item) => {
     myFunction();
   });
 });
+
+//   Script for Countries 2 DropDown
+function myFunction2() {
+  const arrow = document.querySelector(".arrow2");
+  const down = document.getElementById("myDropdown2");
+  document.getElementById("myDropdown2").classList.toggle("hidden");
+  if (!down.classList.contains("hidden")) {
+    arrow.classList.add("rotate-180");
+  } else {
+    arrow.classList.remove("rotate-180");
+  }
+}
+
+function filterFunction2() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput2");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown2");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+const options2 = document.querySelectorAll("#myDropdown2 a");
+options2.forEach((item) => {
+  item.classList.add("text-slate-600");
+  item.addEventListener("click", () => {
+    options2.forEach((inner) => {
+      inner.classList.remove("text-blue-700", "font-medium", "bg-blue-50");
+    });
+    document.querySelector(".dropbtnspan2").textContent = item.textContent;
+    item.classList.remove("text-slate-600");
+    item.classList.add("bg-blue-50", "text-blue-700", "font-medium");
+    myFunction2();
+  });
+});
 //script for cities
 function myCities() {
   const arrow = document.querySelector(".city-arrow");
@@ -81,6 +123,48 @@ cityoptions.forEach((item) => {
     item.classList.remove("text-slate-600");
     item.classList.add("bg-blue-50", "text-blue-700", "font-medium");
     myCities();
+  });
+});
+
+//script for cities2
+function myCities2() {
+  const arrow = document.querySelector(".city-arrow2");
+  const down = document.getElementById("cityDropdown2");
+  document.getElementById("cityDropdown2").classList.toggle("hidden");
+  if (!down.classList.contains("hidden")) {
+    arrow.classList.add("rotate-180");
+  } else {
+    arrow.classList.remove("rotate-180");
+  }
+}
+
+function filterCities2() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("cityInput2");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("cityDropdown2");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+const cityoptions2 = document.querySelectorAll("#cityDropdown2 a");
+cityoptions2.forEach((item) => {
+  item.classList.add("text-slate-600");
+  item.addEventListener("click", () => {
+    cityoptions2.forEach((inner) => {
+      inner.classList.remove("text-blue-700", "font-medium", "bg-blue-50");
+    });
+    document.querySelector(".citydropbtnspan2").textContent = item.textContent;
+    item.classList.remove("text-slate-600");
+    item.classList.add("bg-blue-50", "text-blue-700", "font-medium");
+    myCities2();
   });
 });
 //script for states
