@@ -1,7 +1,7 @@
 const productCheckBox = document.querySelector(".allCheckProduct");
 const tick = document.querySelector(".allSvgTick");
-const allCheckBoxArr = [...allCheckBox];
 const allCheckBox = document.querySelectorAll("tbody tr td input");
+const allCheckBoxArr = [...allCheckBox];
 const allSvgTicks = document.querySelectorAll(".svgTick");
 const classestoToggle = [
   "appearance-none",
