@@ -2976,6 +2976,7 @@
                     <div class="mt-7 bg-white rounded-[4px] w-full p-7 pb-0 shadow">
                         <!-- Profile -->
                         <div class="flex flex-wrap items-start justify-between gap-8 ">
+                            <div class="div  flex gap-7 flex-wrap">
                             <div>
                                 <img alt="Profile Picture" class="w-[155px] h-[155px]"
                                     src="/overview-assetts/vuetify.png" />
@@ -3090,9 +3091,10 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
 
                             <!-- Buttons -->
-                            <div class="relative flex gap-3">
+                            <div class="relative flex flex-wrap gap-3">
                                 <button onclick="toggleAddUser()"
                                     class="bg-blue-100  text-blue-700  text-xs font-medium py-2 px-4 hover:bg-blue-200 rounded-[4px]">Add
                                     User</button>
@@ -3251,9 +3253,9 @@
 
                     </div>
                     <!-- First card -->
-                    <div class="grid grid-cols-5 mt-7 gap-7">
+                    <div class="grid lg:grid-cols-5 md:grid-cols-5 grid-cols-1 mt-7 gap-7">
                         <!-- Doughnut Chart -->
-                        <div class="col-span-2 py-6 pt-6 bg-white shadow">
+                        <div class="lg:col-span-2 md:col-span-2 col-span-1 py-6 pt-6 bg-white shadow">
                             <div class="pb-4 pl-6 mr-auto details">
                                 <p class="text-xl font-semibold leading-5 text-gray-800">
                                     Task Summary
@@ -3334,7 +3336,7 @@
                         </div>
                         <!-- Doughnut Chart -->
                         <!-- Main Chart  -->
-                        <div class="col-span-3 px-2 pt-6 bg-white shadow pb-7 my-shadow">
+                        <div class="lg:col-span-3 md:col-span-3 col-span-1 px-2 pt-6 bg-white shadow pb-7 my-shadow">
                             <div class="flex flex-col items-start justify-between gap-4 ml-6 mb-9">
                                 <div class="div">
                                     <p class="text-xl font-semibold leading-5 text-gray-800 ">
@@ -3382,7 +3384,7 @@
                     </div>
                     <!-- Second End -->
                     <!-- Third Start -->
-                    <div class="grid grid-cols-2 mt-7 gap-7">
+                    <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-7 gap-7">
                         <div class="bg-white rounded shadow p-7 max-h-auto">
                             <div class="flex flex-col">
                                 <div class="flex items-center justify-between header">
@@ -3671,8 +3673,8 @@
                     <!-- Fourth Start -->
                     <div class="mt-7">
                         <div class="flex flex-col bg-white rounded shadow">
-                            <div class="flex flex-row items-center justify-between mb-12 header">
-                                <div class="mt-6 ml-6 div">
+                            <div class="flex flex-row flex-wrap items-center justify-between mb-12 header mt-6">
+                                <div class=" mx-6 div">
                                     <p class="text-xl font-semibold leading-tight text-slate-800">
                                         Project Overview
                                     </p>
@@ -3680,11 +3682,11 @@
                                         Total $9,430 spent so far
                                     </p>
                                 </div>
-                                <div class="hidden mr-6 div lg:block md:block">
-                                    <div class="flex w-full gap-4 mx-auto mt-6">
+                                <div class=" mx-6 div ">
+                                    <div class="flex flex-wrap w-full gap-4 mx-auto mt-6">
                                         <div class="flex items-center border rounded border-slate-400">
                                             <input type="text" name="serach" id=""
-                                                class="rounded py-[13px] px-4 border-none outline-none placeholder-slate-600 text-sm"
+                                                class="max-w-[236px] w-full rounded py-[13px] px-4 border-none outline-none placeholder:text-slate-600 text-sm"
                                                 placeholder="Search" />
 
                                             <svg width="16" height="16" viewBox="0 0 16 16" class="m-3 cursor-pointer"
@@ -3750,7 +3752,7 @@
                                                                    <div
                 id="reportrange"
                 class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
-                style="cursor: pointer; padding: 5px 10px; width:100%"
+                style="cursor: pointer; padding: 5px 10px; width:fit-content;"
               >
                 <div class="flex items-center gap-2 py-2">
                   <i class="fa fa-calendar"></i>&nbsp;
@@ -3801,7 +3803,7 @@
                                                 Status
                                             </th>
                                             <th
-                                                class="px-6 py-6 text-base font-medium leading-none text-center text-slate-600">
+                                                class="px-6 py-6 text-base font-medium leading-none text-right text-slate-600">
                                                 Actions
                                             </th>
                                         </tr>
@@ -3839,8 +3841,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction "
+                                            class="text-sm leading-none text-left px-6 text-slate-600 py-7 hover:cursor-pointer">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction "
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -3854,7 +3856,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -3902,8 +3904,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -3917,7 +3919,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -3965,8 +3967,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -3980,7 +3982,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -4028,8 +4030,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4043,7 +4045,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -4091,8 +4093,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4106,7 +4108,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -4154,8 +4156,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4169,7 +4171,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -4217,8 +4219,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4232,7 +4234,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -4280,8 +4282,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4344,8 +4346,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4359,7 +4361,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -4407,8 +4409,8 @@
                                             </button>
                                         </td>
                                         <td
-                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer">
-                                            <div class="relative flex justify-center justify-self-center actions-intereaction"
+                                            class="text-sm leading-none text-left text-slate-600 py-7 hover:cursor-pointer px-6">
+                                            <div class="relative flex justify-end justify-self-center actions-intereaction"
                                                 onclick="handleActionsInteraction(this)">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -4422,7 +4424,7 @@
                                                         d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                                         fill="#475569" />
                                                 </svg>
-                                                <div class="px-1 absolute z-[1000] -top-16 right-24 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                                <div class="px-1 absolute  bottom-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
                                                     id="hideMe">
                                                     <a href="javascript:void(0)"
                                                         class="block p-2 text-xs rounded text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700">
@@ -4440,42 +4442,41 @@
                                 </table>
                             </div>
                             <div class="flex w-full justify-end py-[38px]">
-                                <div class="flex items-center mr-12">
-                                    <div class="svg-container mr-[29px] cursor-pointer">
-                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7 1L1 7L7 13" stroke="#6B7280" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
-                                    <div
-                                        class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100">
-                                        <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
-                                    </div>
-                                    <div
-                                        class="div border border-blue-700 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                        <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
-                                    </div>
-                                    <div
-                                        class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                        <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
-                                    </div>
-                                    <div
-                                        class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                        <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
-                                    </div>
-                                    <div
-                                        class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                        <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
-                                    </div>
-                                    <div class="svg-container ml-[29px] cursor-pointer">
-                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 13L7 7L1 1" stroke="#1D4ED8" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
-                                </div>
+                                <div class="flex mx-9 items-center flex-wrap gap-4">
+                        <div class="svg-container mr-1 cursor-pointer">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1 7L7 13" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
+                        </div>
+                        <div
+                            class="div border border-blue-700 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
+                        </div>
+                        <div class="svg-container ml-1 cursor-pointer">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L1 1" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
                             </div>
                         </div>
                     </div>
