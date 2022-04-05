@@ -2129,7 +2129,7 @@
                         </div>
                         <div class="flex gap-7 pt-7 lg:flex-row flex-col">
                             <div class="flex p-7 border border-slate-300 rounded">
-                                <div class="img-container">
+                                <div class="img-container rounded overflow-hidden">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/ai%201.png" alt="" />
                                 </div>
                                 <div class="details pl-4">
@@ -3366,8 +3366,8 @@
                                             </div>
                                         </div>
                     </div>
-                    <div class="flex justify-start mb-8">
-                          <div class="relative">
+                    <div class="flex justify-start mb-8 items-center">
+                          <div class="relative flex">
                                         <input type="checkbox" checked name="Notification"
                                             class="checkbox rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer bg-blue-100  appearance-none" />
          <div class="svgTick -z-10 cursor-pointer absolute top-[2px] left-[2px] ">
@@ -3385,8 +3385,8 @@
                             <p class="text-sm leading-none text-gray-600">Due tomorrow</p>
                         </div>
                     </div>
-                    <div class="flex justify-start mb-8">
-                          <div class="relative">
+                    <div class="flex justify-start mb-8 items-center">
+                          <div class="relative flex">
                                         <input type="checkbox" checked name="Notification"
                                             class="checkbox rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer bg-blue-100  appearance-none" />
          <div class="svgTick -z-10 cursor-pointer absolute top-[2px] left-[2px] ">
@@ -3406,8 +3406,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex justify-start mb-8">
-                         <div class="relative">
+                    <div class="flex justify-start mb-8 items-center">
+                         <div class="relative flex">
                                         <input type="checkbox" checked name="Notification"
                                             class="checkbox rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer bg-blue-100  appearance-none" />
          <div class="svgTick -z-10 cursor-pointer absolute top-[2px] left-[2px] ">
@@ -3427,9 +3427,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="flex justify-between itemes-center">
-                        <div class="flex justify-start mb-8">
-                              <div class="relative">
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="flex justify-start items-center ">
+                              <div class="relative flex">
                                         <input type="checkbox" checked name="Notification"
                                             class="checkbox rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer bg-blue-100  appearance-none" />
          <div class="svgTick -z-10 cursor-pointer absolute top-[2px] left-[2px] ">
@@ -3461,8 +3461,8 @@
                         </div>
                         <!-- w-10 h-7 -->
                     </div>
-                    <div class="flex justify-between itemes-center">
-                        <div class="flex justify-start mb-8">
+                    <div class="flex justify-between items-center ">
+                        <div class="flex justify-start items-center">
                               <div class="relative">
                                         <input type="checkbox" checked name="Notification"
                                             class="checkbox rounded-[4px] accent-blue-700 w-5 h-5 cursor-pointer bg-blue-100  appearance-none" />
@@ -3517,40 +3517,30 @@
                                                 Quick Actions
                                             </p>
                                         </button>
-                                        <div
-                                            class="dropdown-content-btn max-w-[176px] block bg-white shadow-[0px_1px_2px_rgba(0,0,0,0.07)]  border-t border-gray-200">
-                                            <a href="#">
-                                                <p
-                                                    class="qb no-underline text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-200">
-                                                    New Ticket
-                                                </p>
-                                            </a>
-                                            <a href="#">
-                                                <p
-                                                    class="qb no-underline px-4 py-3 text-xs leading-[0.875rem] text-gray-600 block hover:text-blue-700 hover:bg-blue-200">
-                                                    New Customer
-                                                </p>
-                                            </a>
-                                            <a href="#">
-                                                <p
-                                                    class="qb no-underline px-4 py-3 text-xs leading-[0.875rem] text-gray-600 block hover:text-blue-700 hover:bg-blue-200">
-                                                    New Contact
-                                                </p>
-                                            </a>
-                                            <a href="#">
-                                                <p
-                                                    class="qb no-underline px-4 py-3 text-xs leading-[0.875rem] text-gray-600 block hover:text-blue-700 hover:bg-blue-200">
-                                                    Settings
-                                                </p>
-                                            </a>
-                                            <hr class="border-gray-200" />
-                                            <button
-                                                class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300">
-                                                <p class="text-xs font-medium leading-3 text-white">
-                                                    Generate Reports
-                                                </p>
-                                            </button>
-                                        </div>
+                                       <div
+                          class="dropdown-content-btn max-w-[176px] block  bg-white  shadow border-t border-gray-200 px-1 py-2">
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline  text-decoration-none px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Ticket</p>
+                          </a>
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Customer</p>
+                          </a>
+                          <a href="javascript:void(0)">
+                              <p
+                                  class="qb no-underline px-4 py-3 text-xs leading-3 text-gray-600 block hover:text-blue-700 hover:bg-blue-100 hover:font-medium hover:rounded">
+                                  New Contact</p>
+                          </a>
+                          <hr class=" border-slate-200 ">
+                          <button
+                              class="mt-3 ml-3 mb-3 inline-flex items-center justify-center px-3 py-2 bg-blue-700 rounded hover:bg-blue-600 transform duration-300
+                              text-xs font-medium leading-3 text-white">Generate Reports
+                              
+                          </button>
+                      </div>
                                     </div>
                                 </div>
                                 <!-- Interactipon -->
@@ -3630,7 +3620,7 @@
                 <!-- New members -->
             </div>
             <!-- Main page body -->
-            <div class="mt-7 grid md:grid-cols-3 px-7
+            <div class="my-7 grid md:grid-cols-3 px-7 
             gap-7 ">
                 <!-- Progress -->
                 <div class="p-6 bg-white max-h-auto col-span-2 lg:row-span-2 lg:col-span-1  w-full rounded shadow">
