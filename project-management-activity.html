@@ -2943,6 +2943,7 @@
                     <div class="mt-7 bg-white rounded-[4px] w-full p-7 pb-0 shadow">
                         <!-- Profile -->
                         <div class="flex flex-wrap items-start justify-between gap-8 ">
+                            <div class="div  flex gap-7 flex-wrap">
                             <div>
                                 <img alt="Profile Picture" class="w-[155px] h-[155px]"
                                     src="/overview-assetts/vuetify.png" />
@@ -2952,8 +2953,7 @@
                                 <div class="flex flex-wrap gap-x-4">
                                     <p class="text-xl font-semibold leading-tight text-gray-800">Project Point</p>
                                     <!-- badge -->
-                                    <div
-                                        class="bg-blue-100 rounded-[4px] p-1 text-blue-700 text-xs font-medium leading-3">
+                                    <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700  text-xs font-medium leading-3">
                                         In Progress
                                     </div>
                                 </div>
@@ -2980,7 +2980,7 @@
                                         <p class="mt-2 text-base font-semibold leading-none text-gray-800">72</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <svg width="139" height="33" viewBox="0 0 139 33" fill="none"
+                                        <svg class="cursor-pointer" width="139" height="33" viewBox="0 0 139 33" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <mask id="mask0_114_2514" style="mask-type:alpha" maskUnits="userSpaceOnUse"
@@ -3058,17 +3058,19 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
 
                             <!-- Buttons -->
-                            <div class="relative flex gap-3">
+                            <div class="relative flex flex-wrap gap-3">
                                 <button onclick="toggleAddUser()"
                                     class="bg-blue-100  text-blue-700  text-xs font-medium py-2 px-4 hover:bg-blue-200 rounded-[4px]">Add
                                     User</button>
                                 <button onclick="toggleAddTarget()"
                                     class="bg-blue-700  text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]">Add
                                     Target</button>
-                                <button onclick="toggleQuickActions()"
-                                    class="p-2 bg-blue-100 rounded hover:bg-blue-200">
+                                <button
+                                onclick="toggleQuickActions()"
+                                class="p-2 bg-blue-100 rounded hover:bg-blue-200">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3081,95 +3083,83 @@
                                             d="M2.625 8.3125C3.34987 8.3125 3.9375 7.72487 3.9375 7C3.9375 6.27513 3.34987 5.6875 2.625 5.6875C1.90013 5.6875 1.3125 6.27513 1.3125 7C1.3125 7.72487 1.90013 8.3125 2.625 8.3125Z"
                                             fill="#475569" />
                                     </svg>
-                                    <!-- quick links -->
-                                    <div id="handleClick" class="hidden absolute top-8 right-0 max-w-[176px] w-full">
-                                        <div class="bg-white border-b border-gray-200 rounded shadow dropdown">
-                                            <div class="py-2 border-t border-gray-200 shadow dropdown-content">
-                                                <p
-                                                    class="px-3 py-3 text-xs font-semibold leading-3 text-left border-b text-slate-800 border-slate-200">
-                                                    Quick Actions
-                                                </p>
-                                                <a href="#">
-                                                    <p
-                                                        class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                        Create Invoice
+                                      <!-- quick links -->
+                                        <div id="handleClick" class="hidden absolute top-8 right-0 max-w-[176px] w-full">
+                                            <div
+                                                class="bg-white border-b border-gray-200 rounded shadow dropdown">
+                                                <div class="py-2 border-t border-gray-200 shadow dropdown-content">
+                                                    <p class="px-3 py-3 text-xs font-semibold leading-3 text-left border-b text-slate-800 border-slate-200">
+                                                        Quick Actions
                                                     </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p
-                                                        class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                        Generate Report
-                                                    </p>
-                                                </a>
-                                                <a href="#">
-                                                    <p
-                                                        class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                        Payment
-                                                    </p>
-                                                </a>
-                                                <!-- onmouseover="show();" onmouseout="hide()" -->
-                                                <div
-                                                    class="relative flex justify-between mx-1 text-left cursor-pointer itemes-center hover:bg-blue-100 group subscription hover:text-blue-700 hover:font-medium hover:rounded">
-                                                    <a href="#" class="">
-                                                        <p
-                                                            class="p-2 text-xs leading-3 text-gray-600 sub group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
-                                                            Subscription
+                                                    <a href=" javascript:void(0)">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                            Create Invoice
                                                         </p>
                                                     </a>
-                                                    <!-- <svg width="6"
-                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                                                    <a href=" javascript:void(0)">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                            Generate Report
+                                                        </p>
+                                                    </a>
+                                                    <a href=" javascript:void(0)">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                            Payment
+                                                        </p>
+                                                    </a>
+                                                    <div 
+                                                        class="relative flex justify-between mx-1 text-left cursor-pointer itemes-center hover:bg-blue-100 group subscription hover:text-blue-700 hover:font-medium hover:rounded">
+                                                        <a href=" javascript:void(0)" class="">
+                                                            <p class="p-2 text-xs leading-3 text-gray-600 sub group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
+                                                                Subscription
+                                                            </p>
+                                                        </a>
+                                                        <svg width="6"
+                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600 hidden"
                                                             height="8" viewBox="0 0 6 8" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M1.3125 7.375L4.6875 4L1.3125 0.625" stroke=""
                                                                 stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg> -->
-                                                    <div id="plans"
-                                                        class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:hidden">
-                                                        <div
-                                                            class="px-1 py-2 bg-white border-t border-gray-200 rounded shadow plan">
-                                                            <a href="#">
-                                                                <p
-                                                                    class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                                    Plans
-                                                                </p>
-                                                            </a>
-                                                            <a href="#">
-                                                                <p
-                                                                    class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                                    Bills
-                                                                </p>
-                                                            </a>
-                                                            <a href="#">
-                                                                <p
-                                                                    class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                                    Reports
-                                                                </p>
-                                                            </a>
-                                                            <a href="#">
-                                                                <p
-                                                                    class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                                    Invoices
-                                                                </p>
-                                                            </a>
-                                                            <a href="#">
-                                                                <p
-                                                                    class="p-2 text-xs font-normal leading-3 text-gray-600 cr hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                                    Statements
-                                                                </p>
-                                                            </a>
+                                                        </svg>
+                                                        <div  id="plans"
+                                                            class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:hidden">
+                                                            <div class="px-1 py-2 bg-white border-t border-gray-200 rounded shadow plan">
+                                                                <a href=" javascript:void(0)">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Plans
+                                                                    </p>
+                                                                </a>
+                                                                <a href=" javascript:void(0)">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Bills
+                                                                    </p>
+                                                                </a>
+                                                                <a href=" javascript:void(0)">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Reports
+                                                                    </p>
+                                                                </a>
+                                                                <a href=" javascript:void(0)">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Invoices
+                                                                    </p>
+                                                                </a>
+                                                                <a href=" javascript:void(0)">
+                                                                    <p class="p-2 text-xs font-normal leading-3 text-gray-600 cr hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                                        Statements
+                                                                    </p>
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <a href=" javascript:void(0)">
+                                                        <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
+                                                            Settings
+                                                        </p>
+                                                    </a>
                                                 </div>
-                                                <a href="#">
-                                                    <p
-                                                        class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
-                                                        Settings
-                                                    </p>
-                                                </a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- end -->
+                                        <!-- end -->
 
 
                                 </button>
@@ -3245,7 +3235,8 @@
                                 </div>
                                 <div class="hidden buttons-container lg:block">
                                     <button
-                                        class="px-3 py-2 text-sm font-medium rounded focus:bg-blue-100 focus:text-blue-700 ml-7">
+                                        class="px-3 py-2 text-sm font-medium rounded 
+                                        text-blue-700 bg-blue-100 focus:bg-blue-100 focus:text-blue-700 ml-7">
                                         Day
                                     </button>
                                     <button

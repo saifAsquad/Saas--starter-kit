@@ -2956,6 +2956,7 @@
                     <div class="mt-7 bg-white rounded-[4px] w-full p-7 pb-0 shadow">
                         <!-- Profile -->
                         <div class="flex flex-wrap items-start justify-between gap-8 ">
+                            <div class="div  flex gap-7 flex-wrap">
                             <div>
                                 <img alt="Profile Picture" class="w-[155px] h-[155px]"
                                     src="/overview-assetts/vuetify.png" />
@@ -2965,7 +2966,7 @@
                                 <div class="flex flex-wrap gap-x-4">
                                     <p class="text-xl font-semibold leading-tight text-gray-800">Project Point</p>
                                     <!-- badge -->
-                                    <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700 text-xs font-medium leading-3">
+                                    <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700  text-xs font-medium leading-3">
                                         In Progress
                                     </div>
                                 </div>
@@ -2992,7 +2993,7 @@
                                         <p class="mt-2 text-base font-semibold leading-none text-gray-800">72</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <svg width="139" height="33" viewBox="0 0 139 33" fill="none"
+                                        <svg class="cursor-pointer" width="139" height="33" viewBox="0 0 139 33" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <mask id="mask0_114_2514" style="mask-type:alpha" maskUnits="userSpaceOnUse"
@@ -3070,16 +3071,17 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
 
                             <!-- Buttons -->
-                            <div class="relative flex gap-3">
+                            <div class="relative flex flex-wrap gap-3">
                                 <button onclick="toggleAddUser()"
                                     class="bg-blue-100  text-blue-700  text-xs font-medium py-2 px-4 hover:bg-blue-200 rounded-[4px]">Add
                                     User</button>
                                 <button onclick="toggleAddTarget()"
                                     class="bg-blue-700  text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]">Add
                                     Target</button>
-                                 <button
+                                <button
                                 onclick="toggleQuickActions()"
                                 class="p-2 bg-blue-100 rounded hover:bg-blue-200">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -3102,60 +3104,59 @@
                                                     <p class="px-3 py-3 text-xs font-semibold leading-3 text-left border-b text-slate-800 border-slate-200">
                                                         Quick Actions
                                                     </p>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Create Invoice
                                                         </p>
                                                     </a>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Generate Report
                                                         </p>
                                                     </a>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Payment
                                                         </p>
                                                     </a>
-                                                    <!-- onmouseover="show();" onmouseout="hide()" -->
-                                                    <div
+                                                    <div 
                                                         class="relative flex justify-between mx-1 text-left cursor-pointer itemes-center hover:bg-blue-100 group subscription hover:text-blue-700 hover:font-medium hover:rounded">
-                                                        <a href="#" class="">
+                                                        <a href=" javascript:void(0)" class="">
                                                             <p class="p-2 text-xs leading-3 text-gray-600 sub group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
                                                                 Subscription
                                                             </p>
                                                         </a>
-                                                        <!-- <svg width="6"
-                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                                                        <svg width="6"
+                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600 hidden"
                                                             height="8" viewBox="0 0 6 8" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M1.3125 7.375L4.6875 4L1.3125 0.625" stroke=""
                                                                 stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg> -->
-                                                        <div id="plans"
+                                                        </svg>
+                                                        <div  id="plans"
                                                             class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:hidden">
                                                             <div class="px-1 py-2 bg-white border-t border-gray-200 rounded shadow plan">
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Plans
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Bills
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Reports
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Invoices
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 cr hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Statements
                                                                     </p>
@@ -3163,7 +3164,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Settings
                                                         </p>
@@ -3175,8 +3176,6 @@
 
 
                                 </button>
-                
-                                
                             </div>
                         </div>
                         <!-- Buttonsss -->
@@ -3246,13 +3245,13 @@
                                 Manage Budget
                             </p>
                             <div class="grid grid-cols-12 gap-4 pt-8">
-                                <div class="col-span-4">
+                                <div class="lg:col-span-4 md:col-span-4 col-span-12">
                                     <p class="text-base font-medium leading-none text-slate-600">
                                         Current Status
                                     </p>
                                 </div>
-                                <div class="col-span-8">
-                                    <div class="flex justify-between pb-3">
+                                <div class="lg:col-span-8 md:col-span-8 col-span-12">
+                                    <div class="flex flex-wrap gap-2 justify-between pb-3">
                                         <p class="text-sm font-semibold leading-none text-slate-600">
                                             Total: 74,800
                                         </p>
@@ -3262,7 +3261,7 @@
                                     </div>
                                     <div class="relative cursor-pointer group">
                                         <div class="div h-[6px] bg-blue-50 rounded w-full"></div>
-                                        <div class="absolute bottom-0 left-0 div h-[6px] bg-blue-700 rounded w-[500px]">
+                                        <div class="absolute bottom-0 left-0 div h-[6px] bg-blue-700 rounded w-10/12">
                                         </div>
                                         <div
                                             class="hidden absolute top-4 left-[505px] group-hover:block shadow rounded bg-white z-10">
@@ -3275,24 +3274,24 @@
                                 </div>
                             </div>
                             <div class="grid grid-cols-12 gap-4 pt-4">
-                                <div class="col-span-4">
+                                <div class="lg:col-span-4 md:col-span-4 col-span-12">
                                     <p class="text-base font-medium leading-none text-slate-600">
                                         Project Description
                                     </p>
                                 </div>
-                                <div class="col-span-8">
+                                <div class="lg:col-span-8 md:col-span-8 col-span-12">
                                     <textarea name="" id="" rows="8"
                                         class="w-full p-3 border rounded outline-none focus:bg-gray-50 border-slate-300"></textarea>
                                 </div>
                             </div>
                             <div class="grid grid-cols-12 gap-4 pt-7">
-                                <div class="col-span-4">
+                                <div class="lg:col-span-4 md:col-span-4 col-span-12">
                                     <p class="text-base font-medium leading-none text-slate-600">
                                         Choose Usage
                                     </p>
                                 </div>
-                                <div class="col-span-8">
-                                    <div class="flex items-center justify-between gap-x-6">
+                                <div class="lg:col-span-8 md:col-span-8 col-span-12">
+                                    <div class="grid lg:grid-cols-3 md:grid-cols-3  grid-cols-1 items-center justify-between gap-6">
                                         <div class="flex flex-col p-5 border rounded cursor-pointer focus:bg-blue-50 focus:border-blue-700 border-slate-300"
                                             tabindex="0">
                                             <p class="text-base font-semibold leading-none text-center text-slate-800">
@@ -3327,12 +3326,12 @@
                                 </div>
                             </div>
                             <div class="grid grid-cols-12 gap-4 pt-7">
-                                <div class="col-span-4">
+                                <div class="lg:col-span-4 md:col-span-4 col-span-12">
                                     <p class="text-base font-medium leading-none text-slate-600">
                                         Manage Budget
                                     </p>
                                 </div>
-                                <div class="col-span-4">
+                                <div class="lg:col-span-8 md:col-span-8 col-span-12">
                                     <div class="flex items-center px-4 py-3 border rounded border-slate-300">
                                         <div class="svg-container" onclick="minusme(this)">
                                             <svg class="rounded-full cursor-pointer hover:bg-gray-100" width="24"
@@ -3368,12 +3367,12 @@
                                 </div>
                             </div>
                             <div class="grid grid-cols-12 gap-4 pb-3 pt-7">
-                                <div class="col-span-4">
+                                <div class="lg:col-span-4 md:col-span-4 col-span-12">
                                     <p class="text-base font-medium leading-none text-slate-600">
                                         Notifications
                                     </p>
                                 </div>
-                                <div class="col-span-4">
+                                <div class="lg:col-span-8 md:col-span-8 col-span-12">
                                    <div class="flex gap-6 ml-auto">
                         <div class="input-group flex items-center">
                             <div>
@@ -3419,17 +3418,15 @@
                             </div>
                         </div>
                         <hr class="h-[1px] bg-slate-100" />
-                        <div class="flex justify-end btn-container px-7 py-7">
-                            <div class="flex gap-x-4">
-                                <button
-                                    class="px-6 py-4 text-blue-700 bg-white border border-blue-700 rounded hover:bg-blue-100">
-                                    Cancel
-                                </button>
-                                <button class="px-6 py-4 text-white bg-blue-700 rounded hover:bg-blue-600">
-                                    Save Changes
-                                </button>
-                            </div>
-                        </div>
+                         <div class="px-7 w-full flex flex-wrap items-center lg:justify-end md:justify-end justify-center gap-4 py-10">
+                    <button
+                        class="bg-white border-blue-700 rounded hover:bg-blue-100 text-[14px] font-medium px-6 py-4 text-blue-700 border">
+                        Cancel
+                    </button>
+                    <button class="bg-blue-700 rounded hover:bg-blue-600 text-[14px] font-medium px-6 py-4 text-white">
+                        Save Changes
+                    </button>
+                </div>
                     </div>
 
 
