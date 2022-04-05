@@ -9,16 +9,27 @@ const tooltip = document.querySelectorAll(".tooltipDiv");
 function toggleAddUser() {
   user.classList.toggle("hidden");
 }
+tooltip.forEach((e) => {
+  e.addEventListener("click", (y) => {
+    e.classList.toggle("active");
+    e.classList.toggle("hidden");
+  });
+});
 function openTableMenuD(element) {
   tooltip.forEach((e) => {
-    console.log(e);
-    if (e.classList.contains("active")) {
+    // console.log(element.parentElement.children[1]);
+    if (
+      e.classList.contains("active") &&
+      e != element.parentElement.children[0]
+    ) {
       e.classList.toggle("hidden");
       e.classList.toggle("active");
     }
   });
+
   element.parentElement.children[0].classList.toggle("hidden");
   element.parentElement.children[0].classList.toggle("active");
+  // console.log(element.parentElement.children[0]);
 }
 function showFilterDropDown(id) {
   document.getElementById(id).classList.toggle("hidden");
