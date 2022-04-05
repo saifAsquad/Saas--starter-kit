@@ -163,3 +163,7 @@ table tbody tr:hover {
   @apply: bg-green-400;
   background-color: #1d4ed8;
 }
+.statsComponent {
+  top: -5px !important;
+  /* overflow: hidden; */
+}

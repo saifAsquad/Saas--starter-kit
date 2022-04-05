@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full" lang="en">
+<html class="overflow-y-[initial]" lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,8 +10,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
+<style>
 
-<body class="relative h-full bg-gray-100"></body>
+</style>
+<body class="relative h-full bg-slate-50"></body>
 <div class="flex flex-no-wrap items-start">
     <!-- Sidebar starts -->
     <section class="hidden xl:block navigation-menu">
@@ -2354,10 +2356,10 @@
                             </p>
                         </div>
                         <div class="relative max-w-[400px] w-full">
-                            <input type="text" placeholder="Search"
+                            <input type="text" placeholder="Search" id="searchInput"
                                 class="py-4 pl-4 outline-none rounded-[4px] border border-slate-200 focus:bg-gray-50 max-w-[400px] w-full" />
-                            <img src="./overview-assetts/search-icon.svg" alt="search icon"
-                                class="absolute pointer-events-none right-2 top-4" />
+                            <img src="./overview-assetts/search-icon.svg" alt="search icon" id="searchBtn"
+                                class="absolute  cursor-pointer right-2 top-4" />
                         </div>
                     </div>
 
@@ -2374,10 +2376,8 @@
 
                                 </div>
                             </button>
-                            <div class="panel   max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorem.
-                                    Facilis quos nam assumenda cupiditate neque aliquam praesentium pariatur quisquam
-                                    aut! Obcaecati possimus laborum labore minima vel nesciunt suscipit sed.</p>
+                            <div class="panel mt-4 pr-5 max-h-0 transition-[max-height,all] duration-200 overflow-hidden ease-in-out  ">
+                                <p>Remember you can ask the status of your orders any timeyou want from our certain abc helpline. if you are not registered at abc.com you can access directly in the xyz section. In this case you will have enter your email address and order number</p>
                             </div>
                         </div>
 
@@ -2392,10 +2392,8 @@
 
                                 </div>
                             </button>
-                            <div class="panel   max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorem.
-                                    Facilis quos nam assumenda cupiditate neque aliquam praesentium pariatur quisquam
-                                    aut! Obcaecati possimus laborum labore minima vel nesciunt suscipit sed.</p>
+                            <div class="panel mt-4  max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
+                                <p>Remember you can ask the status of your orders any timeyou want from our certain abc helpline. if you are not registered at abc.com you can access directly in the xyz section. In this case you will have enter your email address and order number</p>
                             </div>
                         </div>
 
@@ -2410,10 +2408,8 @@
 
                                 </div>
                             </button>
-                            <div class="panel   max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorem.
-                                    Facilis quos nam assumenda cupiditate neque aliquam praesentium pariatur quisquam
-                                    aut! Obcaecati possimus laborum labore minima vel nesciunt suscipit sed.</p>
+                            <div class="panel mt-4  max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
+                                <p>Remember you can ask the status of your orders any timeyou want from our certain abc helpline. if you are not registered at abc.com you can access directly in the xyz section. In this case you will have enter your email address and order number</p>
                             </div>
                         </div>
 
@@ -2428,10 +2424,8 @@
 
                                 </div>
                             </button>
-                            <div class="panel   max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorem.
-                                    Facilis quos nam assumenda cupiditate neque aliquam praesentium pariatur quisquam
-                                    aut! Obcaecati possimus laborum labore minima vel nesciunt suscipit sed.</p>
+                            <div class="panel mt-4  max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
+                                <p>Remember you can ask the status of your orders any timeyou want from our certain abc helpline. if you are not registered at abc.com you can access directly in the xyz section. In this case you will have enter your email address and order number</p>
                             </div>
                         </div>
 
@@ -2446,10 +2440,8 @@
 
                                 </div>
                             </button>
-                            <div class="panel   max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, dolorem.
-                                    Facilis quos nam assumenda cupiditate neque aliquam praesentium pariatur quisquam
-                                    aut! Obcaecati possimus laborum labore minima vel nesciunt suscipit sed.</p>
+                            <div class="panel mt-4  max-h-0 transition-[max-height] duration-200 overflow-hidden ease-out ">
+                                <p>Remember you can ask the status of your orders any timeyou want from our certain abc helpline. if you are not registered at abc.com you can access directly in the xyz section. In this case you will have enter your email address and order number</p>
                             </div>
                         </div>
                     </div>
@@ -2476,20 +2468,27 @@
             let img = this.children[0].children[1];
             let question = this.children[0];
             if (this.classList.contains('active')) {
-                question.classList.add('mb-4');
+                // question.classList.add('mb-4');
                 img.srcset = './overview-assetts/cross.svg';
             } else {
                 img.srcset = './overview-assetts/plus-icon.svg';
-                question.classList.remove('mb-4');
+                // question.classList.remove('mb-4');
             }
 
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
+				// panel.classList.toggle('opacity-0');
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
+				// panel.classList.toggle('opacity-0');
             }
         });
     }
+	const searchBtn = document.querySelector('#searchBtn');
+	const searchInput = document.querySelector('#searchInput');
+	searchBtn.addEventListener('click',()=>{
+		searchInput.focus();
+	})
 </script>
 </body>
 

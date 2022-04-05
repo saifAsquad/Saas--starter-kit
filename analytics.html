@@ -12,6 +12,698 @@
 </head>
 
 <body class="bg-gray-100 relative h-full">
+     <!-- Add New Member Modal -->
+	<div
+  id="add-user"
+  class="overflow-auto absolute pt-8 bg-opacity-80 hidden bg-gray-800 z-[200] flex justify-center fixed inset-0"
+>
+  <div class="mx-auto bg-white rounded blur-none div max-w-740px h-fit">
+    <div class="absolute top-10 right-10">
+      <svg
+        onclick="toggleAddUser()"
+        class="cursor-pointer hover:bg-gray-50"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17.25 17.25L6.75 6.75"
+          stroke="#1E293B"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M17.25 6.75L6.75 17.25"
+          stroke="#1E293B"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <div class="px-24 py-10">
+      <p
+        class="text-2xl font-semibold leading-normal text-center text-slate-800"
+      >
+        Search Users
+      </p>
+      <p class="pt-4 text-sm leading-tight text-center text-gray-600">
+        Invite people you want to collaborate with
+      </p>
+
+      <div
+        class="input-group border border-slate-300 rounded bg-slate-100 py-[14px] px-[18px] mt-10 flex items-center"
+      >
+        <svg
+          class="cursor-pointer"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.66667 11.3333C9.24399 11.3333 11.3333 9.24399 11.3333 6.66667C11.3333 4.08934 9.24399 2 6.66667 2C4.08934 2 2 4.08934 2 6.66667C2 9.24399 4.08934 11.3333 6.66667 11.3333Z"
+            stroke="#475569"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14 14L10 10"
+            stroke="#475569"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <input
+          type="text"
+          name="search"
+          id=""
+          class="outline-none w-full bg-slate-100 placeholder:text-lsate-600 placeholder:text-sm pl-[10px]"
+          placeholder="Search"
+        />
+        <svg
+          class="cursor-pointer hover:bg-gray-50"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.5 11.5L4.5 4.5"
+            stroke="#475569"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M11.5 4.5L4.5 11.5"
+            stroke="#475569"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div
+        class="p-7 mt-[35px] bg-slate-50 rounded max-h-[460px] overflow-y-auto"
+        id="style-2"
+      >
+        <div class="flex flex-col">
+          <div class="flex justify-between profile">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%20199.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">Harry Fritsch</p>
+                <p class="mt-1 text-sm text-gray-600">Harry1230@gmail.com</p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between profile mt-7">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0000s_0035_azamat-zhanisov-a5sRFieA3BY-unsplash%201.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">Kesha John</p>
+                <p class="mt-1 text-sm text-gray-600">
+                  02 pending and 73 completed tasks
+                </p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between profile mt-7">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0020_ardalan-hamedani-8WAcVr1BVjw-unsplash.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">
+                  Kristen Bernier
+                </p>
+                <p class="mt-1 text-sm text-gray-600">
+                  00 pending and 55 completed tasks
+                </p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between profile mt-7">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0029_azamat-zhanisov-4yhHhpAMC3U-unsplash.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">
+                  Brittany Ankunding
+                </p>
+                <p class="mt-1 text-sm text-gray-600">
+                  09 pending and 18 completed tasks
+                </p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between profile mt-7">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0002s_0004_alfred-kenneally-JwzpdmSYIDc-unsplash.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">Nelson Blick</p>
+                <p class="mt-1 text-sm text-gray-600">
+                  05 pending and 104 completed tasks
+                </p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between profile mt-7">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0016_olena-sergienko-XttWKETqCCQ-unsplash.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">Tasha Hahn</p>
+                <p class="mt-1 text-sm text-gray-600">Juvenal_King@gmail.com</p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between profile mt-7">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0000s_0035_azamat-zhanisov-a5sRFieA3BY-unsplash%201.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">Kesha John</p>
+                <p class="mt-1 text-sm text-gray-600">
+                  02 pending and 73 completed tasks
+                </p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between profile mt-7">
+            <div class="flex items-center div">
+              <div class="form-check relative flex mr-7">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="h-5 w-5 rounded checkStat appearance-none border-slate-400 border accent-blue-700"
+                />
+                <div
+                  class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Unsplash-Avatars_0004s_0029_azamat-zhanisov-4yhHhpAMC3U-unsplash.png"
+                  alt=""
+                  class="w-10 h-10 rounded"
+                />
+              </div>
+              <div class="ml-3 detailContainer">
+                <p class="text-sm font-medium text-slate-800">
+                  Brittany Ankunding
+                </p>
+                <p class="mt-1 text-sm text-gray-600">
+                  09 pending and 18 completed tasks
+                </p>
+              </div>
+            </div>
+            <div class="relative button-conatiner">
+              <button
+                onclick="moreoptionmodal(this)"
+                class="border border-blue-700 rounded text-blue-700 font-medium text-xs hover:bg-blue-100 px-[14px] py-[10px]"
+              >
+                More Options
+              </button>
+              <div
+                class="absolute right-0 z-10 hidden w-32 px-1 py-2 bg-white rounded shadow top-12"
+                id="newMemberInteraction"
+              >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Guest</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Owner</a
+                >
+                <a
+                  href=""
+                  class="block px-2 py-2 text-xs rounded text-slate-600 hover:bg-blue-100 hover:font-medium hover:text-blue-700"
+                  >Editor</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] bg-slate-100" />
+    <div class="flex justify-end pb-10 btn-container px-7 pt-7">
+      <div class="flex gap-x-4">
+        <button
+		onclick="toggleAddUser()"
+          class="px-6 py-4 text-blue-700 bg-white border border-blue-700 rounded hover:bg-blue-100"
+        >
+          Cancel
+        </button>
+        <button
+          class="px-6 py-4 text-white bg-blue-700 rounded hover:bg-blue-600"
+        >
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="flex items-start flex-no-wrap">
         <!-- Sidebar starts -->
         <section class="hidden xl:block navigation-menu">
@@ -2338,12 +3030,122 @@
 							Home - Dashboards - Multipurpose
 						</p>
 					</div>
-					<div class="flex  items-center gap-3">
-						<button
-							class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
+						<div class="flex  items-center gap-3">
+						<div class="relative">
+<button onclick="showFilterOptions('handleClick1')" class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
 							Filter
 						</button>
-						<button
+							  <div id="handleClick1"
+                                class="hidden bg-white max-h-auto min-w-[216px] rounded shadow top-10 absolute right-[32px]">
+                                <div class="flex flex-col">
+                                    <div class="header border-b border-gray-200">
+                                        <p  class="text-xs font-bold text-slate-800 my-3 ml-3">
+                                            Filter Options
+                                        </p>
+                                    </div>
+                                    <div class="details p-3">
+                                        <div class=" group relative">
+                                            <p class="text-xs leading-3 text-slate-800 mb-2" >Status</p>
+                                            <button onclick="showFilterDropDown('dropdown')" id="dropdownDividerButton"
+                                                class="bg-slate-100 font-normal rounded text-xs text-slate-400 p-2 text-left inline-flex items-center w-full mb-6"
+                                                type="button">
+                                                 <span id="setfilterText1">Select Options</span>  
+                                                <svg class="ml-auto w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </button>
+                                            <div id="dropdown"
+                                                class="hidden  z-10 w-full text-base list-none bg-slate-100 divide-y divide-gray-100 shadow pt-3 pb-4 absolute top-[56px] left-0">
+                                                
+                                                    
+                                                        <a href="javascript:void(0)"
+                                                            class="py-2 px-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded">Approved
+                                                        </a>
+                                                        <a href="javascript:void(0)"
+                                                            class="py-2 px-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded">Success</a>
+                                                        <a href="javascript:void(0)"
+                                                            class="py-2 px-4 text-xs text-slate-700 hover:text-blue-700 hover:font-medium hover:bg-blue-100 hover:rounded">Rejected</a>
+                                                   
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="members">
+                                            <p class="text-xs leading-3 text-slate-800 mb-2">Member</p>
+                                            <div class="flex flex-row">
+                                                <div class="form-check flex items-center gap-x-1">
+                                                    <div class=" relative flex ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                                    <label class="form-check-label inline-block text-slate-600 text-xs"
+                                                        for="flexCheckDefault">
+                                                        Employee
+                                                    </label>
+                                                </div>
+                                                <div class="form-check ml-3 flex items-center gap-x-1">
+                                                    <div class=" relative flex ">
+                                            <input type="checkbox" name="" id=""
+                                                class="h-5 w-5 rounded checkStat appearance-none  border-slate-400 border accent-blue-700" />
+                                            <div class="svgTickStats -z-10 absolute cursor-pointer top-[2px] left-[2px]">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                                    <label
+                                                        class="form-check-label inline-block text-slate-600 text-xs font-normal"
+                                                        for="flexCheckChecked">
+                                                        Author
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notifications mt-6">
+                                            <p class="text-xs leading-3 text-slate-800 mb-2">
+                                                Notifications
+                                            </p>
+                                            <div
+                                                class="relative inline-block w-7 mr-2 align-middle select-none transition duration-200 ease-in">
+                                                <input type="checkbox" name="toggle" id="toggle"
+                                                    class="toggle-checkboxf absolute block w-[10px] h-[10px] rounded-full bg-white appearance-none cursor-pointer mx-[2px] my-[2px]" />
+                                                <label for="toggle"
+                                                    class="toggle-labelf block overflow-hidden h-[14px] rounded-full bg-gray-300 cursor-pointer"></label>
+                                            </div>
+                                            <label for="toggle" class="text-xs text-gray-700">Enabled</label>
+                                        </div>
+                                        <div class="btns flex justify-end mt-8">
+                                            <div class="btn1">
+                                                <button onclick="showFilterOptions('handleClick1')"
+                                                    class="px-3 py-2 border rounded hover:bg-blue-700 text-xs font-medium leading-3 hover:text-white text-blue-700 bg-white border-blue-700">
+                                                    Reset
+                                                </button>
+                                            </div>
+                                            <div class="btn2">
+                                                <button onclick="showFilterOptions('handleClick1')"
+                                                    class="px-3 py-2 border rounded hover:bg-blue-700 text-xs font-medium leading-3 hover:text-white text-blue-700 bg-white border-blue-700 ml-2">
+                                                    Apply
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+						
+						<button onclick="toggleAddUser()"
 							class="p-2.5 text-xs leading-3 text-white  rounded focus:outline-none hover:bg-blue-600 bg-blue-700 focus:bg-blue-800 flex items-center justify-center">
 							<span class="mr-1">New Member</span>
 							<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -2532,7 +3334,7 @@
                                     </div>
 
                                     <div class="svg-container ">
-                                        <svg class="lg:mt-10 md:mt-10 mt-2  ml-2 relative lg:h-48  md:h-48 w-full h-48"
+                                        <svg class="lg:mt-10 md:mt-10 mt-2  ml-2 relative lg:h-48  md:h-48 w-full h-48 object-cover"
                                             width="300" height="200" viewBox="0 0 300 200" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2653,7 +3455,7 @@
                                                 <div
                                                     class="absolute  right-[174px] rounded top-0 hidden group-hover:block hover:block max-w-[112px] ">
                                                     <div
-                                                        class=" shadow rounded border-t border-slate-200 p-1  bg-white">
+                                                        class="w-[101px] shadow rounded border-t border-slate-200 p-1  bg-white">
                                                         <a href="javascript:void(0)" class="hover:bg-blue-100 hover:font-medium hover:text-blue-700
                                                    text-xs leading-3 text-slate-600 hover:rounded ">
                                                             Plans
@@ -2735,8 +3537,8 @@
                                         <th class="text-base font-medium leading-none text-gray-600 text-left py-6">
                                             Progress
                                         </th>
-                                        <th align="left"
-                                            class="text-base font-medium leading-none text-gray-600 text-center pr-7 py-6">
+                                        <th align="right"
+                                            class="text-base text-right font-medium leading-none text-gray-600  pr-7 py-6">
                                             More
                                         </th>
                                     </tr>
@@ -3298,6 +4100,7 @@
         }
     </style>
  <script src="./script/allcheckboxv3.js"></script>
+ <script src="./script/dashboard.js"></script>
         
     </style>
 </body>
