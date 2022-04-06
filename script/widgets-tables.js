@@ -45,13 +45,7 @@ function tableInteract(e) {
 
 // Table interaction
 function showDiv() {
-  const val = document.getElementById("handleClick").style.display;
-  console.log(val);
-  if (val === "block") {
-    document.getElementById("handleClick").style.display = "none";
-    return;
-  }
-  document.getElementById("handleClick").style.display = "block";
+  document.getElementById("handleClick").classList.toggle("hidden");
 }
 
 function toggleDropdown2(e) {
@@ -110,7 +104,7 @@ function openTableMenuD(element) {
 }
 function tableInteraction(el) {
   tableMore.forEach((e) => {
-    if (e.classList.contains("active")) {
+    if (e.classList.contains("active") && e != el.parentElement.children[1]) {
       e.classList.toggle("active");
       e.classList.toggle("hidden");
     }
@@ -130,7 +124,37 @@ document.querySelector("body").addEventListener("click", () => {
       e.classList.remove("active");
     }
   });
+  tableMore.forEach((e) => {
+    if (e.classList.contains("active")) {
+      e.classList.toggle("active");
+      e.classList.toggle("hidden");
+    }
+  });
+  if (!document.getElementById("handleClick2").classList.contains("hidden")) {
+    document.getElementById("handleClick2").classList.toggle("hidden");
+  }
+  if (!document.getElementById("handleClick").classList.contains("hidden")) {
+    document.getElementById("handleClick").classList.toggle("hidden");
+  }
 });
-setTimeout(() => {
-  document.getElementById("focused").focus();
-}, 1000);
+
+const allArrivalBtns = document.querySelectorAll(".arrival-btn");
+allArrivalBtns.forEach((e) => {
+  e.addEventListener("click", () => {
+    allArrivalBtns.forEach((y) => {
+      if (y.classList.contains("active") && y != e) {
+        y.classList.toggle("text-blue-700");
+        y.classList.toggle("bg-blue-50");
+        y.classList.toggle("active");
+        y.classList.toggle("text-gray-600");
+      }
+    });
+
+    if (!e.classList.contains("active")) {
+      e.classList.add("text-blue-700");
+      e.classList.add("bg-blue-50");
+      e.classList.remove("text-gray-600");
+      e.classList.add("active");
+    }
+  });
+});
