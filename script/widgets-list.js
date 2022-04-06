@@ -115,5 +115,24 @@ document.getElementById("members-button").addEventListener("click", () => {
 document.getElementById("members-button1").addEventListener("click", () => {
   document.getElementById("members-interaction1").classList.toggle("hidden");
 });
-
+document.querySelector("body").addEventListener("click", () => {
+  if (
+    !document.getElementById("members-interaction").classList.contains("hidden")
+  ) {
+    document.getElementById("members-interaction").classList.toggle("hidden");
+  }
+  if (
+    !document
+      .getElementById("members-interaction1")
+      .classList.contains("hidden")
+  ) {
+    document.getElementById("members-interaction1").classList.toggle("hidden");
+  }
+  if (!document.getElementById("handleClick2").classList.contains("hidden")) {
+    document.getElementById("handleClick2").classList.toggle("hidden");
+  }
+  if (!document.getElementById("handleClick").classList.contains("hidden")) {
+    document.getElementById("handleClick").classList.toggle("hidden");
+  }
+});
 // document.getElementById("focused").focus();
