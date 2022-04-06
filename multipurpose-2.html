@@ -4322,10 +4322,10 @@
             </div>
             <div class="flex  items-center gap-3">
 						<div class="relative">
-<button onclick="showFilterOptions('handleClick1')" class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
+<button onclick="event.stopPropagation();showFilterOptions('handleClick1')" class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
 							Filter
 						</button>
-							  <div id="handleClick1"
+							  <div id="handleClick1" onclick="event.stopPropagation();"
                                 class="hidden bg-white max-h-auto min-w-[216px] rounded shadow top-10 absolute right-[32px]">
                                 <div class="flex flex-col">
                                     <div class="header border-b border-gray-200">
@@ -4336,7 +4336,7 @@
                                     <div class="details p-3">
                                         <div class=" group relative">
                                             <p class="text-xs leading-3 text-slate-800 mb-2" >Status</p>
-                                            <button onclick="showFilterDropDown('dropdown')" id="dropdownDividerButton"
+                                            <button onclick="event.stopPropagation();showFilterDropDown('dropdown')" id="dropdownDividerButton"
                                                 class="bg-slate-100 font-normal rounded text-xs text-slate-400 p-2 text-left inline-flex items-center w-full mb-6"
                                                 type="button">
                                                  <span id="setfilterText1">Select Options</span>  
@@ -4346,8 +4346,8 @@
                                                         stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                                 </svg>
                                             </button>
-                                            <div id="dropdown"
-                                                class="hidden  z-10 w-full text-base list-none bg-slate-100 divide-y divide-gray-100 shadow pt-3 pb-4 absolute top-[56px] left-0">
+                                            <div id="dropdown" 
+                                                class="hidden  z-20 w-full text-base list-none bg-slate-100 divide-y divide-gray-100 shadow pt-3 pb-4 absolute top-[56px] left-0">
                                                 
                                                     
                                                         <a href="javascript:void(0)"
@@ -4418,13 +4418,13 @@
                                         </div>
                                         <div class="btns flex justify-end mt-8">
                                             <div class="btn1">
-                                                <button onclick="showFilterOptions('handleClick')"
+                                                <button onclick="showFilterOptions('handleClick1')"
                                                     class="px-3 py-2 border rounded hover:bg-blue-700 text-xs font-medium leading-3 hover:text-white text-blue-700 bg-white border-blue-700">
                                                     Reset
                                                 </button>
                                             </div>
                                             <div class="btn2">
-                                                <button onclick="showFilterOptions('handleClick')"
+                                                <button onclick="showFilterOptions('handleClick1')"
                                                     class="px-3 py-2 border rounded hover:bg-blue-700 text-xs font-medium leading-3 hover:text-white text-blue-700 bg-white border-blue-700 ml-2">
                                                     Apply
                                                 </button>
@@ -4462,7 +4462,7 @@
                   Statistics
                 </p>
 
-                <button id="members-button">
+                <button id="members-button" onclick="event.stopPropagation();membersbtn();" >
                   <svg
                     class="cursor-pointer"
                     width="24"
@@ -4959,7 +4959,7 @@
                   </p>
                 </div>
                 <div
-                  onclick="toggleDropdown2(this)"
+                  onclick="event.stopPropagation();toggleDropdown2(this)"
                   class="w-[26px] h-[26px] p-1.5 bg-blue-100 rounded cursor-pointer hover:bg-blue-200"
                 >
                   <svg

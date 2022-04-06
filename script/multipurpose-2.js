@@ -275,17 +275,20 @@ window.addEventListener("resize", () => {
   }
 });
 //statistics
-document.getElementById("members-button").addEventListener("click", () => {
-  console.log("statistics");
-  document.getElementById("members-interaction").classList.toggle("hidden");
-});
+
 //schedule interaction
-function toggleDropdown2(e) {
-  document.getElementById("handleClick").classList.toggle("hidden");
-}
+
 function show() {
   document.getElementById("plans").style.display = "block";
 }
 function hide() {
   document.getElementById("plans").style.display = "none";
 }
+
+// document.querySelector("body").addEventListener("click", () => {
+//   if (
+//     !document.getElementById("members-interaction").classList.contains("hidden")
+//   ) {
+//     document.getElementById("members-interaction").classList.toggle("hidden");
+//   }
+// });
