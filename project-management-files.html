@@ -2955,7 +2955,8 @@
                     <!-- First card -->
                     <div class="mt-7 bg-white rounded-[4px] w-full p-7 pb-0 shadow">
                         <!-- Profile -->
-                        <div class="flex flex-wrap items-start justify-between gap-8 ">
+                         <div class="flex flex-wrap items-start justify-between gap-8 ">
+                            <div class="div  flex gap-7 flex-wrap">
                             <div>
                                 <img alt="Profile Picture" class="w-[155px] h-[155px]"
                                     src="/overview-assetts/vuetify.png" />
@@ -2965,7 +2966,7 @@
                                 <div class="flex flex-wrap gap-x-4">
                                     <p class="text-xl font-semibold leading-tight text-gray-800">Project Point</p>
                                     <!-- badge -->
-                                    <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700 text-xs font-medium leading-3">
+                                    <div class="bg-blue-100 rounded-[4px] p-1 text-blue-700  text-xs font-medium leading-3">
                                         In Progress
                                     </div>
                                 </div>
@@ -2992,7 +2993,7 @@
                                         <p class="mt-2 text-base font-semibold leading-none text-gray-800">72</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <svg width="139" height="33" viewBox="0 0 139 33" fill="none"
+                                        <svg class="cursor-pointer" width="139" height="33" viewBox="0 0 139 33" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <mask id="mask0_114_2514" style="mask-type:alpha" maskUnits="userSpaceOnUse"
@@ -3070,16 +3071,17 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
 
                             <!-- Buttons -->
-                            <div class="relative flex gap-3">
+                            <div class="relative flex flex-wrap gap-3">
                                 <button onclick="toggleAddUser()"
                                     class="bg-blue-100  text-blue-700  text-xs font-medium py-2 px-4 hover:bg-blue-200 rounded-[4px]">Add
                                     User</button>
                                 <button onclick="toggleAddTarget()"
                                     class="bg-blue-700  text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]">Add
                                     Target</button>
-                                     <button
+                                <button
                                 onclick="toggleQuickActions()"
                                 class="p-2 bg-blue-100 rounded hover:bg-blue-200">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -3102,60 +3104,59 @@
                                                     <p class="px-3 py-3 text-xs font-semibold leading-3 text-left border-b text-slate-800 border-slate-200">
                                                         Quick Actions
                                                     </p>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Create Invoice
                                                         </p>
                                                     </a>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Generate Report
                                                         </p>
                                                     </a>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Payment
                                                         </p>
                                                     </a>
-                                                    <!-- onmouseover="show();" onmouseout="hide()" -->
                                                     <div 
                                                         class="relative flex justify-between mx-1 text-left cursor-pointer itemes-center hover:bg-blue-100 group subscription hover:text-blue-700 hover:font-medium hover:rounded">
-                                                        <a href="#" class="">
+                                                        <a href=" javascript:void(0)" class="">
                                                             <p class="p-2 text-xs leading-3 text-gray-600 sub group-hover:text-blue-700 group-hover:font-medium group-hover:rounded group-hover:bg-blue-100">
                                                                 Subscription
                                                             </p>
                                                         </a>
-                                                        <!-- <svg width="6"
-                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                                                        <svg width="6"
+                                                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600 hidden"
                                                             height="8" viewBox="0 0 6 8" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M1.3125 7.375L4.6875 4L1.3125 0.625" stroke=""
                                                                 stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg> -->
-                                                        <div id="plans"
+                                                        </svg>
+                                                        <div  id="plans"
                                                             class="max-w-[117px] w-full absolute left-[170px] top-0 hidden rounded-lg group-hover:hidden">
                                                             <div class="px-1 py-2 bg-white border-t border-gray-200 rounded shadow plan">
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Plans
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Bills
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Reports
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Invoices
                                                                     </p>
                                                                 </a>
-                                                                <a href="#">
+                                                                <a href=" javascript:void(0)">
                                                                     <p class="p-2 text-xs font-normal leading-3 text-gray-600 cr hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                                         Statements
                                                                     </p>
@@ -3163,7 +3164,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href=" javascript:void(0)">
                                                         <p class="p-2 mx-1 text-xs leading-3 text-left text-gray-600 hover:text-blue-700 hover:font-medium hover:rounded hover:bg-blue-100">
                                                             Settings
                                                         </p>
@@ -3175,7 +3176,6 @@
 
 
                                 </button>
-                                
                             </div>
                         </div>
                         <!-- Buttonsss -->
@@ -3239,8 +3239,8 @@
                     <!-- First card -->
 
                     <div class="div">
-                        <div class="flex flex-row items-center justify-between header py-7">
-                            <div class="ml-6 div">
+                        <div class="flex flex-row flex-wrap gap-4 items-center justify-between header py-7 mt-6">
+                            <div class="mx-6 div">
                                 <p class="text-xl font-semibold leading-tight text-slate-800">
                                     Files
                                 </p>
@@ -3248,8 +3248,8 @@
                                     There are total 31 files
                                 </p>
                             </div>
-                            <div class="items-center hidden mr-6 div lg:flex md:flex">
-                                <div class="flex items-center w-full mx-auto mt-6">
+                            <div class="items-center  mx-6 div flex">
+                                <div class="flex flex-wrap gap-4 items-center w-full mx-auto">
                                     <div class="flex items-center border rounded border-slate-400">
                                         <input type="text" name="serach" id=""
                                             class="rounded py-[13px] px-4 border-none outline-none placeholder-slate-600 text-sm bg-inherit"
@@ -3266,7 +3266,7 @@
                                     </div>
 
                                     <div
-                                        class="relative w-full ml-3 border border-blue-700 rounded dropdown-one bg-inherit">
+                                        class="relative  border border-blue-700 rounded dropdown-one bg-inherit">
                                         <button onclick="showDropDownMenu(this)"
                                             class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-36 bg-inherit">
                                             <span class="pr-4 text-sm font-medium text-blue-700"
@@ -3309,7 +3309,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 button-container">
+                                    <div class=" button-container">
                                         <button
                                             class="px-8 py-[15px] bg-blue-700 text-white font-medium text-sm hover:bg-blue-600 rounded w-36">
                                             Upload Files
@@ -3511,41 +3511,41 @@
                             </div>
                         </div>
                         <div class="flex w-full justify-end py-[38px]">
-                            <div class="flex items-center mr-12">
-                                <div class="svg-container mr-[29px] cursor-pointer">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 1L1 7L7 13" stroke="#6B7280" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100">
-                                    <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
-                                </div>
-                                <div
-                                    class="div border border-blue-700 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                    <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
-                                </div>
-                                <div
-                                    class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                    <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
-                                </div>
-                                <div
-                                    class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                    <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
-                                </div>
-                                <div
-                                    class="div border border-gray-300 rounded-[6px] ml-[26px] cursor-pointer hover:bg-blue-100">
-                                    <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
-                                </div>
-                                <div class="svg-container ml-[29px] cursor-pointer">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 13L7 7L1 1" stroke="#1D4ED8" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
+                               <div class="flex mx-9 items-center flex-wrap gap-4">
+                        <div class="svg-container mr-1 cursor-pointer">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1 7L7 13" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="div border border-gray-300 rounded-[6px] cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">1</p>
+                        </div>
+                        <div
+                            class="div border border-blue-700 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-blue-700 text-xs">2</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">3</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">4</p>
+                        </div>
+                        <div
+                            class="div border border-gray-300 rounded-[6px]  cursor-pointer hover:bg-blue-100">
+                            <p class="px-[10px] py-2 text-gray-600 text-xs">5</p>
+                        </div>
+                        <div class="svg-container ml-1 cursor-pointer">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L1 1" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
                         </div>
                     </div>
 
