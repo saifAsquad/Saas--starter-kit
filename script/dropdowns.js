@@ -329,10 +329,6 @@ tempoptions.forEach((item) => {
   });
 });
 
-//Status Drop down
-function showDropDownMenu(el) {
-  el.parentElement.children[1].classList.toggle("hidden");
-}
 function swaptext(el) {
   const targetText = el.innerText;
   document.getElementById("drop-down-content-setter").innerText = targetText;
