@@ -11,6 +11,26 @@ const classestoToggle = [
   "accent-white",
   "accent-blue-700",
 ];
+window.onload = function () {
+  console.log(productCheckBox.checked);
+  if (productCheckBox.checked) {
+    console.log("in first time");
+    classestoToggle.forEach((c) => {
+      productCheckBox.classList.toggle(c);
+    });
+    tick.classList.toggle("-z-10");
+  }
+  allCheckBox.forEach((e) => {
+    if (e.checked) {
+      classestoToggle.forEach((c) => {
+        e.classList.toggle(c);
+      });
+      e.nextElementSibling.classList.toggle("-z-10");
+      e.nextElementSibling.classList.toggle("active");
+      e.parentElement.parentElement.className = "bg-blue-50";
+    }
+  });
+};
 
 productCheckBox.addEventListener("click", (e) => {
   const isChecked = e.target.checked;

@@ -2365,7 +2365,7 @@
                         <div class="mx-auto  w-full flex-wrap gap-4 flex">
                             <div
                                         class="dropdown-one border rounded border-blue-700    bg-inherit relative">
-                                        <button onclick="showDropDownMenu(this)"
+                                        <button onclick="event.stopPropagation(); showDropDownMenu(this)"
                                             class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-[146px] bg-inherit">
                                             <span class="pr-4 font-medium text-blue-700 text-sm"
                                                 id="drop-down-content-setter">
@@ -2379,7 +2379,7 @@
                                             </svg>
                                         </button>
 
-                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white z-10"
+                                        <div class="hidden catalogueDropDown rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white z-10"
                                             id="drop-down-div">
                                             <a class="cursor-pointer" >
                                                 <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
@@ -3425,7 +3425,7 @@
                         <tr>
                             <td class="pl-6 relative">
                                 <input type="checkbox" name="" id=""
-                                    class="h-5 w-5rounded border-slate-400 border accent-blue-700" />
+                                    class="h-5 w-5 rounded border-slate-400 border accent-blue-700" />
                             <div class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3293 3.62372C13.5371 3.80556 13.5581 4.12144 13.3763 4.32926L6.37629 12.3293C6.28516 12.4334 6.15495 12.4951 6.01664 12.4997C5.87833 12.5043 5.7443 12.4514 5.64645 12.3536L2.64645 9.35356C2.45118 9.1583 2.45118 8.84172 2.64645 8.64645C2.84171 8.45119 3.15829 8.45119 3.35355 8.64645L5.97564 11.2685L12.6237 3.67075C12.8056 3.46294 13.1214 3.44188 13.3293 3.62372Z" fill="white"/>
@@ -3789,128 +3789,9 @@
    
 </style>
   <script src="./script/dropdowns.js"></script>
-  <script>
-       const productCheckBox = document.querySelector(".allCheckProduct");
-       const tick =document.querySelector(".allSvgTick");
-      const allCheckBox = document.querySelectorAll("tbody tr td input");
-      const allSvgTicks = document.querySelectorAll('.svgTick');
- const classestoToggle = ['appearance-none','bg-blue-700','border-transparent','active','accent-white','accent-blue-700'];
-  
-      productCheckBox.addEventListener("click", (e) => {
-        const isChecked = e.target.checked;
-        tick.classList.add('active');
-        if (isChecked) {
-classestoToggle.forEach(c=>{
-                  productCheckBox.classList.toggle(c);
+  <script src="./script/catalouge-common.js"></script>
+  <script src="./script/allcheckbox.js"></script>
 
-})
-          allCheckBox.forEach((ac) => {
-              if(!ac.checked){
-classestoToggle.forEach(c=>{
-                  ac.classList.toggle(c);
-                  
-
-              })
-              ac.checked = true;
-            ac.parentElement.parentElement.className = 'bg-blue-50';
-            ac.nextElementSibling.classList.toggle("-z-10");
-            tick.classList.remove('-z-10');
-              }
-              
-        });
-        } else {
-          allCheckBox.forEach((ac) => {
-              ac.checked = false
-              ac.parentElement.parentElement.className = '';
-        }
-        );
-        }
-      });
-      tick.addEventListener('click', t=>{
-          tick.classList.toggle('-z-10');
-            
-         productCheckBox.checked = false;
-             classestoToggle.forEach(c=>{
-                 productCheckBox.classList.toggle(c);
-             })
-             allSvgTicks.forEach(at=>{
-
-             classestoToggle.forEach(c=>{
-                 at.previousElementSibling.classList.toggle(c);
-             })
-             at.classList.toggle('-z-10');
-           
-             at.previousElementSibling.checked = false;
-          
-              at.parentElement.parentElement.className = '';
-             })
-        
-      })
-      allCheckBox.forEach(e=>{
-          e.addEventListener("click", (y) =>{
-              classestoToggle.forEach(c=>{
-                  y.target.classList.toggle(c);
-
-              })
-            
-              if(y.target.checked){
-                     e.nextElementSibling.classList.toggle("-z-10");
-                     e.nextElementSibling.classList.toggle("active");
-                     e.parentElement.parentElement.className = 'bg-blue-50';
-              }else{
- 
-                   e.parentElement.parentElement.className = '';
-
-              }
-          })
-      })
-      allSvgTicks.forEach(e=>{
-          e.addEventListener('click',y=>{
-             classestoToggle.forEach(c=>{
-                 e.previousElementSibling.classList.toggle(c);
-             })
-             e.classList.toggle('-z-10');
-             e.classList.toggle('active');
-           
-             e.previousElementSibling.checked = false;
-            
-              e.parentElement.parentElement.className = '';
-              if(tick.classList.contains('active')){
-                
-                tick.classList.add('-z-10');
-                tick.classList.remove('active')
-                productCheckBox.checked = false;
-                classestoToggle.forEach(c=>{
-                    
-                 productCheckBox.classList.toggle(c);
-                 
-             })
-              }
-
-          })
-      })
-
-      //table interaction
-     function tableInteraction(el){
-        el.parentElement.children[1].classList.toggle('hidden');
-     }
-     //
-   document.getElementsByTagName('table')[0].addEventListener('click',closeAll());
-       
-     
-     
-     function closeAll() {
-         document.querySelectorAll('.tableSvgInt').forEach(e=>{
-         if(e.classList.contains('hidden')){
-             return;
-            
-             
-         }
-         e.classList.add("hidden");
-     })
-	
-}
-  </script>
 </body>
 
 </html>

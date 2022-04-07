@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Template</title>
+        <link rel="stylesheet" href="Styles/quickactions.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
@@ -2799,7 +2800,9 @@
                 <!--  -->
                 <div class="mt-7 bg-white rounded-[4px] w-full pb-10">
                     <!-- Profile -->
-                    <div class="p-7 flex justify-between items-start flex-wrap gap-8">
+                 <div
+              class="p-7 flex justify-between items-start flex-col lg:flex-row gap-8"
+            >
               <div class="div max-w-[705px] flex gap-7 flex-wrap">
                 <div>
                   <img
@@ -2921,14 +2924,18 @@
                 </div>
               </div>
               <!-- Buttons -->
-              <div class="flex items-center gap-3">
+              <div class="flex items-center gap-3 relative">
                 <button
-                  onclick="toggleInteraction()"
+                  onclick="event.stopPropagation();toggleInteraction()"
                   class="bg-blue-700 text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]"
                 >
                   Hire me
                 </button>
-                <button class="p-2 rounded bg-blue-100 hover:bg-blue-200">
+
+                <button
+                  class="p-2 rounded bg-blue-100 hover:bg-blue-200"
+                  onclick="event.stopPropagation();showQuickLinks('handleClick')"
+                >
                   <svg
                     width="14"
                     height="14"
@@ -2950,6 +2957,118 @@
                     />
                   </svg>
                 </button>
+                <!-- quick links -->
+                <div
+                  id="handleClick"
+                  class="hidden absolute top-10 left-[50%] sm:left-[86px] rounded lg:-left-14 max-w-[176px]"
+                >
+                  <div class="rounded">
+                    <div
+                      class="dropdown-content rounded border-t bg-white border-b border-gray-200 shadow"
+                    >
+                      <p
+                        class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4 border-b border-slate-200"
+                      >
+                        Quick Actions
+                      </p>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mt-2 mx-1"
+                      >
+                        Create Invoice
+                      </a>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mx-1"
+                      >
+                        Generate Report
+                      </a>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mx-1"
+                      >
+                        Payment
+                      </a>
+
+                      <div
+                        class="relative hover:bg-blue-200 mx-1 cursor-pointer group subscription rounded"
+                      >
+                        <div
+                          onclick="event.stopPropagation();"
+                          class="flex justify-between items-center"
+                        >
+                          <a
+                            href="javascript:void(0)"
+                            class="hover:bg-blue-100 group-hover:font-medium group-hover:text-blue-700 text-xs leading-3 text-slate-600 group-hover:rounded"
+                          >
+                            Description
+                          </a>
+
+                          <svg
+                            width="6"
+                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                            height="8"
+                            viewBox="0 0 6 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.3125 7.375L4.6875 4L1.3125 0.625"
+                              stroke=""
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div
+                          class="absolute w-[101px] right-[170px] sm:-right-[100px] lg:right-[172px] rounded top-0 hidden group-hover:block hover:block max-w-[112px]"
+                        >
+                          <div
+                            class="shadow rounded border-t border-slate-200 p-1 bg-white"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Plans
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Bills
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Reports
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Invoices
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Statements
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mb-2 mx-1"
+                      >
+                        Settings
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
                     <!-- Buttonsss -->
@@ -3804,6 +3923,7 @@
              <!-------------------------------Choose Date Range------------ -->
         <script type="text/javascript" src="./script/choose-date-range.js"></script>
         <script src="./script/singlecheckboxv2.js"></script>
+          <script src="./script/account-common.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Template</title>
+    <link rel="stylesheet" href="Styles/quickactions.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <link
@@ -25,7 +26,7 @@
           class="close-svg-container absolute top-9 right-7 hover:bg-gray-50 cursor-pointer"
         >
           <svg
-            onclick="toggleInteraction()"
+            onclick="event.stopPropagation();toggleInteraction()"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -55,7 +56,10 @@
             upon your account type
           </p>
           <div class="headers flex gap-8 flex-wrap justify-between mt-10 pb-7">
-            <div class="instance flex cursor-pointer" onclick="hideme(this)">
+            <div
+              class="instance flex cursor-pointer"
+              onclick="event.stopPropagation();hideme(this)"
+            >
               <svg
                 width="20"
                 height="20"
@@ -88,7 +92,10 @@
               </p>
             </div>
 
-            <div class="instance flex cursor-pointer" onclick="hideme(this)">
+            <div
+              class="instance flex cursor-pointer"
+              onclick="event.stopPropagation();hideme(this)"
+            >
               <svg
                 width="20"
                 class="stroke-slate-600"
@@ -118,7 +125,10 @@
               </p>
             </div>
 
-            <div class="instance flex cursor-pointer" onclick="hideme(this)">
+            <div
+              class="instance flex cursor-pointer"
+              onclick="event.stopPropagation();hideme(this)"
+            >
               <svg
                 width="20"
                 class="stroke-slate-600"
@@ -139,7 +149,10 @@
               </p>
             </div>
 
-            <div class="instance flex cursor-pointer" onclick="hideme(this)">
+            <div
+              class="instance flex cursor-pointer"
+              onclick="event.stopPropagation();hideme(this)"
+            >
               <svg
                 width="20"
                 class="stroke-slate-600"
@@ -456,7 +469,10 @@
                 <div
                   class="flex items-center border border-slate-300 px-4 py-3 rounded mt-4 max-w-[356px]"
                 >
-                  <div class="svg-container" onclick="minusme(this)">
+                  <div
+                    class="svg-container"
+                    onclick="event.stopPropagation();minusme(this)"
+                  >
                     <svg
                       class="hover:bg-gray-100 cursor-pointer rounded-full"
                       width="24"
@@ -486,7 +502,10 @@
                   >
                     1000
                   </div>
-                  <div class="svg-container" onclick="plusme(this)">
+                  <div
+                    class="svg-container"
+                    onclick="event.stopPropagation();plusme(this)"
+                  >
                     <svg
                       class="hover:bg-gray-100 cursor-pointer rounded-full"
                       width="24"
@@ -958,7 +977,7 @@
               <!-- Dashboards -->
               <div class="flex flex-col">
                 <li
-                  onclick="toggleDropdown(this)"
+                  onclick="event.stopPropagation();toggleDropdown(this)"
                   class="flex border-l-2 border-blue-700 w-full justify-between text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
                   <a href="#" class="flex px-8 items-center py-2">
@@ -1100,7 +1119,7 @@
               <!-- Pages -->
               <div class="flex flex-col">
                 <li
-                  onclick="toggleDropdown(this)"
+                  onclick="event.stopPropagation();toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
                   <a href="#" class="flex px-8 items-center py-2">
@@ -1258,7 +1277,7 @@
               <!-- Account -->
               <div class="flex flex-col">
                 <li
-                  onclick="toggleDropdown(this)"
+                  onclick="event.stopPropagation();toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
                   <a href="#" class="flex px-8 items-center py-2">
@@ -1346,7 +1365,7 @@
               <!-- widgets -->
               <div class="flex flex-col">
                 <li
-                  onclick="toggleDropdown(this)"
+                  onclick="event.stopPropagation();toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
                   <a href="#" class="flex px-8 items-center py-2">
@@ -1457,7 +1476,7 @@
               <!-- utilities -->
               <div class="flex flex-col">
                 <li
-                  onclick="toggleDropdown(this)"
+                  onclick="event.stopPropagation();toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
                   <a href="#" class="flex px-8 items-center py-2">
@@ -1593,7 +1612,7 @@
               <!-- ui Components -->
               <div class="flex flex-col">
                 <li
-                  onclick="toggleDropdown(this)"
+                  onclick="event.stopPropagation();toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
                   <a href="#" class="flex px-8 items-center py-2">
@@ -1831,7 +1850,7 @@
               <!-- Applications -->
               <div class="flex flex-col">
                 <li
-                  onclick="toggleDropdown(this)"
+                  onclick="event.stopPropagation();toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
                   <a href="#" class="flex px-8 items-center py-2">
@@ -1918,7 +1937,7 @@
                   </a>
 
                   <li
-                    onclick="openSubEcommerce()"
+                    onclick="event.stopPropagation();openSubEcommerce()"
                     class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                   >
                     <svg
@@ -1937,7 +1956,7 @@
                     class="pl-3 transition-all origin-top duration-600 h-0 opacity-0 pt-[-20px] scale-y-0 sub-ecommerce"
                   >
                     <li
-                      onclick="openSubCatalogue()"
+                      onclick="event.stopPropagation();openSubCatalogue()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -2054,7 +2073,7 @@
                     </ul>
                     <!-- Sub Catalogue -->
                     <li
-                      onclick="openSubOrder()"
+                      onclick="event.stopPropagation();openSubOrder()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -2155,7 +2174,7 @@
                     </ul>
                     <!-- Sub Order -->
                     <li
-                      onclick="openSubOverview()"
+                      onclick="event.stopPropagation();openSubOverview()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -2256,7 +2275,7 @@
                     </ul>
                     <!-- Sub Overview -->
                     <li
-                      onclick="openSubCustomer()"
+                      onclick="event.stopPropagation();openSubCustomer()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -4299,7 +4318,9 @@
           <!--  -->
           <div class="mt-7 bg-white shadow-sm rounded-[4px] w-full pb-10">
             <!-- Profile -->
-            <div class="p-7 flex justify-between items-start flex-wrap gap-8">
+            <div
+              class="p-7 flex justify-between items-start flex-col lg:flex-row gap-8"
+            >
               <div class="div max-w-[705px] flex gap-7 flex-wrap">
                 <div>
                   <img
@@ -4421,14 +4442,18 @@
                 </div>
               </div>
               <!-- Buttons -->
-              <div class="flex items-center gap-3">
+              <div class="flex items-center gap-3 relative">
                 <button
-                  onclick="toggleInteraction()"
+                  onclick="event.stopPropagation();toggleInteraction()"
                   class="bg-blue-700 text-white text-xs font-medium py-2 px-4 hover:bg-blue-600 rounded-[4px]"
                 >
                   Hire me
                 </button>
-                <button class="p-2 rounded bg-blue-100 hover:bg-blue-200">
+
+                <button
+                  class="p-2 rounded bg-blue-100 hover:bg-blue-200"
+                  onclick="event.stopPropagation();showQuickLinks('handleClick')"
+                >
                   <svg
                     width="14"
                     height="14"
@@ -4450,6 +4475,118 @@
                     />
                   </svg>
                 </button>
+                <!-- quick links -->
+                <div
+                  id="handleClick"
+                  class="hidden absolute top-10 left-[50%] sm:left-[86px] rounded lg:-left-14 max-w-[176px]"
+                >
+                  <div class="rounded">
+                    <div
+                      class="dropdown-content rounded border-t bg-white border-b border-gray-200 shadow"
+                    >
+                      <p
+                        class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4 border-b border-slate-200"
+                      >
+                        Quick Actions
+                      </p>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mt-2 mx-1"
+                      >
+                        Create Invoice
+                      </a>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mx-1"
+                      >
+                        Generate Report
+                      </a>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mx-1"
+                      >
+                        Payment
+                      </a>
+
+                      <div
+                        class="relative hover:bg-blue-200 mx-1 cursor-pointer group subscription rounded"
+                      >
+                        <div
+                          onclick="event.stopPropagation();"
+                          class="flex justify-between items-center"
+                        >
+                          <a
+                            href="javascript:void(0)"
+                            class="hover:bg-blue-100 group-hover:font-medium group-hover:text-blue-700 text-xs leading-3 text-slate-600 group-hover:rounded"
+                          >
+                            Description
+                          </a>
+
+                          <svg
+                            width="6"
+                            class="my-auto mr-[10px] group-hover:stroke-[#1D4ED8] stroke-gray-600"
+                            height="8"
+                            viewBox="0 0 6 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.3125 7.375L4.6875 4L1.3125 0.625"
+                              stroke=""
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div
+                          class="absolute w-[101px] right-[170px] sm:-right-[100px] lg:right-[172px] rounded top-0 hidden group-hover:block hover:block max-w-[112px]"
+                        >
+                          <div
+                            class="shadow rounded border-t border-slate-200 p-1 bg-white"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Plans
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Bills
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Reports
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Invoices
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded"
+                            >
+                              Statements
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <a
+                        href="javascript:void(0)"
+                        class="hover:bg-blue-100 hover:font-medium hover:text-blue-700 text-xs leading-3 text-slate-600 hover:rounded mb-2 mx-1"
+                      >
+                        Settings
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Buttonsss -->
@@ -4660,5 +4797,6 @@
       }
     </script>
     <script src="./script/singlecheckboxv2.js"></script>
+    <script src="./script/account-common.js"></script>
   </body>
 </html>

@@ -4327,7 +4327,7 @@
 					</div>
 					<div class="flex  items-center gap-3">
 						<div class="relative">
-<button onclick="showFilterOptions('handleClick1')" class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
+<button onclick="event.stopPropagation();showFilterOptions('handleClick1')" class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
 							Filter
 						</button>
 							  <div id="handleClick1"
@@ -4341,7 +4341,7 @@
                                     <div class="details p-3">
                                         <div class=" group relative">
                                             <p class="text-xs leading-3 text-slate-800 mb-2" >Status</p>
-                                            <button onclick="showFilterDropDown('dropdown')" id="dropdownDividerButton"
+                                            <button onclick="event.stopPropagation();showFilterDropDown('dropdown')" id="dropdownDividerButton"
                                                 class="bg-slate-100 font-normal rounded text-xs text-slate-400 p-2 text-left inline-flex items-center w-full mb-6"
                                                 type="button">
                                                  <span id="setfilterText1">Select Options</span>  
@@ -4641,7 +4641,7 @@
 
                 <div class="relative">
                   <div
-                    onclick="toggleDropdown2(this)"
+                    onclick="event.stopPropagation();showFilterOptions('handleClick')"
                     class="bg-blue-100 rounded cursor-pointer hover:bg-blue-200"
                   >
                     <svg
@@ -4944,9 +4944,9 @@
                        <!-- Interactipon -->
                         <div 
                         id="members-interaction"
-                        class=" absolute overview-interaction hidden right-0 top-7 max-w-[176px] w-full">
+                        class=" absolute overview-interaction hidden right-0 top-7 min-w-[176px] max-w-[176px] w-full">
                             <div
-                                class="dropdown-btn inline-block relative max-w-[176px] w-full bg-white  rounded border-b border-gray-200 shadow">
+                                class="dropdown-btn inline-block relative  w-full bg-white  rounded border-b border-gray-200 shadow">
                                 <button class="dropbtn-btn bg-white border-none cursor-pointer">
                                     <p class="text-xs font-semibold leading-3 text-gray-800 px-4 py-4 ">
                                         Quick Actions
@@ -4983,7 +4983,7 @@
                         <!-- Interactipon -->
                     <!-- Interactipon -->
                     <button
-                      id="members-button"
+                      id="members-button" onclick="event.stopPropagation();membersbtn();"
                       class="hover:bg-gray-100 hover:cursor-pointer"
                     >
                       <svg
