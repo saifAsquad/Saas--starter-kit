@@ -3645,12 +3645,13 @@
 
         function toggleQuickActions(){
     document.getElementById('handleClick').classList.toggle('hidden');
-    document.querySelectorAll("#handleClick a").forEach(function(element){
+    
+}
+document.querySelectorAll("#handleClick a").forEach(function(element){
     element.addEventListener('click',function(){
         document.getElementById('handleClick').classList.toggle('hidden');
     })
 });
-}
         </script>
 
         <style>

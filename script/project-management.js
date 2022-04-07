@@ -229,9 +229,9 @@ function mainChart() {
 mainChart();
 // Main chart
 
-function showNewMemberInteraction() {
-  document.getElementById("newMemberInteraction").classList.toggle("hidden");
-}
+// function showNewMemberInteraction() {
+//   document.getElementById("newMemberInteraction").classList.toggle("hidden");
+// }
 
 const els = document.querySelector(".actions-intereaction");
 function handleActionsInteraction(el) {
@@ -308,3 +308,12 @@ function showNewMemberInteraction(el) {
   el.parentElement.children[1].classList.toggle("hidden");
   // document.getElementById("newMemberInteraction").classList.toggle("hidden");
 }
+document
+  .querySelectorAll("#newMemberInteraction2 a")
+  .forEach(function (element) {
+    element.addEventListener("click", function () {
+      document
+        .getElementById("newMemberInteraction2")
+        .classList.toggle("hidden");
+    });
+  });
