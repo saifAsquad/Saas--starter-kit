@@ -107,8 +107,6 @@ var myChart = new Chart(ctx, {
   },
 });
 
-document.getElementById("focused").focus();
-
 //schedule interaction
 // function toggleDropdown2(e) {
 //   document.getElementById("handleClick").classList.toggle("hidden");
@@ -119,3 +117,23 @@ function show() {
 function hide() {
   document.getElementById("plans").style.display = "none";
 }
+const allArrivalBtns = document.querySelectorAll(".arrival-btn");
+allArrivalBtns.forEach((e) => {
+  e.addEventListener("click", () => {
+    allArrivalBtns.forEach((y) => {
+      if (y.classList.contains("active") && y != e) {
+        y.classList.toggle("text-blue-700");
+        y.classList.toggle("bg-blue-50");
+        y.classList.toggle("active");
+        y.classList.toggle("text-gray-600");
+      }
+    });
+
+    if (!e.classList.contains("active")) {
+      e.classList.add("text-blue-700");
+      e.classList.add("bg-blue-50");
+      e.classList.remove("text-gray-600");
+      e.classList.add("active");
+    }
+  });
+});
