@@ -107,16 +107,12 @@ var myChart = new Chart(ctx, {
   },
 });
 
-document.getElementById("members-button").addEventListener("click", () => {
-  document.getElementById("members-interaction").classList.toggle("hidden");
-});
-
 document.getElementById("focused").focus();
 
 //schedule interaction
-function toggleDropdown2(e) {
-  document.getElementById("handleClick").classList.toggle("hidden");
-}
+// function toggleDropdown2(e) {
+//   document.getElementById("handleClick").classList.toggle("hidden");
+// }
 function show() {
   document.getElementById("plans").style.display = "block";
 }

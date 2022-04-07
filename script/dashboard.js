@@ -80,6 +80,8 @@ function activeComponentChecker(el) {
   const el2 = document.getElementById("handleClick1");
   const el3 = document.getElementById("dropdown");
   const el4 = document.getElementById("members-interaction");
+  const el5 = document.getElementById("overview-interaction");
+
   if (el1 && el1 != el) {
     if (!el1.classList.contains("hidden")) {
       el1.classList.toggle("hidden");
@@ -104,6 +106,13 @@ function activeComponentChecker(el) {
     if (!el4.classList.contains("hidden")) {
       el4.classList.toggle("hidden");
       console.log("function call el4");
+    }
+  }
+  if (el5 && el5 != el) {
+    // console.log("function call el4");
+    if (!el5.classList.contains("hidden")) {
+      el5.classList.toggle("hidden");
+      console.log("function call el5");
     }
   }
 }
