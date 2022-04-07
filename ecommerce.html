@@ -20,7 +20,7 @@
   <div class="mx-auto bg-white rounded blur-none div max-w-740px h-fit">
     <div class="absolute top-10 right-10">
       <svg
-        onclick="toggleAddUser()"
+        onclick="event.stopPropagation();toggleAddUser()"
         class="cursor-pointer hover:bg-gray-50"
         width="24"
         height="24"
@@ -3033,10 +3033,10 @@
 					</div>
 					<div class="flex  items-center gap-3">
 							<div class="relative">
-<button onclick="showFilterOptions('filterOption')" class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
+<button onclick="event.stopPropagation();showFilterOptions('handleClick1')" class="text-xs font-medium leading-3 text-blue-700 py-2.5 px-4 border rounded border-blue-700 hover:bg-blue-50 focus:outline-none focus:bg-blue-100">
 							Filter
 						</button>
-							  <div id="filterOption"
+							  <div id="handleClick1"
                                 class="hidden bg-white max-h-auto min-w-[216px] rounded shadow top-10 absolute right-[32px]">
                                 <div class="flex flex-col">
                                     <div class="header border-b border-gray-200">
@@ -3321,7 +3321,7 @@
                     <!-- Overview -->
                     <div class="p-6 bg-white col-span-2 my-shadow lg:col-span-1 relative max-h-auto rounded ">
                         <!-- Interactipon -->
-                        <div class=" absolute overview-interaction hidden right-6 top-12 max-w-[176px] w-full">
+                        <div id="overview-interaction" class=" absolute  hidden right-6 top-12 max-w-[176px] w-full">
                             <div
                                 class="dropdown-btn inline-block relative max-w-[176px] w-full bg-white  rounded border-b border-gray-200 shadow">
                                 <button class="dropbtn-btn bg-white border-none cursor-pointer">
@@ -3363,7 +3363,7 @@
                                     <p class="text-lg font-bold text-slate-800">Overview</p>
                                 </div>
                                 <div class="div relative">
-                                    <button onclick="toggleOverview()" class="hover:bg-gray-100 hover:cursor-pointer">
+                                    <button onclick="event.stopPropagation();showFilterOptions('overview-interaction')" class="hover:bg-gray-100 hover:cursor-pointer">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M4.5 12H19.5" stroke="#475569" stroke-linecap="round"
@@ -3511,7 +3511,7 @@
                             </p>
                         </div>
                         <div class="div  relative">
-                            <button onclick="showDiv()" class="p-2  bg-blue-100 mr-8 hover:cursor-pointer hover:bg-blue-200">
+                            <button onclick="event.stopPropagation();showFilterOptions('handleClick')" class="p-2  bg-blue-100 mr-8 hover:cursor-pointer hover:bg-blue-200">
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="red"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 3.0625V10.9375" stroke="#1D4ED8" stroke-linecap="round"
@@ -3521,7 +3521,7 @@
                                 </svg>
                             </button>
 
-                            <div id="handleClick"
+                            <div id="handleClick" onclick="event.stopPropagation;"
                                 class="hidden bg-white max-h-auto min-w-[216px] rounded shadow top-10 absolute right-[32px]">
                                 <div class="flex flex-col">
                                     <div class="header border-b border-gray-200">
@@ -3532,7 +3532,7 @@
                                     <div class="details p-3">
                                         <div class="dropdown group relative">
                                             <p class="text-xs leading-3 text-slate-800 mb-2" >Status</p>
-                                            <button onclick="showFilteroptionInteraction()" id="dropdownDividerButton"
+                                            <button onclick="event.stopPropagation();showFilteroptionInteraction()" id="dropdownDividerButton"
                                                 class="bg-slate-100 font-normal rounded text-xs text-slate-400 p-2 text-left inline-flex items-center w-full mb-6"
                                                 type="button">
                                                  <span id="setfilterText">Select Options</span>  
