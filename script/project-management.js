@@ -235,15 +235,21 @@ mainChart();
 
 const els = document.querySelector(".actions-intereaction");
 function handleActionsInteraction(el) {
-  // els.array.forEach((element) => {
-  //   element.children[1].style.display = "none";
-  // });
-  el.children[1].classList.toggle("hidden");
-  // document.getElementsByClassName("actions-intereaction").style.display =
-  //   "flex";
-  // const showDiv =
-  // console.log(showDiv);
-  // showDiv.classList.toggle("hidden");
+  document.querySelectorAll("#hideMe").forEach((el) => {
+    el.classList.add("hidden");
+  });
+  el.children[1].classList.remove("hidden");
+  // console.log(el.children[1]);
+
+  el.children[1].childNodes.forEach((els) => {
+    // console.log(els);
+    els.addEventListener("click", () => {
+      // console.log(ets);
+      // e.parentElement.classList.add("hidden");
+      console.log(els.parentElement);
+      els.parentElement.style.display = "none";
+    });
+  });
 }
 
 const target = document.getElementById("add-target");
