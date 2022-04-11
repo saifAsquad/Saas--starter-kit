@@ -25,7 +25,7 @@
   <!-- Interaction -->
   <div id="interaction-1"
     class="w-screen h-screen pt-6 pb-4 hidden fixed flex overflow-auto justify-center z-[2000] inset-0 flex bg-opacity-30 bg-slate-900">
-    <div class="shadow h-fit rounded bg-white max-w-[932px] relative">
+    <div class="shadow h-fit rounded bg-white w-[932px] relative">
       <div class="close-svg-container absolute top-9 right-7 hover:bg-gray-50 cursor-pointer">
         <svg onclick="toggleInteraction()" width="24" height="24" viewBox="0 0 24 24" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -3032,7 +3032,7 @@
           <!-- Form -->
           <div class="bg-white">
             <!-------------------------Header----------------------------->
-            <div class="p-10">
+            <div class="px-7 py-10">
               <div class="flex">
                 <div>
                   <p class="text-xl font-semibold leading-tight text-gray-800">
@@ -3080,8 +3080,8 @@
             </div>
             <!----------------------------Table ------------------------------->
             <div class="flex flex-col w-full bg-white">
-              <div class="header flex flex-row justify-between items-center my-10">
-                <div class="div mx-10">
+              <div class="header flex flex-row justify-between items-center my-10 ">
+                <div class="div mx-7">
                   <p class="text-xl font-semibold leading-tight text-gray-800">
                     API Keys
                   </p>
@@ -3093,7 +3093,9 @@
                     <div class="flex items-center gap-2 py-2">
                       <i class="fa fa-calendar"></i>&nbsp;
                       <span id="fa-calendar">Pick a Date Range</span>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg 
+                      class="mt-[5px]"
+                      width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#2563EB" stroke-linecap="round"
                           stroke-linejoin="round" />
                       </svg>
@@ -3156,7 +3158,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10 bg-white py-2 rounded shadow-md w-[124px] hidden" id="hideMe">
+                        <div class="px-1 absolute top-4 right-0 z-10 bg-white py-2 rounded shadow-md w-[124px] hidden hideMe" id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                             Edit</a>
@@ -3198,7 +3200,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10 bg-white py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10 bg-white py-2 rounded shadow-md w-[124px] hidden hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3241,7 +3243,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10 bg-white py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10 bg-white py-2 rounded shadow-md w-[124px] hidden hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3284,7 +3286,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10  py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10  py-2 rounded shadow-md w-[124px] hidden bg-white hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3327,7 +3329,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3370,7 +3372,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3413,7 +3415,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3456,7 +3458,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3499,7 +3501,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute top-4 right-0 z-10py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute top-4 right-0 z-10py-2 rounded shadow-md w-[124px] hidden bg-white hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3542,7 +3544,7 @@
                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                             fill="#475569" />
                         </svg>
-                        <div class="px-1 absolute bottom-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white"
+                        <div class="px-1 absolute bottom-4 right-0 z-10 py-2 rounded shadow-md w-[124px] hidden bg-white hideMe"
                           id="hideMe">
                           <a 
                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
@@ -3783,11 +3785,34 @@
 </script>
 <script>
   function handleActionsInteraction(el) {
+    document.querySelectorAll(".hideMe").forEach(el =>
+    {
+      el.classList.remove("hidden");
+el.style.display = "none";
 
-    el.children[1].classList.toggle("hidden");
+el.classList.remove("active");
+    });
+    
+    el.children[1].style.display="block";
+ 
+    el.children[1].classList.add("active");
+
+   
 
 
   }
+  document.querySelectorAll(".hideMe a").forEach(el =>
+  {
+    let parent = el.parentElement;
+    console.log(parent);
+   el.addEventListener("click", () => {
+    
+     parent.style.visibility="hidden";
+   });
+
+  });
+
+ 
   function toggleInteraction() {
     document.getElementById("interaction-1").classList.toggle("hidden");
   }
