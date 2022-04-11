@@ -19,7 +19,7 @@
     <!-- Interaction -->
     <div id="interaction-1"
         class="w-screen h-screen pt-6 pb-4 hidden fixed flex overflow-auto justify-center z-[2000] inset-0 flex bg-opacity-30 bg-slate-900">
-        <div class="shadow h-fit rounded bg-white max-w-[932px] relative">
+        <div class="shadow h-fit rounded bg-white w-[932px] relative">
             <div class="close-svg-container absolute top-9 right-7 hover:bg-gray-50 cursor-pointer">
                 <svg onclick="toggleInteraction()" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -3285,7 +3285,7 @@
 
 
                             </div>
-                            <div class="dropdown  bg-white relative w-full col-span-2 lg:col-span-4">
+                            <div class="dropdown border rounded broder-slate-300  bg-white relative w-full col-span-2 lg:col-span-4">
                                 <div onclick="myFunction()"
                                     class="dropbtn broder-slate-300 relative border rounded max-w-full bg-white text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50 flex items-center">
                                     <span class="dropbtnspan text-slate-600 text-sm"> Select a country</span>
@@ -3296,7 +3296,7 @@
                                     </svg>
                                 </div>
                                 <div id="myDropdown"
-                                    class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10">
+                                    class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10 text-sm text-slate-600">
                                     <input type="text" placeholder="Search.."
                                         class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
                                         id="myInput" onkeyup="filterFunction()" />
@@ -3569,7 +3569,7 @@
                             </div>
                             <div class="dropdown relative w-full col-span-2 lg:col-span-4">
                                 <div onclick="myLang()"
-                                    class="langdropbtn broder-slate-300 relative border rounded max-w-full text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50">
+                                    class="langdropbtn broder-slate-300 relative border rounded max-w-full text-slate-600  py-4 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50 text-sm text-slate-600">
                                     <span class="langdropbtnspan text-sm text-slate-600"> Select a language </span>
                                     <svg class="absolute lang-arrow top-4 right-4" width="16" height="16"
                                         viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3578,7 +3578,7 @@
                                     </svg>
                                 </div>
                                 <div id="langDropdown"
-                                    class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10">
+                                    class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10 text-sm text-slate-600">
                                     <input type="text" placeholder="Search.."
                                         class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
                                         id="langInput" onkeyup="filterLang()" />
@@ -3619,7 +3619,7 @@
                                     </svg>
                                 </div>
                                 <div id="stateDropdown"
-                                    class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10">
+                                    class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto h-[246px] flex flex-col z-10 text-sm text-slate-600">
                                     <input type="text" placeholder="Search.."
                                         class="border broder-slate-300 py-2 px-3 outline-none focus:bg-gray-50"
                                         id="stateInput" onkeyup="filterStates()" />
@@ -4075,7 +4075,9 @@
 
                                             </div>
                                     </div>
-                                <p class="text-sm leading-sm text-gray-600">Yes, deactivate my account</p>
+                                    <div>
+                                <p class="text-sm leading-3 pb-1.5 text-center text-slate-600">Yes, deactivate my account</p>
+                                </div>
                             </div>
                         </div>
                         <div class="flex flex-col justify-between  mt-12 pt-12 border-t border-gray-300">

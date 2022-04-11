@@ -2383,10 +2383,12 @@
             <!-- Main Chart  -->
             <!--  -->
             <!-- Sales Activity -->
+                <div class="grid grid-cols-12" >
+                    <div class="col-span-9">
             <div class="mt-7 w-full p-10 pb-0 bg-white my-shadow rounded flex flex-col justify-center">
                 <div class="flex items-center justify-between">
                     <h2 class="text-lg font-semibold leading-[18px] text-gray-800">
-                        sales Activities
+                        Sales Activities
                     </h2>
                     <div class="flex items-center gap-x-6">
                         <div class="flex items-center justify-center">
@@ -2411,6 +2413,10 @@
                 </div>
                 <canvas class="w-full h-[400px] py-7" height="400px" id="chartjs-1"></canvas>
             </div>
+            </div>
+            <div class="col-span-3"></div>
+            </div>
+
             <!-- Sales Activity -->
             <!-- Main Chart  -->
             <div class="mt-7 grid grid-cols-2 lg:grid-cols-3  grid-rows-1 w-full gap-7 ">
@@ -2468,7 +2474,148 @@
                 <!-- Loaction stats -->
                 <div class="lg:col-span-1 col-span-2 row-span-1 ">
                     <section>
-                        <div class=" w-full  h-full bg-white shadow rounded px-8 py-8 bg-white relative">
+                        <!-- Doughnut Chart -->
+                <div class="bg-white my-shadow pt-6 py-6">
+                    <div class="details pl-6 pb-4">
+                        <p class="text-lg font-semibold leading-none text-gray-800">
+                            Progress
+                        </p>
+                        <p class="text-sm leading-none text-gray-600 pt-1">
+                            Tueday, 23 July 2023
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="max-w-[161px] max-h-[161px]">
+                            <canvas id="myChartDough"></canvas>
+                        </div>
+                    </div>
+                    <div class="labels flex justify-around mt-8">
+                        <div class="flex items-center">
+                            <div>
+                                <svg width="8" class="flex-inline" height="8" viewBox="0 0 8 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="4" r="4" fill="#EC4899" />
+                                </svg>
+                            </div>
+                            <div class="div ml-1">
+                                <p class="text-xs leading-3 text-pink-500">HR</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="4" r="4" fill="#6366F1" />
+                                </svg>
+                            </div>
+                            <div class="div ml-1">
+                                <p class="text-xs leading-3 text-indigo-500">Marketing</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="4" r="4" fill="#1D4ED8" />
+                                </svg>
+                            </div>
+                            <div class="div ml-1">
+                                <p class="text-xs leading-3 text-blue-700">Finance</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="4" r="4" fill="#EAB308" />
+                                </svg>
+                            </div>
+                            <div class="div ml-1">
+                                <p class="text-xs leading-3 text-yellow-500">Operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doughnut Chart -->
+
+                        
+
+                    </section>
+                </div>
+            </div>
+            <!-- Main Chart  -->
+            <div class="grid gap-7 mt-7 grid-cols-12">
+                <div class="col-span-8">
+                    <div
+                class=" bg-white  rounded-[4px] col-span-2 px-7 flex justify-between flex-col items-center gap-12 p-7 my-shadow">
+                <div class="flex justify-between items-center w-full">
+                    <p class="text-lg font-semibold leading-[18px] text-gray-800">Sales Activities</p>
+                    <!-- Dropdown -->
+                    <div class="relative">
+                        <div
+                            class="dropdown-one w-[96px]  flex items-center justify-center  border rounded border-blue-700  w-full bg-white  rounded  ">
+                            <button class="dropbtn-one">
+                                <p
+                                    class="dropbtn-one dropbtn-one1 text-xs font-medium leading-3 hover:text-blue-500  text-blue-700 px-4 py-2 ">
+                                    Monthly
+                                </p>
+                            </button>
+                            <svg class="mr-2" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.50039 0.200048L5.00039 3.70005L8.50039 0.200049L9.90039 0.900049L5.00039 5.80005L0.100391 0.900048L1.50039 0.200048Z"
+                                    fill="#1D4ED8" />
+                            </svg>
+
+
+                            <div
+                                class="dwy openit hidden interactions bg-white w-[96px] rounded  shadow border-t border-gray-200 absolute top-8">
+                                <p
+                                    class="cr link-11 text-xs leading-3 text-gray-600 hover:text-blue-700 hover:font-medium">
+                                    Daily</p>
+                                <p
+                                    class="cr text-xs link-11 leading-3 text-gray-600 hover:text-blue-700 hover:font-medium">
+                                    Weekly</p>
+                                <p
+                                    class="cr text-xs link-11 leading-3 text-gray-600 hover:text-blue-700 hover:font-medium">
+                                    Yearly</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <canvas height="300px" width="1024px" id="my-chart-main">
+                </canvas>
+            </div>
+                </div>
+                <div class="col-span-4">
+
+                <!-- Percent Chart -->
+                <div class="bg-white my-shadow pt-6 py-6">
+                    <div class="details pl-6 pb-4">
+                        <p class="text-lg font-semibold leading-none text-gray-800">
+                            Progress
+                        </p>
+                        <p class="text-sm leading-none text-gray-600 pt-1">
+                            Tueday, 23 July 2023
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-[250px] h-[250px]">
+                            <canvas id="myChartPercent"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Percent Chart -->
+               </div>
+                
+            </div>
+
+            <!-- Main Chart -->
+            <div class="grid grid-cols-12">
+               <div class=" col-span-4 mt-7">
+
+             <div class=" w-full  h-full bg-white shadow rounded px-8 py-8  relative">
                             <p class="text-lg font-semibold leading-none text-left text-gray-800 ">Location stats</p>
 
                             <div class="relative group">
@@ -2562,136 +2709,8 @@
 
 
                         </div>
-
-                    </section>
-                </div>
-            </div>
-            <!-- Main Chart  -->
-            <div class="grid gap-7 mt-7 md:grid-cols-2">
-                <!-- Percent Chart -->
-                <div class="bg-white my-shadow pt-6 py-6">
-                    <div class="details pl-6 pb-4">
-                        <p class="text-lg font-semibold leading-none text-gray-800">
-                            Progress
-                        </p>
-                        <p class="text-sm leading-none text-gray-600 pt-1">
-                            Tueday, 23 July 2023
-                        </p>
-                    </div>
-                    <div class="flex justify-center">
-                        <div class="max-w-[205px] max-h-[205px]">
-                            <canvas id="myChartPercent"></canvas>
                         </div>
-                    </div>
-                </div>
-                <!-- Percent Chart -->
-                <!-- Doughnut Chart -->
-                <div class="bg-white my-shadow pt-6 py-6">
-                    <div class="details pl-6 pb-4">
-                        <p class="text-lg font-semibold leading-none text-gray-800">
-                            Progress
-                        </p>
-                        <p class="text-sm leading-none text-gray-600 pt-1">
-                            Tueday, 23 July 2023
-                        </p>
-                    </div>
-                    <div class="flex justify-center">
-                        <div class="max-w-[161px] max-h-[161px]">
-                            <canvas id="myChartDough"></canvas>
                         </div>
-                    </div>
-                    <div class="labels flex justify-around mt-8">
-                        <div class="flex items-center">
-                            <div>
-                                <svg width="8" class="flex-inline" height="8" viewBox="0 0 8 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4" cy="4" r="4" fill="#EC4899" />
-                                </svg>
-                            </div>
-                            <div class="div ml-1">
-                                <p class="text-xs leading-3 text-pink-500">HR</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div>
-                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4" cy="4" r="4" fill="#6366F1" />
-                                </svg>
-                            </div>
-                            <div class="div ml-1">
-                                <p class="text-xs leading-3 text-indigo-500">Marketing</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div>
-                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4" cy="4" r="4" fill="#1D4ED8" />
-                                </svg>
-                            </div>
-                            <div class="div ml-1">
-                                <p class="text-xs leading-3 text-blue-700">Finance</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div>
-                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="4" cy="4" r="4" fill="#EAB308" />
-                                </svg>
-                            </div>
-                            <div class="div ml-1">
-                                <p class="text-xs leading-3 text-yellow-500">Operations</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Doughnut Chart -->
-            </div>
-
-            <!-- Main Chart -->
-            <div
-                class=" bg-white mt-7 rounded-[4px] col-span-2 px-7 flex justify-between flex-col items-center gap-12 p-7 my-shadow">
-                <div class="flex justify-between items-center w-full">
-                    <p class="text-lg font-semibold leading-[18px] text-gray-800">Sales Activities</p>
-                    <!-- Dropdown -->
-                    <div class="relative">
-                        <div
-                            class="dropdown-one w-[96px]  flex items-center justify-center  border rounded border-blue-700  w-full bg-white  rounded  ">
-                            <button class="dropbtn-one">
-                                <p
-                                    class="dropbtn-one dropbtn-one1 text-xs font-medium leading-3 hover:text-blue-500  text-blue-700 px-4 py-2 ">
-                                    Monthly
-                                </p>
-                            </button>
-                            <svg class="mr-2" width="10" height="6" viewBox="0 0 10 6" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M1.50039 0.200048L5.00039 3.70005L8.50039 0.200049L9.90039 0.900049L5.00039 5.80005L0.100391 0.900048L1.50039 0.200048Z"
-                                    fill="#1D4ED8" />
-                            </svg>
-
-
-                            <div
-                                class="dwy openit hidden interactions bg-white w-[96px] rounded  shadow border-t border-gray-200 absolute top-8">
-                                <p
-                                    class="cr link-11 text-xs leading-3 text-gray-600 hover:text-blue-700 hover:font-medium">
-                                    Daily</p>
-                                <p
-                                    class="cr text-xs link-11 leading-3 text-gray-600 hover:text-blue-700 hover:font-medium">
-                                    Weekly</p>
-                                <p
-                                    class="cr text-xs link-11 leading-3 text-gray-600 hover:text-blue-700 hover:font-medium">
-                                    Yearly</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <canvas height="300px" width="1024px" id="my-chart-main">
-                </canvas>
-            </div>
             <!--  -->
             <!--  -->
             <!--  -->

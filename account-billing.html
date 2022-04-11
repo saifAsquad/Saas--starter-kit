@@ -34,7 +34,7 @@
     <!-- Interaction -->
     <div id="interaction-1"
         class="w-screen h-screen pt-6 pb-4 hidden fixed flex overflow-auto justify-center z-[2000] inset-0 flex bg-opacity-30 bg-slate-900">
-        <div class="shadow h-fit rounded bg-white max-w-[932px] relative">
+        <div class="shadow h-fit rounded bg-white w-[932px] relative">
             <div class="close-svg-container absolute top-9 right-7 hover:bg-gray-50 cursor-pointer">
                 <svg onclick="toggleInteraction()" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -3149,7 +3149,7 @@
                                 A line that guides the user about the neccessary facts
                             </p>
 
-                            <div class="flex flex-row flex-wrap mt-[40px] max-w-[604px] justify-between">
+                            <div class="flex flex-row flex-wrap mt-[40px] max-w-[604px] justify-between items-center">
                                 <h1 class="font-Inter font-[600] text-[20px] text-gray-800">
                                     User Information
                                 </h1>
@@ -3381,7 +3381,7 @@
 
                         <!-----------------Table ------------>
                         <div class="flex flex-col w-full bg-white">
-                            <div class="header flex flex-row justify-between items-end my-10">
+                            <div class="header flex flex-row justify-between items-center my-10">
                                 <div class="div ml-10">
                                     <p class="text-xl font-semibold leading-tight text-gray-800 align-bottom">
                                         Transaction Details
@@ -3397,6 +3397,7 @@
                   <i class="fa fa-calendar"></i>&nbsp;
                   <span id="fa-calendar">Pick a Date Range</span>
                   <svg
+                  class="mt-[6px]"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -3928,9 +3929,15 @@
         </style>
             
         <script>
-           
+           document.querySelectorAll("#payment-method-interaction a").forEach((el) => {
+                     
+                    el.addEventListener("click", () => {
+                        el.parentElement.classList.toggle("hidden");
+                    });
+                });
             function showPaymentMethodInteraction(inte) {
                 inte.parentElement.children[1].classList.toggle("hidden");
+                
             }
         </script>
          <!-------------------------------Choose Date Range------------ -->
