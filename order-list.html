@@ -2336,7 +2336,7 @@
                             <div
                                 class="dropdown-one border rounded border-blue-700    bg-inherit relative min-w-[146px] 
                                  ">
-                                <button onclick="showDropDownMenu(this)"
+                                <button onclick="event.stopPropagation();showDropDownMenu('catalogueDropDown')"
                                     class="dropbtn-one  px-5 py-[12px]   bg-inherit m-0">
                                     <span class="pr-4 font-medium text-blue-700 text-sm" id="drop-down-content-setter">
                                         Status
@@ -2350,7 +2350,7 @@
                                   
                                 </button>
 
-                                <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
+                                <div class="hidden catalogueDropDown rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
                                     id="drop-down-div">
                                     <a class="cursor-pointer">
                                         <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
@@ -2474,7 +2474,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer px-6 ">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -2497,8 +2497,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -2565,7 +2565,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -2588,8 +2588,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -2657,7 +2657,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -2680,8 +2680,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -2749,7 +2749,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -2772,8 +2772,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -2841,7 +2841,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -2864,8 +2864,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -2933,7 +2933,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                 <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -2956,8 +2956,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -3025,7 +3025,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -3048,8 +3048,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -3117,7 +3117,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -3140,8 +3140,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -3209,7 +3209,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 px-6 hover:cursor-pointer">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -3232,8 +3232,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv tableSvgInt px-1 absolute top-4 right-0  py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -3301,7 +3301,7 @@
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer px-6">
                                  <div
                       class="flex justify-self-center justify-end relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this)"
                     >
                       <svg
                         width="24"
@@ -3324,8 +3324,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute bottom-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                        id="hideMe"
+                        class="ts tv ts tv bottom-4 right-0 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                       onclick="event.stopPropagation();"  id="hideMe"
                       >
                       <p
                           href=""
@@ -3397,14 +3397,7 @@
     </div>
     <!-- Body -->
 </div>
-<script>
 
-     function handleActionsInteraction(el) {
-       
-        el.children[1].classList.toggle("hidden");
-       
-      }
-</script>
 <style>
     tr {
 
@@ -3419,7 +3412,7 @@
 </style>
 <script src="/script/navigationScript.js"></script>
 
-<script src="./script/dropdowns.js"></script>
+<script src="./script/catalouge-common.js"></script>
 <script src="./script/allcheckbox.js"></script>
  
 </body>

@@ -2507,7 +2507,7 @@
                             class="dropdown-one border border-blue-700 w-full rounded ml-3 bg-inherit relative"
                           >
                             <button
-                              onclick="showDropDownMenu(this)"
+                              onclick="event.stopPropagation(); showDropDownMenu1(this)"
                               class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-[146px] bg-inherit"
                             >
                               <span
@@ -3758,14 +3758,14 @@
                     class="dropdown-one border border-blue-700 rounded bg-inherit relative"
                   >
                     <button
-                      onclick="showDropDownMenu(this)"
+                      onclick="event.stopPropagation(); showDropDownMenu('catalogueDropDown')"
                       class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-[146px] bg-inherit"
                     >
                       <span
                         class="pr-4 font-medium text-blue-700 text-sm settextofdropdown"
                         id="drop-down-content-setter"
                       >
-                        Category
+                        Category!
                       </span>
                       <svg
                         width="16"
@@ -3784,7 +3784,7 @@
                     </button>
 
                     <div
-                      class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
+                      class="hidden catalogueDropDown rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
                       id="drop-down-div3"
                     >
                       <a class="cursor-pointer">
@@ -3845,7 +3845,7 @@
                         class="w-5 h-5 rounded border-slate-400 border accent-blue-700 allCheckProduct"
                       />
                       <div
-                        class="allSvgTick -z-10 absolute cursor-pointer top-[24px] left-[26px]"
+                        class="allSvgTick -z-10 absolute cursor-pointer top-[21px] left-[26px]"
                       >
                         <svg
                           width="16"
@@ -3897,7 +3897,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -3956,7 +3956,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -3979,7 +3979,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4007,7 +4008,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4067,7 +4068,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative actions-intereaction"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4090,7 +4091,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4118,7 +4120,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4177,7 +4179,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4200,7 +4202,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4228,7 +4231,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4287,7 +4290,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4310,7 +4313,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4338,7 +4342,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4397,7 +4401,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4420,7 +4424,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4448,7 +4453,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4507,7 +4512,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4530,7 +4535,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4558,7 +4564,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4617,7 +4623,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4640,7 +4646,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4668,7 +4675,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4727,7 +4734,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4750,7 +4757,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4778,7 +4786,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4837,7 +4845,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4860,7 +4868,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        class="tableSvgInt px-1 absolute top-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -4888,7 +4897,7 @@
                       class="h-5 w-5 rounded border-slate-400 border accent-blue-700"
                     />
                     <div
-                      class="svgTick -z-10 absolute cursor-pointer top-[37px] left-[25.5px]"
+                      class="svgTick -z-10 absolute cursor-pointer top-[33px] left-[25.5px]"
                     >
                       <svg
                         width="16"
@@ -4947,7 +4956,7 @@
                   >
                     <div
                       class="flex justify-self-center justify-center relative"
-                      onclick="handleActionsInteraction(this)"
+                      onclick="event.stopPropagation();handleActionsInteraction(this);"
                     >
                       <svg
                         width="24"
@@ -4970,7 +4979,8 @@
                         />
                       </svg>
                       <div
-                        class="px-1 absolute bottom-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        class="tableSvgInt px-1 absolute bottom-4 right-[43%] py-2 rounded shadow-md w-[124px] hidden bg-white z-10"
+                        onclick="event.stopPropagation();"
                         id="hideMe"
                       >
                         <p
@@ -5064,19 +5074,17 @@
       <!-- Body -->
     </div>
     <script src="/script/navigationScript.js"></script>
+    <script src="/script/catalouge-common.js"></script>
     <script>
       const els = document.querySelector(".actions-intereaction");
       console.log(els);
-      function handleActionsInteraction(el) {
-        el.children[1].classList.toggle("hidden");
-      }
     </script>
     <style>
       table img {
         max-width: 40px;
       }
     </style>
-    <script src="./script/dropdowns.js"></script>
+    <!-- <script src="./script/dropdowns.js"></script> -->
     <script src="./script/allcheckbox.js"></script>
   </body>
 </html>
