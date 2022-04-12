@@ -2673,7 +2673,7 @@
                             </button>
 
                             <div
-                                class="hidden absolute top-13 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10">
+                                class="hidden absolute top-13 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10 more-options">
                                 <a href="#"
                                     class="cr text-xs leading-3 text-slate-600 px-3 py-2 block hover:bg-blue-100 hover:text-blue-700 hover:font-medium hover:rounded">Edit</a>
                                 <a href="#"
@@ -2701,7 +2701,7 @@
                             </button>
 
                             <div
-                                class="hidden absolute top-13 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10">
+                                class="hidden absolute top-13 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10 more-options">
                                 <a href="#"
                                     class="cr text-xs leading-3 text-slate-600 px-3 py-2 block hover:bg-blue-100 hover:text-blue-700 hover:font-medium hover:rounded">Edit</a>
                                 <a href="#"
@@ -2727,7 +2727,7 @@
                             </button>
 
                             <div
-                                class="hidden absolute top-13 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10">
+                                class="hidden absolute top-13 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10 more-options">
                                 <a href="#"
                                     class="cr text-xs leading-3 text-slate-600 px-3 py-2 block hover:bg-blue-100 hover:text-blue-700 hover:font-medium hover:rounded">Edit</a>
                                 <a href="#"
@@ -2755,7 +2755,7 @@
                             </button>
 
                             <div
-                                class="hidden absolute top-13 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10">
+                                class="hidden absolute bottom-12 left-0 rounded w-full shadow border-t border-gray-200 px-1 py-3 bg-white z-10 more-options">
                                 <a href="#"
                                     class="cr text-xs leading-3 text-slate-600 px-3 py-2 block hover:bg-blue-100 hover:text-blue-700 hover:font-medium hover:rounded">Edit</a>
                                 <a href="#"
@@ -2784,6 +2784,13 @@
         const elDiv = el.parentElement.children[1];
         elDiv.classList.toggle("hidden");
     }
+    document.querySelectorAll(".more-options a").forEach(el => {
+        el.addEventListener("click", e => {
+            e.preventDefault();
+            // const elDiv = e.target.parentElement.parentElement.parentElement.children[1];
+            el.parentElement.classList.toggle("hidden");
+        });
+    });
 </script>
 </body>
 

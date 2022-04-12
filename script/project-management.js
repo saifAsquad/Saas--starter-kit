@@ -260,6 +260,11 @@ function toggleAddTarget() {
 function moreoptionmodal(el) {
   el.parentElement.children[1].classList.toggle("hidden");
 }
+document.querySelectorAll("#newMemberInteraction a").forEach((el) => {
+  el.addEventListener("click", () => {
+    el.parentElement.classList.toggle("hidden");
+  });
+});
 
 const user = document.getElementById("add-user");
 function toggleAddUser() {

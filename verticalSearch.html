@@ -2399,17 +2399,17 @@
           id="lenDropdown"
           class="absolute z-10 flex flex-col hidden w-full overflow-auto bg-white rounded dropdown-content"
         >
-          <a label="Theme 1" class="flex items-center">Published 
+          <a label="Theme 1" class="flex items-center hover:font-medium">Published 
 
          Beginner
 
           </a>
-            <a label="Theme 2" class="flex items-center">Scheduled 
+            <a label="Theme 2" class="flex items-center hover:font-medium">Scheduled 
 
           Intermediate
 
             </a>
-            <a label="Theme 3" class="flex items-center">Draft
+            <a label="Theme 3" class="flex items-center hover:font-medium">Draft
           
 Expert
                 </a>
@@ -2474,7 +2474,7 @@ Expert
                                                <div class="relative w-full mt-3 dropdown">
         <div
           onclick="myWeight()"
-          class="weightdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+          class="weightdropbtn  broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
         >
           <span class="py-1 weightdropbtnspan"></span>
           <svg
@@ -2495,7 +2495,7 @@ Expert
         </div>
         <div
           id="weightDropdown"
-          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto  flex flex-col z-10 rounded"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto  flex flex-col z-10 rounded tempdropbtn"
         >
           <a label="Q/A ">Q/A </a>
             <a label="Designing">Designing</a>
@@ -2506,12 +2506,12 @@ Expert
       </div>
                     </div>
 
-                    <div class="mt-8">
+                    <div class="mt-8"> 
                         <p class="mb-3 text-base font-medium leading-none text-left text-gray-800">Group Type</p>
                                                  <div class="relative w-full mt-3 dropdown">
         <div
           onclick="myTemp()"
-          class="tempdropbtn broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
+          class=" broder-slate-300 relative border rounded max-w-[712px] text-slate-600 h-[48px] py-3 px-4 cursor-pointer hover:bg-gray-50 outline-none focus:bg-gray-50"
         >
           <span class="py-1 tempdropbtnspan"></span>
           <svg
@@ -2532,7 +2532,7 @@ Expert
         </div>
         <div
           id="tempDropdown"
-          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto  flex flex-col z-10 rounded"
+          class="dropdown-content absolute w-full bg-white hidden max-w-[712px] overflow-auto  flex flex-col z-10 rounded tempdropbtn"
         >
           <a  label="Template 1">All</a>
             <a label="Template 2">Users</a>
@@ -2641,6 +2641,9 @@ Expert
         font-weight: 500;
 
     }
+	.active2{
+		display:none;
+	}
 </style>
   <script src="./script/dropdowns.js"></script>
 </body>
