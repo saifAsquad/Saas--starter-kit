@@ -106,7 +106,7 @@ const myBarChart = new Chart(document.getElementById("chartjs-1"), {
       tooltip: {
         padding: 7,
         backgroundColor: "#ffffff",
-        displayColors: false,
+        displayColors: true,
         usePointStyle: true,
         caretSize: 5,
         caretPadding: 12,

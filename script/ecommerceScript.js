@@ -35,7 +35,8 @@ var myChart = new Chart(ctx, {
           size: 8,
         },
         bodyFont: {
-          size: 10,
+          size: 12,
+          weight: "bold",
         },
 
         displayColors: false,
@@ -45,7 +46,7 @@ var myChart = new Chart(ctx, {
         pointRadius: "0",
         borderColor: "#d1d5db",
         borderWidth: 0.5,
-        caretSize: 0,
+        caretSize: 5,
         caretPadding: 12,
         boxWidth: 20,
         titleColor: "#475569",
@@ -148,7 +149,8 @@ var myChart = new Chart(ctx, {
           size: 8,
         },
         bodyFont: {
-          size: 10,
+          size: 12,
+          weight: "bold",
         },
 
         displayColors: false,
@@ -156,7 +158,7 @@ var myChart = new Chart(ctx, {
         padding: 4,
         backgroundColor: "#ffffff",
         pointRadius: "0",
-        caretSize: 0,
+        caretSize: 5,
         caretPadding: 12,
         borderColor: "#d1d5db",
         borderWidth: 0.5,
@@ -261,7 +263,8 @@ var myChart = new Chart(ctx, {
           size: 8,
         },
         bodyFont: {
-          size: 10,
+          size: 12,
+          weight: "bold",
         },
 
         displayColors: false,
@@ -269,7 +272,7 @@ var myChart = new Chart(ctx, {
         padding: 4,
         backgroundColor: "#ffffff",
         pointRadius: "0",
-        caretSize: 0,
+        caretSize: 5,
         borderColor: "#d1d5db",
         borderWidth: 0.5,
         caretPadding: 12,
@@ -374,7 +377,8 @@ var myChart = new Chart(ctx, {
           size: 8,
         },
         bodyFont: {
-          size: 10,
+          size: 12,
+          weight: "bold",
         },
 
         displayColors: false,
@@ -382,10 +386,11 @@ var myChart = new Chart(ctx, {
         padding: 4,
         backgroundColor: "#ffffff",
         pointRadius: "0",
-        caretSize: 0,
+        caretSize: 5,
         caretPadding: 12,
         borderColor: "#d1d5db",
         borderWidth: 0.5,
+        width: 60,
         boxWidth: 20,
         titleColor: "#475569",
         bodyColor: "#475569",
@@ -527,22 +532,28 @@ const chartMain = new Chart(ChartMain, {
         titleFont: {
           size: 12,
         },
+        titleFont: {
+          size: 8,
+        },
+        footerFont: {
+          size: 8,
+        },
         bodyFont: {
-          size: 20,
+          size: 12,
         },
 
         displayColors: false,
         borderColor: "#f8fafc",
         borderWidth: 2,
-        padding: 8,
-        width: 40,
+        caretSize: 8,
         backgroundColor: "#ffffff",
         pointRadius: "0",
-        caretSize: 0,
-        caretPadding: 12,
-        boxWidth: 20,
+        // xAlign: "center",
+        yAlign: "center",
         titleColor: "#A3A3A3",
         bodyColor: "#171717",
+        padding: 12,
+        height: 100,
         footerColor: "#A3A3A3",
         callbacks: {
           title: function (tooltipItem, data) {

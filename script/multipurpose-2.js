@@ -161,10 +161,11 @@ function mainChart() {
         mode: "index",
         intersect: false,
         titleFont: {
-          size: 16,
+          size: 8,
         },
         bodyFont: {
-          size: 20,
+          size: 12,
+          weight: "bold",
         },
 
         displayColors: false,
@@ -172,12 +173,12 @@ function mainChart() {
         padding: 8,
         backgroundColor: "#ffffff",
         pointRadius: "0",
-        caretSize: 0,
-        caretPadding: 12,
+        caretSize: 5,
+        caretPadding: 0,
         borderColor: "#d1d5db",
         borderWidth: 0.5,
         boxWidth: 40,
-        titleColor: "#475569",
+        titleColor: "#1E293B",
         bodyColor: "#475569",
         callbacks: {
           title: function (tooltipItem, data) {
@@ -225,7 +226,8 @@ function mainChart() {
         max: 100,
         ticks: {
           // forces step size to be 50 units
-          color: "#212121",
+          color: "#1D4ED8",
+          backgroundColor: "#FFFFFF",
 
           stepSize: 50,
           callback: function (value, index, values) {
