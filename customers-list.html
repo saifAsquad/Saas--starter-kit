@@ -3185,7 +3185,7 @@
                             </div>
                            <div
                                         class="dropdown-one border rounded border-blue-700  rounded  bg-inherit relative">
-                                        <button onclick="showDropDownMenu(this)"
+                                        <button onclick="event.stopPropagation();showDropDownMenu('catalogueDropDown')"
                                             class="dropbtn-one relative px-5 py-[12px] flex items-center justify-between w-28 bg-inherit">
                                             <span class="pr-4 font-medium text-blue-700 text-sm"
                                                 id="drop-down-content-setter">
@@ -3199,7 +3199,7 @@
                                             </svg>
                                         </button>
 
-                                        <div class="hidden rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
+                                        <div class="hidden catalogueDropDown rounded w-full shadow border-t border-gray-200 px-1 py-2 absolute top-[56px] right-0 bg-white"
                                             id="drop-down-div">
                                             <a class="cursor-pointer" >
                                                 <p class="cr text-sm leading-3 text-slate-600 rounded py-2 px-[10px] hover:bg-blue-100 hover:rounded hover:font-medium hover:text-blue-700"
@@ -3299,7 +3299,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3312,8 +3312,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                          <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3358,7 +3358,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3371,8 +3371,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                          <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3418,7 +3418,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3431,8 +3431,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                         <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3478,7 +3478,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3491,8 +3491,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                          <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3538,7 +3538,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3551,8 +3551,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                          <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3598,7 +3598,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3611,8 +3611,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                          <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3658,7 +3658,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3671,8 +3671,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                          <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3718,7 +3718,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3731,8 +3731,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                          <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3778,7 +3778,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3791,8 +3791,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  top-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                         <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3838,7 +3838,7 @@
 
                             <td class="text-sm leading-none text-slate-600 text-left py-7 hover:cursor-pointer">
                                 <div class="flex justify-self-end justify-end relative actions-intereaction px-6"
-                                    onclick="handleActionsInteraction(this)">
+                                    onclick="event.stopPropagation();handleActionsInteraction(this)">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -3851,8 +3851,8 @@
                                             d="M4.5 14.25C5.74264 14.25 6.75 13.2426 6.75 12C6.75 10.7574 5.74264 9.75 4.5 9.75C3.25736 9.75 2.25 10.7574 2.25 12C2.25 13.2426 3.25736 14.25 4.5 14.25Z"
                                             fill="#475569" />
                                     </svg>
-                                    <div class="px-1 absolute bottom-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
-                                        id="hideMe">
+                                    <div class="tableSvgInt px-1 absolute  bottom-4 right-6 py-2 rounded shadow-md w-[124px] hidden z-10 bg-white"
+                                        onclick="event.stopPropagation();"  id="hideMe">
                                         <a 
                                             class="p-2 text-xs text-slate-600 hover:font-medium hover:bg-blue-100 hover:text-blue-700 rounded block">
                                             View</a>
@@ -3922,17 +3922,7 @@
 <script>
     const els = document.querySelector(".actions-intereaction");
     console.log(els);
-    function handleActionsInteraction(el) {
-        // els.array.forEach((element) => {
-        //   element.children[1].style.display = "none";
-        // });
-        el.children[1].classList.toggle("hidden");
-        // document.getElementsByClassName("actions-intereaction").style.display =
-        //   "flex";
-        // const showDiv =
-        // console.log(showDiv);
-        // showDiv.classList.toggle("hidden");
-    }
+
 
     function toggleModal() {
         document.querySelector(".modal").classList.toggle('hidden')
@@ -4059,10 +4049,10 @@
       }
    
 </style>
-    <script src="./script/dropdowns.js"></script>
+    <script src="./script/catalouge-common.js"></script>
        <!-------------------------------Choose Date Range------------ -->
     <script type="text/javascript" src="./script/choose-date-range.js"></script>
-        <script src="./script/dropdowns.js"></script>
+     
         <script src="./script/allcheckbox.js"></script>
  
 </body>
