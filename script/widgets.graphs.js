@@ -52,10 +52,11 @@ function mainChart() {
         mode: "index",
         intersect: false,
         titleFont: {
-          size: 16,
+          size: 8,
         },
         bodyFont: {
-          size: 20,
+          size: 12,
+          weight: "bold",
         },
 
         displayColors: false,
@@ -63,12 +64,12 @@ function mainChart() {
         padding: 8,
         backgroundColor: "#ffffff",
         pointRadius: "0",
-        caretSize: 0,
+        caretSize: 5,
         caretPadding: 12,
         borderColor: "#d1d5db",
         borderWidth: 0.5,
         boxWidth: 40,
-        titleColor: "#475569",
+        titleColor: "#1E293B",
         bodyColor: "#475569",
         callbacks: {
           title: function (tooltipItem, data) {
@@ -197,7 +198,7 @@ const myBarChart = new Chart(document.getElementById("chartjs-1"), {
       tooltip: {
         padding: 7,
         backgroundColor: "#ffffff",
-        displayColors: false,
+        displayColors: true,
         usePointStyle: true,
         caretSize: 5,
         caretPadding: 12,
@@ -332,8 +333,15 @@ const myChart2 = new Chart(mmainchart, {
         caretSize: 5,
         caretPadding: 12,
         boxWidth: 10,
-        titleColor: "#000000",
-        bodyColor: "#000000",
+        titleFont: {
+          size: 8,
+        },
+        bodyFont: {
+          size: 12,
+          weight: "bold",
+        },
+        titleColor: "#1E293B",
+        bodyColor: "#475569",
         borderColor: "#d1d5db",
         borderWidth: 1,
         titleFont: "bold",
@@ -596,22 +604,28 @@ function getEcommerce() {
           titleFont: {
             size: 12,
           },
+          titleFont: {
+            size: 8,
+          },
+          footerFont: {
+            size: 8,
+          },
           bodyFont: {
-            size: 20,
+            size: 12,
           },
 
           displayColors: false,
           borderColor: "#f8fafc",
           borderWidth: 2,
-          padding: 8,
-          width: 40,
+          caretSize: 8,
           backgroundColor: "#ffffff",
           pointRadius: "0",
-          caretSize: 0,
-          caretPadding: 12,
-          boxWidth: 20,
+          // xAlign: "center",
+          yAlign: "center",
           titleColor: "#A3A3A3",
           bodyColor: "#171717",
+          padding: 12,
+          height: 100,
           footerColor: "#A3A3A3",
           callbacks: {
             title: function (tooltipItem, data) {

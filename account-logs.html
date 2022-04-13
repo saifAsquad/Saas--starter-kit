@@ -606,9 +606,11 @@
                         <!-- Dashboards -->
                         <div class="flex flex-col">
                             <li onclick="toggleDropdown(this)"
-                                class="flex  border-l-2 border-blue-700   w-full  justify-between text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
+                                class="flex   w-full  justify-between text-slate-600 hover:bg-blue-50 cursor-pointer items-center ">
                                 <a href="#" class="flex px-8 items-center py-2">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    <svg 
+                                    class="text-slate-600"
+                                    width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M2.5 6.625V14C2.5 14.1326 2.55268 14.2598 2.64645 14.3536C2.74021 14.4473 2.86739 14.5 3 14.5H6V10.25C6 10.0511 6.07902 9.86032 6.21967 9.71967C6.36032 9.57902 6.55109 9.5 6.75 9.5H9.25C9.44891 9.5 9.63968 9.57902 9.78033 9.71967C9.92098 9.86032 10 10.0511 10 10.25V14.5H13C13.1326 14.5 13.2598 14.4473 13.3536 14.3536C13.4473 14.2598 13.5 14.1326 13.5 14V6.625"
@@ -796,63 +798,125 @@
                         </div>
                         <!-- Account -->
                         <div class="flex flex-col">
-                            <li onclick="toggleDropdown(this)"
-                                class="flex     w-full  justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
-                                <a href="#" class="flex px-8 items-center py-2">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.75 4.5C10.6275 6.15219 9.37503 7.5 8.00003 7.5C6.62503 7.5 5.37034 6.1525 5.25003 4.5C5.12503 2.78125 6.34378 1.5 8.00003 1.5C9.65628 1.5 10.875 2.8125 10.75 4.5Z"
-                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path
-                                            d="M8.00008 9.5C5.28133 9.5 2.52195 11 2.01133 13.8313C1.94976 14.1725 2.14289 14.5 2.50008 14.5H13.5001C13.8576 14.5 14.0507 14.1725 13.9891 13.8313C13.4782 11 10.7188 9.5 8.00008 9.5Z"
-                                            stroke="currentColor" stroke-miterlimit="10" />
-                                    </svg>
+							<li onclick="toggleDropdown(this)"
+								class="flex   border-l-2 border-blue-700    w-full  justify-between text-blue-700 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center ">
+								<a href="#" class="flex px-8 items-center py-2">
+									<svg 
+                                    class="stroke-blue-700"
+                                    width="16" height="16" viewBox="0 0 16 16" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M10.75 4.5C10.6275 6.15219 9.37503 7.5 8.00003 7.5C6.62503 7.5 5.37034 6.1525 5.25003 4.5C5.12503 2.78125 6.34378 1.5 8.00003 1.5C9.65628 1.5 10.875 2.8125 10.75 4.5Z"
+											 stroke-linecap="round" stroke-linejoin="round" />
+										<path
+											d="M8.00008 9.5C5.28133 9.5 2.52195 11 2.01133 13.8313C1.94976 14.1725 2.14289 14.5 2.50008 14.5H13.5001C13.8576 14.5 14.0507 14.1725 13.9891 13.8313C13.4782 11 10.7188 9.5 8.00008 9.5Z"
+											 stroke-miterlimit="10" />
+									</svg>
 
 
 
-                                    <span class="text-sm ml-2">Account</span>
-                                </a>
+									<span class="text-sm ml-2 text-blue-700">Account</span>
+								</a>
 
-                                <div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
-                                    <svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
+								<div class="py-1   rounded text-gray-300 flex items-center justify-center text-xs">
+									<svg class="mr-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="#475569" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
 
-                                </div>
-
-
-
-                            </li>
-                            <ul
-                                class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
-                                <a class="dashboard-links" href="/account-overview.html">
-                                    <li
-                                        class="text-xs  hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
-                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="#BFDBFE"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="3" cy="3" r="3" />
-                                        </svg>
-                                        Overview
-                                    </li>
-                                </a>
-                                <a href="account-settings.html">
-                                    <li
-                                        class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
-                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
-                                        </svg>
-                                        Settings
-                                    </li>
-                                </a>
+								</div>
 
 
 
-                            </ul>
-                        </div>
+							</li>
+							<ul
+								class="invisible opacity-0  flex flex-col  mb-4 h-0 transition-all ease-in-out duration-600  text-slate-600">
+								<a class="dashboard-links" href="/account-overview.html">
+									<li
+										class="text-xs  hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]   pl-14 ">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="#BFDBFE"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" />
+										</svg>
+										Overview
+									</li>
+								</a>
+								<a href="account-settings.html">
+									<li
+										class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]  pl-14 ">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+										</svg>
+										Settings
+									</li>
+								</a>
+								<a href="account-security.html">
+									<li
+										class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]  pl-14">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+										</svg>
+										Security
+									</li>
+								</a>
+								<a href="account-billing.html">
+									<li
+										class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]  pl-14 ">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+										</svg>
+										Billing
+									</li>
+								</a>
+								<a href="account-statements.html">
+									<li
+										class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]  pl-14 ">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+										</svg>
+										Statements
+									</li>
+								</a>
+								<a href="account-referals.html">
+									<li
+										class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]  pl-14 ">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+										</svg>
+										Referals
+									</li>
+								</a>
+								<a href="accounts-api-keys.html">
+									<li
+										class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]  pl-14 ">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+										</svg>
+										API Keys
+									</li>
+								</a>
+								<a href="account-logs.html">
+									<li
+										class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px]  pl-14 text-blue-700 bg-blue-50">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#1D4ED8" />
+										</svg>
+										Logs
+									</li>
+								</a>
+
+
+
+							</ul>
+						</div>
 
                         <!-- widgets -->
                         <div class="flex flex-col">
@@ -1222,16 +1286,88 @@
                             </li>
                             <ul
                                 class="invisible opacity-0  flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600  ">
-                                <a href="project-management.html">
-                                    <li
-                                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
-                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
-                                        </svg>
-                                        Project Management
-                                    </li>
-                                </a>
+                                <li
+										onclick="openSubProject()"
+										class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+										<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+										</svg>
+										Project Management
+									</li>
+									<!--Sub Project Management-->
+									<ul class="pl-3 transition-all  origin-top duration-600 h-0 opacity-0 pt-[-20px] scale-y-0    sub-project-management">
+										<a href="project-management.html">
+											<li
+												class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+												<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+												</svg>
+												Overview
+											</li>
+										</a>
+										<a href="project-management-target.html">
+											<li
+												class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+												<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+												</svg>
+												Target
+											</li>
+										</a>
+										<a href="project-management-settings.html">
+											<li
+												class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+												<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+												</svg>
+												Settings
+											</li>
+										</a>
+										<a href="project-management-users.html">
+											<li
+												class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+												<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+												</svg>
+												Users
+											</li>
+										</a>
+										<a href="project-management-files.html">
+											<li
+												class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+												<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+												</svg>
+												Files
+											</li>
+										</a>
+										<a href="project-management-budget.html">
+											<li
+												class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+												<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+												</svg>
+												Budget
+											</li>
+										</a>
+										<a href="project-management-activity.html">
+											<li
+												class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
+												<svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+												</svg>
+												Activity
+											</li>
+										</a>
+									</ul>
 
                                 <li onclick="openSubEcommerce()"
                                     class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600">
@@ -1532,28 +1668,28 @@
 				</div>
 				<!-- ***Links -->
 				<ul class="text-slate-600 lg:flex items-center gap-x-6 hidden">
-					<li class="text-blue-700 bg-blue-50 font-medium p-3 rounded cursor-pointer">
-						Dashboards
-					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
-						Pages
-					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
-						Account
-					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
-						Widgets
-					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
-						Utilities
-					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
-						UI Components
-					</li>
-					<li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
-						Applications
-					</li>
-				</ul>
+                    <li class=" font-medium p-3 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700 ">
+                        Dashboards
+                    </li>
+                    <li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+                        Pages
+                    </li>
+                    <li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded text-blue-700 bg-blue-50">
+                        Account
+                    </li>
+                    <li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+                        Widgets
+                    </li>
+                    <li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+                        Utilities
+                    </li>
+                    <li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+                        UI Components
+                    </li>
+                    <li class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded">
+                        Applications
+                    </li>
+                </ul>
 				<div class="flex gap-x-7 items-center">
 					<!-- ***Search Icon*** -->
 					<div class="search cursor-pointer relative">

@@ -174,7 +174,7 @@ function mainChart() {
         backgroundColor: "#ffffff",
         pointRadius: "0",
         caretSize: 5,
-        caretPadding: 0,
+        caretPadding: 12,
         borderColor: "#d1d5db",
         borderWidth: 0.5,
         boxWidth: 40,
@@ -294,3 +294,9 @@ function hide() {
 //     document.getElementById("members-interaction").classList.toggle("hidden");
 //   }
 // });
+//For closing more option of New Member
+document.querySelectorAll("#newMemberInteraction a").forEach((el) => {
+  el.addEventListener("click", () => {
+    el.parentElement.classList.toggle("hidden");
+  });
+});

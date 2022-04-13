@@ -137,3 +137,9 @@ allArrivalBtns.forEach((e) => {
     }
   });
 });
+//For closing more option of New Member
+document.querySelectorAll("#newMemberInteraction a").forEach((el) => {
+  el.addEventListener("click", () => {
+    el.parentElement.classList.toggle("hidden");
+  });
+});
