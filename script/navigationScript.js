@@ -298,6 +298,21 @@ const allIcons = [
     component: qs(".searchDropDown"),
   },
 ];
+allIcons.forEach((i) => {
+  i.icon.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
+
+document.body.onclick = function (e) {
+  allIcons.forEach((ic) => {
+    if (ic.icon.classList.contains("active")) {
+      ic.icon.classList.remove("active");
+      ic.component.classList.replace("opacity-1", "opacity-0");
+      ic.component.classList.remove("active");
+    }
+  });
+};
 statChartBtn.addEventListener("click", statsToggler);
 statCrossBtn.addEventListener("click", statsToggler);
 function statsToggler() {
