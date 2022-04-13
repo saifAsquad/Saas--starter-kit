@@ -668,3 +668,9 @@ document.querySelectorAll("#dropdownDivider a").forEach((a) => {
     document.getElementById("dropdownDivider").classList.add("hidden");
   });
 });
+//For closing more option of New Member
+document.querySelectorAll("#newMemberInteraction a").forEach((el) => {
+  el.addEventListener("click", () => {
+    el.parentElement.classList.toggle("hidden");
+  });
+});
