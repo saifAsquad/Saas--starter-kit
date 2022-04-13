@@ -174,3 +174,13 @@ table tbody tr:hover {
   width: 20px;
   height: 20px;
 }
+@media screen and (max-width: 503px) {
+  .searchDropDown {
+    min-width: 356px !important;
+    left: -4vw;
+  }
+  .notiDropDown {
+    min-width: 356px !important;
+    left: -6vw;
+  }
+}
