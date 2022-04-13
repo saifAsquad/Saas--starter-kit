@@ -274,10 +274,25 @@ const allIcons = [
 		component: qs(".searchDropDown"),
 	},
 ];
+allIcons.forEach((i) => {
+	i.icon.addEventListener("click", (e) => {
+		e.stopPropagation();
+	});
+});
+
+document.body.onclick = function (e) {
+	allIcons.forEach((ic) => {
+		if (ic.icon.classList.contains("active")) {
+			ic.icon.classList.remove("active");
+			ic.component.classList.replace("opacity-1", "opacity-0");
+			ic.component.classList.remove("active");
+		}
+	});
+};
 statChartBtn.addEventListener("click", statsToggler);
 statCrossBtn.addEventListener("click", statsToggler);
 function statsToggler() {
-	statChartBtn.classList.toggle("active")
+	statChartBtn.classList.toggle("active");
 	statChart.classList.toggle("active");
 	if (statChart.classList.contains("active")) {
 		allIcons.forEach((y) => {
@@ -407,7 +422,6 @@ notify.forEach((e) => {
 	// console.log(e.btn);
 
 	e.btn.addEventListener("click", () => {
-
 		e.list.classList.toggle("active");
 		if (e.list.classList.contains("active")) {
 			e.btn.classList.add("bg-blue-50");
