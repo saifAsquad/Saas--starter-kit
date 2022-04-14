@@ -299,6 +299,9 @@ const allIcons = [
   },
 ];
 allIcons.forEach((i) => {
+  i.component.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
   i.icon.addEventListener("click", (e) => {
     e.stopPropagation();
   });
@@ -416,13 +419,13 @@ toggleBtn.forEach((e) => {
     e.classList.toggle("active");
     if (e.classList.contains("active")) {
       e.classList.add("bg-blue-700");
-      e.classList.remove("bg-slate-300");
+      e.classList.remove("bg-blue-100");
       e.children[0].classList.add("translate-x-[80%]");
       e.children[0].classList.remove("translate-x-0");
       // e.nextElementSibling;
     } else {
       e.classList.remove("bg-blue-700");
-      e.classList.add("bg-slate-300");
+      e.classList.add("bg-blue-100");
       e.children[0].classList.remove("translate-x-[80%]");
       e.children[0].classList.add("translate-x-0");
     }
