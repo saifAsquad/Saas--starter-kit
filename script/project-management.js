@@ -238,10 +238,10 @@ function handleActionsInteraction(el) {
   document.querySelectorAll("#hideMe").forEach((el) => {
     el.classList.add("hidden");
   });
-  el.children[1].classList.remove("hidden");
+  el.parentElement.children[1].classList.remove("hidden");
   // console.log(el.children[1]);
 
-  el.children[1].childNodes.forEach((els) => {
+  el.parentElement.children[1].childNodes.forEach((els) => {
     // console.log(els);
     els.addEventListener("click", () => {
       // console.log(ets);
