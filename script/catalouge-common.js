@@ -21,6 +21,7 @@ function activeComponentChecker(el) {
 const tableMore = document.querySelectorAll(".tableSvgInt");
 tableMore.forEach((e) => {
   e.addEventListener("click", (y) => {
+    console.log(e);
     e.classList.toggle("hidden");
     e.classList.toggle("active");
   });
@@ -38,6 +39,34 @@ function tableInteraction(el) {
 }
 //Status Drop down
 function showDropDownMenu(el) {
-  activeComponentChecker(el);
+  const element = document.querySelector(`.${el}`);
+  activeComponentChecker(element);
+  element.classList.toggle("hidden");
+}
+function swaptext3(el) {
+  const targetText = el.innerText;
+  document.querySelector(".settextofdropdown").innerText = targetText;
+
+  document.getElementById("drop-down-div3").classList.add("hidden");
+}
+function handleActionsInteraction(el) {
+  tableMore.forEach((e) => {
+    if (e.classList.contains("active") && e != el.children[1]) {
+      e.classList.toggle("active");
+      e.classList.toggle("hidden");
+    }
+  });
+  activeComponentChecker(el.children[1]);
+  el.children[1].classList.toggle("hidden");
+  el.children[1].classList.toggle("active");
+}
+function showDropDownMenu1(el) {
   el.parentElement.children[1].classList.toggle("hidden");
+}
+
+function swaptext(el) {
+  const targetText = el.innerText;
+  document.getElementById("drop-down-content-setter").innerText = targetText;
+
+  document.getElementById("drop-down-div").classList.add("hidden");
 }

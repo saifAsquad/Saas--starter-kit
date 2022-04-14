@@ -31,6 +31,7 @@ var myChart = new Chart(ctx, {
         },
         bodyFont: {
           size: 12,
+          weight: "bold",
         },
 
         displayColors: false,
@@ -38,13 +39,12 @@ var myChart = new Chart(ctx, {
         padding: 10,
         backgroundColor: "#ffffff",
         pointRadius: "0",
-        caretSize: 0,
+        caretSize: 5,
         caretPadding: 12,
         borderColor: "#d1d5db",
         borderWidth: 0.5,
         boxWidth: 12,
-        titleFont: 20,
-        bodyFont: 16,
+
         bodyColor: "#1E293B",
         titleColor: "#475569",
         callbacks: {
@@ -135,5 +135,11 @@ allArrivalBtns.forEach((e) => {
       e.classList.remove("text-gray-600");
       e.classList.add("active");
     }
+  });
+});
+//For closing more option of New Member
+document.querySelectorAll("#newMemberInteraction a").forEach((el) => {
+  el.addEventListener("click", () => {
+    el.parentElement.classList.toggle("hidden");
   });
 });

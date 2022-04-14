@@ -5,7 +5,13 @@
 function myFunction() {
   const arrow = document.querySelector(".arrow");
   const down = document.getElementById("myDropdown");
-  document.getElementById("myDropdown").classList.toggle("hidden");
+  document.querySelectorAll(".dropdown-content").forEach((el) => {
+    el.classList.add("active2");
+  });
+  document.getElementById("myDropdown").classList.remove("active2");
+  if (!down.classList.contains("active2")) {
+    down.classList.toggle("hidden");
+  }
   if (!down.classList.contains("hidden")) {
     arrow.classList.add("rotate-180");
   } else {
@@ -171,12 +177,24 @@ cityoptions2.forEach((item) => {
 function myStates() {
   const arrow = document.querySelector(".states-arrow");
   const down = document.getElementById("stateDropdown");
-  document.getElementById("stateDropdown").classList.toggle("hidden");
+  document.querySelectorAll(".dropdown-content").forEach((el) => {
+    el.classList.add("active2");
+  });
+  down.classList.remove("active2");
+  if (!down.classList.contains("active2")) {
+    down.classList.toggle("hidden");
+  }
+  // document.getElementById("stateDropdown").classList.toggle("hidden");
   if (!down.classList.contains("hidden")) {
     arrow.classList.add("rotate-180");
   } else {
     arrow.classList.remove("rotate-180");
   }
+}
+//Dropdwon
+function showDropDownMenu(el) {
+  el.parentElement.children[1].classList.toggle("hidden");
+  // getElementsById("drop-down-div").classList.toggle("hidden");
 }
 
 function filterStates() {
@@ -213,7 +231,14 @@ stateoptions.forEach((item) => {
 function myLang() {
   const arrow = document.querySelector(".lang-arrow");
   const down = document.getElementById("langDropdown");
-  document.getElementById("langDropdown").classList.toggle("hidden");
+  document.querySelectorAll(".dropdown-content").forEach((el) => {
+    el.classList.add("active2");
+  });
+  down.classList.remove("active2");
+  if (!down.classList.contains("active2")) {
+    down.classList.toggle("hidden");
+  }
+  // document.getElementById("langDropdown").classList.toggle("hidden");
   if (!down.classList.contains("hidden")) {
     arrow.classList.add("rotate-180");
   } else {
@@ -281,7 +306,14 @@ lenoptions.forEach((item) => {
 function myWeight() {
   const arrow = document.querySelector(".weight-arrow");
   const down = document.getElementById("weightDropdown");
-  document.getElementById("weightDropdown").classList.toggle("hidden");
+  document.querySelectorAll(".tempdropbtn").forEach((el) => {
+    el.classList.add("active2");
+  });
+  down.classList.remove("active2");
+  if (!down.classList.contains("active2")) {
+    down.classList.toggle("hidden");
+  }
+
   if (!down.classList.contains("hidden")) {
     arrow.classList.add("rotate-180");
   } else {
@@ -307,7 +339,15 @@ weightoptions.forEach((item) => {
 function myTemp() {
   const arrow = document.querySelector(".tempdropbtnspan");
   const down = document.getElementById("tempDropdown");
-  document.getElementById("tempDropdown").classList.toggle("hidden");
+  document.querySelectorAll(".tempdropbtn").forEach((el) => {
+    el.classList.add("active2");
+  });
+  down.classList.remove("active2");
+  if (!down.classList.contains("active2")) {
+    down.classList.toggle("hidden");
+  }
+
+  // document.getElementById("tempDropdown").classList.toggle("hidden");
   if (!down.classList.contains("hidden")) {
     arrow.nextElementSibling.classList.add("rotate-180");
   } else {
@@ -340,4 +380,10 @@ function swaptext2(el) {
   document.getElementById("drop-down-content-setter2").innerText = targetText;
 
   document.getElementById("drop-down-div2").classList.add("hidden");
+}
+function swaptext3(el) {
+  const targetText = el.innerText;
+  document.querySelector(".settextofdropdown").innerText = targetText;
+
+  document.getElementById("drop-down-div3").classList.add("hidden");
 }

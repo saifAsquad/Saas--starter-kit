@@ -1031,14 +1031,12 @@
               <!-- Dashboards -->
               <div class="flex flex-col">
                 <li
-                  onclick="event.stopPropagation();toggleDropdown(this)"
-                  class="flex border-l-2 border-blue-700 w-full justify-between text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
+                  onclick="toggleDropdown(this)"
+                  class="flex w-full justify-between text-slate-600 hover:bg-blue-50 cursor-pointer items-center"
                 >
-                  <a
-                    href="javascript:void(0)"
-                    class="flex px-8 items-center py-2"
-                  >
+                  <a href="#" class="flex px-8 items-center py-2">
                     <svg
+                      class="text-slate-600"
                       width="16"
                       height="16"
                       viewBox="0 0 16 16"
@@ -1176,13 +1174,10 @@
               <!-- Pages -->
               <div class="flex flex-col">
                 <li
-                  onclick="event.stopPropagation();toggleDropdown(this)"
+                  onclick="toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
-                  <a
-                    href="javascript:void(0)"
-                    class="flex px-8 items-center py-2"
-                  >
+                  <a href="#" class="flex px-8 items-center py-2">
                     <svg
                       width="16"
                       height="16"
@@ -1337,14 +1332,12 @@
               <!-- Account -->
               <div class="flex flex-col">
                 <li
-                  onclick="event.stopPropagation();toggleDropdown(this)"
-                  class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
+                  onclick="toggleDropdown(this)"
+                  class="flex border-l-2 border-blue-700 w-full justify-between text-blue-700 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
-                  <a
-                    href="javascript:void(0)"
-                    class="flex px-8 items-center py-2"
-                  >
+                  <a href="#" class="flex px-8 items-center py-2">
                     <svg
+                      class="stroke-blue-700"
                       width="16"
                       height="16"
                       viewBox="0 0 16 16"
@@ -1353,18 +1346,16 @@
                     >
                       <path
                         d="M10.75 4.5C10.6275 6.15219 9.37503 7.5 8.00003 7.5C6.62503 7.5 5.37034 6.1525 5.25003 4.5C5.12503 2.78125 6.34378 1.5 8.00003 1.5C9.65628 1.5 10.875 2.8125 10.75 4.5Z"
-                        stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
                       <path
                         d="M8.00008 9.5C5.28133 9.5 2.52195 11 2.01133 13.8313C1.94976 14.1725 2.14289 14.5 2.50008 14.5H13.5001C13.8576 14.5 14.0507 14.1725 13.9891 13.8313C13.4782 11 10.7188 9.5 8.00008 9.5Z"
-                        stroke="currentColor"
                         stroke-miterlimit="10"
                       />
                     </svg>
 
-                    <span class="text-sm ml-2">Account</span>
+                    <span class="text-sm ml-2 text-blue-700">Account</span>
                   </a>
 
                   <div
@@ -1388,17 +1379,17 @@
                   </div>
                 </li>
                 <ul
-                  class="invisible opacity-0 flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600"
+                  class="invisible opacity-0 flex flex-col mb-4 h-0 transition-all ease-in-out duration-600 text-slate-600"
                 >
                   <a class="dashboard-links" href="/account-overview.html">
                     <li
-                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14 text-blue-700 bg-blue-50"
                     >
                       <svg
                         width="6"
                         height="6"
                         viewBox="0 0 6 6"
-                        fill="#BFDBFE"
+                        fill="#1D4ED8"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <circle cx="3" cy="3" r="3" />
@@ -1408,7 +1399,7 @@
                   </a>
                   <a href="account-settings.html">
                     <li
-                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14"
                     >
                       <svg
                         width="6"
@@ -1422,20 +1413,112 @@
                       Settings
                     </li>
                   </a>
+                  <a href="account-security.html">
+                    <li
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14"
+                    >
+                      <svg
+                        width="6"
+                        height="6"
+                        viewBox="0 0 6 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                      </svg>
+                      Security
+                    </li>
+                  </a>
+                  <a href="account-billing.html">
+                    <li
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14"
+                    >
+                      <svg
+                        width="6"
+                        height="6"
+                        viewBox="0 0 6 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                      </svg>
+                      Billing
+                    </li>
+                  </a>
+                  <a href="account-statements.html">
+                    <li
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14"
+                    >
+                      <svg
+                        width="6"
+                        height="6"
+                        viewBox="0 0 6 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                      </svg>
+                      Statements
+                    </li>
+                  </a>
+                  <a href="account-referals.html">
+                    <li
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14"
+                    >
+                      <svg
+                        width="6"
+                        height="6"
+                        viewBox="0 0 6 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                      </svg>
+                      Referals
+                    </li>
+                  </a>
+                  <a href="accounts-api-keys.html">
+                    <li
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14"
+                    >
+                      <svg
+                        width="6"
+                        height="6"
+                        viewBox="0 0 6 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                      </svg>
+                      API Keys
+                    </li>
+                  </a>
+                  <a href="account-logs.html">
+                    <li
+                      class="text-xs hover:text-blue-700 cursor-pointer flex py-2 items-center gap-2 font-normal leading-[16px] pl-14"
+                    >
+                      <svg
+                        width="6"
+                        height="6"
+                        viewBox="0 0 6 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                      </svg>
+                      Logs
+                    </li>
+                  </a>
                 </ul>
               </div>
 
               <!-- widgets -->
               <div class="flex flex-col">
                 <li
-                  onclick="event.stopPropagation();toggleDropdown(this)"
+                  onclick="toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
-                  <a
-                    href="
-                  javascript:void(0)"
-                    class="flex px-8 items-center py-2"
-                  >
+                  <a href="#" class="flex px-8 items-center py-2">
                     <svg
                       width="16"
                       height="16"
@@ -1543,14 +1626,10 @@
               <!-- utilities -->
               <div class="flex flex-col">
                 <li
-                  onclick="event.stopPropagation();toggleDropdown(this)"
+                  onclick="toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
-                  <a
-                    href="
-                  javascript:void(0)"
-                    class="flex px-8 items-center py-2"
-                  >
+                  <a href="#" class="flex px-8 items-center py-2">
                     <svg
                       width="16"
                       height="16"
@@ -1683,14 +1762,10 @@
               <!-- ui Components -->
               <div class="flex flex-col">
                 <li
-                  onclick="event.stopPropagation();toggleDropdown(this)"
+                  onclick="toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
-                  <a
-                    href="
-                  javascript:void(0)"
-                    class="flex px-8 items-center py-2"
-                  >
+                  <a href="#" class="flex px-8 items-center py-2">
                     <svg
                       width="16"
                       height="16"
@@ -1925,13 +2000,10 @@
               <!-- Applications -->
               <div class="flex flex-col">
                 <li
-                  onclick="event.stopPropagation();toggleDropdown(this)"
+                  onclick="toggleDropdown(this)"
                   class="flex w-full justify-between text-slate-800 hover:text-blue-700 hover:bg-blue-50 cursor-pointer items-center"
                 >
-                  <a
-                    href="javascript:void(0)"
-                    class="flex px-8 items-center py-2"
-                  >
+                  <a href="#" class="flex px-8 items-center py-2">
                     <svg
                       width="16"
                       height="16"
@@ -1997,25 +2069,141 @@
                 <ul
                   class="invisible opacity-0 flex flex-col pl-14 mb-4 h-0 transition-all ease-in-out duration-600"
                 >
-                  <a href="project-management.html">
-                    <li
-                      class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                  <li
+                    onclick="openSubProject()"
+                    class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                  >
+                    <svg
+                      width="6"
+                      height="6"
+                      viewBox="0 0 6 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        width="6"
-                        height="6"
-                        viewBox="0 0 6 6"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                    </svg>
+                    Project Management
+                  </li>
+                  <!--Sub Project Management-->
+                  <ul
+                    class="pl-3 transition-all origin-top duration-600 h-0 opacity-0 pt-[-20px] scale-y-0 sub-project-management"
+                  >
+                    <a href="project-management.html">
+                      <li
+                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                       >
-                        <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
-                      </svg>
-                      Project Management
-                    </li>
-                  </a>
+                        <svg
+                          width="6"
+                          height="6"
+                          viewBox="0 0 6 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                        </svg>
+                        Overview
+                      </li>
+                    </a>
+                    <a href="project-management-target.html">
+                      <li
+                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      >
+                        <svg
+                          width="6"
+                          height="6"
+                          viewBox="0 0 6 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                        </svg>
+                        Target
+                      </li>
+                    </a>
+                    <a href="project-management-settings.html">
+                      <li
+                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      >
+                        <svg
+                          width="6"
+                          height="6"
+                          viewBox="0 0 6 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                        </svg>
+                        Settings
+                      </li>
+                    </a>
+                    <a href="project-management-users.html">
+                      <li
+                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      >
+                        <svg
+                          width="6"
+                          height="6"
+                          viewBox="0 0 6 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                        </svg>
+                        Users
+                      </li>
+                    </a>
+                    <a href="project-management-files.html">
+                      <li
+                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      >
+                        <svg
+                          width="6"
+                          height="6"
+                          viewBox="0 0 6 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                        </svg>
+                        Files
+                      </li>
+                    </a>
+                    <a href="project-management-budget.html">
+                      <li
+                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      >
+                        <svg
+                          width="6"
+                          height="6"
+                          viewBox="0 0 6 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                        </svg>
+                        Budget
+                      </li>
+                    </a>
+                    <a href="project-management-activity.html">
+                      <li
+                        class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
+                      >
+                        <svg
+                          width="6"
+                          height="6"
+                          viewBox="0 0 6 6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="3" cy="3" r="3" fill="#BFDBFE" />
+                        </svg>
+                        Activity
+                      </li>
+                    </a>
+                  </ul>
 
                   <li
-                    onclick="event.stopPropagation();openSubEcommerce()"
+                    onclick="openSubEcommerce()"
                     class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                   >
                     <svg
@@ -2034,7 +2222,7 @@
                     class="pl-3 transition-all origin-top duration-600 h-0 opacity-0 pt-[-20px] scale-y-0 sub-ecommerce"
                   >
                     <li
-                      onclick="event.stopPropagation();openSubCatalogue()"
+                      onclick="openSubCatalogue()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -2151,7 +2339,7 @@
                     </ul>
                     <!-- Sub Catalogue -->
                     <li
-                      onclick="event.stopPropagation();openSubOrder()"
+                      onclick="openSubOrder()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -2252,7 +2440,7 @@
                     </ul>
                     <!-- Sub Order -->
                     <li
-                      onclick="event.stopPropagation();openSubOverview()"
+                      onclick="openSubOverview()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -2353,7 +2541,7 @@
                     </ul>
                     <!-- Sub Overview -->
                     <li
-                      onclick="event.stopPropagation();openSubCustomer()"
+                      onclick="openSubCustomer()"
                       class="text-xs hover:text-blue-700 cursor-pointer flex pb-2 items-center gap-2 font-normal leading-[16px] text-slate-600"
                     >
                       <svg
@@ -2468,7 +2656,7 @@
           <!-- ***Links -->
           <ul class="text-slate-600 lg:flex items-center gap-x-6 hidden">
             <li
-              class="text-blue-700 bg-blue-50 font-medium p-3 rounded cursor-pointer"
+              class="font-medium p-3 rounded cursor-pointer hover:bg-blue-50 hover:text-blue-700"
             >
               Dashboards
             </li>
@@ -2478,7 +2666,7 @@
               Pages
             </li>
             <li
-              class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded"
+              class="cursor-pointer hover:bg-blue-50 hover:text-blue-700 transition duration-200 p-3 rounded text-blue-700 bg-blue-50"
             >
               Account
             </li>
@@ -4554,7 +4742,7 @@
                 <!-- quick links -->
                 <div
                   id="handleClick"
-                  class="hidden absolute top-10 left-[50%] sm:left-[86px] rounded lg:-left-14 max-w-[176px]"
+                  class="hidden absolute top-10 left-[70%] sm:left-[86px] rounded lg:-left-14 max-w-[176px]"
                 >
                   <div class="rounded">
                     <div
@@ -4734,7 +4922,7 @@
                   Profile Details
                 </p>
                 <button
-                  class="bg-blue-700 mr-6 text-white text- font-medium py-4 px-6 hover:bg-blue-600 rounded-[4px]"
+                  class="bg-blue-700 mr-6 text-white text- font-medium lg:py-4 md:py-3 py-2 lg:px-6 md:px-4 px-3 hover:bg-blue-600 rounded-[4px]"
                 >
                   Edit Profile
                 </button>
