@@ -122,7 +122,7 @@ getDoughnut();
 function mainChart() {
   //Data block
   const data = {
-    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    labels: ["  Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     datasets: [
       {
         display: false,
@@ -136,6 +136,7 @@ function mainChart() {
         pointRadius: 0,
         pointHoverRadius: 8,
         pointHitRadius: 10,
+        enabled:false,
         pointBackgroundColor: "#ffffff",
       },
       {
@@ -158,7 +159,10 @@ function mainChart() {
     responsive: true,
     plugins: {
       tooltip: {
-        mode: "index",
+        filter: function (tooltipItem) {
+          return tooltipItem.datasetIndex === 0;
+      },
+        mode: "nearest",
         intersect: false,
         titleFont: {
           size: 8,
@@ -226,7 +230,7 @@ function mainChart() {
         max: 100,
         ticks: {
           // forces step size to be 50 units
-          color: "#1D4ED8",
+          color: "#64748B",
           backgroundColor: "#FFFFFF",
 
           stepSize: 50,
@@ -240,11 +244,35 @@ function mainChart() {
         },
       },
       x: {
+        
+        
+        beginAtZero:false,
         grid: {
           display: false,
         },
         ticks: {
-          color: "#212121",
+          callback: function (val) {
+            switch(val) {
+              case 0 :
+                return '                      Mon'
+              case 1: 
+              return 'Tue'
+              case 2: 
+              return 'Wed'
+              case 3: 
+              return 'Thu'
+              case 4: 
+              return 'Fri'
+              case 5: 
+              return 'Sat'
+              
+            }
+          },
+          color: "#64748B",
+          backdropPadding: {
+            x: 50,
+            y: 4
+        }
         },
       },
     },
