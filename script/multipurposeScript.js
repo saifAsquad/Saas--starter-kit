@@ -22,6 +22,7 @@ var myChart = new Chart(ctx, {
     ],
   },
   options: {
+    responsive:false,
     plugins: {
       tooltip: {
         mode: "index",

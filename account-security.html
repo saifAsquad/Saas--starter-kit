@@ -3281,7 +3281,7 @@
                                     <div class="flex items-center gap-x-6">
                                                 <div
                 id="reportrange"
-                class="hover:bg-blue-100 border font-medium text-[14px] rounded text-blue-700 border-blue-700"
+                class="hover:bg-blue-100 border font-medium text-[14px] rounded leading-[14px] text-blue-700 border-blue-700"
                 style="cursor: pointer; padding: 5px 10px; width: fit-content"
               >
                 <div class="flex items-center gap-2 py-2">
@@ -3305,9 +3305,9 @@
               </div>
                                     </div>
                                 </div>
-                                <div class="flex lg:flex-row flex-col gap-6">
+                                <div class="flex lg:flex-row flex-col gap-20">
                                     <div class="lg:w-9/12 lg:h-[512px] w-full">
-                                        <canvas class=" py-7" height="500" width="1024" id="chartjs-1"> </canvas>
+                                        <canvas class=" py-7"  id="chartjs-1"> </canvas>
                                     </div>
                                     <div class="divs-conatiner max-w-[304px] w-full mx-auto gap-6 flex flex-col my-6"
                                         id="setUsersAndAdmins">
@@ -3385,7 +3385,7 @@
 
                                         <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
                                             <button
-                                                class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto">
+                                                class="bg-green-100 font-medium text-[0.75rem] leading-[0.75rem] text-green-700 px-3 py-2 rounded mx-auto">
                                                 Lisenced
                                             </button>
                                         </td>
@@ -3407,7 +3407,7 @@
 
                                         <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
                                             <button
-                                                class="bg-yellow-100 font-medium text-xs text-yellow-600 px-3 py-2 rounded mx-auto">
+                                                class="bg-yellow-100 font-medium text-[0.75rem] text-yellow-600 px-3 py-2 rounded mx-auto leading-[0.75rem]">
                                                 To be Paid
                                             </button>
                                         </td>
@@ -3429,7 +3429,7 @@
 
                                         <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
                                             <button
-                                                class="bg-red-100 font-medium text-xs text-red-600 px-3 py-2 rounded mx-auto">
+                                                class="bg-red-100 font-medium text-[0.75rem] leading-[0.75rem] text-red-600 px-3 py-2 rounded mx-auto">
                                                 Unknown
                                             </button>
                                         </td>
@@ -3451,7 +3451,7 @@
 
                                         <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
                                             <button
-                                                class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto">
+                                                class="bg-green-100 font-medium text-[0.75rem] leading-[0.75rem]  text-green-700 px-3 py-2 rounded mx-auto">
                                                 Lisenced
                                             </button>
                                         </td>
@@ -3473,7 +3473,7 @@
 
                                         <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
                                             <button
-                                                class="bg-green-100 font-medium text-xs text-green-700 px-3 py-2 rounded mx-auto">
+                                                class="bg-green-100 font-medium text-[0.75rem] leading-[0.75rem]  text-green-700 px-3 py-2 rounded mx-auto">
                                                 Lisenced
                                             </button>
                                         </td>
@@ -3495,7 +3495,7 @@
 
                                         <td class="text-sm leading-none text-slate-600 text-left py-7 font-medium px-6">
                                             <button
-                                                class="bg-red-100 font-medium text-xs text-red-600 px-3 py-2 rounded mx-auto">
+                                                class="bg-red-100 font-medium text-[0.75rem] leading-[0.75rem]  text-red-600 px-3 py-2 rounded mx-auto">
                                                 Unknown
                                             </button>
                                         </td>
@@ -3737,10 +3737,7 @@
 
             }
 
-            canvas {
-                /* max-width: 1024px !important; */
-                max-height: 500px !important;
-            }
+          
             .daterangepicker{
                 right:97px !important;
             }
@@ -3867,7 +3864,7 @@
                                     return value + "%";
                                 },
                                 // forces step size to be 50 units
-                                color: "#9CA3AF",
+                                color: "#475569",
 
                                 font: {
                                     size: 12,
@@ -3882,7 +3879,7 @@
                         },
                         x: {
                             ticks: {
-                                color: "#9CA3AF",
+                                color: "#475569",
                             },
                             grid: {
                                 display: false,
