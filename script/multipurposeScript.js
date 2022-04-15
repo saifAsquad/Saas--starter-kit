@@ -144,3 +144,52 @@ document.querySelectorAll("#newMemberInteraction a").forEach((el) => {
     el.parentElement.classList.toggle("hidden");
   });
 });
+
+// Data Objects 
+
+const data=[
+
+  
+  {
+desig:"Front End Developer",
+category:"Engineering",
+location:"Los Angeles, California",
+time:"Full-time",
+closing:"Closing on 23 July,2021"
+
+
+  },
+  {
+    desig:"Back End Developer",
+    category:"Engineering",
+    location:"Los Angeles, California",
+    time:"Full-time",
+    closing:"Closing on 23 July,2021"
+    
+    
+      },
+      {
+        desig:"Graphic Designer",
+        category:"Engineering",
+        location:"Los Angeles, California",
+        time:"Full-time",
+        closing:"Closing on 23 July,2021"
+        
+        
+          },
+          {
+            desig:"Web Designer",
+            category:"Engineering",
+            location:"Los Angeles, California",
+            time:"Full-time",
+            closing:"Closing on 23 July,2021"
+            
+            
+              }
+
+]
+
+function changeData(){
+  
+ 
+}

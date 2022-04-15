@@ -50,15 +50,16 @@ function swaptext3(el) {
   document.getElementById("drop-down-div3").classList.add("hidden");
 }
 function handleActionsInteraction(el) {
+  console.log(el.parentElement.children[1]);
   tableMore.forEach((e) => {
-    if (e.classList.contains("active") && e != el.children[1]) {
+    if (e.classList.contains("active") && e != el.parentElement.children[1]) {
       e.classList.toggle("active");
       e.classList.toggle("hidden");
     }
   });
-  activeComponentChecker(el.children[1]);
-  el.children[1].classList.toggle("hidden");
-  el.children[1].classList.toggle("active");
+  activeComponentChecker(el.parentElement.children[1]);
+  el.parentElement.children[1].classList.toggle("hidden");
+  el.parentElement.children[1].classList.toggle("active");
 }
 function showDropDownMenu1(el) {
   el.parentElement.children[1].classList.toggle("hidden");

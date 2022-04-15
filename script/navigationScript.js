@@ -269,6 +269,9 @@ then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 
 function moreoptionmodal(el) {
+  document.querySelectorAll("#newMemberInteraction").forEach((elp)=>{
+    elp.classList.add("hidden");
+  })
   el.parentElement.children[1].classList.toggle("hidden");
 }
 
@@ -282,6 +285,9 @@ function qsA(e) {
 
 // Nav Icons handler
 const statChartBtn = qs(".statsChartBtn");
+statChartBtn.addEventListener('click', (e) => {
+  e.stopPropagation()
+})
 const statChart = qs(".statsComponent");
 const statCrossBtn = qs(".statCrossBtn");
 const allIcons = [
@@ -307,8 +313,19 @@ allIcons.forEach((i) => {
   });
 });
 
+const stats= qs('.statsComponent')
+stats.addEventListener('click', (e) => {
+  e.stopPropagation()
+}
+  
+)
+
 document.body.onclick = function (e) {
+  if(stats.classList.contains('active')) {
+    stats.classList.replace( 'active','translate-x-full')
+  }
   allIcons.forEach((ic) => {
+ 
     if (ic.icon.classList.contains("active")) {
       ic.icon.classList.remove("active");
       ic.component.classList.replace("opacity-1", "opacity-0");
